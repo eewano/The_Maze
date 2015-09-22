@@ -3,7 +3,9 @@ using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
+	// 歩行スピード
 	public float speed = 3.0F;
+	// 方向転換のスピード
 	public float rotationSpeed = 50.0F;
 
 	void FixedUpdate() {
