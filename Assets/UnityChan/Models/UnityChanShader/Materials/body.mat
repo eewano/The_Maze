@@ -59,16 +59,16 @@ Material:
     m_Floats:
       data:
         first:
-          name: _SpecularPower
-        second: 20
+          name: _FalloffPower
+        second: .300000012
       data:
         first:
           name: _EdgeThickness
         second: .5
       data:
         first:
-          name: _FalloffPower
-        second: .300000012
+          name: _SpecularPower
+        second: 20
     m_Colors:
       data:
         first:
