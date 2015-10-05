@@ -2,26 +2,30 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-
-	private NavMeshAgent m_agent;
-	private int SpeedId;
-	// 歩行スピード
-	public float speed = 3.0F;
-	// 方向転換のスピード
-	public float rotationSpeed = 50.0F;
+	
+	private Animator animator;
+	// 前進速度
+	public float forwardSpeed = 7.0f;
+	// 後退速度
+	public float backwardSpeed = 2.0f;
+	// 旋回速度
+	public float rotateSpeed = 2.0f;
+	// キャラクターコントローラ（カプセルコライダ）の移動量
+	public Vector3 velocity;
 
 	// Use this for initialization
 	void Start () {
-		m_agent = this.GetComponent<NavMeshAgent> ();
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		float translation = Input.GetAxis("Vertical") * speed;
-		float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-		translation *= Time.deltaTime;
-		rotation *= Time.deltaTime;
-		transform.Translate(0, 0, translation);
-		transform.Rotate(0, rotation, 0);	
+	void FixedUpdate () {
+		float h = Input.GetAxis("Horizontal");
+
+		// 上下のキー入力でキャラクターを移動させる
+		transform.localPosition += velocity * Time.fixedDeltaTime;
+		
+		// 左右のキー入力でキャラクタをY軸で旋回させる
+		transform.Rotate(0, h * rotateSpeed, 0);
 	}
 }
