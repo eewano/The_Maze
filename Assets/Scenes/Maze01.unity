@@ -74,7 +74,7 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
-    agentRadius: .5
+    agentRadius: .300000012
     agentHeight: 2
     agentSlope: 45
     agentClimb: .400000006
@@ -82,7 +82,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
-    cellSize: .166666672
+    cellSize: .100000001
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: 9595378553c26134ab2e592e2f1bdc2b, type: 2}
 --- !u!1 &25753263
@@ -4142,7 +4142,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4150,7 +4150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9499,7 +9499,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464749642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .699999988, z: 0}
+  m_LocalPosition: {x: 17, y: 0, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9515,7 +9515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b74e0bfddf335747b811d050dac5726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 130850, guid: 4d8fb20711bf4a641b2943e2a1f6264a, type: 2}
+  Player: {fileID: 191276, guid: 4d8fb20711bf4a641b2943e2a1f6264a, type: 2}
   texClear: {fileID: 854238075}
 --- !u!1 &1470005501
 GameObject:
@@ -10630,7 +10630,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1587253310}
   - 65: {fileID: 1587253309}
-  - 114: {fileID: 1587253308}
   m_Layer: 0
   m_Name: WarpPoint
   m_TagString: WarpPoint
@@ -10638,17 +10637,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1587253308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1587253307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03e374d0a9187a4fa474a5162d2ad03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1587253309
 BoxCollider:
   m_ObjectHideFlags: 0

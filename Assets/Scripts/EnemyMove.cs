@@ -5,6 +5,7 @@ public class EnemyMove : MonoBehaviour {
 
 	[SerializeField] GameObject targetNavMeshObjects;
 	NavMeshAgent navMeshAgentComponent;
+	GameObject Target;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,9 @@ public class EnemyMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		navMeshAgentComponent.SetDestination (targetNavMeshObjects.transform.position);
+		Target = GameObject.Find ("Player(Clone)");
+
+		//設定したターゲットの位置を常に追跡対象とする
+		navMeshAgentComponent.SetDestination (Target.transform.position);
 	}
 }

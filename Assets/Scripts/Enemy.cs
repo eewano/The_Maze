@@ -14,9 +14,10 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
+
 		//Playerと接触したらGAME OVER。
 		if (col.gameObject.tag == "Player") {
-			Application.LoadLevel ("StartMenu");
+			Application.LoadLevel (Application.loadedLevelName);
 		}
 	}
 }

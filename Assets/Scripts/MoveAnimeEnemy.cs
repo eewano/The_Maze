@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveAnime : MonoBehaviour {
+public class MoveAnimeEnemy : MonoBehaviour {
 
 	Animator animator;
 	NavMeshAgent agent;

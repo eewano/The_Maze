@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b74e0bfddf335747b811d050dac5726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 175942, guid: 4b5ae19a5f2529c45b6f95c3dd851685, type: 2}
+  Player: {fileID: 191276, guid: 4d8fb20711bf4a641b2943e2a1f6264a, type: 2}
   texClear: {fileID: 1220586365}
 --- !u!4 &81817404
 Transform:
@@ -9467,7 +9467,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14.5
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9475,7 +9475,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9495,7 +9495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444344, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11426806, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
       propertyPath: Player
