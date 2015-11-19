@@ -27,7 +27,7 @@ public class TitleSoundEffect : MonoBehaviour {
 
 	public void GameEnter()
 	{
-		Destroy (TitleBGM);
 		EnterSE.PlayOneShot (EnterSE.clip);
+		Destroy (TitleBGM);
 	}
 }

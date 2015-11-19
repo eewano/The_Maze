@@ -2558,7 +2558,8 @@ AudioSource:
   m_GameObject: {fileID: 1478555959}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24332494, guid: be88605a484916144ab1f71da0a1e85e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 33775ff25b5174f49bc0ec2f47fe5ea9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2628,7 +2629,8 @@ AudioSource:
   m_GameObject: {fileID: 1478555959}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24310534, guid: be88605a484916144ab1f71da0a1e85e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 80f4293420614d0499950f32c4dab312, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2698,7 +2700,8 @@ AudioSource:
   m_GameObject: {fileID: 1478555959}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24323380, guid: be88605a484916144ab1f71da0a1e85e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0b368f382c5b20048a0d6e1944f763e8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3204,7 +3207,6 @@ GameObject:
   - 20: {fileID: 1956701063}
   - 92: {fileID: 1956701062}
   - 124: {fileID: 1956701061}
-  - 114: {fileID: 1956701059}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3212,17 +3214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1956701059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1956701058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21ce38626fd4644caccb6da5253715c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &1956701061
 Behaviour:
   m_ObjectHideFlags: 0
