@@ -4,43 +4,103 @@ using UnityEngine.UI;
 
 public class TitleController : MonoBehaviour {
 
-	public Text hiScoreLabel;
-	TitleSoundEffect titlesoundEffect;
+	enum GameState
+	{
+		TITLE,
+		DESCRIPTION,
+		START
+	}
 
-	public void Start()
+	GameState state;
+
+	TitleSoundEffect titlesoundEffect;
+	public Text titleLabel;
+	public Text subtitleLabel;
+	public Text descriptiontitleLabel;
+	public Text descriptionLabel;
+	public GameObject descriptionButton;
+	public GameObject mazePanel01;
+	public GameObject mazePanel02;
+	public GameObject mazePanel03;
+	public GameObject titleButton;
+
+	void Start()
 	{
 		titlesoundEffect = GameObject.Find("TitleSoundController").GetComponent<TitleSoundEffect>();
+		Title ();
 	}
 
-	//-----ゲームをスタートさせる-----
-	public void OnStartButtonClicked()
+	void Update()
 	{
-		//スタートサウンドを再生する
-		titlesoundEffect.GameStart();
+		switch (state) {
 
-		//1秒後にステージシーンに切り替える
-		Invoke ("GoToStage", 1.0f);
+		case GameState.TITLE:
+			break;
+
+		case GameState.DESCRIPTION:
+			break;
+
+		case GameState.START:
+			Application.LoadLevel ("Maze01");
+			break;
+		}
 	}
 
-	void GoToStage()
+	void Title()
 	{
-		Application.LoadLevel ("Stage");
-	}
-	//-----ゲームをスタートさせる-----
+		state = GameState.TITLE;
+			
+		titleLabel.enabled = true;
+		subtitleLabel.enabled = true;
+		descriptiontitleLabel.enabled = false;
+		descriptionLabel.enabled = false;
 
-	//-----説明画面に飛ぶ-----
-	public void OnDescriptionButtonClicked()
+		descriptionButton.gameObject.SetActive (true);
+		mazePanel01.gameObject.SetActive (true);
+		mazePanel02.gameObject.SetActive (true);
+		mazePanel03.gameObject.SetActive (true);
+		titleButton.gameObject.SetActive (false);
+	}
+
+	void Description()
 	{
-		//説明サウンドを再生する
-		titlesoundEffect.Description();
+		state = GameState.DESCRIPTION;
 
-		//1秒後に説明シーンに切り替える
-		Invoke ("GoToDescription", 1.0f);
+		titleLabel.enabled = false;
+		subtitleLabel.enabled = false;
+		descriptiontitleLabel.enabled = true;
+		descriptionLabel.enabled = true;
+		
+		descriptionButton.gameObject.SetActive (false);
+		mazePanel01.gameObject.SetActive (false);
+		mazePanel02.gameObject.SetActive (false);
+		mazePanel03.gameObject.SetActive (false);
+		titleButton.gameObject.SetActive (true);
 	}
 
-	void GoToDescription()
+	void GameStart()
 	{
-		Application.LoadLevel ("Description");
+		state = GameState.START;
 	}
-	//-----説明画面に飛ぶ-----
+
+
+
+	public void Maze01Start()
+	{
+		titlesoundEffect.GameEnter();
+		Invoke ("GameStart", 3.0f);
+	}
+
+	public void OnTitleButtonClicked()
+	{
+		titlesoundEffect.Exit();
+		Title();
+	}
+
+	public void OnDescriptionClicked()
+	{
+		titlesoundEffect.Enter();
+		Description();
+	}
+	
 }
