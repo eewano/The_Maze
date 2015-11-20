@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class TitleController : MonoBehaviour {
 
-	enum GameState
+	enum TitleState
 	{
 		TITLE,
 		DESCRIPTION,
 		START
 	}
 
-	GameState state;
+	TitleState state;
 
 	TitleSoundEffect titlesoundEffect;
 	public Text titleLabel;
@@ -34,13 +34,13 @@ public class TitleController : MonoBehaviour {
 	{
 		switch (state) {
 
-		case GameState.TITLE:
+		case TitleState.TITLE:
 			break;
 
-		case GameState.DESCRIPTION:
+		case TitleState.DESCRIPTION:
 			break;
 
-		case GameState.START:
+		case TitleState.START:
 			Application.LoadLevel ("Maze01");
 			break;
 		}
@@ -48,7 +48,7 @@ public class TitleController : MonoBehaviour {
 
 	void Title()
 	{
-		state = GameState.TITLE;
+		state = TitleState.TITLE;
 			
 		titleLabel.enabled = true;
 		subtitleLabel.enabled = true;
@@ -64,7 +64,7 @@ public class TitleController : MonoBehaviour {
 
 	void Description()
 	{
-		state = GameState.DESCRIPTION;
+		state = TitleState.DESCRIPTION;
 
 		titleLabel.enabled = false;
 		subtitleLabel.enabled = false;
@@ -80,7 +80,7 @@ public class TitleController : MonoBehaviour {
 
 	void GameStart()
 	{
-		state = GameState.START;
+		state = TitleState.START;
 	}
 
 
@@ -102,5 +102,4 @@ public class TitleController : MonoBehaviour {
 		titlesoundEffect.Enter();
 		Description();
 	}
-	
 }

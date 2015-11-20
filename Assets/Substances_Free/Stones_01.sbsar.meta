@@ -1,12 +1,17 @@
 fileFormatVersion: 2
 guid: c9aecbced71bf9647a5598c07af40aaf
+timeCreated: 1447990051
+licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
-  - serializedVersion: 12
+  - serializedVersion: 16
     name: Stones_01
     prototypeName: Stones_01
     shader: {fileID: 4, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _NORMALMAP
+    renderQueue: -1
+    lightmapFlags: 5
     inputs:
     - name: $normalformat
       value:
@@ -137,7 +142,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 1, y: 1}
+      scale: {x: 400, y: 400}
       generateMipmaps: 1
       generateAllOutputs: 1
       animationUpdateRate: 42
@@ -149,14 +154,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 400, y: 400}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 400, y: 40}
             offset: {x: 0, y: 0}
       floats:
         data:
@@ -221,3 +226,5 @@ SubstanceImporter:
       loadingBehavior: 1
   deletedPrototypes: []
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

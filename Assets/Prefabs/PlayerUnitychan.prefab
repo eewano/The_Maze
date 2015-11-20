@@ -1436,10 +1436,13 @@ GameObject:
   - 4: {fileID: 466930}
   - 95: {fileID: 9538690}
   - 143: {fileID: 14345562}
+  - 136: {fileID: 13659624}
   - 114: {fileID: 11444986}
+  - 54: {fileID: 5453418}
+  - 114: {fileID: 11405918}
   m_Layer: 0
-  m_Name: unitychan
-  m_TagString: Untagged
+  m_Name: PlayerUnitychan
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2290,7 +2293,6 @@ GameObject:
   - 20: {fileID: 2061020}
   - 92: {fileID: 9259910}
   - 124: {fileID: 12493850}
-  - 81: {fileID: 8147890}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3274,7 +3276,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -2}
+  m_LocalPosition: {x: 0, y: 1.70000005, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 466930}
@@ -4226,7 +4228,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110530}
-  m_LocalRotation: {x: -.0937465355, y: .697855115, z: .707468987, w: .0608067513}
+  m_LocalRotation: {x: -.0937465429, y: .697855175, z: .707469046, w: .0608067289}
   m_LocalPosition: {x: -.0554340295, y: .00173068431, z: .0986537337}
   m_LocalScale: {x: 1.00000036, y: 1.0000006, z: 1.00000048}
   m_Children:
@@ -4896,13 +4898,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194782}
   m_Mesh: {fileID: 4300004, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
---- !u!81 &8147890
-AudioListener:
+--- !u!54 &5453418
+Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190904}
-  m_Enabled: 1
+  m_GameObject: {fileID: 155104}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!92 &9259910
 Behaviour:
   m_ObjectHideFlags: 1
@@ -4927,6 +4937,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11405918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03e374d0a9187a4fa474a5162d2ad03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11444986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4938,11 +4959,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 20
-  ForwardSpeed: 5
-  BackwardSpeed: 2
+  gravity: 5
+  ForwardSpeed: 3
+  BackwardSpeed: 1
   RotSpeed: 2
-  JumpPower: 10
+  JumpPower: 8
 --- !u!119 &11997796
 Projector:
   m_ObjectHideFlags: 1
@@ -4968,6 +4989,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190904}
   m_Enabled: 1
+--- !u!136 &13659624
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: .75, z: 0}
 --- !u!137 &13700496
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -6174,6 +6208,30 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.z
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ForwardSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BackwardSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: JumpPower
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 1.59000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: RotSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
