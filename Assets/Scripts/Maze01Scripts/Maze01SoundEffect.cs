@@ -7,6 +7,7 @@ public class Maze01SoundEffect : MonoBehaviour {
 	private AudioSource ClearSE;
 	private AudioSource EnterSE;
 	private AudioSource ExitSE;
+	private AudioSource ReadyGoSE;
 
 	void Start()
 	{
@@ -15,6 +16,7 @@ public class Maze01SoundEffect : MonoBehaviour {
 		ClearSE = audioSources [1];
 		EnterSE = audioSources [2];
 		ExitSE = audioSources [3];
+		ReadyGoSE = audioSources [4];
 	}
 
 	public void EnterSound() {
@@ -23,5 +25,9 @@ public class Maze01SoundEffect : MonoBehaviour {
 
 	public void ExitSound() {
 		ClearSE.PlayOneShot (ExitSE.clip);
+	}
+
+	public void ReadyGoSound() {
+		ReadyGoSE.PlayOneShot (ReadyGoSE.clip);
 	}
 }
