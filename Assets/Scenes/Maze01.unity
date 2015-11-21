@@ -10336,7 +10336,7 @@ MonoBehaviour:
   Maze01descriptionLabel: {fileID: 1163995936}
   Maze01ClearLabel: {fileID: 1341858046}
   GameOverLabel: {fileID: 1600918161}
-  Maze01TimelimitLabel: {fileID: 1667534740}
+  Maze01TimerLabel: {fileID: 1667534740}
   NextMazeButton: {fileID: 665430769}
   ReturnButton: {fileID: 830019283}
   RestartButton: {fileID: 655572160}
@@ -12238,8 +12238,9 @@ GameObject:
   - 224: {fileID: 1667534739}
   - 222: {fileID: 1667534741}
   - 114: {fileID: 1667534740}
+  - 114: {fileID: 1667534742}
   m_Layer: 5
-  m_Name: Maze01TimelimitLabel
+  m_Name: Maze01TimerLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12300,6 +12301,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1667534738}
+--- !u!114 &1667534742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1667534738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21266b47162e48b49177e12859c356b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 90
 --- !u!1 &1676213941
 GameObject:
   m_ObjectHideFlags: 0
