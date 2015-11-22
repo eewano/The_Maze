@@ -9,24 +9,27 @@ public class GameController : MonoBehaviour {
 		READY,
 		PLAYING,
 		CLEAR,
+		TIMEUP,
 		GAMEOVER
 	}
 
-	GameState state;
-
-	Maze01SoundEffect maze01soundEffect;
-	Timer maze01Timer;
 	public Text Maze01StartLabel;
 	public Text Maze01descriptionLabel;
 	public Text Maze01ClearLabel;
-	public Text GameOverLabel;
+	public Text FailerLabel;
 	public Text Maze01TimerLabel;
+	public Text TimeUpLabel;
 	public GameObject NextMazeButton;
 	public GameObject ReturnButton;
 	public GameObject RestartButton;
 	public GameObject GiveUpButton;
 	public GameObject SpawnPoint;
 	public GameObject ReadyCamera;
+
+	private Timer maze01Timer;
+	private GameState state;
+
+	Maze01SoundEffect maze01soundEffect;
 
 	void Start()
 	{
@@ -45,9 +48,18 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.PLAYING:
+			if(maze01Timer.GetTimeRemaining() == 0)
+			{
+				maze01Timer.StopTimer();
+				TimeUp();
+			}
 			break;
 
 		case GameState.CLEAR:
+			break;
+
+		case GameState.TIMEUP:
+			//Invoke("GameOver", 2.0f * Time.deltaTime);
 			break;
 
 		case GameState.GAMEOVER:
@@ -62,8 +74,9 @@ public class GameController : MonoBehaviour {
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = true;
 		Maze01ClearLabel.enabled = false;
-		GameOverLabel.enabled = false;
+		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = false;
+		TimeUpLabel.enabled = false;
 
 		NextMazeButton.gameObject.SetActive (false);
 		RestartButton.gameObject.SetActive (false);
@@ -71,6 +84,8 @@ public class GameController : MonoBehaviour {
 		GiveUpButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyCamera.gameObject.SetActive (true);
+
+		maze01Timer.StartTimer();
 	}
 
 	void Playing()
@@ -80,8 +95,9 @@ public class GameController : MonoBehaviour {
 		Maze01StartLabel.enabled = true;
 		Maze01descriptionLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
-		GameOverLabel.enabled = false;
+		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = true;
+		TimeUpLabel.enabled = false;
 
 		NextMazeButton.gameObject.SetActive (false);
 		RestartButton.gameObject.SetActive (false);
@@ -100,30 +116,54 @@ public class GameController : MonoBehaviour {
 	{
 		state = GameState.CLEAR;
 
-		Maze01StartLabel.enabled = false;
+		//Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
 		Maze01ClearLabel.enabled = true;
-		GameOverLabel.enabled = false;
+		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = false;
+		TimeUpLabel.enabled = false;
 
 		NextMazeButton.gameObject.SetActive (true);
 		RestartButton.gameObject.SetActive (false);
 		ReturnButton.gameObject.SetActive (true);
+		GiveUpButton.gameObject.SetActive (false);
+	}
+
+	void TimeUp()
+	{
+		state = GameState.TIMEUP;
+
+		//Maze01StartLabel.enabled = false;
+		Maze01descriptionLabel.enabled = false;
+		Maze01ClearLabel.enabled = false;
+		FailerLabel.enabled = false;
+		Maze01TimerLabel.enabled = true;
+		TimeUpLabel.enabled = true;
+
+		NextMazeButton.gameObject.SetActive (false);
+		RestartButton.gameObject.SetActive (false);
+		ReturnButton.gameObject.SetActive (false);
+
+		maze01soundEffect.TimeUpSound();
 	}
 
 	void GameOver()
 	{
 		state = GameState.GAMEOVER;
 
-		Maze01StartLabel.enabled = false;
+		//Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
-		GameOverLabel.enabled = true;
+		FailerLabel.enabled = true;
 		Maze01TimerLabel.enabled = false;
+		TimeUpLabel.enabled = false;
 
 		NextMazeButton.gameObject.SetActive (false);
 		RestartButton.gameObject.SetActive (true);
 		ReturnButton.gameObject.SetActive (true);
+		GiveUpButton.gameObject.SetActive (false);
+
+		maze01soundEffect.GameOverSound();
 	}
 
 	void Restart()
@@ -154,5 +194,7 @@ public class GameController : MonoBehaviour {
 	public void OnGiveUpButtonClicked()
 	{
 		maze01soundEffect.ExitSound();
+		//Invoke("Ready", 2.0f * Time.deltaTime);
+
 	}
 }
