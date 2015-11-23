@@ -14,8 +14,6 @@ public class ClearPoint : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider outer) {
-		gameController.SendMessage("StageClear");
-		//クリアしたら時間を止める
-		Time.timeScale = 0.0f;
+		gameController.SendMessage("Clear");
 	}
 }

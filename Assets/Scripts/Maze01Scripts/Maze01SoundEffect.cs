@@ -26,7 +26,7 @@ public class Maze01SoundEffect : MonoBehaviour {
 	}
 
 	public void ExitSound() {
-		ClearSE.PlayOneShot (ExitSE.clip);
+		ExitSE.PlayOneShot (ExitSE.clip);
 	}
 
 	public void ReadyGoSound() {
@@ -35,5 +35,14 @@ public class Maze01SoundEffect : MonoBehaviour {
 
 	public void TimeUpSound() {
 		TimeUpSE.PlayOneShot (TimeUpSE.clip);
+	}
+
+	public void ClearSound() {
+		ClearSE.PlayOneShot (ClearSE.clip);
+	}
+
+	public void ToTitleSound() {
+		EnterSE.PlayOneShot (EnterSE.clip);
+		Destroy (Maze01BGM);
 	}
 }
