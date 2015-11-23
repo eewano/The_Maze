@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 		GAMEOVER
 	}
 
+	/*---各テキストやボタン---*/
 	public Text Maze01StartLabel;
 	public Text Maze01descriptionLabel;
 	public Text Maze01ClearLabel;
@@ -25,14 +26,19 @@ public class GameController : MonoBehaviour {
 	public GameObject GiveUpButton;
 	public GameObject SpawnPoint;
 	public GameObject ReadyCamera;
+	/*----------------------*/
 
+	/*---タイマーとステート---*/
 	private Timer maze01Timer;
 	private GameState state;
+	/*----------------------*/
 
+	//1面のサウンド
 	Maze01SoundEffect maze01soundEffect;
 
 	void Start()
 	{
+		//サウンド類とTimerスクリプトを呼び出す
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
 		maze01Timer = GameObject.Find ("Maze01TimerLabel").GetComponent<Timer> ();
 		Ready ();
@@ -48,6 +54,8 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.PLAYING:
+			Destroy(Maze01StartLabel, 2.0f);
+
 			if(maze01Timer.GetTimeRemaining() == 0)
 			{
 				maze01Timer.StopTimer();
@@ -78,6 +86,7 @@ public class GameController : MonoBehaviour {
 		Maze01TimerLabel.enabled = false;
 		TimeUpLabel.enabled = false;
 
+		Maze01StartLabel.gameObject.SetActive (true);
 		NextMazeButton.gameObject.SetActive (false);
 		RestartButton.gameObject.SetActive (false);
 		ReturnButton.gameObject.SetActive (false);
@@ -106,10 +115,8 @@ public class GameController : MonoBehaviour {
 		SpawnPoint.gameObject.SetActive (true);
 		ReadyCamera.gameObject.SetActive (false);
 
-		maze01Timer.StartTimer ();
-
 		maze01soundEffect.ReadyGoSound();
-		Destroy(Maze01StartLabel, 2.0f);
+		maze01Timer.StartTimer ();
 	}
 
 	void Clear()
@@ -162,8 +169,6 @@ public class GameController : MonoBehaviour {
 		RestartButton.gameObject.SetActive (true);
 		ReturnButton.gameObject.SetActive (true);
 		GiveUpButton.gameObject.SetActive (false);
-
-		maze01soundEffect.GameOverSound();
 	}
 
 	void Restart()
@@ -193,7 +198,7 @@ public class GameController : MonoBehaviour {
 
 	public void OnGiveUpButtonClicked()
 	{
-		maze01soundEffect.ExitSound();
+		maze01soundEffect.EnterSound();
 		//Invoke("Ready", 2.0f * Time.deltaTime);
 
 	}
