@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 		READY,
 		READYGO,
 		PLAYING,
+		GOAL,
 		CLEAR,
 		TIMEUP,
 		FAILURE,
@@ -19,6 +20,7 @@ public class GameController : MonoBehaviour {
 	/*---各テキストやボタン---*/
 	public Text Maze01StartLabel;
 	public Text Maze01descriptionLabel;
+	public Text Maze01GoalLabel;
 	public Text Maze01ClearLabel;
 	public Text FailerLabel;
 	public Text Maze01TimerLabel;
@@ -39,7 +41,7 @@ public class GameController : MonoBehaviour {
 	private GameState state;
 	/*----------------------*/
 
-	//1面のサウンド
+	//1面で使用するサウンド
 	Maze01SoundEffect maze01soundEffect;
 
 	void Start()
@@ -72,6 +74,12 @@ public class GameController : MonoBehaviour {
 			}
 			break;
 
+		case GameState.GOAL:
+			maze01soundEffect.GoalSound();
+			Invoke ("Clear", 4.0f);
+			enabled = false;
+			break;
+
 		case GameState.CLEAR:
 			break;
 
@@ -102,6 +110,7 @@ public class GameController : MonoBehaviour {
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = true;
+		Maze01GoalLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = false;
@@ -126,6 +135,7 @@ public class GameController : MonoBehaviour {
 
 		Maze01StartLabel.enabled = true;
 		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = false;
@@ -150,6 +160,7 @@ public class GameController : MonoBehaviour {
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = true;
@@ -169,19 +180,45 @@ public class GameController : MonoBehaviour {
 		Time.timeScale = 1.0f;
 	}
 
-	void Clear()
+	void Goal()
 	{
-		state = GameState.CLEAR;
+		state = GameState.GOAL;
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
-		Maze01ClearLabel.enabled = true;
+		Maze01GoalLabel.enabled = true;
+		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = false;
 		TimeUpLabel.enabled = false;
 		GiveUpLabel.enabled = false;
 
 		NextMazeButton.gameObject.SetActive (false);
+		ToTitleButton.gameObject.SetActive (false);
+		RestartButton.gameObject.SetActive (false);
+		GameOverButton.gameObject.SetActive (false);
+		GiveUpButton.gameObject.SetActive (false);
+		CancelButton.gameObject.SetActive (false);
+		SpawnPoint.gameObject.SetActive (false);
+		ReadyCamera.gameObject.SetActive (false);
+	}
+
+	void Clear()
+	{
+		state = GameState.CLEAR;
+
+		enabled = true;
+		
+		Maze01StartLabel.enabled = false;
+		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
+		Maze01ClearLabel.enabled = true;
+		FailerLabel.enabled = false;
+		Maze01TimerLabel.enabled = false;
+		TimeUpLabel.enabled = false;
+		GiveUpLabel.enabled = false;
+		
+		NextMazeButton.gameObject.SetActive (true);
 		ToTitleButton.gameObject.SetActive (true);
 		RestartButton.gameObject.SetActive (false);
 		GameOverButton.gameObject.SetActive (false);
@@ -189,8 +226,6 @@ public class GameController : MonoBehaviour {
 		CancelButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyCamera.gameObject.SetActive (false);
-
-		maze01soundEffect.ClearSound();
 	}
 
 	void TimeUp()
@@ -199,6 +234,7 @@ public class GameController : MonoBehaviour {
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = true;
@@ -223,6 +259,7 @@ public class GameController : MonoBehaviour {
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = true;
 		Maze01TimerLabel.enabled = false;
@@ -245,6 +282,7 @@ public class GameController : MonoBehaviour {
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
 		Maze01ClearLabel.enabled = false;
 		FailerLabel.enabled = false;
 		Maze01TimerLabel.enabled = true;

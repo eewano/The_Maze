@@ -4,7 +4,7 @@ using System.Collections;
 public class Maze01SoundEffect : MonoBehaviour {
 	
 	private AudioSource Maze01BGM;
-	private AudioSource ClearSE;
+	private AudioSource GoalSE;
 	private AudioSource EnterSE;
 	private AudioSource ExitSE;
 	private AudioSource ReadyGoSE;
@@ -14,7 +14,7 @@ public class Maze01SoundEffect : MonoBehaviour {
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource> ();
 		Maze01BGM = audioSources [0];
-		ClearSE = audioSources [1];
+		GoalSE = audioSources [1];
 		EnterSE = audioSources [2];
 		ExitSE = audioSources [3];
 		ReadyGoSE = audioSources [4];
@@ -37,8 +37,8 @@ public class Maze01SoundEffect : MonoBehaviour {
 		TimeUpSE.PlayOneShot (TimeUpSE.clip);
 	}
 
-	public void ClearSound() {
-		ClearSE.PlayOneShot (ClearSE.clip);
+	public void GoalSound() {
+		GoalSE.PlayOneShot (GoalSE.clip);
 	}
 
 	public void ToTitleSound() {

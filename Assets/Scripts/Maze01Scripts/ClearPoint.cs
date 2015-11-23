@@ -14,6 +14,6 @@ public class ClearPoint : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider outer) {
-		gameController.SendMessage("Clear");
+		gameController.SendMessage("Goal");
 	}
 }
