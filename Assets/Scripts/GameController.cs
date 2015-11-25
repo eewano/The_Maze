@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour {
 	public GameObject CancelButton;
 	public GameObject ReadyCamera;
 	public GameObject SpawnPoint;
+	public GameObject Player;
 	/*----------------------*/
 
 	/*---タイマーとステート---*/
