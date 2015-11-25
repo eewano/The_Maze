@@ -3683,6 +3683,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 129958, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26374a0e91c8bc24eaf16cf54b6a0b64, type: 2}
   m_IsPrefabParent: 0
@@ -10128,6 +10132,7 @@ MonoBehaviour:
   CancelButton: {fileID: 706297242}
   ReadyCamera: {fileID: 300678981}
   SpawnPoint: {fileID: 1501519807}
+  Player: {fileID: 0}
 --- !u!1 &1466772410
 GameObject:
   m_ObjectHideFlags: 0
@@ -12358,7 +12363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21266b47162e48b49177e12859c356b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 30
+  timeLimit: 10
 --- !u!1 &1676213941
 GameObject:
   m_ObjectHideFlags: 0
