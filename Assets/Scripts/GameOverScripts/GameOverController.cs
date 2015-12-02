@@ -7,18 +7,40 @@ public class GameOverController : MonoBehaviour {
 	public Text GameOverLabel;
 	public Text ReturnToTitleLabel;
 
+	public Image FadeBlack;
+	float Alpha;
+	bool FadeOut;
+
 	void Start()
 	{
 		GameOverLabel.enabled = true;
 		ReturnToTitleLabel.enabled = true;
 
 		Time.timeScale = 1.0f;
+
+		FadeOut = false;
+		Alpha = 0;
+		FadeBlack.gameObject.SetActive(false);
 	}
 
 	void Update()
 	{
 		if (Input.GetMouseButtonDown (0)) {
-			Invoke ("ReturnToTitle", 2);
+			if(FadeBlack.gameObject.activeSelf == false)
+			{
+				FadeBlack.gameObject.SetActive(true);
+				FadeOut = true;
+			}
+		}
+
+		if(FadeOut == true)
+		{
+			FadeBlack.gameObject.GetComponent<Image>().color = new Color(0, 0, 0, Alpha);
+			Alpha += 0.5f * Time.deltaTime;
+			if(Alpha >= 1)
+			{
+				Invoke ("ReturnToTitle", 1.0f);
+			}
 		}
 	}
 

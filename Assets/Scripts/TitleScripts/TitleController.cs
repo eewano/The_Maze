@@ -24,10 +24,18 @@ public class TitleController : MonoBehaviour {
 	public GameObject mazePanel03;
 	public GameObject titleButton;
 
+	public Image FadeBlack;
+	float Alpha;
+	bool FadeOut;
+
 	void Start()
 	{
 		titlesoundEffect = GameObject.Find("TitleSoundController").GetComponent<TitleSoundEffect>();
 		Title ();
+
+		FadeOut = false;
+		Alpha = 0;
+		FadeBlack.gameObject.SetActive(false);
 	}
 
 	void Update()
@@ -41,7 +49,15 @@ public class TitleController : MonoBehaviour {
 			break;
 
 		case TitleState.START:
-			Application.LoadLevel ("Maze01");
+			if(FadeOut == true)
+			{
+				FadeBlack.gameObject.GetComponent<Image>().color = new Color(0, 0, 0, Alpha);
+				Alpha += Time.deltaTime;
+				if(Alpha >= 1)
+				{
+					Application.LoadLevel ("Maze01");
+				}
+			}
 			break;
 		}
 	}
@@ -81,6 +97,11 @@ public class TitleController : MonoBehaviour {
 	void GameStart()
 	{
 		state = TitleState.START;
+		if(FadeBlack.gameObject.activeSelf == false)
+		{
+			FadeBlack.gameObject.SetActive(true);
+			FadeOut = true;
+		}
 	}
 
 
@@ -88,7 +109,7 @@ public class TitleController : MonoBehaviour {
 	public void Maze01Start()
 	{
 		titlesoundEffect.GameEnter();
-		Invoke ("GameStart", 3.0f);
+		Invoke ("GameStart", 2.0f);
 	}
 
 	public void OnTitleButtonClicked()
