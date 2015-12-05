@@ -5,7 +5,6 @@ public class ClearPoint : MonoBehaviour {
 
 	GameObject gameController;
 
-	// Use this for initialization
 	void Start () {
 
 		//クリア後にゲームを再スタートする際、プレイヤーがまた動き出せる様にする

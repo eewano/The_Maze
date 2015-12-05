@@ -14,17 +14,17 @@ public class TitleController : MonoBehaviour {
 	TitleState state;
 
 	TitleSoundEffect titlesoundEffect;
-	public Text titleLabel;
-	public Text subtitleLabel;
-	public Text descriptiontitleLabel;
-	public Text descriptionLabel;
-	public GameObject descriptionButton;
-	public GameObject mazePanel01;
-	public GameObject mazePanel02;
-	public GameObject mazePanel03;
-	public GameObject titleButton;
+	[SerializeField] Text titleLabel;
+	[SerializeField] Text subtitleLabel;
+	[SerializeField] Text descriptiontitleLabel;
+	[SerializeField] Text descriptionLabel;
+	[SerializeField] GameObject descriptionButton;
+	[SerializeField] GameObject mazePanel01;
+	[SerializeField] GameObject mazePanel02;
+	[SerializeField] GameObject mazePanel03;
+	[SerializeField] GameObject titleButton;
 
-	public Image FadeBlack;
+	[SerializeField] Image FadeBlack;
 	float Alpha;
 	bool FadeOut;
 

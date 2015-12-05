@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class GameOverController : MonoBehaviour {
 
-	public Text GameOverLabel;
-	public Text ReturnToTitleLabel;
+	[SerializeField] Text GameOverLabel;
+	[SerializeField] Text ReturnToTitleLabel;
 
-	public Image FadeBlack;
+	[SerializeField] Image FadeBlack;
 	float Alpha;
 	bool FadeOut;
 

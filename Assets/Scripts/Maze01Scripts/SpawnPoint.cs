@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnPoint : MonoBehaviour {
 
-	public GameObject Player;
+	[SerializeField] GameObject Player;
 
 	void Start () {
 		Instantiate (Player, transform.position, transform.rotation);

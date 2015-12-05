@@ -18,23 +18,23 @@ public class GameController : MonoBehaviour {
 	}
 
 	/*---各テキストやボタン---*/
-	public Text Maze01StartLabel;
-	public Text Maze01descriptionLabel;
-	public Text Maze01GoalLabel;
-	public Text Maze01ClearLabel;
-	public Text FailerLabel;
-	public Text Maze01TimerLabel;
-	public Text TimeUpLabel;
-	public Text GiveUpLabel;
-	public GameObject NextMazeButton;
-	public GameObject ToTitleButton;
-	public GameObject GameOverButton;
-	public GameObject RestartButton;
-	public GameObject GiveUpButton;
-	public GameObject CancelButton;
-	public GameObject ReadyCamera;
-	public GameObject SpawnPoint;
-	public GameObject Player;
+	[SerializeField] Text Maze01StartLabel;
+	[SerializeField] Text Maze01descriptionLabel;
+	[SerializeField] Text Maze01GoalLabel;
+	[SerializeField] Text Maze01ClearLabel;
+	[SerializeField] Text FailerLabel;
+	[SerializeField] Text Maze01TimerLabel;
+	[SerializeField] Text TimeUpLabel;
+	[SerializeField] Text GiveUpLabel;
+	[SerializeField] GameObject NextMazeButton;
+	[SerializeField] GameObject ToTitleButton;
+	[SerializeField] GameObject GameOverButton;
+	[SerializeField] GameObject RestartButton;
+	[SerializeField] GameObject GiveUpButton;
+	[SerializeField] GameObject CancelButton;
+	[SerializeField] GameObject ReadyCamera;
+	[SerializeField] GameObject SpawnPoint;
+	[SerializeField] GameObject Player;
 	/*----------------------*/
 
 	/*---タイマーとステート---*/
@@ -45,8 +45,16 @@ public class GameController : MonoBehaviour {
 	//1面で使用するサウンド
 	Maze01SoundEffect maze01soundEffect;
 
+	[SerializeField] Image FadeBlack;
+	float Alpha;
+	bool FadeOut;
+
 	void Start()
 	{
+		FadeOut = false;
+		Alpha = 0;
+		FadeBlack.gameObject.SetActive(false);
+
 		//サウンド類とTimerスクリプトを呼び出す
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
 		maze01Timer = GameObject.Find ("Maze01TimerLabel").GetComponent<Timer> ();
@@ -82,6 +90,15 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.CLEAR:
+			if(FadeOut == true)
+			{
+				FadeBlack.gameObject.GetComponent<Image>().color = new Color(0, 0, 0, Alpha);
+				Alpha += Time.deltaTime;
+				if(Alpha >= 1)
+				{
+					Invoke("ToTitle", 2.0f);
+				}
+		}
 			break;
 
 		case GameState.TIMEUP:
@@ -320,7 +337,13 @@ public class GameController : MonoBehaviour {
 	public void OnToTitleButtonClicked()
 	{
 		maze01soundEffect.ToTitleSound();
-		Invoke("ToTitle", 3.0f);
+
+		if(FadeBlack.gameObject.activeSelf == false)
+		{
+			FadeBlack.gameObject.SetActive(true);
+			FadeOut = true;
+		}
+		Invoke("CLEAR", 2.0f);
 	}
 
 	public void OnGameOverButtonClicked()

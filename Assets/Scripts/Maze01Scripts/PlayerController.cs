@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour {
 
 	Vector3 moveDirection = Vector3.zero;
 
-	public float gravity;
-	public float ForwardSpeed;
-	public float BackwardSpeed;
-	public float RotSpeed;
-	public float JumpPower;
+	[SerializeField] float gravity;
+	[SerializeField] float ForwardSpeed;
+	[SerializeField] float BackwardSpeed;
+	[SerializeField] float RotSpeed;
+	[SerializeField] float JumpPower;
 
 	void Start()
 	{

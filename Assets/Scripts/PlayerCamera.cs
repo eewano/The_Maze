@@ -5,8 +5,8 @@ public class PlayerCamera : MonoBehaviour {
 
 	Vector3 diff;
 
-	public GameObject target;
-	public float followSpeed;
+	[SerializeField] GameObject target;
+	[SerializeField] float followSpeed;
 
 	void Start()
 	{

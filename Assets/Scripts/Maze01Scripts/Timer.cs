@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-	public int timeLimit = 90;
+	[SerializeField] int timeLimit = 90;
 
 	//制限時間
 	private float timeRemaining;
