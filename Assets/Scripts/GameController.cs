@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour {
 				{
 					Invoke("ToTitle", 2.0f);
 				}
-		}
+			}
 			break;
 
 		case GameState.TIMEUP:
