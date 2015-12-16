@@ -63,5 +63,12 @@ public class PlayerController : MonoBehaviour {
 			playerPointLight.range = 30;
 			Destroy(hit.gameObject);
 		}
+		else if (hit.gameObject.tag == "Croquette") {
+			maze01soundEffect.CroquetteSound();
+			ForwardSpeed = 3.75f;
+			BackwardSpeed = 1.25f;
+			RotSpeed = 2.5f;
+			Destroy(hit.gameObject);
+		}
 	}
 }

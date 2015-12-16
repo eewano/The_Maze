@@ -8,6 +8,7 @@ TagManager:
   - WarpPoint02
   - WarpPoint03
   - Light
+  - Croquette
   layers:
   - Default
   - TransparentFX
