@@ -14,10 +14,16 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] float RotSpeed;
 	[SerializeField] float JumpPower;
 
+	Light playerPointLight;
+
+	Maze01SoundEffect maze01soundEffect;
+
 	void Start()
 	{
 		controller = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
+		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
+		playerPointLight = GameObject.Find ("PlayerPointLight").GetComponent<Light> ();
 	}
 		
 	void Update()
@@ -49,5 +55,13 @@ public class PlayerController : MonoBehaviour {
 
 		animator.SetBool ("Run", moveDirection.z > 0.0f);
 		animator.SetBool ("Back", moveDirection.z < 0.0f);
+	}
+		
+	void OnControllerColliderHit(ControllerColliderHit hit) {
+		if (hit.gameObject.tag == "Light") {
+			maze01soundEffect.LightBallSound();
+			playerPointLight.range = 30;
+			Destroy(hit.gameObject);
+		}
 	}
 }

@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - WarpPoint
-  - NewWall
+  - WarpPoint01
+  - WarpPoint02
+  - WarpPoint03
+  - Light
   layers:
   - Default
   - TransparentFX

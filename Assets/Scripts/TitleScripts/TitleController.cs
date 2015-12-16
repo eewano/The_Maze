@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
 
@@ -55,7 +56,7 @@ public class TitleController : MonoBehaviour {
 				Alpha += Time.deltaTime;
 				if(Alpha >= 1)
 				{
-					Application.LoadLevel ("Maze01");
+					SceneManager.LoadScene ("Maze01");
 				}
 			}
 			break;

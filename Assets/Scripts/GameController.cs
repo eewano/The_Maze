@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -321,12 +322,17 @@ public class GameController : MonoBehaviour {
 
 	void GameOver()
 	{
-		Application.LoadLevel("GameOver");
+		SceneManager.LoadScene("GameOver");
 	}
 
 	void ToTitle()
 	{
-		Application.LoadLevel("Title");
+		SceneManager.LoadScene("Title");
+	}
+
+	void Restart()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
 	}
 		
 	public void OnNextMazeButtonClicked()
@@ -353,8 +359,8 @@ public class GameController : MonoBehaviour {
 
 	public void OnRestartButtonClicked()
 	{
-		maze01soundEffect.EnterSound();
-		Invoke("Ready", 2.0f);
+		maze01soundEffect.ToTitleSound();
+		Invoke("Restart", 3.0f);
 	}
 
 	public void OnGiveUpButtonClicked()
