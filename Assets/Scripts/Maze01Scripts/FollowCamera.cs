@@ -3,18 +3,45 @@ using System.Collections;
 
 public class FollowCamera : MonoBehaviour {
 
+	/** 追従するオブジェクト */
 	public Transform target;
-	private Vector3 offset;
 
-	void Start ()
-	{
-		//自分自身とtargetとの相対距離を求める
-		offset = GetComponent<Transform>().position - target.position;
-	}
+	/** Z方向の距離 */
+	[SerializeField] float distance;
 
-	void Update ()
-	{
-		// 自分自身の座標に、targetの座標に相対座標を足した値を設定する
-		GetComponent<Transform>().position = target.position + offset;
+	/** Y方向の高さ */
+	[SerializeField] float height;
+
+	/** 上下高さのスムーズ移動速度 */
+	[SerializeField] float heightDamping;
+
+	/** 左右回転のスムーズ移動速度 */
+	[SerializeField] float rotationDamping;
+
+	void LateUpdate() {
+		//if (target == null) {
+		//	return;
+		//}
+
+		//追従先位置
+		float wantedRotationAngle = target.eulerAngles.y;
+		float wantedHeight = target.position.y + height;
+
+		//現在位置
+		float currentRotationAngle = transform.eulerAngles.y;
+		float currentHeight = transform.position.y;
+
+		//追従先へのスムーズ移動距離(方向)
+		currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, 
+			rotationDamping * Time.deltaTime);
+		currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
+
+		//カメラの移動
+		var currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
+		Vector3 pos = target.position - currentRotation * Vector3.forward * distance;
+		pos.y = currentHeight;
+		transform.position = pos;
+
+		transform.LookAt(target);
 	}
 }
