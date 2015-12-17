@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
 
 	void Start()
 	{
+		GameController.GameIsOver = false;
+
 		controller = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
@@ -28,6 +30,11 @@ public class PlayerController : MonoBehaviour {
 		
 	void Update()
 	{
+		if (GameController.GameIsOver) {
+			animator.Stop ();
+			return;
+		}
+
 		if (controller.isGrounded) {
 			if (Input.GetAxis ("Vertical") > 0.0f) {
 				moveDirection.z = Input.GetAxis ("Vertical") * ForwardSpeed;
@@ -40,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 			transform.Rotate (0, Input.GetAxis ("Horizontal") * RotSpeed, 0);
 
 			if (Input.GetButtonDown ("Jump")) {
+				maze01soundEffect.JumpSound();
 				moveDirection.y = JumpPower;
 				animator.SetTrigger ("Jump");
 			}
@@ -53,8 +61,9 @@ public class PlayerController : MonoBehaviour {
 		if (controller.isGrounded)
 			moveDirection.y = 0;
 
-		animator.SetBool ("Run", moveDirection.z > 0.0f);
+		animator.SetFloat ("Run", moveDirection.z);
 		animator.SetBool ("Back", moveDirection.z < 0.0f);
+		animator.SetFloat ("Dash", moveDirection.z);
 	}
 		
 	void OnControllerColliderHit(ControllerColliderHit hit) {

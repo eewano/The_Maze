@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+	public static bool GameIsOver = false;
+
 	enum GameState
 	{
 		READY,
@@ -52,6 +54,7 @@ public class GameController : MonoBehaviour {
 
 	void Start()
 	{
+		GameIsOver = false;
 		FadeOut = false;
 		Alpha = 0;
 		FadeBlack.gameObject.SetActive(false);
@@ -81,6 +84,7 @@ public class GameController : MonoBehaviour {
 			{
 				maze01Timer.StopTimer();
 				TimeUp();
+				GameIsOver = true;
 			}
 			break;
 

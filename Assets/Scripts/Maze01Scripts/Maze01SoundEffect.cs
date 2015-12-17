@@ -11,6 +11,7 @@ public class Maze01SoundEffect : MonoBehaviour {
 	private AudioSource TimeUpSE;
 	private AudioSource LightBallSE;
 	private AudioSource CroquetteSE;
+	private AudioSource JumpSE;
 
 	void Start()
 	{
@@ -23,6 +24,7 @@ public class Maze01SoundEffect : MonoBehaviour {
 		TimeUpSE = audioSources [5];
 		LightBallSE = audioSources [6];
 		CroquetteSE = audioSources [7];
+		JumpSE = audioSources [8];
 	}
 
 	public void EnterSound() {
@@ -56,5 +58,9 @@ public class Maze01SoundEffect : MonoBehaviour {
 
 	public void CroquetteSound() {
 		CroquetteSE.PlayOneShot (CroquetteSE.clip);
+	}
+
+	public void JumpSound() {
+		JumpSE.PlayOneShot (JumpSE.clip);
 	}
 }
