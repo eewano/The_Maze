@@ -7,16 +7,16 @@ public class FollowCamera : MonoBehaviour {
 	public Transform target;
 
 	/** Z方向の距離 */
-	[SerializeField] float distance;
+	[SerializeField] float distance = 0;
 
 	/** Y方向の高さ */
-	[SerializeField] float height;
+	[SerializeField] float height = 0;
 
 	/** 上下高さのスムーズ移動速度 */
-	[SerializeField] float heightDamping;
+	[SerializeField] float heightDamping = 0;
 
 	/** 左右回転のスムーズ移動速度 */
-	[SerializeField] float rotationDamping;
+	[SerializeField] float rotationDamping = 0;
 
 	void LateUpdate() {
 		//if (target == null) {

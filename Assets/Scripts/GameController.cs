@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
 	public static bool GameIsOver = false;
+	public static bool GoalAndClear = false;
 
 	enum GameState
 	{
@@ -21,22 +22,22 @@ public class GameController : MonoBehaviour {
 	}
 
 	/*---各テキストやボタン---*/
-	[SerializeField] Text Maze01StartLabel;
-	[SerializeField] Text Maze01descriptionLabel;
-	[SerializeField] Text Maze01GoalLabel;
-	[SerializeField] Text Maze01ClearLabel;
-	[SerializeField] Text FailerLabel;
-	[SerializeField] Text Maze01TimerLabel;
-	[SerializeField] Text TimeUpLabel;
-	[SerializeField] Text GiveUpLabel;
-	[SerializeField] GameObject NextMazeButton;
-	[SerializeField] GameObject ToTitleButton;
-	[SerializeField] GameObject GameOverButton;
-	[SerializeField] GameObject RestartButton;
-	[SerializeField] GameObject GiveUpButton;
-	[SerializeField] GameObject CancelButton;
-	[SerializeField] GameObject ReadyCamera;
-	[SerializeField] GameObject SpawnPoint;
+	[SerializeField] Text Maze01StartLabel = null;
+	[SerializeField] Text Maze01descriptionLabel = null;
+	[SerializeField] Text Maze01GoalLabel = null;
+	[SerializeField] Text Maze01ClearLabel = null;
+	[SerializeField] Text FailerLabel = null;
+	[SerializeField] Text Maze01TimerLabel = null;
+	[SerializeField] Text TimeUpLabel = null;
+	[SerializeField] Text GiveUpLabel = null;
+	[SerializeField] GameObject NextMazeButton = null;
+	[SerializeField] GameObject ToTitleButton = null;
+	[SerializeField] GameObject GameOverButton = null;
+	[SerializeField] GameObject RestartButton = null;
+	[SerializeField] GameObject GiveUpButton = null;
+	[SerializeField] GameObject CancelButton = null;
+	[SerializeField] GameObject ReadyCamera = null;
+	[SerializeField] GameObject SpawnPoint = null;
 	[SerializeField] GameObject Player;
 	/*----------------------*/
 
@@ -48,13 +49,14 @@ public class GameController : MonoBehaviour {
 	//1面で使用するサウンド
 	Maze01SoundEffect maze01soundEffect;
 
-	[SerializeField] Image FadeBlack;
+	[SerializeField] Image FadeBlack = null;
 	float Alpha;
 	bool FadeOut;
 
 	void Start()
 	{
 		GameIsOver = false;
+		GoalAndClear = false;
 		FadeOut = false;
 		Alpha = 0;
 		FadeBlack.gameObject.SetActive(false);
@@ -90,6 +92,7 @@ public class GameController : MonoBehaviour {
 
 		case GameState.GOAL:
 			maze01soundEffect.GoalSound();
+			GoalAndClear = true;
 			Invoke ("Clear", 4.0f);
 			enabled = false;
 			break;

@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour {
 
 	Vector3 moveDirection = Vector3.zero;
 
-	[SerializeField] float gravity;
+	[SerializeField] float gravity = 0;
 	[SerializeField] float ForwardSpeed;
 	[SerializeField] float BackwardSpeed;
 	[SerializeField] float RotSpeed;
-	[SerializeField] float JumpPower;
+	[SerializeField] float JumpPower = 0;
 
 	Light playerPointLight;
 
@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (GameController.GameIsOver) {
 			animator.Stop ();
+			return;
+		}
+
+		if (GameController.GoalAndClear) {
+			animator.SetTrigger ("Goal");
 			return;
 		}
 

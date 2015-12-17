@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour {
 
-	[SerializeField] Text GameOverLabel;
-	[SerializeField] Text ReturnToTitleLabel;
+	[SerializeField] Text GameOverLabel = null;
+	[SerializeField] Text ReturnToTitleLabel = null;
 
-	[SerializeField] Image FadeBlack;
+	[SerializeField] Image FadeBlack = null;
 	float Alpha;
 	bool FadeOut;
 

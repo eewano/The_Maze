@@ -6,9 +6,6 @@ public class ClearPoint : MonoBehaviour {
 	GameObject gameController;
 
 	void Start () {
-
-		//クリア後にゲームを再スタートする際、プレイヤーがまた動き出せる様にする
-		Time.timeScale = 1;
 		gameController = GameObject.Find ("GameController");
 	}
 
