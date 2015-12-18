@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject MapButton = null;
 	[SerializeField] GameObject ToMazeButton = null;
 	[SerializeField] GameObject SpawnPoint = null;
+	[SerializeField] GameObject ReadyLight = null;
 	[SerializeField] GameObject Player;
 	/*----------------------*/
 
@@ -161,6 +162,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (true);
 
 		maze01Timer.ResetTimer();
 	}
@@ -187,6 +189,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (true);
 
 		maze01soundEffect.ReadyGoSound();
 	}
@@ -214,6 +217,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (true);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (true);
+		ReadyLight.gameObject.SetActive (false);
 
 		maze01Timer.StartTimer ();
 
@@ -244,6 +248,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (false);
 	}
 
 	void Clear()
@@ -270,6 +275,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (false);
 	}
 
 	void TimeUp()
@@ -294,6 +300,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (false);
 
 		maze01soundEffect.TimeUpSound();
 	}
@@ -320,6 +327,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (false);
 	}
 
 	void GiveUp()
@@ -344,6 +352,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (false);
 
 		Time.timeScale = 0.0f;
 	}
@@ -372,6 +381,7 @@ public class GameController : MonoBehaviour {
 		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (true);
 		SpawnPoint.gameObject.SetActive (false);
+		ReadyLight.gameObject.SetActive (false);
 
 		Time.timeScale = 0.0f;
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LightBallMove : MonoBehaviour {
+public class MapCrystalMove : MonoBehaviour {
 
 	Vector3 startPosition;
 
@@ -20,5 +20,7 @@ public class LightBallMove : MonoBehaviour {
 
 		//xを変位させたポジションに再設定する。
 		transform.localPosition = startPosition + new Vector3(0, y, 0);
+
+		transform.Rotate (0, 1, 0);
 	}
 }
