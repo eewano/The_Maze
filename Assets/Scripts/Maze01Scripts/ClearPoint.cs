@@ -9,7 +9,8 @@ public class ClearPoint : MonoBehaviour {
 		gameController = GameObject.Find ("GameController");
 	}
 
-	void OnTriggerEnter(Collider outer) {
+	void OnTriggerEnter(Collider col) {
+		if(col.gameObject.tag == "Player")
 		gameController.SendMessage("Goal");
 	}
 }

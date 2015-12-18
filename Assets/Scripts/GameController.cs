@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
 		TIMEUP,
 		FAILURE,
 		GIVEUP,
+		MAP,
 		GAMEOVER
 	}
 
@@ -36,7 +37,8 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject RestartButton = null;
 	[SerializeField] GameObject GiveUpButton = null;
 	[SerializeField] GameObject CancelButton = null;
-	[SerializeField] GameObject ReadyCamera = null;
+	[SerializeField] GameObject MapButton = null;
+	[SerializeField] GameObject ToMazeButton = null;
 	[SerializeField] GameObject SpawnPoint = null;
 	[SerializeField] GameObject Player;
 	/*----------------------*/
@@ -48,6 +50,7 @@ public class GameController : MonoBehaviour {
 
 	//1面で使用するサウンド
 	Maze01SoundEffect maze01soundEffect;
+	CameraController cameraController;
 
 	[SerializeField] Image FadeBlack = null;
 	float Alpha;
@@ -64,6 +67,7 @@ public class GameController : MonoBehaviour {
 		//サウンド類とTimerスクリプトを呼び出す
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
 		maze01Timer = GameObject.Find ("Maze01TimerLabel").GetComponent<Timer> ();
+		cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
 		Ready ();
 	}
 
@@ -91,8 +95,8 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.GOAL:
-			maze01soundEffect.GoalSound();
 			GoalAndClear = true;
+			maze01soundEffect.GoalSound();
 			Invoke ("Clear", 4.0f);
 			enabled = false;
 			break;
@@ -116,13 +120,16 @@ public class GameController : MonoBehaviour {
 		case GameState.FAILURE:
 			break;
 
-		case GameState.GIVEUP:
+		case GameState.GIVEUP:/*
 			//残り時間が0になったらタイムオーバーのステートに移行する
 			if(maze01Timer.GetTimeRemaining() == 0)
 			{
 				maze01Timer.StopTimer();
 				TimeUp();
-			}
+			}*/
+			break;
+
+		case GameState.MAP:
 			break;
 
 		case GameState.GAMEOVER:
@@ -133,6 +140,8 @@ public class GameController : MonoBehaviour {
 	void Ready()
 	{
 		state = GameState.READY;
+
+		cameraController.ShowReadyCamera();
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = true;
@@ -149,8 +158,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (true);
 
 		maze01Timer.ResetTimer();
 	}
@@ -174,8 +184,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (true);
 
 		maze01soundEffect.ReadyGoSound();
 	}
@@ -183,6 +194,8 @@ public class GameController : MonoBehaviour {
 	void Playing()
 	{
 		state = GameState.PLAYING;
+
+		cameraController.ShowPlayerCamera();
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
@@ -198,8 +211,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (true);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (true);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (true);
-		ReadyCamera.gameObject.SetActive (false);
 
 		maze01Timer.StartTimer ();
 
@@ -209,6 +223,8 @@ public class GameController : MonoBehaviour {
 	void Goal()
 	{
 		state = GameState.GOAL;
+
+		cameraController.ShowGoalCamera();
 
 		Maze01StartLabel.enabled = false;
 		Maze01descriptionLabel.enabled = false;
@@ -225,8 +241,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (false);
 	}
 
 	void Clear()
@@ -250,8 +267,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (false);
 	}
 
 	void TimeUp()
@@ -273,8 +291,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (false);
 
 		maze01soundEffect.TimeUpSound();
 	}
@@ -298,8 +317,9 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (true);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (false);
 	}
 
 	void GiveUp()
@@ -321,10 +341,41 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (true);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (true);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
-		ReadyCamera.gameObject.SetActive (false);
 
 		Time.timeScale = 0.0f;
+	}
+
+	void Map()
+	{
+		state = GameState.MAP;
+
+		cameraController.ShowMapCamera();
+
+		Maze01StartLabel.enabled = false;
+		Maze01descriptionLabel.enabled = false;
+		Maze01GoalLabel.enabled = false;
+		Maze01ClearLabel.enabled = false;
+		FailerLabel.enabled = false;
+		Maze01TimerLabel.enabled = true;
+		TimeUpLabel.enabled = false;
+		GiveUpLabel.enabled = false;
+
+		NextMazeButton.gameObject.SetActive (false);
+		ToTitleButton.gameObject.SetActive (false);
+		RestartButton.gameObject.SetActive (false);
+		GameOverButton.gameObject.SetActive (false);
+		GiveUpButton.gameObject.SetActive (false);
+		CancelButton.gameObject.SetActive (false);
+		MapButton.gameObject.SetActive (false);
+		ToMazeButton.gameObject.SetActive (true);
+		SpawnPoint.gameObject.SetActive (false);
+
+		Time.timeScale = 0.0f;
+
+		return;
 	}
 
 	void GameOver()
@@ -377,6 +428,18 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void OnCancelButtonClicked()
+	{
+		maze01soundEffect.ExitSound();
+		Playing();
+	}
+
+	public void OnMapButtonClicked()
+	{
+		maze01soundEffect.EnterSound();
+		Map();
+	}
+
+	public void OnToMazeButtonClicked()
 	{
 		maze01soundEffect.ExitSound();
 		Playing();

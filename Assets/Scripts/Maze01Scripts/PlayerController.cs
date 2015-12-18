@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour {
 	void Start()
 	{
 		GameController.GameIsOver = false;
-
 		controller = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
@@ -36,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (GameController.GoalAndClear) {
-			animator.SetTrigger ("Goal");
+			animator.Stop ();
 			return;
 		}
 
@@ -51,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 
 			transform.Rotate (0, Input.GetAxis ("Horizontal") * RotSpeed, 0);
 
-			if (Input.GetButtonDown ("Jump")) {
+			if (Input.GetButtonDown ("Jump") && moveDirection.z > 0) {
 				maze01soundEffect.JumpSound();
 				moveDirection.y = JumpPower;
 				animator.SetTrigger ("Jump");
@@ -73,16 +72,15 @@ public class PlayerController : MonoBehaviour {
 		
 	void OnControllerColliderHit(ControllerColliderHit hit) {
 		if (hit.gameObject.tag == "Light") {
-			maze01soundEffect.LightBallSound();
+			maze01soundEffect.LightBallSound ();
 			playerPointLight.range = 30;
-			Destroy(hit.gameObject);
-		}
-		else if (hit.gameObject.tag == "Croquette") {
-			maze01soundEffect.CroquetteSound();
+			Destroy (hit.gameObject);
+		} else if (hit.gameObject.tag == "Croquette") {
+			maze01soundEffect.CroquetteSound ();
 			ForwardSpeed = 3.75f;
 			BackwardSpeed = 1.25f;
 			RotSpeed = 2.5f;
-			Destroy(hit.gameObject);
+			Destroy (hit.gameObject);
 		}
 	}
 }

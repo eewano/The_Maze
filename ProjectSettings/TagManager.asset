@@ -9,6 +9,7 @@ TagManager:
   - WarpPoint03
   - Light
   - Croquette
+  - Goal
   layers:
   - Default
   - TransparentFX
