@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
 	public static bool GameIsOver = false;
 	public static bool GoalAndClear = false;
+	public static bool MapCrystalGet = false;
 
 	enum GameState
 	{
@@ -61,6 +62,7 @@ public class GameController : MonoBehaviour {
 	{
 		GameIsOver = false;
 		GoalAndClear = false;
+		MapCrystalGet = false;
 		FadeOut = false;
 		Alpha = 0;
 		FadeBlack.gameObject.SetActive(false);
@@ -86,6 +88,10 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.PLAYING:
+			if(MapCrystalGet)
+			{
+				MapButton.gameObject.SetActive (true);
+			}
 			//残り時間が0になったらタイムオーバーのステートに移行する
 			if(maze01Timer.GetTimeRemaining() == 0)
 			{
@@ -121,13 +127,7 @@ public class GameController : MonoBehaviour {
 		case GameState.FAILURE:
 			break;
 
-		case GameState.GIVEUP:/*
-			//残り時間が0になったらタイムオーバーのステートに移行する
-			if(maze01Timer.GetTimeRemaining() == 0)
-			{
-				maze01Timer.StopTimer();
-				TimeUp();
-			}*/
+		case GameState.GIVEUP:
 			break;
 
 		case GameState.MAP:
@@ -214,10 +214,12 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (true);
 		CancelButton.gameObject.SetActive (false);
-		MapButton.gameObject.SetActive (true);
+		MapButton.gameObject.SetActive (false);
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (true);
 		ReadyLight.gameObject.SetActive (false);
+
+
 
 		maze01Timer.StartTimer ();
 

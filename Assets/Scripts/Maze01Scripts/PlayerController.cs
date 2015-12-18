@@ -81,6 +81,10 @@ public class PlayerController : MonoBehaviour {
 			BackwardSpeed = 1.25f;
 			RotSpeed = 2.5f;
 			Destroy (hit.gameObject);
+		} else if (hit.gameObject.tag == "Map") {
+			maze01soundEffect.MapCrystalSound ();
+			GameController.MapCrystalGet = true;
+			Destroy (hit.gameObject);
 		}
 	}
 }
