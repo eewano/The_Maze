@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
 	public static bool GameIsOver = false;
+	public static bool Dead = false;
 	public static bool GoalAndClear = false;
 	public static bool MapCrystalGet = false;
 
@@ -42,7 +43,7 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject ToMazeButton = null;
 	[SerializeField] GameObject SpawnPoint = null;
 	[SerializeField] GameObject ReadyLight = null;
-	[SerializeField] GameObject Player;
+	//[SerializeField] GameObject Player = null;
 	/*----------------------*/
 
 	/*---タイマーとステート---*/
@@ -61,6 +62,7 @@ public class GameController : MonoBehaviour {
 	void Start()
 	{
 		GameIsOver = false;
+		Dead = false;
 		GoalAndClear = false;
 		MapCrystalGet = false;
 		FadeOut = false;
@@ -103,6 +105,7 @@ public class GameController : MonoBehaviour {
 
 		case GameState.GOAL:
 			GoalAndClear = true;
+			//Player.gameObject.SetActive (false);
 			maze01soundEffect.GoalSound();
 			Invoke ("Clear", 4.0f);
 			enabled = false;
@@ -125,6 +128,7 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.FAILURE:
+			Dead = true;
 			break;
 
 		case GameState.GIVEUP:
@@ -218,8 +222,6 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (true);
 		ReadyLight.gameObject.SetActive (false);
-
-
 
 		maze01Timer.StartTimer ();
 

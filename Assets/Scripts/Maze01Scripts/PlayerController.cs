@@ -20,11 +20,12 @@ public class PlayerController : MonoBehaviour {
 
 	void Start()
 	{
-		GameController.GameIsOver = false;
+		//GameController.GameIsOver = false;
 		controller = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();
 		playerPointLight = GameObject.Find ("PlayerPointLight").GetComponent<Light> ();
+		gameObject.SetActive (true);
 	}
 		
 	void Update()
@@ -34,8 +35,15 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 
+		if (GameController.Dead) {
+			animator.Stop ();
+			gameObject.SetActive(false);
+			return;
+		}
+
 		if (GameController.GoalAndClear) {
 			animator.Stop ();
+			gameObject.SetActive(false);
 			return;
 		}
 
