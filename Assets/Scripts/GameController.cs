@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	public static bool Dead = false;
 	public static bool GoalAndClear = false;
 	public static bool MapCrystalGet = false;
+	public static bool StartTween = false;
 
 	enum GameState
 	{
@@ -43,7 +44,7 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject ToMazeButton = null;
 	[SerializeField] GameObject SpawnPoint = null;
 	[SerializeField] GameObject ReadyLight = null;
-	//[SerializeField] GameObject Player = null;
+	[SerializeField] GameObject PlayerGoal = null;
 	/*----------------------*/
 
 	/*---タイマーとステート---*/
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour {
 		GoalAndClear = false;
 		MapCrystalGet = false;
 		FadeOut = false;
+		StartTween = false;
 		Alpha = 0;
 		FadeBlack.gameObject.SetActive(false);
 
@@ -105,7 +107,7 @@ public class GameController : MonoBehaviour {
 
 		case GameState.GOAL:
 			GoalAndClear = true;
-			//Player.gameObject.SetActive (false);
+			StartTween = true;
 			maze01soundEffect.GoalSound();
 			Invoke ("Clear", 4.0f);
 			enabled = false;
@@ -167,6 +169,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (true);
+		PlayerGoal.gameObject.SetActive (false);
 
 		maze01Timer.ResetTimer();
 	}
@@ -194,6 +197,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (true);
+		PlayerGoal.gameObject.SetActive (false);
 
 		maze01soundEffect.ReadyGoSound();
 	}
@@ -222,6 +226,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (true);
 		ReadyLight.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (false);
 
 		maze01Timer.StartTimer ();
 
@@ -253,6 +258,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (true);
 	}
 
 	void Clear()
@@ -305,6 +311,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (false);
 
 		maze01soundEffect.TimeUpSound();
 	}
@@ -332,6 +339,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (false);
 	}
 
 	void GiveUp()
@@ -357,6 +365,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (false);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (false);
 
 		Time.timeScale = 0.0f;
 	}
@@ -386,6 +395,7 @@ public class GameController : MonoBehaviour {
 		ToMazeButton.gameObject.SetActive (true);
 		SpawnPoint.gameObject.SetActive (false);
 		ReadyLight.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (false);
 
 		Time.timeScale = 0.0f;
 

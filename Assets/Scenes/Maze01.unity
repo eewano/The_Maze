@@ -6679,6 +6679,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 2}
+      propertyPath: m_Name
+      value: PlayerGoal
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 2}
     - {fileID: 11400002, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 2}
@@ -8196,8 +8200,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.25, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 968167323}
+  m_RootOrder: 4
 --- !u!1 &167051411
 GameObject:
   m_ObjectHideFlags: 0
@@ -23440,6 +23444,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381393653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &381831204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 381831205}
+  m_Layer: 0
+  m_Name: GoalCameraEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &381831205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381831204}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: -19, y: 0.5, z: 23.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &383402368
 GameObject:
   m_ObjectHideFlags: 0
@@ -25132,7 +25163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &411106238
 GameObject:
   m_ObjectHideFlags: 0
@@ -26005,7 +26036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &431195102
 Transform:
   m_ObjectHideFlags: 0
@@ -30387,8 +30418,8 @@ Transform:
   m_LocalPosition: {x: 1, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 968167323}
+  m_RootOrder: 3
 --- !u!1 &504603577
 GameObject:
   m_ObjectHideFlags: 0
@@ -32424,7 +32455,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1501519807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19, y: 0.08, z: 19}
+  m_LocalPosition: {x: 19, y: 0.08, z: -19}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 95912945}
@@ -60175,6 +60206,7 @@ MonoBehaviour:
   GoalCamera: {fileID: 1057439389}
   Ceiling: {fileID: 431195101}
   MapLight: {fileID: 503916526}
+  GoalLight: {fileID: 166920882}
 --- !u!4 &968167323
 Transform:
   m_ObjectHideFlags: 0
@@ -60188,8 +60220,10 @@ Transform:
   - {fileID: 995458461}
   - {fileID: 1057439390}
   - {fileID: 300678986}
+  - {fileID: 503916528}
+  - {fileID: 166920884}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &974641631
 GameObject:
   m_ObjectHideFlags: 0
@@ -64281,7 +64315,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1057439385}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: -19, y: 0.5, z: 23.8}
+  m_LocalPosition: {x: -19, y: 1.5, z: 24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 968167323}
@@ -64298,10 +64332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   From: {fileID: 1057439390}
-  To: {fileID: 0}
-  Sec: 3
-  StartTween: 0
-  ResetTween: 0
+  To: {fileID: 381831205}
+  Sec: 50
 --- !u!1 &1057504591
 GameObject:
   m_ObjectHideFlags: 0
@@ -75109,6 +75141,10 @@ Transform:
   - {fileID: 1479391455}
   m_Father: {fileID: 1041469230}
   m_RootOrder: 20
+--- !u!1 &1249981910 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 2}
+  m_PrefabInternal: {fileID: 129605106}
 --- !u!1 &1250312086
 GameObject:
   m_ObjectHideFlags: 0
@@ -89195,6 +89231,7 @@ MonoBehaviour:
   ToMazeButton: {fileID: 291840771}
   SpawnPoint: {fileID: 1501519807}
   ReadyLight: {fileID: 850216140}
+  PlayerGoal: {fileID: 1249981910}
   FadeBlack: {fileID: 1888444923}
 --- !u!1 &1465043991
 GameObject:
@@ -127808,7 +127845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2127466816
 MonoBehaviour:
   m_ObjectHideFlags: 0

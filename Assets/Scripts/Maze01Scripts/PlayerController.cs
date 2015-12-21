@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 
 	void Start()
 	{
-		//GameController.GameIsOver = false;
 		controller = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
 		maze01soundEffect = GameObject.Find("Maze01SoundController").GetComponent<Maze01SoundEffect>();

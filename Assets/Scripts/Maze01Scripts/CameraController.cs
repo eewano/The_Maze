@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour {
 	[SerializeField] Camera GoalCamera = null;
 	[SerializeField] GameObject Ceiling = null;
 	[SerializeField] GameObject MapLight = null;
+	[SerializeField] GameObject GoalLight = null;
 
 	public void ShowReadyCamera()
 	{
@@ -18,6 +19,7 @@ public class CameraController : MonoBehaviour {
 		GoalCamera.enabled = false;
 		Ceiling.gameObject.SetActive (true);
 		MapLight.gameObject.SetActive (false);
+		GoalLight.gameObject.SetActive (false);
 	}
 
 	public void ShowPlayerCamera()
@@ -28,6 +30,7 @@ public class CameraController : MonoBehaviour {
 		GoalCamera.enabled = false;
 		Ceiling.gameObject.SetActive (true);
 		MapLight.gameObject.SetActive (false);
+		GoalLight.gameObject.SetActive (false);
 	}
 
 	public void ShowMapCamera()
@@ -38,6 +41,7 @@ public class CameraController : MonoBehaviour {
 		GoalCamera.enabled = false;
 		Ceiling.gameObject.SetActive (false);
 		MapLight.gameObject.SetActive (true);
+		GoalLight.gameObject.SetActive (false);
 
 		Time.timeScale = 0.0f;
 	}
@@ -50,5 +54,6 @@ public class CameraController : MonoBehaviour {
 		GoalCamera.enabled = true;
 		Ceiling.gameObject.SetActive (true);
 		MapLight.gameObject.SetActive (false);
+		GoalLight.gameObject.SetActive (true);
 	}
 }
