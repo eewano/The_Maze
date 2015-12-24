@@ -39,9 +39,13 @@ public class FollowCamera : MonoBehaviour {
 		//カメラの移動
 		var currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
 		Vector3 pos = target.position - currentRotation * Vector3.forward * distance;
-		pos.y = currentHeight;
+//		pos.y = currentHeight;
+		pos.y = height;
 		transform.position = pos;
 
-		transform.LookAt(target);
+		//Y軸への追跡を無効にする。
+		var lookatTarget = target.position;
+		lookatTarget.y = height;
+		transform.LookAt(lookatTarget);
 	}
 }

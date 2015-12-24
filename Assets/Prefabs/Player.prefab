@@ -5131,7 +5131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 453274}
   distance: 0.4
-  height: 0
+  height: 1
   heightDamping: 10
   rotationDamping: 10
 --- !u!114 &11438132
@@ -6429,7 +6429,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: height
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: rotationDamping
