@@ -4,13 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - WarpPoint01
-  - WarpPoint02
-  - WarpPoint03
   - Light
   - Croquette
-  - Goal
   - Map
+  - Goal
+  - Warp01-01
+  - Warp01-02
+  - Warp01-03
+  - Warp01-04
+  - Warp01-05
+  - Warp02-01
+  - Warp02-02
+  - Warp02-03
+  - Warp02-04
+  - Warp02-05
   layers:
   - Default
   - TransparentFX

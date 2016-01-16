@@ -5,20 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
 
+	public static bool Mz00 = false;
+	public static bool Mz01 = false;
+	bool FadeOut;
+
+	float Alpha;
+
 	enum TitleState
 	{
 		TITLE,
 		DESCRIPTION,
 		START
 	}
+	private TitleState state;
 
-	TitleState state;
-
-	TitleSoundEffect titlesoundEffect;
 	[SerializeField] Text titleLabel = null;
 	[SerializeField] Text subtitleLabel = null;
 	[SerializeField] Text descriptiontitleLabel = null;
 	[SerializeField] Text descriptionLabel = null;
+
 	[SerializeField] GameObject descriptionButton = null;
 	[SerializeField] GameObject mazePanel01 = null;
 	[SerializeField] GameObject mazePanel02 = null;
@@ -26,11 +31,14 @@ public class TitleController : MonoBehaviour {
 	[SerializeField] GameObject titleButton = null;
 
 	[SerializeField] Image FadeBlack = null;
-	float Alpha;
-	bool FadeOut;
+
+	TitleSoundEffect titlesoundEffect;
 
 	void Start()
 	{
+		Mz00 = false;
+		Mz01 = false;
+
 		titlesoundEffect = GameObject.Find("TitleSoundController").GetComponent<TitleSoundEffect>();
 		Title ();
 
@@ -56,42 +64,54 @@ public class TitleController : MonoBehaviour {
 				Alpha += Time.deltaTime;
 				if(Alpha >= 1)
 				{
-					SceneManager.LoadScene ("Maze01");
+					if (Mz00) {
+						SceneManager.LoadScene ("Maze00");
+					} else if (Mz01) {
+						SceneManager.LoadScene ("Maze01");
+					}
 				}
 			}
 			break;
 		}
 	}
 
+	void AllFalse()
+	{
+		titleLabel.enabled = false;
+		subtitleLabel.enabled = false;
+		descriptiontitleLabel.enabled = false;
+		descriptionLabel.enabled = false;
+
+		descriptionButton.gameObject.SetActive (false);
+		mazePanel01.gameObject.SetActive (false);
+		mazePanel02.gameObject.SetActive (false);
+		mazePanel03.gameObject.SetActive (false);
+		titleButton.gameObject.SetActive (false);
+	}
+
+
 	void Title()
 	{
 		state = TitleState.TITLE;
-			
+
+		AllFalse ();
 		titleLabel.enabled = true;
 		subtitleLabel.enabled = true;
-		descriptiontitleLabel.enabled = false;
-		descriptionLabel.enabled = false;
 
 		descriptionButton.gameObject.SetActive (true);
 		mazePanel01.gameObject.SetActive (true);
 		mazePanel02.gameObject.SetActive (true);
 		mazePanel03.gameObject.SetActive (true);
-		titleButton.gameObject.SetActive (false);
 	}
 
 	void Description()
 	{
 		state = TitleState.DESCRIPTION;
 
-		titleLabel.enabled = false;
-		subtitleLabel.enabled = false;
+		AllFalse ();
 		descriptiontitleLabel.enabled = true;
 		descriptionLabel.enabled = true;
-		
-		descriptionButton.gameObject.SetActive (false);
-		mazePanel01.gameObject.SetActive (false);
-		mazePanel02.gameObject.SetActive (false);
-		mazePanel03.gameObject.SetActive (false);
+
 		titleButton.gameObject.SetActive (true);
 	}
 
@@ -106,9 +126,16 @@ public class TitleController : MonoBehaviour {
 	}
 
 
-
-	public void Maze01Start()
+	public void Mz00Start()
 	{
+		Mz00 = true;
+		titlesoundEffect.GameEnter();
+		Invoke ("GameStart", 2.0f);
+	}
+
+	public void Mz01Start()
+	{
+		Mz01 = true;
 		titlesoundEffect.GameEnter();
 		Invoke ("GameStart", 2.0f);
 	}

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Maze01SoundEffect : MonoBehaviour {
+public class MzSoundEffect : MonoBehaviour {
 	
-	private AudioSource Maze01BGM;
 	private AudioSource GoalSE;
 	private AudioSource EnterSE;
 	private AudioSource ExitSE;
@@ -11,26 +10,23 @@ public class Maze01SoundEffect : MonoBehaviour {
 	private AudioSource TimeUpSE;
 	private AudioSource LightBallSE;
 	private AudioSource CroquetteSE;
-	private AudioSource JumpSE;
 	private AudioSource MapCrystalSE;
 
 	void Start()
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource> ();
-		Maze01BGM = audioSources [0];
-		GoalSE = audioSources [1];
-		EnterSE = audioSources [2];
-		ExitSE = audioSources [3];
-		ReadyGoSE = audioSources [4];
-		TimeUpSE = audioSources [5];
-		LightBallSE = audioSources [6];
-		CroquetteSE = audioSources [7];
-		JumpSE = audioSources [8];
-		MapCrystalSE = audioSources [9];
+		ReadyGoSE = audioSources [0];
+		EnterSE = audioSources [1];
+		ExitSE = audioSources [2];
+		LightBallSE = audioSources [3];
+		CroquetteSE = audioSources [4];
+		MapCrystalSE = audioSources [5];
+		TimeUpSE = audioSources [6];
+		GoalSE = audioSources [7];
 	}
 
 	public void EnterSound() {
-		Maze01BGM.PlayOneShot (EnterSE.clip);
+		EnterSE.PlayOneShot (EnterSE.clip);
 	}
 
 	public void ExitSound() {
@@ -51,7 +47,6 @@ public class Maze01SoundEffect : MonoBehaviour {
 
 	public void ToTitleSound() {
 		EnterSE.PlayOneShot (EnterSE.clip);
-		Destroy (Maze01BGM);
 	}
 
 	public void LightBallSound() {
@@ -60,10 +55,6 @@ public class Maze01SoundEffect : MonoBehaviour {
 
 	public void CroquetteSound() {
 		CroquetteSE.PlayOneShot (CroquetteSE.clip);
-	}
-
-	public void JumpSound() {
-		JumpSE.PlayOneShot (JumpSE.clip);
 	}
 
 	public void MapCrystalSound() {

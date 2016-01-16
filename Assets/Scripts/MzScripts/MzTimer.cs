@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour {
+public class MzTimer : MonoBehaviour {
 
 	[SerializeField] int timeLimit = 90;
 
