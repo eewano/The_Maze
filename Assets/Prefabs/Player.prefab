@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForwardSpeed: 5
   BackwardSpeed: 2.5
-  RotSpeed: 5
+  RotSpeed: 1
 --- !u!114 &11449536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: RotSpeed
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
@@ -528,6 +528,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[6].outSlope
       value: -7.815635
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rotationSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

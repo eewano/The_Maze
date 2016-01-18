@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour {
 		switch (state) {
 
 		case GameState.READY:
-			if (Input.GetMouseButtonDown (0))
+			if (Input.GetMouseButtonUp (0))
 				ReadyGo ();
 			break;
 
