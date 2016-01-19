@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Warp : MonoBehaviour {
 
-	Vector3 Warp01_01 = new Vector3(8.2f, 0.0f, 9.5f);
-	Vector3 Warp01_02 = new Vector3(8.6f, 0.0f, 9.5f);
-	Vector3 Warp01_03 = new Vector3(9.0f, 0.0f, 9.5f);
-	Vector3 Warp01_04 = new Vector3(9.4f, 0.0f, 9.5f);
-	Vector3 Warp01_05 = new Vector3(9.8f, 0.0f, 9.5f);
+	Vector3 Warp01_01 = new Vector3(8.5f, 0.5f, 9.8f);
+	Vector3 Warp01_02 = new Vector3(8.5f, 0.5f, 9.4f);
+	Vector3 Warp01_03 = new Vector3(8.5f, 0.5f, 9.0f);
+	Vector3 Warp01_04 = new Vector3(8.5f, 0.5f, 8.6f);
+	Vector3 Warp01_05 = new Vector3(8.5f, 0.5f, 8.2f);
 
-	Vector3 Warp02_01 = new Vector3(7.5f, 0.0f, 11.8f);
-	Vector3 Warp02_02 = new Vector3(7.5f, 0.0f, 11.4f);
-	Vector3 Warp02_03 = new Vector3(7.5f, 0.0f, 11.0f);
-	Vector3 Warp02_04 = new Vector3(7.5f, 0.0f, 10.6f);
-	Vector3 Warp02_05 = new Vector3(7.5f, 0.0f, 10.2f);
+	Vector3 Warp02_01 = new Vector3(6.2f, 0.5f, 10.5f);
+	Vector3 Warp02_02 = new Vector3(6.6f, 0.5f, 10.5f);
+	Vector3 Warp02_03 = new Vector3(7.0f, 0.5f, 10.5f);
+	Vector3 Warp02_04 = new Vector3(7.4f, 0.5f, 10.5f);
+	Vector3 Warp02_05 = new Vector3(7.8f, 0.5f, 10.5f);
 
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "Warp01-01") {

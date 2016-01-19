@@ -117,6 +117,7 @@ public class GameController : MonoBehaviour {
 		case GameState.GOAL:
 			GoalAndClear = true;
 			StartTween = true;
+			mzTimer.StopTimer();
 
 			Invoke ("Clear", 4.0f);
 			break;
@@ -267,7 +268,8 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 		MzClearLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			MzClearLabel.text = "0 面\nクリア !";
+			MzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n迷路探索の始まりです !";
+			MzClearLabel.fontSize = 60;
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
 			MzClearLabel.text = "1 面\nクリア !";
@@ -326,20 +328,25 @@ public class GameController : MonoBehaviour {
 
 	public void OnRestartButtonClicked()
 	{
+		mzBGM.Stop ();
 		mzSoundEffect.ToTitleSound();
 		Invoke("Restart", 3.0f);
 	}
 		
 	public void OnNextMzButtonClicked()
 	{
+		AllFalse ();
+		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 
 	public void OnToTitleButtonClicked()
 	{
+		AllFalse ();
 		mzBGM.Stop ();
 		mzSoundEffect.ToTitleSound();
 		Invoke("ToTitle", 4.0f);
+		return;
 	}
 }

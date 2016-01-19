@@ -130,14 +130,14 @@ public class TitleController : MonoBehaviour {
 	{
 		Mz00 = true;
 		titlesoundEffect.GameEnter();
-		Invoke ("GameStart", 2.0f);
+		Invoke ("GameStart", 1.0f);
 	}
 
 	public void Mz01Start()
 	{
 		Mz01 = true;
 		titlesoundEffect.GameEnter();
-		Invoke ("GameStart", 2.0f);
+		Invoke ("GameStart", 1.0f);
 	}
 
 	public void OnTitleButtonClicked()

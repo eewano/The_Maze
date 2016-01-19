@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	private bool KeyboardCont;
+	private bool TouchPadCont;
+
 	Light playerPointlight;
 
 	MzSoundEffect mzSoundEffect;
@@ -11,56 +14,90 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] float BackwardSpeed = 0.0f;
 	[SerializeField] float RotSpeed = 0.0f;
 
+	[SerializeField] float KBSpeed = 0.0f;
+	[SerializeField] float KBRotSpeed = 0.0f;
+
+	Rect LeftRect = new Rect(148, 0, 152, 428);	//左側を向く範囲。
+	Rect RightRect = new Rect(430, 0, 152, 428);	//右側を向く範囲。
+	Rect UpRect = new Rect(148, 142, 434, 143);	//上側を向く範囲。
+	Rect DownRect = new Rect(148, 0, 434, 142);	//下側を向く範囲。
+
 	void Start()
 	{
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
 		playerPointlight = GameObject.Find ("PlayerPointlight").GetComponent<Light> ();
 		gameObject.SetActive (true);
+		KeyboardCont = false;
+		TouchPadCont = true;
 	}
 
 
 	void Update () {
+
 		if (GameController.GoalAndClear) {
 			gameObject.SetActive (false);
 		}
-		/*
+
+		if (GameController.GameIsOver || GameController.Dead) {
+			gameObject.SetActive (false);
+			return;
+		}
+
+		if (Input.GetKeyDown ("k")) {
+			KeyboardCont = true;
+			TouchPadCont = false;
+		}
+		else if(Input.GetKeyDown ("t")) {
+			KeyboardCont = false;
+			TouchPadCont = true;
+		}
+			
 		//テスト用のキー操作。
-		float translation = Input.GetAxis("Vertical") * speed;
-		float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-		translation *= Time.deltaTime;
-		rotation *= Time.deltaTime;
-		transform.Translate(0, 0, translation);
-		transform.Rotate(0, rotation, 0);
-		*/
-		//float rotation = Input.GetAxis("Horizontal") * RotSpeed * Time.deltaTime;
+		if (KeyboardCont) {
+			float translation = Input.GetAxis ("Vertical") * KBSpeed;
+			float rotation = Input.GetAxis ("Horizontal") * KBRotSpeed;
+			translation *= Time.deltaTime;
+			rotation *= Time.deltaTime;
+			transform.Translate (0, 0, translation);
+			transform.Rotate (0, rotation, 0);
+		}
 
-		//クリックされたよ
-		if (Input.GetMouseButton(0)) {
+		//タッチパッドによる操作。
+		if(TouchPadCont) {
+			
+			if (Input.GetMouseButton (0)) {
 
-			if (Input.mousePosition.x < Screen.width / 4) {
-				Debug.Log("左側が反応");
-				transform.Rotate (0, RotSpeed * -1, 0);
-			}
-			else if (Input.mousePosition.x > Screen.width * 3 / 4) {
-				Debug.Log("右側が反応");
-				transform.Rotate (0, RotSpeed, 0);
-			}
+				//Touch ScrTouch = Input.GetTouch (0);
+				//Vector2 newVec = new Vector2 (ScrTouch.position.x, Screen.height - ScrTouch.position.y);
 
-			//if (Input.mousePosition.y > center_y) {
-			if (Input.mousePosition.y > Screen.height * 3 / 4) {
-				Debug.Log("上側が反応");
-				this.transform.Translate(this.transform.forward * 0.05f);
-				//transform.Translate (ForwardSpeed * Time.deltaTime * transform.forward);
-			}
-			//else if (Input.mousePosition.y < center_y) {
-			else if (Input.mousePosition.y < Screen.height / 4) {
-				Debug.Log("下側が反応");
-
-				//for(ForwardSpeed = 0; this.ForwardSpeed <= ForwardSpeed; ++ForwardSpeed) {
-					transform.Translate (-ForwardSpeed * Time.deltaTime * transform.forward);
+				if (Input.mousePosition.x >= LeftRect.xMin && 
+					Input.mousePosition.x < LeftRect.xMax && 
+					Input.mousePosition.y >= LeftRect.yMin && 
+					Input.mousePosition.y < LeftRect.yMax) {
+					Debug.Log ("左側が反応");
+					transform.Rotate (0, RotSpeed * -1, 0);
+				} else if (Input.mousePosition.x >= RightRect.xMin && 
+					Input.mousePosition.x < RightRect.xMax && 
+					Input.mousePosition.y >= RightRect.yMin && 
+					Input.mousePosition.y < RightRect.yMax) {
+					Debug.Log ("右側が反応");
+					transform.Rotate (0, RotSpeed, 0);
 				}
-				//this.transform.Translate(this.transform.forward * -0.05f);
-				//transform.Translate (-ForwardSpeed * Time.deltaTime * transform.forward);
+					
+				if (Input.mousePosition.x >= UpRect.xMin && 
+					Input.mousePosition.x < UpRect.xMax && 
+					Input.mousePosition.y >= UpRect.yMin && 
+					Input.mousePosition.y < UpRect.yMax) {
+					Debug.Log ("上側が反応");
+					transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
+				} else if (Input.mousePosition.x >= DownRect.xMin && 
+					Input.mousePosition.x < DownRect.xMax && 
+					Input.mousePosition.y >= DownRect.yMin && 
+					Input.mousePosition.y < DownRect.yMax) {
+					Debug.Log ("下側が反応");
+					transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
+				}
+			}
 		}
 	}
 
@@ -74,9 +111,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		else if (hit.gameObject.tag == "Croquette") {
 			mzSoundEffect.CroquetteSound ();
-			ForwardSpeed = 7.5f;
-			BackwardSpeed = 5.0f;
-			RotSpeed = 75.0f;
+			ForwardSpeed = 4.5f;
+			BackwardSpeed = 2.0f;
+			RotSpeed = 1.4f;
 			GameController.Croquette = true;
 			Destroy (hit.gameObject);
 		}
@@ -89,45 +126,25 @@ public class PlayerController : MonoBehaviour {
 }
 
 /*
-//画面の横の長さを取得です
-int width = Screen.width;
+//タッチパッドによる操作。
+if(TouchPadCont) {
+	if (Input.GetMouseButton (0)) {
 
-//画面の縦の長さを取得
-int height = Screen.height;
-
-//画面の中央値を取ります
-int center_x = Screen.width / 2;
-int center_y = Screen.height / 2;
-
-void Start () {
-
-}
-
-
-void Update () {
-
-	//クリックされたよ
-	if (Input.GetMouseButtonDown(0)) {
-
-
-		//これらは重複するよ
-		//細かい設定は頑張ってね
-
-		if (Input.mousePosition.x < center_x) {
-			Debug.Log("画面の右側が押されたよ");
-		}
-		else if (Input.mousePosition.x > center_x) {
-			Debug.Log("画面の左側が押されたよ");
+		if (Input.mousePosition.x < Screen.width / 4) {
+			Debug.Log ("左側が反応");
+			transform.Rotate (0, RotSpeed * -1, 0);
+		} else if (Input.mousePosition.x > Screen.width * 3 / 4) {
+			Debug.Log ("右側が反応");
+			transform.Rotate (0, RotSpeed, 0);
 		}
 
-		if (Input.mousePosition.y < center_y) {
-			Debug.Log("画面の下側が押されたよ");
+		if (Input.mousePosition.y > Screen.height * 3 / 4) {
+			Debug.Log ("上側が反応");
+			transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
+		} else if (Input.mousePosition.y < Screen.height / 4) {
+			Debug.Log ("下側が反応");
+			transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
 		}
-		else if (Input.mousePosition.y > center_y) {
-			Debug.Log("画面の上側が押されたよ");
-		}
-
 	}
-
 }
 */

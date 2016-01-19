@@ -44,13 +44,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 425624}
   - 33: {fileID: 3354402}
-  - 136: {fileID: 13602906}
-  - 54: {fileID: 5443504}
   - 114: {fileID: 11432230}
   - 114: {fileID: 11422380}
   - 23: {fileID: 2357868}
   - 82: {fileID: 8258140}
   - 114: {fileID: 11449536}
+  - 136: {fileID: 13688138}
+  - 54: {fileID: 5484904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78,7 +78,7 @@ Transform:
   m_GameObject: {fileID: 177290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 414886}
   - {fileID: 462556}
@@ -102,7 +102,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117754}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -171,7 +171,7 @@ Skybox:
   m_GameObject: {fileID: 117754}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: e918076aa8813584f9e43c75d2dad9c1, type: 2}
---- !u!54 &5443504
+--- !u!54 &5484904
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -322,9 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardSpeed: 5
-  BackwardSpeed: 2.5
-  RotSpeed: 1
+  ForwardSpeed: 3
+  BackwardSpeed: 1
+  RotSpeed: 1.2
+  KBSpeed: 3
+  KBRotSpeed: 100
 --- !u!114 &11449536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,7 +347,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117754}
   m_Enabled: 1
---- !u!136 &13602906
+--- !u!136 &13688138
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -354,10 +356,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.8
+  m_Radius: 1
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -375,7 +377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
@@ -387,7 +389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: RotSpeed
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
@@ -399,7 +401,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Radius
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
@@ -536,6 +538,34 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: rotationSpeed
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: KBSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: KBRotSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ForwardSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 425624}
+    - target: {fileID: 0}
+      propertyPath: BackwardSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -48,7 +48,7 @@ public class Mz00Controller : MonoBehaviour {
 		if (GameController.MapCrystal == true && FirstMapFlag == false) {
 			MapCrystalLabel.enabled = true;
 			Time.timeScale = 0.0f;
-			if (Input.GetMouseButtonUp (0)) {
+			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
 				MapCrystalLabel.enabled = false;
 				FirstMapFlag = true;
@@ -59,7 +59,7 @@ public class Mz00Controller : MonoBehaviour {
 		if (GameController.Croquette == true && FirstCroqFlag == false) {
 			CroquetteLabel.enabled = true;
 			Time.timeScale = 0.0f;
-			if (Input.GetMouseButtonUp (0)) {
+			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
 				CroquetteLabel.enabled = false;
 				FirstCroqFlag = true;
@@ -70,7 +70,7 @@ public class Mz00Controller : MonoBehaviour {
 		if (GameController.Light == true && FirstLightFlag == false) {
 			LightLabel.enabled = true;
 			Time.timeScale = 0.0f;
-			if (Input.GetMouseButtonUp (0)) {
+			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
 				LightLabel.enabled = false;
 				FirstLightFlag = true;
