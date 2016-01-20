@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject NextMzButton = null;
 	[SerializeField] GameObject ToTitleButton = null;
 
-	[SerializeField] GameObject PlayerSpawnPoint = null;
+	[SerializeField] GameObject Player = null;
 	[SerializeField] GameObject PlayerGoal = null;
 
 	private MzTimer mzTimer;
@@ -152,13 +152,14 @@ public class GameController : MonoBehaviour {
 		NextMzButton.gameObject.SetActive (false);
 		ToTitleButton.gameObject.SetActive (false);
 
-		PlayerSpawnPoint.gameObject.SetActive (false);
+		Player.gameObject.SetActive (false);
+		PlayerGoal.gameObject.SetActive (false);
 	}
 
 	void Ready()
 	{
 		state = GameState.READY;
-		cameraController.ShowReadyCamera();
+		cameraController.ShowPlayerCamera();
 
 		AllFalse ();
 		MzDescriptionLabel.enabled = true;
@@ -170,7 +171,6 @@ public class GameController : MonoBehaviour {
 			MzDescriptionLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
-		PlayerGoal.gameObject.SetActive (false);
 
 		mzTimer.ResetTimer();
 	}
@@ -198,7 +198,7 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 		MzTimerLabel.enabled = true;
 		GiveUpButton.gameObject.SetActive (true);
-		PlayerSpawnPoint.gameObject.SetActive (true);
+		Player.gameObject.SetActive (true);
 
 		mzTimer.StartTimer ();
 		Time.timeScale = 1.0f;
@@ -213,6 +213,7 @@ public class GameController : MonoBehaviour {
 		GiveUpLabel.enabled = true;
 		CancelButton.gameObject.SetActive (true);
 		GameOverButton.gameObject.SetActive (true);
+		Player.gameObject.SetActive (true);
 
 		Time.timeScale = 0.0f;
 	}
@@ -225,6 +226,7 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 		MzTimerLabel.enabled = true;
 		ToMzButton.gameObject.SetActive (true);
+		Player.gameObject.SetActive (true);
 
 		Time.timeScale = 0.0f;
 	}
@@ -235,6 +237,7 @@ public class GameController : MonoBehaviour {
 
 		AllFalse ();
 		TimeUpLabel.enabled = true;
+		Player.gameObject.SetActive (true);
 
 		mzSoundEffect.TimeUpSound();
 	}
@@ -265,7 +268,6 @@ public class GameController : MonoBehaviour {
 	{
 		state = GameState.CLEAR;
 
-		AllFalse ();
 		MzClearLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
 			MzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n迷路探索の始まりです !";
@@ -275,6 +277,7 @@ public class GameController : MonoBehaviour {
 			MzClearLabel.text = "1 面\nクリア !";
 		}
 
+		GoalLabel.enabled = false;
 		NextMzButton.gameObject.SetActive (true);
 		ToTitleButton.gameObject.SetActive (true);
 	}
@@ -296,6 +299,10 @@ public class GameController : MonoBehaviour {
 		SceneManager.LoadScene("Title");
 	}
 
+	void ToNext()
+	{
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+	}
 
 	public void OnGiveUpButtonClicked()
 	{
@@ -338,7 +345,8 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+		Invoke("ToNext", 4.0f);
+		return;
 	}
 
 	public void OnToTitleButtonClicked()

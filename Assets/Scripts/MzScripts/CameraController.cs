@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour {
 
-	[SerializeField] Camera ReadyCamera = null;
 	[SerializeField] Camera PlayerCamera = null;
 	[SerializeField] Camera MapCamera = null;
 	[SerializeField] Camera GoalCamera = null;
@@ -15,7 +14,6 @@ public class CameraController : MonoBehaviour {
 
 	void CameraAllSet()
 	{
-		ReadyCamera.enabled = false;
 		PlayerCamera.enabled = false;
 		MapCamera.enabled = false;
 		GoalCamera.enabled = false;
@@ -29,19 +27,9 @@ public class CameraController : MonoBehaviour {
 		}
 	}
 
-
-
-	public void ShowReadyCamera()
-	{
-		CameraAllSet ();
-
-		ReadyCamera.enabled = true;
-	}
-
 	public void ShowPlayerCamera()
 	{
 		CameraAllSet ();
-
 		PlayerCamera.enabled = true;
 	}
 
@@ -52,8 +40,6 @@ public class CameraController : MonoBehaviour {
 		MapCamera.enabled = true;
 		Ceiling.gameObject.SetActive (false);
 		MapLight.gameObject.SetActive (true);
-
-		//Time.timeScale = 0.0f;
 	}
 
 	public void ShowGoalCamera()

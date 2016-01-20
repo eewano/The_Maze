@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour {
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
 		playerPointlight = GameObject.Find ("PlayerPointlight").GetComponent<Light> ();
 		gameObject.SetActive (true);
-		KeyboardCont = false;
-		TouchPadCont = true;
+		KeyboardCont = true;
+		TouchPadCont = false;
 	}
 
 
