@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 	private bool KeyboardCont;
 	private bool TouchPadCont;
 
-	Light playerPointlight;
+	Light playerSpotlight;
 
 	MzSoundEffect mzSoundEffect;
 
@@ -25,10 +25,14 @@ public class PlayerController : MonoBehaviour {
 	void Start()
 	{
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
-		playerPointlight = GameObject.Find ("PlayerPointlight").GetComponent<Light> ();
+		playerSpotlight = GameObject.Find ("PlayerSpotlight").GetComponent<Light> ();
 		gameObject.SetActive (true);
-		KeyboardCont = true;
-		TouchPadCont = false;
+
+		KeyboardCont = false;
+		TouchPadCont = true;
+
+		GameController.Fall = false;
+		GameController.GameIsOver = false;
 	}
 
 
@@ -38,8 +42,7 @@ public class PlayerController : MonoBehaviour {
 			gameObject.SetActive (false);
 		}
 
-		if (GameController.GameIsOver || GameController.Dead) {
-			gameObject.SetActive (false);
+		if (GameController.Fall || GameController.GameIsOver) {
 			return;
 		}
 
@@ -105,7 +108,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider hit) {
 		if (hit.gameObject.tag == "Light") {
 			mzSoundEffect.LightBallSound ();
-			playerPointlight.range = 30;
+			playerSpotlight.range = 7.5f;
 			GameController.Light = true;
 			Destroy (hit.gameObject);
 		}
@@ -114,6 +117,8 @@ public class PlayerController : MonoBehaviour {
 			ForwardSpeed = 4.5f;
 			BackwardSpeed = 2.0f;
 			RotSpeed = 1.4f;
+			KBSpeed = 4.5f;
+			KBRotSpeed = 200.0f;
 			GameController.Croquette = true;
 			Destroy (hit.gameObject);
 		}

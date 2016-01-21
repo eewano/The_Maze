@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	public static bool Light = false;
 	public static bool Croquette = false;
 	public static bool GameIsOver = false;
+	public static bool Fall = false;
 	public static bool Dead = false;
 	public static bool GoalAndClear = false;
 	public static bool StartTween = false;
@@ -159,7 +160,7 @@ public class GameController : MonoBehaviour {
 	void Ready()
 	{
 		state = GameState.READY;
-		cameraController.ShowPlayerCamera();
+		cameraController.ShowReadyCamera();
 
 		AllFalse ();
 		MzDescriptionLabel.enabled = true;
@@ -245,11 +246,13 @@ public class GameController : MonoBehaviour {
 	void Failure()
 	{
 		state = GameState.FAILURE;
+		cameraController.ShowPlayerCamera();
 
 		AllFalse ();
 		FailerLabel.enabled = true;
 		GameOverButton.gameObject.SetActive (true);
 		RestartButton.gameObject.SetActive (true);
+		Player.gameObject.SetActive (true);
 	}
 
 	void Goal()
