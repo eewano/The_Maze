@@ -285,7 +285,7 @@ RectTransform:
   - {fileID: 1140596933}
   - {fileID: 1020212722}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -560,67 +560,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325518396}
---- !u!1 &470447626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 470447628}
-  - 108: {fileID: 470447627}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &470447627
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 470447626}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &470447628
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 470447626}
-  m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!1 &493173041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1100449095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1759,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3000\u6050\u308C\u3092\u77E5\u3089\u306A\u3044Unity\u3061\u3083\u3093\u304C\u3001\u69D8\u3005\u306A\u4ED5\u639B\u3051\u306E\u3042\u308B\u8FF7\u8DEF\u3092\u63A2\u7D22\u3059\u308B\u30B2\u30FC\u30E0\u3067\u3059\u3002\n\u3000\u30B3\u30F3\u30C8\u30ED\u30FC\u30E9\u30FC\u30DC\u30BF\u30F3\u3001\u53CA\u3073\u30B8\u30E3\u30F3\u30D7\u30DC\u30BF\u30F3\u3092\u99C6\u4F7F\u3057\u3066\u5236\u9650\u6642\u9593\u5185\u306B\u8FF7\u8DEF\u304B\u3089\u8131\u51FA\u51FA\u6765\u305F\u3089\u30AF\u30EA\u30A2\u3068\u306A\u308A\u307E\u3059\u3002\n\u3000\u5C1A\u3001\u8FF7\u8DEF\u306B\u3088\u3063\u3066\u30EB\u30FC\u30EB\u304C\u7570\u306A\u308B\u4ED6\u3001\u69D8\u3005\u306A\u30A2\u30A4\u30C6\u30E0\u3084\u4ED5\u639B\u3051\u3082\u3042\u308A\u307E\u3059\u306E\u3067\u3001\u5404\u8FF7\u8DEF\u306E\u30B9\u30BF\u30FC\u30C8\u753B\u9762\u306E\u8AAC\u660E\u3092\u826F\u304F\u8AAD\u3093\u3067\u304B\u3089\u3001\u904A\u3093\u3067\u4E0B\u3055\u3044\u3002"
+  m_Text: "\u3000\u6050\u308C\u3092\u77E5\u3089\u306A\u3044Unity\u3061\u3083\u3093\u304C\u3001\u69D8\u3005\u306A\u4ED5\u639B\u3051\u306E\u3042\u308B\u8FF7\u8DEF\u3092\u63A2\u7D22\u3059\u308B\u30B2\u30FC\u30E0\u3067\u3059\u3002\u30B3\u30F3\u30C8\u30ED\u30FC\u30E9\u30FC\u30DC\u30BF\u30F3\u3092\u99C6\u4F7F\u3057\u3066\u5236\u9650\u6642\u9593\u5185\u306B\u8FF7\u8DEF\u304B\u3089\u8131\u51FA\u51FA\u6765\u305F\u3089\u30AF\u30EA\u30A2\u3068\u306A\u308A\u307E\u3059\u3002\n\u3000\u5C1A\u3001\u8FF7\u8DEF\u306B\u3088\u3063\u3066\u30EB\u30FC\u30EB\u304C\u7570\u306A\u308B\u4ED6\u3001\u69D8\u3005\u306A\u30A2\u30A4\u30C6\u30E0\u3084\u4ED5\u639B\u3051\u3082\u3042\u308A\u307E\u3059\u306E\u3067\u3001\u5404\u8FF7\u8DEF\u306E\u30B9\u30BF\u30FC\u30C8\u753B\u9762\u306E\u8AAC\u660E\u3092\u826F\u304F\u8AAD\u3093\u3067\u304B\u3089\u904A\u3093\u3067\u4E0B\u3055\u3044\u3002\u307E\u305A\u306F0\u9762\u304B\u3089\u30D7\u30EC\u30A4\u3059\u308B\u4E8B\u3092\u85A6\u3081\u307E\u3059\u3002"
 --- !u!222 &1140763472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1900,7 +1839,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1181897930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,7 +2705,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!82 &1478555961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3131,7 +3070,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1751418750
 GameObject:
   m_ObjectHideFlags: 0

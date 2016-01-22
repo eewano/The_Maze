@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour {
 			BackwardSpeed = 2.0f;
 			RotSpeed = 1.4f;
 			KBSpeed = 4.5f;
-			KBRotSpeed = 200.0f;
+			KBRotSpeed = 150.0f;
 			GameController.Croquette = true;
 			Destroy (hit.gameObject);
 		}
