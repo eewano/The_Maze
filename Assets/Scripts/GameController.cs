@@ -14,21 +14,6 @@ public class GameController : MonoBehaviour {
 	public static bool GoalAndClear = false;
 	public static bool StartTween = false;
 
-	enum GameState
-	{
-		READY,
-		READYGO,
-		PLAYING,
-		GIVEUP,
-		MAP,
-		TIMEUP,
-		FAILURE,
-		GOAL,
-		CLEAR,
-		GAMEOVER
-	}
-	private GameState state;
-		
 	[SerializeField] Text MzDescriptionLabel = null;
 	[SerializeField] Text MzStartLabel = null;
 	[SerializeField] Text MzClearLabel = null;
@@ -38,6 +23,15 @@ public class GameController : MonoBehaviour {
 	[SerializeField] Text TimeUpLabel = null;
 	[SerializeField] Text FailerLabel = null;
 	[SerializeField] Text GoalLabel = null;
+
+	[SerializeField] GameObject ForwardButton = null;
+	[SerializeField] GameObject BackButton = null;
+	[SerializeField] GameObject LeftButton = null;
+	[SerializeField] GameObject RightButton = null;
+	[SerializeField] GameObject FLButton = null;
+	[SerializeField] GameObject FRButton = null;
+	[SerializeField] GameObject BLButton = null;
+	[SerializeField] GameObject BRButton = null;
 
 	[SerializeField] GameObject GiveUpButton = null;
 	[SerializeField] GameObject CancelButton = null;
@@ -52,10 +46,26 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject PlayerGoal = null;
 
 	private MzTimer mzTimer;
+	private MzSoundEffect mzSoundEffect;
+	private CameraController cameraController;
+	private AudioSource mzBGM;
 
-	MzSoundEffect mzSoundEffect;
-	CameraController cameraController;
-	AudioSource mzBGM;
+	enum GameState
+	{
+		READY,
+		READYGO,
+		PLAYING,
+		GIVEUP,
+		MAP,
+		TIMEUP,
+		FAILURE,
+		GOAL,
+		CLEAR,
+		GAMEOVER
+	}
+	private GameState state;
+
+
 
 	void Start()
 	{
@@ -73,6 +83,8 @@ public class GameController : MonoBehaviour {
 		mzBGM = GameObject.Find ("MzBGM").GetComponent<AudioSource> ();
 		Ready ();
 	}
+
+
 
 	void Update()
 	{
@@ -144,6 +156,15 @@ public class GameController : MonoBehaviour {
 		FailerLabel.enabled = false;
 		GoalLabel.enabled = false;
 
+		ForwardButton.gameObject.SetActive (false);
+		BackButton.gameObject.SetActive (false);
+		LeftButton.gameObject.SetActive (false);
+		RightButton.gameObject.SetActive (false);
+		FLButton.gameObject.SetActive (false);
+		FRButton.gameObject.SetActive (false);
+		BLButton.gameObject.SetActive (false);
+		BRButton.gameObject.SetActive (false);
+
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
 		GameOverButton.gameObject.SetActive (false);
@@ -198,6 +219,14 @@ public class GameController : MonoBehaviour {
 
 		AllFalse ();
 		MzTimerLabel.enabled = true;
+		ForwardButton.gameObject.SetActive (true);
+		BackButton.gameObject.SetActive (true);
+		LeftButton.gameObject.SetActive (true);
+		RightButton.gameObject.SetActive (true);
+		FLButton.gameObject.SetActive (true);
+		FRButton.gameObject.SetActive (true);
+		BLButton.gameObject.SetActive (true);
+		BRButton.gameObject.SetActive (true);
 		GiveUpButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
 
@@ -286,7 +315,6 @@ public class GameController : MonoBehaviour {
 	}
 
 
-
 	void GameOver()
 	{
 		SceneManager.LoadScene("GameOver");
@@ -306,6 +334,8 @@ public class GameController : MonoBehaviour {
 	{
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
+
+
 
 	public void OnGiveUpButtonClicked()
 	{
@@ -345,19 +375,19 @@ public class GameController : MonoBehaviour {
 		
 	public void OnNextMzButtonClicked()
 	{
-		AllFalse ();
+		//AllFalse ();
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
 		Invoke("ToNext", 4.0f);
-		return;
+		//return;
 	}
 
 	public void OnToTitleButtonClicked()
 	{
-		AllFalse ();
+		//AllFalse ();
 		mzBGM.Stop ();
 		mzSoundEffect.ToTitleSound();
 		Invoke("ToTitle", 4.0f);
-		return;
+		//return;
 	}
 }

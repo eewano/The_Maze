@@ -3,8 +3,8 @@ using System.Collections;
 
 public class FootSound : MonoBehaviour {
 
-	public float sound_interval = 0.5f;	
-	public AudioClip foot_se01;
+	public static float SoundInterval = 0.4f;	
+	[SerializeField] AudioClip MzWalkSE = null;
 	private AudioSource audio_source;
 
 	private float count = 0;
@@ -12,22 +12,23 @@ public class FootSound : MonoBehaviour {
 
 	void Start () {
 		audio_source = gameObject.GetComponent<AudioSource>();
-		audio_source.clip = foot_se01;
+		audio_source.clip = MzWalkSE;
 	}
 
 
-	void Update () {
-
+	void Update ()
+	{
 		if (GameController.Fall || GameController.GameIsOver || GameController.Dead) {
 			return;
 		}
 
 		if (last_pos != transform.position) {
-			if (sound_interval < count) {
+			if (SoundInterval < count) {
 				audio_source.Play();
 				count = 0;
 			}
 		}
+
 		last_pos = transform.position;
 		count += 1 * Time.deltaTime;
 	}
