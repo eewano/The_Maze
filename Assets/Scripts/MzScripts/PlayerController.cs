@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 	private bool BR = false;
 
 	Light playerSpotlight;
+	FootSound playerFootSound;
 
 	MzSoundEffect mzSoundEffect;
 
@@ -95,6 +96,7 @@ public class PlayerController : MonoBehaviour {
 	void Start()
 	{
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
+		playerFootSound = GameObject.Find ("Player").GetComponent<FootSound> ();
 		playerSpotlight = GameObject.Find ("PlayerSpotlight").GetComponent<Light> ();
 		gameObject.SetActive (true);
 
@@ -205,7 +207,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider hit) {
 		if (hit.gameObject.tag == "Light") {
 			mzSoundEffect.LightBallSound ();
-			playerSpotlight.range = 7.5f;
+			playerSpotlight.range = 6.5f;
 			GameController.Light = true;
 			Destroy (hit.gameObject);
 		}
@@ -216,6 +218,7 @@ public class PlayerController : MonoBehaviour {
 			RotSpeed = 2.0f;
 			KBSpeed = 4.0f;
 			KBRotSpeed = 200.0f;
+			playerFootSound.SoundInterval = 0.35f;
 			GameController.Croquette = true;
 			Destroy (hit.gameObject);
 		}

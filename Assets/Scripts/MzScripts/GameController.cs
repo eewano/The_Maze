@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	public static bool Dead = false;
 	public static bool GoalAndClear = false;
 	public static bool StartTween = false;
+	public static bool Fade = false;
 
 	[SerializeField] Text MzDescriptionLabel = null;
 	[SerializeField] Text MzStartLabel = null;
@@ -45,10 +46,13 @@ public class GameController : MonoBehaviour {
 	[SerializeField] GameObject Player = null;
 	[SerializeField] GameObject PlayerGoal = null;
 
+	[SerializeField] Image FadeBlack = null;
+
 	private MzTimer mzTimer;
 	private MzSoundEffect mzSoundEffect;
 	private CameraController cameraController;
 	private AudioSource mzBGM;
+	private float Alpha;
 
 	enum GameState
 	{
@@ -76,6 +80,7 @@ public class GameController : MonoBehaviour {
 		Dead = false;
 		GoalAndClear = false;
 		StartTween = false;
+		Fade = false;
 
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
 		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
@@ -176,6 +181,8 @@ public class GameController : MonoBehaviour {
 
 		Player.gameObject.SetActive (false);
 		PlayerGoal.gameObject.SetActive (false);
+
+		FadeBlack.enabled = false;
 	}
 
 	void Ready()
@@ -282,6 +289,8 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (true);
 		RestartButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
+
+
 	}
 
 	void Goal()
@@ -322,12 +331,12 @@ public class GameController : MonoBehaviour {
 
 	void Restart()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 
 	void ToTitle()
 	{
-		SceneManager.LoadScene("Title");
+		SceneManager.LoadScene ("Title");
 	}
 
 	void ToNext()
@@ -370,24 +379,26 @@ public class GameController : MonoBehaviour {
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.ToTitleSound();
+		FadeBlack.enabled = true;
+		Fade = true;
 		Invoke("Restart", 3.0f);
 	}
 
 	public void OnNextMzButtonClicked()
 	{
-		//AllFalse ();
 		mzBGM.Stop ();
-		mzSoundEffect.EnterSound();
-		Invoke("ToNext", 4.0f);
-		//return;
+		mzSoundEffect.EnterSound ();
+		FadeBlack.enabled = true;
+		Fade = true;
+		Invoke ("ToNext", 3.0f);
 	}
 
 	public void OnToTitleButtonClicked()
 	{
-		//AllFalse ();
 		mzBGM.Stop ();
-		mzSoundEffect.ToTitleSound();
-		Invoke("ToTitle", 4.0f);
-		//return;
+		mzSoundEffect.ToTitleSound ();
+		FadeBlack.enabled = true;
+		Fade = true;
+		Invoke ("ToTitle", 4.0f);
 	}
 }

@@ -34,7 +34,6 @@ public class Mz00Controller : MonoBehaviour {
 		{
 			Debug.Log ("ClearOK");
 			ToGoalLabel.gameObject.SetActive (true);
-			Debug.Log ("Readydb");
 			Time.timeScale = 0.0f;
 			Debug.Log ("Stop");
 			if (Input.GetMouseButtonDown (0)) {

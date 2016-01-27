@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FootSound : MonoBehaviour {
 
-	public static float SoundInterval = 0.4f;	
+	public float SoundInterval;	
 	[SerializeField] AudioClip MzWalkSE = null;
 	private AudioSource audio_source;
 

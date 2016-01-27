@@ -7,7 +7,7 @@ public class TitleController : MonoBehaviour {
 
 	public static bool Mz00 = false;
 	public static bool Mz01 = false;
-	bool FadeOut;
+	private bool FadeOut;
 
 	float Alpha;
 
