@@ -19,12 +19,15 @@ public class PlayerController : MonoBehaviour {
 
 	MzSoundEffect mzSoundEffect;
 
-	[SerializeField] float ForwardSpeed = 0.0f;
-	[SerializeField] float BackwardSpeed = 0.0f;
-	[SerializeField] float RotSpeed = 0.0f;
+	[SerializeField] private float maxForwardSpeed;
+	[SerializeField] private float maxBackwardSpeed;
+	[SerializeField] private float RotSpeed;
+	private float curSpeed;
+	private float playerSpeed;
 
-	[SerializeField] float KBSpeed = 0.0f;
-	[SerializeField] float KBRotSpeed = 0.0f;
+	[SerializeField] private float KBSpeed;
+	[SerializeField] private float KBRotSpeed;
+
 
 
 	public void PushForwardDown()
@@ -127,7 +130,7 @@ public class PlayerController : MonoBehaviour {
 			TouchPadCont = true;
 		}
 
-		//テスト用のキー操作。
+		//キーボードによる操作
 		if (KeyboardCont) {
 			float translation = Input.GetAxis ("Vertical") * KBSpeed;
 			float rotation = Input.GetAxis ("Horizontal") * KBRotSpeed;
@@ -137,7 +140,10 @@ public class PlayerController : MonoBehaviour {
 			transform.Rotate (0, rotation, 0);
 		}
 
-		//タッチパッドによる操作。
+		curSpeed = Mathf.Lerp(curSpeed, playerSpeed, 10.0f * Time.deltaTime);
+		transform.Translate(Vector3.forward * Time.deltaTime * curSpeed);
+
+		//タッチパッドによる操作
 		if(TouchPadCont) {
 			if (Forward) {
 				MoveForward ();
@@ -155,6 +161,8 @@ public class PlayerController : MonoBehaviour {
 				RotateBL ();
 			} else if (BR) {
 				RotateBR ();
+			} else {
+				playerSpeed = 0;
 			}
 		}
 	}
@@ -162,45 +170,45 @@ public class PlayerController : MonoBehaviour {
 
 	public void MoveForward()
 	{
-		transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
+		playerSpeed = maxForwardSpeed;
 	}
 
 	public void MoveBack()
 	{
-		transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
+		playerSpeed = -maxBackwardSpeed;
 	}
 
 	public void RotateLeft()
 	{
-		transform.Rotate (0, RotSpeed * -1, 0);
+		transform.Rotate(0, -RotSpeed * Time.deltaTime, 0.0f);
 	}
 
 	public void RotateRight()
 	{
-		transform.Rotate (0, RotSpeed, 0);
+		transform.Rotate(0, RotSpeed * Time.deltaTime, 0.0f);
 	}
 	public void MoveFL()
 	{
-		transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
-		transform.Rotate (0, RotSpeed * -1, 0);
+		playerSpeed = maxForwardSpeed;
+		transform.Rotate(0, -RotSpeed * Time.deltaTime, 0.0f);
 	}
 
 	public void MoveFR()
 	{
-		transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
-		transform.Rotate (0, RotSpeed, 0);
+		playerSpeed = maxForwardSpeed;
+		transform.Rotate(0, RotSpeed * Time.deltaTime, 0.0f);
 	}
 
 	public void RotateBL()
 	{
-		transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
-		transform.Rotate (0, RotSpeed * -1, 0);
+		playerSpeed = -maxBackwardSpeed;
+		transform.Rotate(0, -RotSpeed * Time.deltaTime, 0.0f);
 	}
 
 	public void RotateBR()
 	{
-		transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
-		transform.Rotate (0, RotSpeed, 0);
+		playerSpeed = -maxBackwardSpeed;
+		transform.Rotate(0, RotSpeed * Time.deltaTime, 0.0f);
 	}
 
 
@@ -213,11 +221,11 @@ public class PlayerController : MonoBehaviour {
 		}
 		else if (hit.gameObject.tag == "Croquette") {
 			mzSoundEffect.CroquetteSound ();
-			ForwardSpeed = 4.0f;
-			BackwardSpeed = 2.5f;
-			RotSpeed = 2.0f;
+			maxForwardSpeed = 4.0f;
+			maxBackwardSpeed = 2.5f;
+			RotSpeed = 150;
 			KBSpeed = 4.0f;
-			KBRotSpeed = 200.0f;
+			KBRotSpeed = 150.0f;
 			playerFootSound.SoundInterval = 0.35f;
 			GameController.Croquette = true;
 			Destroy (hit.gameObject);
@@ -229,80 +237,3 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 }
-
-/*
-//タッチパッドによる操作。
-if(TouchPadCont) {
-	if (Input.GetMouseButton (0)) {
-
-		if (Input.mousePosition.x < Screen.width / 4) {
-			Debug.Log ("左側が反応");
-			transform.Rotate (0, RotSpeed * -1, 0);
-		} else if (Input.mousePosition.x > Screen.width * 3 / 4) {
-			Debug.Log ("右側が反応");
-			transform.Rotate (0, RotSpeed, 0);
-		}
-
-		if (Input.mousePosition.y > Screen.height * 3 / 4) {
-			Debug.Log ("上側が反応");
-			transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
-		} else if (Input.mousePosition.y < Screen.height / 4) {
-			Debug.Log ("下側が反応");
-			transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
-		}
-	}
-}
-*/
-
-/*
-if(TouchPadCont) {
-
-	if (Input.GetMouseButton (0)) {
-
-		//Touch ScrTouch = Input.GetTouch (0);
-		//Vector2 newVec = new Vector2 (ScrTouch.position.x, Screen.height - ScrTouch.position.y);
-
-		if (Input.mousePosition.x >= LeftRect.xMin && 
-			Input.mousePosition.x < LeftRect.xMax && 
-			Input.mousePosition.y >= LeftRect.yMin && 
-			Input.mousePosition.y < LeftRect.yMax) {
-			Debug.Log ("左側が反応");
-			transform.Rotate (0, RotSpeed * -1, 0);
-		} else if (Input.mousePosition.x >= RightRect.xMin && 
-			Input.mousePosition.x < RightRect.xMax && 
-			Input.mousePosition.y >= RightRect.yMin && 
-			Input.mousePosition.y < RightRect.yMax) {
-			Debug.Log ("右側が反応");
-			transform.Rotate (0, RotSpeed, 0);
-		}
-
-		if (Input.mousePosition.x >= UpRect.xMin && 
-			Input.mousePosition.x < UpRect.xMax && 
-			Input.mousePosition.y >= UpRect.yMin && 
-			Input.mousePosition.y < UpRect.yMax) {
-			Debug.Log ("上側が反応");
-			transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed * 1 );
-		} else if (Input.mousePosition.x >= DownRect.xMin && 
-			Input.mousePosition.x < DownRect.xMax && 
-			Input.mousePosition.y >= DownRect.yMin && 
-			Input.mousePosition.y < DownRect.yMax) {
-			Debug.Log ("下側が反応");
-			transform.Translate(Vector3.forward * Time.deltaTime * BackwardSpeed * -1 );
-		}
-	}
-}
-*/
-
-/*
-if (KeyboardCont) {
-	float forward = CrossPlatformInputManager.GetAxis ("Vertical") * KBSpeed;
-	float back = CrossPlatformInputManager.GetAxis ("Vertical") * KBBack;
-	float rotation = CrossPlatformInputManager.GetAxis ("Horizontal") * KBRotSpeed;
-	forward *= Time.deltaTime;
-	back *= Time.deltaTime;
-	rotation *= Time.deltaTime;
-	transform.Translate (0, 0, forward);
-	transform.Translate (0, 0, -back);
-	transform.Rotate (0, rotation, 0);
-}
-*/

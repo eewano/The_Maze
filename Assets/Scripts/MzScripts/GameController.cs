@@ -15,38 +15,40 @@ public class GameController : MonoBehaviour {
 	public static bool StartTween = false;
 	public static bool Fade = false;
 
-	[SerializeField] Text MzDescriptionLabel = null;
-	[SerializeField] Text MzStartLabel = null;
-	[SerializeField] Text MzClearLabel = null;
+	[SerializeField] private Text MzDescriptionLabel;
+	[SerializeField] private Text MzStartLabel;
+	[SerializeField] private Text MzClearLabel;
 
-	[SerializeField] Text MzTimerLabel = null;
-	[SerializeField] Text GiveUpLabel = null;
-	[SerializeField] Text TimeUpLabel = null;
-	[SerializeField] Text FailerLabel = null;
-	[SerializeField] Text GoalLabel = null;
+	[SerializeField] private Text MzTimerLabel;
+	[SerializeField] private Text LightLabel;
+	[SerializeField] private Text CroquetteLabel;
+	[SerializeField] private Text GiveUpLabel;
+	[SerializeField] private Text TimeUpLabel;
+	[SerializeField] private Text FailerLabel;
+	[SerializeField] private Text GoalLabel;
 
-	[SerializeField] GameObject ForwardButton = null;
-	[SerializeField] GameObject BackButton = null;
-	[SerializeField] GameObject LeftButton = null;
-	[SerializeField] GameObject RightButton = null;
-	[SerializeField] GameObject FLButton = null;
-	[SerializeField] GameObject FRButton = null;
-	[SerializeField] GameObject BLButton = null;
-	[SerializeField] GameObject BRButton = null;
+	[SerializeField] private GameObject ForwardButton;
+	[SerializeField] private GameObject BackButton;
+	[SerializeField] private GameObject LeftButton;
+	[SerializeField] private GameObject RightButton;
+	[SerializeField] private GameObject FLButton;
+	[SerializeField] private GameObject FRButton;
+	[SerializeField] private GameObject BLButton;
+	[SerializeField] private GameObject BRButton;
 
-	[SerializeField] GameObject GiveUpButton = null;
-	[SerializeField] GameObject CancelButton = null;
-	[SerializeField] GameObject GameOverButton = null;
-	[SerializeField] GameObject MapButton = null;
-	[SerializeField] GameObject ToMzButton = null;
-	[SerializeField] GameObject RestartButton = null;
-	[SerializeField] GameObject NextMzButton = null;
-	[SerializeField] GameObject ToTitleButton = null;
+	[SerializeField] private GameObject GiveUpButton;
+	[SerializeField] private GameObject CancelButton;
+	[SerializeField] private GameObject GameOverButton;
+	[SerializeField] private GameObject MapButton;
+	[SerializeField] private GameObject ToMzButton;
+	[SerializeField] private GameObject RestartButton;
+	[SerializeField] private GameObject NextMzButton;
+	[SerializeField] private GameObject ToTitleButton;
 
-	[SerializeField] GameObject Player = null;
-	[SerializeField] GameObject PlayerGoal = null;
+	[SerializeField] private GameObject Player;
+	[SerializeField] private GameObject PlayerGoal;
 
-	[SerializeField] Image FadeBlack = null;
+	[SerializeField] private Image FadeBlack;
 
 	private MzTimer mzTimer;
 	private MzSoundEffect mzSoundEffect;
@@ -105,9 +107,14 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.PLAYING:
-			if(MapCrystal)
-			{
+			if(MapCrystal) {
 				MapButton.gameObject.SetActive (true);
+			}
+			if(Light) {
+				LightLabel.enabled = true;
+			}
+			if(Croquette) {
+				CroquetteLabel.enabled = true;
 			}
 
 			if(mzTimer.GetTimeRemaining() == 0)
@@ -119,9 +126,21 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.GIVEUP:
+			if(Light) {
+				LightLabel.enabled = true;
+			}
+			if(Croquette) {
+				CroquetteLabel.enabled = true;
+			}
 			break;
 
 		case GameState.MAP:
+			if(Light) {
+				LightLabel.enabled = true;
+			}
+			if(Croquette) {
+				CroquetteLabel.enabled = true;
+			}
 			break;
 
 		case GameState.TIMEUP:
@@ -156,6 +175,8 @@ public class GameController : MonoBehaviour {
 		MzClearLabel.enabled = false;
 
 		MzTimerLabel.enabled = false;
+		LightLabel.enabled = false;
+		CroquetteLabel.enabled = false;
 		GiveUpLabel.enabled = false;
 		TimeUpLabel.enabled = false;
 		FailerLabel.enabled = false;
