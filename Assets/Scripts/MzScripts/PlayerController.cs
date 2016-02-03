@@ -21,9 +21,12 @@ public class PlayerController : MonoBehaviour {
 
 	[SerializeField] private float maxForwardSpeed;
 	[SerializeField] private float maxBackwardSpeed;
+	[SerializeField] private float maxRotSpeed;
 	[SerializeField] private float RotSpeed;
 	private float curSpeed;
+	private float curRotSpeed;
 	private float playerSpeed;
+	private float playerRotSpeed;
 
 	[SerializeField] private float KBSpeed;
 	[SerializeField] private float KBRotSpeed;
@@ -143,6 +146,9 @@ public class PlayerController : MonoBehaviour {
 		curSpeed = Mathf.Lerp(curSpeed, playerSpeed, 10.0f * Time.deltaTime);
 		transform.Translate(Vector3.forward * Time.deltaTime * curSpeed);
 
+		curRotSpeed = Mathf.Lerp (curRotSpeed, playerRotSpeed, 10.0f * Time.deltaTime);
+		transform.Rotate(0, -RotSpeed * Time.deltaTime * curRotSpeed, 0.0f);
+
 		//タッチパッドによる操作
 		if(TouchPadCont) {
 			if (Forward) {
@@ -163,6 +169,7 @@ public class PlayerController : MonoBehaviour {
 				RotateBR ();
 			} else {
 				playerSpeed = 0;
+				playerRotSpeed = 0;
 			}
 		}
 	}
@@ -180,35 +187,35 @@ public class PlayerController : MonoBehaviour {
 
 	public void RotateLeft()
 	{
-		transform.Rotate(0, -RotSpeed * Time.deltaTime, 0.0f);
+		playerRotSpeed = maxRotSpeed;
 	}
 
 	public void RotateRight()
 	{
-		transform.Rotate(0, RotSpeed * Time.deltaTime, 0.0f);
+		playerRotSpeed = -maxRotSpeed;
 	}
 	public void MoveFL()
 	{
 		playerSpeed = maxForwardSpeed;
-		transform.Rotate(0, -RotSpeed * Time.deltaTime, 0.0f);
+		playerRotSpeed = maxRotSpeed;
 	}
 
 	public void MoveFR()
 	{
 		playerSpeed = maxForwardSpeed;
-		transform.Rotate(0, RotSpeed * Time.deltaTime, 0.0f);
+		playerRotSpeed = -maxRotSpeed;
 	}
 
 	public void RotateBL()
 	{
 		playerSpeed = -maxBackwardSpeed;
-		transform.Rotate(0, -RotSpeed * Time.deltaTime, 0.0f);
+		playerRotSpeed = maxRotSpeed;
 	}
 
 	public void RotateBR()
 	{
 		playerSpeed = -maxBackwardSpeed;
-		transform.Rotate(0, RotSpeed * Time.deltaTime, 0.0f);
+		playerRotSpeed = -maxRotSpeed;
 	}
 
 

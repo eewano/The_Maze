@@ -1481,6 +1481,10 @@ Prefab:
       propertyPath: maxRotation
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+      propertyPath: maxRotSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
   m_IsPrefabParent: 0
