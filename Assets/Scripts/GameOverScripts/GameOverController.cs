@@ -5,43 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour {
 
-	[SerializeField] Text GameOverLabel = null;
-	[SerializeField] Text ReturnToTitleLabel = null;
-
-	[SerializeField] Image FadeBlack = null;
-	float Alpha;
-	bool FadeOut;
+	[SerializeField] private Text GameOverLabel;
+	[SerializeField] private Text ReturnToTitleLabel;
+	[SerializeField] private Image FadeBlack;
 
 	void Start()
 	{
+		GameController.Fade = false;
+		Time.timeScale = 1.0f;
 		GameOverLabel.enabled = true;
 		ReturnToTitleLabel.enabled = true;
-
-		Time.timeScale = 1.0f;
-
-		FadeOut = false;
-		Alpha = 0;
-		FadeBlack.gameObject.SetActive(false);
+		FadeBlack.enabled = false;
 	}
 
 	void Update()
 	{
 		if (Input.GetMouseButtonDown (0)) {
-			if(FadeBlack.gameObject.activeSelf == false)
-			{
-				FadeBlack.gameObject.SetActive(true);
-				FadeOut = true;
-			}
-		}
-
-		if(FadeOut == true)
-		{
-			FadeBlack.gameObject.GetComponent<Image>().color = new Color(0, 0, 0, Alpha);
-			Alpha += 0.5f * Time.deltaTime;
-			if(Alpha >= 1)
-			{
-				Invoke ("ReturnToTitle", 1.0f);
-			}
+			FadeBlack.enabled = true;
+			GameController.Fade = true;
+			Invoke ("ReturnToTitle", 4.0f);
 		}
 	}
 

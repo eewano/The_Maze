@@ -221,7 +221,6 @@ public class GameController : MonoBehaviour {
 			MzDescriptionLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
-
 		mzTimer.ResetTimer();
 	}
 
@@ -310,8 +309,6 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (true);
 		RestartButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
-
-
 	}
 
 	void Goal()

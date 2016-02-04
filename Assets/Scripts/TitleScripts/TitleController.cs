@@ -7,9 +7,6 @@ public class TitleController : MonoBehaviour {
 
 	public static bool Mz00 = false;
 	public static bool Mz01 = false;
-	private bool FadeOut;
-
-	float Alpha;
 
 	enum TitleState
 	{
@@ -19,18 +16,18 @@ public class TitleController : MonoBehaviour {
 	}
 	private TitleState state;
 
-	[SerializeField] Text titleLabel = null;
-	[SerializeField] Text subtitleLabel = null;
-	[SerializeField] Text descriptiontitleLabel = null;
-	[SerializeField] Text descriptionLabel = null;
+	[SerializeField] private Text titleLabel;
+	[SerializeField] private Text subtitleLabel;
+	[SerializeField] private Text descriptiontitleLabel;
+	[SerializeField] private Text descriptionLabel;
 
-	[SerializeField] GameObject descriptionButton = null;
-	[SerializeField] GameObject mazePanel01 = null;
-	[SerializeField] GameObject mazePanel02 = null;
-	[SerializeField] GameObject mazePanel03 = null;
-	[SerializeField] GameObject titleButton = null;
+	[SerializeField] private GameObject descriptionButton;
+	[SerializeField] private GameObject mazePanel01;
+	[SerializeField] private GameObject mazePanel02;
+	[SerializeField] private GameObject mazePanel03;
+	[SerializeField] private GameObject titleButton;
 
-	[SerializeField] Image FadeBlack = null;
+	[SerializeField] private Image FadeBlack;
 
 	TitleSoundEffect titlesoundEffect;
 
@@ -38,13 +35,12 @@ public class TitleController : MonoBehaviour {
 	{
 		Mz00 = false;
 		Mz01 = false;
+		GameController.Fade = false;
 
 		titlesoundEffect = GameObject.Find("TitleSoundController").GetComponent<TitleSoundEffect>();
 		Title ();
 
-		FadeOut = false;
-		Alpha = 0;
-		FadeBlack.gameObject.SetActive(false);
+		FadeBlack.enabled = false;
 	}
 
 	void Update()
@@ -58,19 +54,11 @@ public class TitleController : MonoBehaviour {
 			break;
 
 		case TitleState.START:
-			if(FadeOut == true)
-			{
-				FadeBlack.gameObject.GetComponent<Image>().color = new Color(0, 0, 0, Alpha);
-				Alpha += Time.deltaTime;
-				if(Alpha >= 1)
-				{
 					if (Mz00) {
 						SceneManager.LoadScene ("Maze00");
 					} else if (Mz01) {
 						SceneManager.LoadScene ("Maze01");
 					}
-				}
-			}
 			break;
 		}
 	}
@@ -121,7 +109,6 @@ public class TitleController : MonoBehaviour {
 		if(FadeBlack.gameObject.activeSelf == false)
 		{
 			FadeBlack.gameObject.SetActive(true);
-			FadeOut = true;
 		}
 	}
 
@@ -130,14 +117,18 @@ public class TitleController : MonoBehaviour {
 	{
 		Mz00 = true;
 		titlesoundEffect.GameEnter();
-		Invoke ("GameStart", 1.0f);
+		FadeBlack.enabled = true;
+		GameController.Fade = true;
+		Invoke ("GameStart", 3.0f);
 	}
 
 	public void Mz01Start()
 	{
 		Mz01 = true;
 		titlesoundEffect.GameEnter();
-		Invoke ("GameStart", 1.0f);
+		FadeBlack.enabled = true;
+		GameController.Fade = true;
+		Invoke ("GameStart", 3.0f);
 	}
 
 	public void OnTitleButtonClicked()

@@ -233,7 +233,7 @@ public class PlayerController : MonoBehaviour {
 			RotSpeed = 150;
 			KBSpeed = 4.0f;
 			KBRotSpeed = 150.0f;
-			playerFootSound.SoundInterval = 0.35f;
+			playerFootSound.SoundInterval = 0.37f;
 			GameController.Croquette = true;
 			Destroy (hit.gameObject);
 		}
