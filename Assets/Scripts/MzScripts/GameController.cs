@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour {
 	public static bool GoalAndClear = false;
 	public static bool StartTween = false;
 	public static bool Fade = false;
+	public static bool MapModeON = false;
+	public static bool MapModeOFF = false;
 
 	[SerializeField] private Text MzDescriptionLabel;
 	[SerializeField] private Text MzStartLabel;
@@ -83,6 +85,8 @@ public class GameController : MonoBehaviour {
 		GoalAndClear = false;
 		StartTween = false;
 		Fade = false;
+		MapModeON = false;
+		MapModeOFF = false;
 
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
 		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
@@ -384,12 +388,16 @@ public class GameController : MonoBehaviour {
 	public void OnMapButtonClicked()
 	{
 		mzSoundEffect.EnterSound();
+		MapModeON = true;
+		MapModeOFF = false;
 		Map();
 	}
 
 	public void OnToMzButtonClicked()
 	{
 		mzSoundEffect.ExitSound();
+		MapModeON = false;
+		MapModeOFF = true;
 		Playing();
 	}
 

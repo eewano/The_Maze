@@ -124,14 +124,40 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 
+		if (GameController.MapModeON == true && GameController.MapModeOFF == false) {
+			playerSpotlight.intensity = 8;
+		} else if (GameController.MapModeON == false && GameController.MapModeOFF == true) {
+			playerSpotlight.intensity = 4;
+		}
+
 		if (Input.GetKeyDown ("k")) {
 			KeyboardCont = true;
 			TouchPadCont = false;
-		}
-		else if(Input.GetKeyDown ("t")) {
+		} else if (Input.GetKeyDown ("t")) {
 			KeyboardCont = false;
 			TouchPadCont = true;
+		} else if (Input.GetKeyDown ("l")) {
+			GameController.Light = true;
+		} else if (Input.GetKeyDown ("c")) {
+			GameController.Croquette = true;
+		} else if (Input.GetKeyDown ("m")) {
+			GameController.MapCrystal = true;
 		}
+
+		if (GameController.Light) {
+			playerSpotlight.range = 6.5f;
+		}
+
+		if (GameController.Croquette) {
+			maxForwardSpeed = 4.0f;
+			maxBackwardSpeed = 2.5f;
+			maxRotSpeed = 1.2f;
+			RotSpeed = 150;
+			KBSpeed = 4.0f;
+			KBRotSpeed = 150.0f;
+			playerFootSound.SoundInterval = 0.37f;
+		}
+			
 
 		//キーボードによる操作
 		if (KeyboardCont) {
@@ -221,25 +247,26 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider hit) {
 		if (hit.gameObject.tag == "Light") {
-			mzSoundEffect.LightBallSound ();
-			playerSpotlight.range = 6.5f;
 			GameController.Light = true;
+			mzSoundEffect.LightBallSound ();
+			//playerSpotlight.range = 6.5f;
 			Destroy (hit.gameObject);
 		}
 		else if (hit.gameObject.tag == "Croquette") {
-			mzSoundEffect.CroquetteSound ();
-			maxForwardSpeed = 4.0f;
-			maxBackwardSpeed = 2.5f;
-			RotSpeed = 150;
-			KBSpeed = 4.0f;
-			KBRotSpeed = 150.0f;
-			playerFootSound.SoundInterval = 0.37f;
 			GameController.Croquette = true;
+			mzSoundEffect.CroquetteSound ();
+			//maxForwardSpeed = 4.0f;
+			//maxBackwardSpeed = 2.5f;
+			//maxRotSpeed = 1.2f;
+			//RotSpeed = 150;
+			//KBSpeed = 4.0f;
+			//KBRotSpeed = 150.0f;
+			//playerFootSound.SoundInterval = 0.37f;
 			Destroy (hit.gameObject);
 		}
 		else if (hit.gameObject.tag == "Map") {
-			mzSoundEffect.MapCrystalSound ();
 			GameController.MapCrystal = true;
+			mzSoundEffect.MapCrystalSound ();
 			Destroy (hit.gameObject);
 		}
 	}
