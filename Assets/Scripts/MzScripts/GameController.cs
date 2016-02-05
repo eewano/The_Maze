@@ -289,7 +289,7 @@ public class GameController : MonoBehaviour {
 		ToMzButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
 
-		Time.timeScale = 0.0f;
+		//Time.timeScale = 0.0f;
 	}
 
 	void TimeUp()
@@ -390,6 +390,7 @@ public class GameController : MonoBehaviour {
 		mzSoundEffect.EnterSound();
 		MapModeON = true;
 		MapModeOFF = false;
+		Pauser.Pause ();
 		Map();
 	}
 
@@ -398,13 +399,14 @@ public class GameController : MonoBehaviour {
 		mzSoundEffect.ExitSound();
 		MapModeON = false;
 		MapModeOFF = true;
+		Pauser.Resume ();
 		Playing();
 	}
 
 	public void OnRestartButtonClicked()
 	{
 		mzBGM.Stop ();
-		mzSoundEffect.ToTitleSound();
+		mzSoundEffect.EnterSound();
 		FadeBlack.enabled = true;
 		Fade = true;
 		Invoke("Restart", 3.0f);
@@ -422,7 +424,7 @@ public class GameController : MonoBehaviour {
 	public void OnToTitleButtonClicked()
 	{
 		mzBGM.Stop ();
-		mzSoundEffect.ToTitleSound ();
+		mzSoundEffect.EnterSound ();
 		FadeBlack.enabled = true;
 		Fade = true;
 		Invoke ("ToTitle", 4.0f);

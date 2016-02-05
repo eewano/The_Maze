@@ -6,11 +6,11 @@ public class WallOnOff : MonoBehaviour {
 	public static bool WallOn = false;
 	public static bool WallOff = false;
 
-	[SerializeField] GameObject OnOffWall = null; 
+	[SerializeField] private GameObject OnOffWall;
 
 	void Start()
 	{
-		WallOn = true;
+		WallOn = false;
 		WallOff = false;
 		OnOffWall.gameObject.SetActive(true);
 	}

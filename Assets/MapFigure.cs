@@ -18,7 +18,7 @@ public class MapFigure : MonoBehaviour {
 			if (gameObject.tag == "Light") {
 				itemLight.color = Color.yellow;
 			} else if (gameObject.tag == "Croquette") {
-				itemLight.color = new Color(0, 1, 1, 1);
+				itemLight.color = new Color(0.0f, 1.0f, 0.0f, 0.5f);
 			}
 				
 		} else if (GameController.MapModeON == false && GameController.MapModeOFF == true) {

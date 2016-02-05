@@ -3,9 +3,20 @@ using System.Collections;
 
 public class WallOn : MonoBehaviour {
 
+	MzSoundEffect mzSoundEffect;
+
+	void Start()
+	{
+		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
+	}
+
 	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "Player")
+		if (col.gameObject.tag == "Player") {
+			if (WallOnOff.WallOn == false && WallOnOff.WallOff == true) {
+				mzSoundEffect.ShutterSound ();
+			}
 			WallOnOff.WallOn = true;
-		WallOnOff.WallOff = false;
+			WallOnOff.WallOff = false;
+		}
 	}
 }

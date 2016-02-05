@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Mz01Trap
+  m_Name: Mz02Ceiling
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,9 +19,9 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 1406741573, guid: 036bc13753e6f3d46b2072367e431230,
+          m_Texture: {fileID: -1313953488, guid: 9ddfec024042d4b40bfd7b21eef499cd,
             type: 3}
-          m_Scale: {x: 2, y: 2}
+          m_Scale: {x: 3, y: 3}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -128,6 +128,10 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
     m_Colors:
       data:
         first:
@@ -136,4 +140,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0.74509805, g: 0.74509805, b: 0.74509805, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 0.019607844}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
