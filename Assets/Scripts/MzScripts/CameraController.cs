@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour {
 
-	[SerializeField] Camera ReadyCamera = null;
-	[SerializeField] Camera PlayerCamera = null;
-	[SerializeField] Camera MapCamera = null;
-	[SerializeField] Camera GoalCamera = null;
-	[SerializeField] GameObject Ceiling = null;
-	[SerializeField] GameObject MzLight = null;
-	[SerializeField] GameObject MapLight = null;
-	[SerializeField] GameObject GoalLight = null;
+	[SerializeField] private Camera ReadyCamera;
+	[SerializeField] private Camera PlayerCamera;
+	[SerializeField] private Camera MapCamera;
+	[SerializeField] private Camera GoalCamera;
+	[SerializeField] private GameObject Ceiling;
+	[SerializeField] private GameObject MzLight;
+	[SerializeField] private GameObject MapLight;
+	[SerializeField] private GameObject GoalLight;
 
 
 	void CameraAllSet()

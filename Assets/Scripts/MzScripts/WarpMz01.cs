@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Warp : MonoBehaviour {
+public class WarpMz01 : MonoBehaviour {
 
 	Vector3 Warp01_01 = new Vector3(8.5f, 0.5f, 9.8f);
 	Vector3 Warp01_02 = new Vector3(8.5f, 0.5f, 9.4f);

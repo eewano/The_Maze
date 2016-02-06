@@ -18,6 +18,11 @@ TagManager:
   - Warp02-03
   - Warp02-04
   - Warp02-05
+  - Warp03-01
+  - Warp03-02
+  - Warp03-03
+  - Warp03-04
+  - Warp03-05
   layers:
   - Default
   - TransparentFX

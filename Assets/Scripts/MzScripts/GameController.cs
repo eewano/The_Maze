@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour {
 	[SerializeField] private GameObject BLButton;
 	[SerializeField] private GameObject BRButton;
 
+	[SerializeField] private GameObject MazeLight;
 	[SerializeField] private GameObject GiveUpButton;
 	[SerializeField] private GameObject CancelButton;
 	[SerializeField] private GameObject GameOverButton;
@@ -115,6 +116,7 @@ public class GameController : MonoBehaviour {
 				MapButton.gameObject.SetActive (true);
 			}
 			if(Light) {
+				MazeLight.gameObject.SetActive (true);
 				LightLabel.enabled = true;
 			}
 			if(Croquette) {
@@ -195,6 +197,7 @@ public class GameController : MonoBehaviour {
 		BLButton.gameObject.SetActive (false);
 		BRButton.gameObject.SetActive (false);
 
+		MazeLight.gameObject.SetActive (false);
 		GiveUpButton.gameObject.SetActive (false);
 		CancelButton.gameObject.SetActive (false);
 		GameOverButton.gameObject.SetActive (false);
@@ -225,6 +228,11 @@ public class GameController : MonoBehaviour {
 			MzDescriptionLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
+		else if (SceneManager.GetActiveScene().name == "Maze02") {
+			MzDescriptionLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、何処かに置き去りに\n" +
+				"されるので、上手く逃げ回りつつゴールを\n目指して下さい。\n\n" +
+				"画面クリックでゲーム開始です。";
+		}
 		mzTimer.ResetTimer();
 	}
 
@@ -240,6 +248,9 @@ public class GameController : MonoBehaviour {
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
 			MzStartLabel.text = "1 面 スタート !";
+		}
+		else if (SceneManager.GetActiveScene().name == "Maze02") {
+			MzStartLabel.text = "2 面 スタート !";
 		}
 	}
 
@@ -338,6 +349,9 @@ public class GameController : MonoBehaviour {
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
 			MzClearLabel.text = "1 面\nクリア !";
+		}
+		else if (SceneManager.GetActiveScene().name == "Maze02") {
+			MzClearLabel.text = "2 面\nクリア !";
 		}
 
 		GoalLabel.enabled = false;
