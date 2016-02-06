@@ -7,6 +7,7 @@ public class TitleController : MonoBehaviour {
 
 	public static bool Mz00 = false;
 	public static bool Mz01 = false;
+	public static bool Mz02 = false;
 
 	enum TitleState
 	{
@@ -35,6 +36,7 @@ public class TitleController : MonoBehaviour {
 	{
 		Mz00 = false;
 		Mz01 = false;
+		Mz02 = false;
 		GameController.Fade = false;
 
 		titlesoundEffect = GameObject.Find("TitleSoundController").GetComponent<TitleSoundEffect>();
@@ -58,6 +60,8 @@ public class TitleController : MonoBehaviour {
 						SceneManager.LoadScene ("Maze00");
 					} else if (Mz01) {
 						SceneManager.LoadScene ("Maze01");
+					} else if (Mz02) {
+						SceneManager.LoadScene ("Maze02");
 					}
 			break;
 		}
@@ -125,6 +129,15 @@ public class TitleController : MonoBehaviour {
 	public void Mz01Start()
 	{
 		Mz01 = true;
+		titlesoundEffect.GameEnter();
+		FadeBlack.enabled = true;
+		GameController.Fade = true;
+		Invoke ("GameStart", 3.0f);
+	}
+
+	public void Mz02Start()
+	{
+		Mz02 = true;
 		titlesoundEffect.GameEnter();
 		FadeBlack.enabled = true;
 		GameController.Fade = true;

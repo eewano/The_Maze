@@ -1718,7 +1718,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1726,7 +1726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3497,11 +3497,26 @@ Prefab:
       objectReference: {fileID: 1464749644}
     - target: {fileID: 11498618, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
       propertyPath: timeLimit
-      value: 240
+      value: 270
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1735464895 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 127172, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+  m_PrefabInternal: {fileID: 1735464894}
+--- !u!114 &1735464896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735464895}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1757778451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,6 +4271,17 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 177290, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
   m_PrefabInternal: {fileID: 817882932}
+--- !u!114 &2076319788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076319787}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2076319793
 MonoBehaviour:
   m_ObjectHideFlags: 0

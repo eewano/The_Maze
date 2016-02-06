@@ -148,9 +148,9 @@ public class PlayerController : MonoBehaviour {
 			maxForwardSpeed = 4.0f;
 			maxBackwardSpeed = 2.5f;
 			maxRotSpeed = 1.2f;
-			RotSpeed = 100.0f;
+			//RotSpeed = 100.0f;
 			KBSpeed = 4.0f;
-			KBRotSpeed = 100.0f;
+			//KBRotSpeed = 100.0f;
 			playerFootSound.SoundInterval = 0.37f;
 		}
 			

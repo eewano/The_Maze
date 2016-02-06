@@ -300,7 +300,7 @@ public class GameController : MonoBehaviour {
 		ToMzButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
 
-		//Time.timeScale = 0.0f;
+		Time.timeScale = 0.0f;
 	}
 
 	void TimeUp()
@@ -404,7 +404,7 @@ public class GameController : MonoBehaviour {
 		mzSoundEffect.EnterSound();
 		MapModeON = true;
 		MapModeOFF = false;
-		Pauser.Pause ();
+		//Pauser.Pause ();
 		Map();
 	}
 
@@ -413,7 +413,7 @@ public class GameController : MonoBehaviour {
 		mzSoundEffect.ExitSound();
 		MapModeON = false;
 		MapModeOFF = true;
-		Pauser.Resume ();
+		//Pauser.Resume ();
 		Playing();
 	}
 
