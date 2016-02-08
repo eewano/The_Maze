@@ -23,6 +23,7 @@ TagManager:
   - Warp03-03
   - Warp03-04
   - Warp03-05
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ClearPoint : MonoBehaviour {
 
-	GameObject gameController;
+	private GameObject gameController;
 
 	void Start () {
 		gameController = GameObject.Find ("GameController");

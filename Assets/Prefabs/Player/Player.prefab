@@ -323,8 +323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardSpeed: 3
-  BackwardSpeed: 2
+  maxForwardSpeed: 0
+  maxBackwardSpeed: 0
+  maxRotSpeed: 0
   RotSpeed: 1.5
   KBSpeed: 3
   KBRotSpeed: 150

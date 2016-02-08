@@ -55,6 +55,8 @@ public class GameController : MonoBehaviour {
 
 	private MzTimer mzTimer;
 	private MzSoundEffect mzSoundEffect;
+	private AudioListener mzAudioListener;
+	private AudioListener mzReadyClear;
 	private CameraController cameraController;
 	private AudioSource mzBGM;
 	private float Alpha;
@@ -90,6 +92,8 @@ public class GameController : MonoBehaviour {
 		MapModeOFF = false;
 
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
+		mzAudioListener = GameObject.Find("Player").GetComponent<AudioListener>();
+		mzReadyClear = GameObject.Find("MzSoundController").GetComponent<AudioListener>();
 		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
 		cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
 		mzBGM = GameObject.Find ("MzBGM").GetComponent<AudioSource> ();
@@ -210,6 +214,9 @@ public class GameController : MonoBehaviour {
 		Player.gameObject.SetActive (false);
 		PlayerGoal.gameObject.SetActive (false);
 
+		mzAudioListener.enabled = false;
+		mzReadyClear.enabled = false;
+
 		FadeBlack.enabled = false;
 	}
 
@@ -219,6 +226,7 @@ public class GameController : MonoBehaviour {
 		cameraController.ShowReadyCamera();
 
 		AllFalse ();
+		mzReadyClear.enabled = true;
 		MzDescriptionLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
 			MzDescriptionLabel.text = "0面はチュートリアルです。\nここでは各基本アイテムの効果を説明していきます。\n" +
@@ -242,6 +250,7 @@ public class GameController : MonoBehaviour {
 		mzSoundEffect.ReadyGoSound();
 
 		AllFalse ();
+		mzReadyClear.enabled = true;
 		MzStartLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
 			MzStartLabel.text = "0 面 スタート !";
@@ -271,6 +280,7 @@ public class GameController : MonoBehaviour {
 		BRButton.gameObject.SetActive (true);
 		GiveUpButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
+		mzAudioListener.enabled = true;
 
 		mzTimer.StartTimer ();
 		Time.timeScale = 1.0f;
@@ -299,6 +309,7 @@ public class GameController : MonoBehaviour {
 		MzTimerLabel.enabled = true;
 		ToMzButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 
 		Time.timeScale = 0.0f;
 	}
@@ -310,6 +321,7 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 		TimeUpLabel.enabled = true;
 		Player.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 
 		mzSoundEffect.TimeUpSound();
 	}
@@ -324,6 +336,7 @@ public class GameController : MonoBehaviour {
 		GameOverButton.gameObject.SetActive (true);
 		RestartButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 	}
 
 	void Goal()
@@ -336,6 +349,7 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 		GoalLabel.enabled = true;
 		PlayerGoal.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 	}
 
 	void Clear()

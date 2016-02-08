@@ -3,9 +3,9 @@ using System.Collections;
 
 public class SpawnPoint : MonoBehaviour {
 
-	[SerializeField] GameObject Player = null;
+	[SerializeField] private GameObject Item;
 
 	void Start () {
-		Instantiate (Player, transform.position, transform.rotation);
+		Instantiate (Item, transform.position, transform.rotation);
 	}
 }
