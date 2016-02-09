@@ -3,34 +3,65 @@ using System.Collections;
 
 public class Enemy02Move : MonoBehaviour {
 
-	[SerializeField] private GameObject Target;
-	[SerializeField] private float xMin;
-	[SerializeField] private float xMax;
-	[SerializeField] private float zMin;
-	[SerializeField] private float zMax;
-	NavMeshAgent navMeshAgentCompornent;
+	[SerializeField] private GameObject target;
+	NavMeshAgent navMeshAgent;
+
+	static Vector3 pos;
+
+	float agentToPatroldistance;
+	float agentToTargetdistance;
+
+	[SerializeField] private AudioClip EnemyMoveSE;
+	private AudioSource audio_source;
+
+	void Awake()
+	{
+		navMeshAgent = GetComponent<NavMeshAgent>();
+	}
 
 	void Start()
 	{
-		navMeshAgentCompornent = this.GetComponent<NavMeshAgent>();
+		EnemyPatrol();
+		audio_source = gameObject.GetComponent<AudioSource>();
+		audio_source.clip = EnemyMoveSE;
 	}
 
 	void Update()
 	{
-		if (Enemy02Start.Enemy02Move == true) {
-			navMeshAgentCompornent.SetDestination (Target.transform.position);
-			GetComponent<Rigidbody> ().position = new Vector3 (
-				Mathf.Clamp (GetComponent<Rigidbody> ().position.x, xMin, xMax), 
-				0.0f, 
-				Mathf.Clamp (GetComponent<Rigidbody> ().position.z, zMin, zMax)
-			);
+		if (GameController.GoalAndClear) {
+			gameObject.SetActive (false);
+		}
+
+		//Agentと目的地の距離
+		agentToPatroldistance = Vector3.Distance (this.navMeshAgent.transform.position, pos);
+
+		//Agentとプレイヤーの距離
+		agentToTargetdistance = Vector3.Distance(this.navMeshAgent.transform.position,target.transform.position);
+
+
+		//プレイヤーとAgentの距離が30f以下になると追跡開始
+		if(agentToTargetdistance <= 6.0f){
+			EnemyTracking();
+
+			//プレイヤーと目的地の距離が15f以下になると次の目的地をランダム指定
+		} else if(agentToPatroldistance < 6.0f){
+			EnemyPatrol();
 		}
 	}
 
-	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "Player") {
-			Enemy02Start.Enemy02Move = false;
-			transform.position = new Vector3(-11, 1, 5);
-		}
+	public void EnemyPatrol()
+	{
+		navMeshAgent.speed = 1.0f;
+		var x = Random.Range(-20.0f, -4.0f);
+		var z = Random.Range(-3.0f, 20.0f);
+		pos = new Vector3 (x, 0, z);
+		navMeshAgent.SetDestination(pos);
+	}
+
+	public void EnemyTracking()
+	{
+		navMeshAgent.speed = 1.5f;
+		pos = target.transform.position;
+		navMeshAgent.SetDestination(pos);
 	}
 }
