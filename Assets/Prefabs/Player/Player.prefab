@@ -28,9 +28,11 @@ GameObject:
   - 92: {fileID: 9214272}
   - 124: {fileID: 12487046}
   - 45: {fileID: 4554284}
+  - 95: {fileID: 9571468}
+  - 114: {fileID: 11474482}
   m_Layer: 0
   m_Name: PlayerCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,14 +46,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 425624}
   - 33: {fileID: 3354402}
-  - 114: {fileID: 11432230}
-  - 114: {fileID: 11422380}
-  - 23: {fileID: 2357868}
-  - 82: {fileID: 8258140}
-  - 114: {fileID: 11449536}
   - 136: {fileID: 13688138}
   - 54: {fileID: 5484904}
-  - 119: {fileID: 11936286}
+  - 23: {fileID: 2357868}
+  - 82: {fileID: 8258140}
+  - 81: {fileID: 8129566}
+  - 114: {fileID: 11432230}
+  - 114: {fileID: 11449536}
+  - 114: {fileID: 11422380}
+  - 114: {fileID: 11415146}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78,8 +81,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 19, y: 0.5, z: -19}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 462556}
   - {fileID: 414886}
@@ -187,6 +190,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!81 &8129566
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177290}
+  m_Enabled: 1
 --- !u!82 &8258140
 AudioSource:
   m_ObjectHideFlags: 1
@@ -197,7 +207,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -268,6 +278,23 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117754}
   m_Enabled: 1
+--- !u!95 &9571468
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117754}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a760c009169b4d5188f50a00b5e93f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &10815456
 Light:
   m_ObjectHideFlags: 1
@@ -301,6 +328,17 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11415146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177290}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11422380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,12 +361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForwardSpeed: 0
-  maxBackwardSpeed: 0
-  maxRotSpeed: 0
-  RotSpeed: 1.5
+  maxForwardSpeed: 3
+  maxBackwardSpeed: 2
+  maxRotSpeed: 1
+  RotSpeed: 75
   KBSpeed: 3
-  KBRotSpeed: 150
+  KBRotSpeed: 75
 --- !u!114 &11449536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,25 +379,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundInterval: 0.4
-  MzWalkSE: {fileID: 8300000, guid: 709328fe751ea4c4082a3bbd986d8a75, type: 3}
---- !u!119 &11936286
-Projector:
+  MzWalkSE: {fileID: 8300000, guid: ae0ed6f40bfa548268095da3290bec1d, type: 3}
+--- !u!114 &11474482
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177290}
+  m_GameObject: {fileID: 117754}
   m_Enabled: 1
-  serializedVersion: 2
-  m_NearClipPlane: 0.1
-  m_FarClipPlane: 100
-  m_FieldOfView: 60
-  m_AspectRatio: 1
-  m_Orthographic: 0
-  m_OrthographicSize: 10
-  m_Material: {fileID: 0}
-  m_IgnoreLayers:
-    serializedVersion: 2
-    m_Bits: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dda7662f0c13488d8c777a764b47293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &12487046
 Behaviour:
   m_ObjectHideFlags: 1
@@ -376,7 +407,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

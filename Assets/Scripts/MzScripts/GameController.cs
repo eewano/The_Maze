@@ -296,6 +296,7 @@ public class GameController : MonoBehaviour {
 		CancelButton.gameObject.SetActive (true);
 		GameOverButton.gameObject.SetActive (true);
 		Player.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 
 		Time.timeScale = 0.0f;
 	}
