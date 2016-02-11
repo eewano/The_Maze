@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -14,10 +15,10 @@ public class PlayerController : MonoBehaviour {
 	private bool BL = false;
 	private bool BR = false;
 
-	Light playerSpotlight;
-	FootSound playerFootSound;
-
-	MzSoundEffect mzSoundEffect;
+	private Light playerSpotlight;
+	private FootSound playerFootSound;
+	private MzSoundEffect mzSoundEffect;
+	private MzTimer mzTimer;
 
 	[SerializeField] private float maxForwardSpeed;
 	[SerializeField] private float maxBackwardSpeed;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 	[SerializeField] private float KBSpeed;
 	[SerializeField] private float KBRotSpeed;
-
+	[SerializeField] private GameObject mapCrystal;
 
 
 	public void PushForwardDown()
@@ -104,6 +105,7 @@ public class PlayerController : MonoBehaviour {
 		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
 		playerFootSound = GameObject.Find ("Player").GetComponent<FootSound> ();
 		playerSpotlight = GameObject.Find ("PlayerSpotlight").GetComponent<Light> ();
+		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
 		gameObject.SetActive (true);
 
 		KeyboardCont = false;
@@ -246,16 +248,22 @@ public class PlayerController : MonoBehaviour {
 			GameController.Light = true;
 			mzSoundEffect.LightBallSound ();
 			Destroy (hit.gameObject);
-		}
-		else if (hit.gameObject.tag == "Croquette") {
+		} else if (hit.gameObject.tag == "Croquette") {
 			GameController.Croquette = true;
 			mzSoundEffect.CroquetteSound ();
 			Destroy (hit.gameObject);
-		}
-		else if (hit.gameObject.tag == "Map") {
+		} else if (hit.gameObject.tag == "Map") {
 			GameController.MapCrystal = true;
 			mzSoundEffect.MapCrystalSound ();
 			Destroy (hit.gameObject);
+		} else if (hit.gameObject.tag == "Enemy") {
+			mzSoundEffect.EnemyTouchSound ();
+			transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
+			mzTimer.EnemyTouchTimer ();
+			GameController.MapCrystal = false;
+			if (mapCrystal == null) {
+				Instantiate (mapCrystal);
+			}
 		}
 	}
 }

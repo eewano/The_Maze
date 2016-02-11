@@ -32,6 +32,10 @@ public class Enemy01Move : MonoBehaviour {
 			gameObject.SetActive (false);
 		}
 
+		if (GameController.Fall || GameController.GameIsOver) {
+			return;
+		}
+
 		//Agentと目的地の距離
 		agentToPatroldistance = Vector3.Distance (this.navMeshAgent.transform.position, pos);
 
@@ -39,17 +43,17 @@ public class Enemy01Move : MonoBehaviour {
 		agentToTargetdistance = Vector3.Distance(this.navMeshAgent.transform.position,target.transform.position);
 
 
-		//プレイヤーとAgentの距離が30f以下になると追跡開始
-		if(agentToTargetdistance <= 5.0f){
+		//プレイヤーとAgentの距離が8.0f以下になると追跡開始
+		if(agentToTargetdistance <= 6.0f){
 			EnemyTracking();
 
-			//プレイヤーと目的地の距離が15f以下になると次の目的地をランダム指定
-		} else if(agentToPatroldistance < 3.0f){
+			//プレイヤーと目的地の距離が4.0f以下になると次の目的地をランダム指定
+		} else if(agentToPatroldistance <= 4.0f){
 			EnemyPatrol();
 		}
 	}
 
-	public void EnemyPatrol()
+	void EnemyPatrol()
 	{
 		navMeshAgent.speed = 1.0f;
 		var x = Random.Range(8.0f, 20.0f);
@@ -58,7 +62,7 @@ public class Enemy01Move : MonoBehaviour {
 		navMeshAgent.SetDestination(pos);
 	}
 
-	public void EnemyTracking()
+	void EnemyTracking()
 	{
 		navMeshAgent.speed = 1.2f;
 		pos = target.transform.position;

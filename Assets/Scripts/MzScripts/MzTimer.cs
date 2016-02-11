@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MzTimer : MonoBehaviour {
 
-	[SerializeField] int timeLimit = 90;
+	[SerializeField] private int timeLimit;
 
 	//制限時間
 	private float timeRemaining;
@@ -55,5 +55,10 @@ public class MzTimer : MonoBehaviour {
 
 		//残り時間のテキストを更新する
 		GetComponent<Text>().text  = "残り時間 : " +  (int)timeRemaining + " 秒";
+	}
+
+	public void EnemyTouchTimer()
+	{
+		timeRemaining -= 30;
 	}
 }

@@ -12,6 +12,7 @@ public class MzSoundEffect : MonoBehaviour {
 	private AudioSource ShutterSE;
 	private AudioSource TimeUpSE;
 	private AudioSource GoalSE;
+	private AudioSource EnemyTouchSE;
 
 	void Start()
 	{
@@ -25,6 +26,7 @@ public class MzSoundEffect : MonoBehaviour {
 		ShutterSE = audioSources [6];
 		TimeUpSE = audioSources [7];
 		GoalSE = audioSources [8];
+		EnemyTouchSE = audioSources [9];
 	}
 
 	public void ReadyGoSound() {
@@ -61,5 +63,9 @@ public class MzSoundEffect : MonoBehaviour {
 
 	public void GoalSound() {
 		GoalSE.PlayOneShot (GoalSE.clip);
+	}
+
+	public void EnemyTouchSound() {
+		EnemyTouchSE.PlayOneShot (EnemyTouchSE.clip);
 	}
 }

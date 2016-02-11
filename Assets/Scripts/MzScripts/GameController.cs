@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour {
 	[SerializeField] private GameObject Player;
 	[SerializeField] private GameObject PlayerGoal;
 
-	[SerializeField] private Image FadeBlack;
+	[SerializeField] private Image fadeBlack;
 
 	private MzTimer mzTimer;
 	private MzSoundEffect mzSoundEffect;
@@ -116,8 +116,10 @@ public class GameController : MonoBehaviour {
 			break;
 
 		case GameState.PLAYING:
-			if(MapCrystal) {
+			if (MapCrystal == true) {
 				MapButton.gameObject.SetActive (true);
+			} else {
+				MapButton.gameObject.SetActive (false);
 			}
 			if(Light) {
 				MazeLight.gameObject.SetActive (true);
@@ -217,7 +219,7 @@ public class GameController : MonoBehaviour {
 		mzAudioListener.enabled = false;
 		mzReadyClear.enabled = false;
 
-		FadeBlack.enabled = false;
+		fadeBlack.enabled = false;
 	}
 
 	void Ready()
@@ -436,7 +438,7 @@ public class GameController : MonoBehaviour {
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
-		FadeBlack.enabled = true;
+		fadeBlack.enabled = true;
 		Fade = true;
 		Invoke("Restart", 3.0f);
 	}
@@ -445,7 +447,7 @@ public class GameController : MonoBehaviour {
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
-		FadeBlack.enabled = true;
+		fadeBlack.enabled = true;
 		Fade = true;
 		Invoke ("ToNext", 3.0f);
 	}
@@ -454,7 +456,7 @@ public class GameController : MonoBehaviour {
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
-		FadeBlack.enabled = true;
+		fadeBlack.enabled = true;
 		Fade = true;
 		Invoke ("ToTitle", 4.0f);
 	}
