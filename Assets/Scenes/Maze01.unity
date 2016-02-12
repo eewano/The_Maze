@@ -1262,7 +1262,7 @@ Prefab:
     - target: {fileID: 11449536, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
       propertyPath: mzWalkSE
       value: 
-      objectReference: {fileID: 8300000, guid: ae0ed6f40bfa548268095da3290bec1d, type: 3}
+      objectReference: {fileID: 8300000, guid: 487cda9111f9aa040a6927a280e12825, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
   m_IsPrefabParent: 0

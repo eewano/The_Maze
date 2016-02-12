@@ -631,7 +631,7 @@ Prefab:
     - target: {fileID: 8276960, guid: f015d111936f24751bea4ef1c94a37a1, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5b26dc6a7ecca4038be2120200613aa0, type: 3}
+      objectReference: {fileID: 8300000, guid: 0b1829aacbe2b41499ea914001419c37, type: 3}
     - target: {fileID: 8276960, guid: f015d111936f24751bea4ef1c94a37a1, type: 2}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
@@ -640,6 +640,10 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11456446, guid: f015d111936f24751bea4ef1c94a37a1, type: 2}
+      propertyPath: EnemyMoveSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b1829aacbe2b41499ea914001419c37, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f015d111936f24751bea4ef1c94a37a1, type: 2}
   m_IsPrefabParent: 0
@@ -3519,7 +3523,7 @@ Prefab:
     - target: {fileID: 8206320, guid: 4985344355ffb4224813445e17bfc1ed, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5b26dc6a7ecca4038be2120200613aa0, type: 3}
+      objectReference: {fileID: 8300000, guid: 0b1829aacbe2b41499ea914001419c37, type: 3}
     - target: {fileID: 8206320, guid: 4985344355ffb4224813445e17bfc1ed, type: 2}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
@@ -3528,6 +3532,10 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11413264, guid: 4985344355ffb4224813445e17bfc1ed, type: 2}
+      propertyPath: EnemyMoveSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b1829aacbe2b41499ea914001419c37, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4985344355ffb4224813445e17bfc1ed, type: 2}
   m_IsPrefabParent: 0
