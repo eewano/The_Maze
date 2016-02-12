@@ -3,9 +3,9 @@ using System.Collections;
 
 public class EnemySpawnPoint : MonoBehaviour {
 
-	[SerializeField] private GameObject Enemy;
+	[SerializeField] private GameObject enemy;
 
 	public void EnemySpawn() {
-		Instantiate (Enemy, transform.position, transform.rotation);
+		Instantiate (enemy, transform.position, transform.rotation);
 	}
 }

@@ -109,11 +109,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465054}
+  - 114: {fileID: 11456446}
   - 54: {fileID: 5407974}
   - 136: {fileID: 13642334}
   - 195: {fileID: 19542614}
   - 82: {fileID: 8276960}
-  - 114: {fileID: 11456446}
   m_Layer: 0
   m_Name: Enemy02
   m_TagString: Enemy
@@ -494,11 +494,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  boundary:
-    xMin: -20
-    xMax: -4
-    zMin: -3
-    zMax: 20
   EnemyMoveSE: {fileID: 8300000, guid: 5b26dc6a7ecca4038be2120200613aa0, type: 3}
 --- !u!136 &13642334
 CapsuleCollider:

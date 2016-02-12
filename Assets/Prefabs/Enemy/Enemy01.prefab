@@ -494,11 +494,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  boundary:
-    xMin: 8
-    xMax: 20
-    zMin: -1
-    zMax: 20
   EnemyMoveSE: {fileID: 8300000, guid: 5b26dc6a7ecca4038be2120200613aa0, type: 3}
 --- !u!136 &13629746
 CapsuleCollider:

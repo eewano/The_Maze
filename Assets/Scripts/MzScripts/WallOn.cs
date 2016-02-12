@@ -7,7 +7,7 @@ public class WallOn : MonoBehaviour {
 
 	void Start()
 	{
-		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
+		mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
 	}
 
 	void OnTriggerEnter(Collider col) {

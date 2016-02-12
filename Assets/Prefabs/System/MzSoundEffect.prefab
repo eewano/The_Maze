@@ -21,7 +21,7 @@ GameObject:
   - 82: {fileID: 8227486}
   - 82: {fileID: 8228502}
   m_Layer: 0
-  m_Name: MzSoundController
+  m_Name: MzSoundEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,7 +354,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 04cc0527baac0449c889416fe76af9ff, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

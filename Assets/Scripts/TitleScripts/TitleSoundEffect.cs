@@ -2,17 +2,15 @@
 using System.Collections;
 
 public class TitleSoundEffect : MonoBehaviour {
-
-	private AudioSource TitleBGM;
+	
 	private AudioSource EnterSE;
 	private AudioSource ExitSE;
 
 	void Start()
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource> ();
-		TitleBGM = audioSources [0];
-		EnterSE = audioSources [1];
-		ExitSE = audioSources [2];
+		EnterSE = audioSources [0];
+		ExitSE = audioSources [1];
 	}
 
 	public void Enter()
@@ -28,6 +26,5 @@ public class TitleSoundEffect : MonoBehaviour {
 	public void GameEnter()
 	{
 		EnterSE.PlayOneShot (EnterSE.clip);
-		Destroy (TitleBGM);
 	}
 }

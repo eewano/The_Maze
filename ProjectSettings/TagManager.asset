@@ -24,6 +24,7 @@ TagManager:
   - Warp03-04
   - Warp03-05
   - Enemy
+  - EnemyArea
   layers:
   - Default
   - TransparentFX

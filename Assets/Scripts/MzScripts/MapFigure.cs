@@ -20,8 +20,8 @@ public class MapFigure : MonoBehaviour {
 			} else if (gameObject.tag == "Croquette") {
 				itemLight.color = new Color(0.0f, 1.0f, 0.0f, 0.5f);
 			}
-				
-		} else if (GameController.MapModeON == false && GameController.MapModeOFF == true) {
+		}
+		else if (GameController.MapModeON == false && GameController.MapModeOFF == true) {
 			itemLight.range = 0;
 			itemLight.intensity = 0;
 		}

@@ -186,6 +186,7 @@ GameObject:
   - 114: {fileID: 11432474}
   - 114: {fileID: 11498618}
   - 114: {fileID: 11436626}
+  - 114: {fileID: 11445734}
   m_Layer: 5
   m_Name: MzTimerLabel
   m_TagString: Untagged
@@ -1298,6 +1299,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u6642\u9593\u5207\u308C\uFF01"
+--- !u!114 &11445734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11459806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1834,7 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21266b47162e48b49177e12859c356b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 120
+  timeLimit: 270
 --- !u!114 &11499078
 MonoBehaviour:
   m_ObjectHideFlags: 1

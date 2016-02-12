@@ -5,62 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	public static bool MapCrystal = false;
-	public static bool Light = false;
-	public static bool Croquette = false;
-	public static bool GameIsOver = false;
-	public static bool Fall = false;
-	public static bool Dead = false;
-	public static bool GoalAndClear = false;
-	public static bool StartTween = false;
-	public static bool Fade = false;
-	public static bool MapModeON = false;
-	public static bool MapModeOFF = false;
-
-	[SerializeField] private Text MzDescriptionLabel;
-	[SerializeField] private Text MzStartLabel;
-	[SerializeField] private Text MzClearLabel;
-
-	[SerializeField] private Text MzTimerLabel;
-	[SerializeField] private Text LightLabel;
-	[SerializeField] private Text CroquetteLabel;
-	[SerializeField] private Text GiveUpLabel;
-	[SerializeField] private Text TimeUpLabel;
-	[SerializeField] private Text FailerLabel;
-	[SerializeField] private Text GoalLabel;
-
-	[SerializeField] private GameObject ForwardButton;
-	[SerializeField] private GameObject BackButton;
-	[SerializeField] private GameObject LeftButton;
-	[SerializeField] private GameObject RightButton;
-	[SerializeField] private GameObject FLButton;
-	[SerializeField] private GameObject FRButton;
-	[SerializeField] private GameObject BLButton;
-	[SerializeField] private GameObject BRButton;
-
-	[SerializeField] private GameObject MazeLight;
-	[SerializeField] private GameObject GiveUpButton;
-	[SerializeField] private GameObject CancelButton;
-	[SerializeField] private GameObject GameOverButton;
-	[SerializeField] private GameObject MapButton;
-	[SerializeField] private GameObject ToMzButton;
-	[SerializeField] private GameObject RestartButton;
-	[SerializeField] private GameObject NextMzButton;
-	[SerializeField] private GameObject ToTitleButton;
-
-	[SerializeField] private GameObject Player;
-	[SerializeField] private GameObject PlayerGoal;
-
-	[SerializeField] private Image fadeBlack;
-
-	private MzTimer mzTimer;
-	private MzSoundEffect mzSoundEffect;
-	private AudioListener mzAudioListener;
-	private AudioListener mzReadyClear;
-	private CameraController cameraController;
-	private AudioSource mzBGM;
-	private float Alpha;
-
 	enum GameState
 	{
 		READY,
@@ -76,7 +20,72 @@ public class GameController : MonoBehaviour {
 	}
 	private GameState state;
 
+	public static bool MapCrystal = false;
+	public static bool Light = false;
+	public static bool Croquette = false;
+	public static bool GameIsOver = false;
+	public static bool Fall = false;
+	public static bool Dead = false;
+	public static bool GoalAndClear = false;
+	public static bool StartTween = false;
+	public static bool Fade = false;
+	public static bool MapModeON = false;
+	public static bool MapModeOFF = false;
 
+	[SerializeField] private GameObject player;
+
+	[SerializeField] private Text mzDescriptionLabel;
+	[SerializeField] private Text mzStartLabel;
+	[SerializeField] private Text mzClearLabel;
+
+	[SerializeField] private Text mzTimerLabel;
+	[SerializeField] private Text lightLabel;
+	[SerializeField] private Text croquetteLabel;
+	[SerializeField] private Text giveUpLabel;
+	[SerializeField] private Text timeUpLabel;
+	[SerializeField] private Text failerLabel;
+	[SerializeField] private Text goalLabel;
+
+	[SerializeField] private GameObject buttonForward;
+	[SerializeField] private GameObject buttonBack;
+	[SerializeField] private GameObject buttonLeft;
+	[SerializeField] private GameObject buttonRight;
+	[SerializeField] private GameObject buttonFL;
+	[SerializeField] private GameObject buttonFR;
+	[SerializeField] private GameObject buttonBL;
+	[SerializeField] private GameObject buttonBR;
+
+	[SerializeField] private GameObject getLight;
+	[SerializeField] private GameObject buttonGiveUp;
+	[SerializeField] private GameObject buttonCancel;
+	[SerializeField] private GameObject buttonGameOver;
+	[SerializeField] private GameObject buttonMap;
+	[SerializeField] private GameObject buttonToMz;
+	[SerializeField] private GameObject buttonRestart;
+	[SerializeField] private GameObject buttonNextMz;
+	[SerializeField] private GameObject buttonToTitle;
+
+	[SerializeField] private GameObject playerGoal;
+
+	[SerializeField] private Image fadeBlack;
+
+	private MzTimer mzTimer;
+	private MzSoundEffect mzSoundEffect;
+	private AudioListener mzAudioListener;
+	private AudioListener mzReadyClear;
+	private CameraController cameraController;
+	private AudioSource mzBGM;
+	private float alpha;
+
+	void Awake()
+	{
+		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer>();
+		mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
+		mzAudioListener = GameObject.Find("Player").GetComponent<AudioListener>();
+		mzReadyClear = GameObject.Find("MzSoundEffect").GetComponent<AudioListener>();
+		cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
+		mzBGM = GameObject.Find ("MzBGM").GetComponent<AudioSource>();
+	}
 
 	void Start()
 	{
@@ -84,6 +93,7 @@ public class GameController : MonoBehaviour {
 		Light = false;
 		Croquette = false;
 		GameIsOver = false;
+		Fall = false;
 		Dead = false;
 		GoalAndClear = false;
 		StartTween = false;
@@ -91,12 +101,6 @@ public class GameController : MonoBehaviour {
 		MapModeON = false;
 		MapModeOFF = false;
 
-		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
-		mzAudioListener = GameObject.Find("Player").GetComponent<AudioListener>();
-		mzReadyClear = GameObject.Find("MzSoundController").GetComponent<AudioListener>();
-		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
-		cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
-		mzBGM = GameObject.Find ("MzBGM").GetComponent<AudioSource> ();
 		Ready ();
 	}
 
@@ -117,16 +121,16 @@ public class GameController : MonoBehaviour {
 
 		case GameState.PLAYING:
 			if (MapCrystal == true) {
-				MapButton.gameObject.SetActive (true);
+				buttonMap.gameObject.SetActive (true);
 			} else {
-				MapButton.gameObject.SetActive (false);
+				buttonMap.gameObject.SetActive (false);
 			}
-			if(Light) {
-				MazeLight.gameObject.SetActive (true);
-				LightLabel.enabled = true;
+			if(Light == true) {
+				getLight.gameObject.SetActive (true);
+				lightLabel.enabled = true;
 			}
-			if(Croquette) {
-				CroquetteLabel.enabled = true;
+			if(Croquette == true) {
+				croquetteLabel.enabled = true;
 			}
 
 			if(mzTimer.GetTimeRemaining() == 0)
@@ -139,19 +143,19 @@ public class GameController : MonoBehaviour {
 
 		case GameState.GIVEUP:
 			if(Light) {
-				LightLabel.enabled = true;
+				lightLabel.enabled = true;
 			}
 			if(Croquette) {
-				CroquetteLabel.enabled = true;
+				croquetteLabel.enabled = true;
 			}
 			break;
 
 		case GameState.MAP:
 			if(Light) {
-				LightLabel.enabled = true;
+				lightLabel.enabled = true;
 			}
 			if(Croquette) {
-				CroquetteLabel.enabled = true;
+				croquetteLabel.enabled = true;
 			}
 			break;
 
@@ -182,39 +186,40 @@ public class GameController : MonoBehaviour {
 
 	void AllFalse()
 	{
-		MzDescriptionLabel.enabled = false;
-		MzStartLabel.enabled = false;
-		MzClearLabel.enabled = false;
+		player.gameObject.SetActive (false);
 
-		MzTimerLabel.enabled = false;
-		LightLabel.enabled = false;
-		CroquetteLabel.enabled = false;
-		GiveUpLabel.enabled = false;
-		TimeUpLabel.enabled = false;
-		FailerLabel.enabled = false;
-		GoalLabel.enabled = false;
+		mzDescriptionLabel.enabled = false;
+		mzStartLabel.enabled = false;
+		mzClearLabel.enabled = false;
 
-		ForwardButton.gameObject.SetActive (false);
-		BackButton.gameObject.SetActive (false);
-		LeftButton.gameObject.SetActive (false);
-		RightButton.gameObject.SetActive (false);
-		FLButton.gameObject.SetActive (false);
-		FRButton.gameObject.SetActive (false);
-		BLButton.gameObject.SetActive (false);
-		BRButton.gameObject.SetActive (false);
+		mzTimerLabel.enabled = false;
+		lightLabel.enabled = false;
+		croquetteLabel.enabled = false;
+		giveUpLabel.enabled = false;
+		timeUpLabel.enabled = false;
+		failerLabel.enabled = false;
+		goalLabel.enabled = false;
 
-		MazeLight.gameObject.SetActive (false);
-		GiveUpButton.gameObject.SetActive (false);
-		CancelButton.gameObject.SetActive (false);
-		GameOverButton.gameObject.SetActive (false);
-		MapButton.gameObject.SetActive (false);
-		ToMzButton.gameObject.SetActive (false);
-		RestartButton.gameObject.SetActive (false);
-		NextMzButton.gameObject.SetActive (false);
-		ToTitleButton.gameObject.SetActive (false);
+		buttonForward.gameObject.SetActive (false);
+		buttonBack.gameObject.SetActive (false);
+		buttonLeft.gameObject.SetActive (false);
+		buttonRight.gameObject.SetActive (false);
+		buttonFL.gameObject.SetActive (false);
+		buttonFR.gameObject.SetActive (false);
+		buttonBL.gameObject.SetActive (false);
+		buttonBR.gameObject.SetActive (false);
 
-		Player.gameObject.SetActive (false);
-		PlayerGoal.gameObject.SetActive (false);
+		getLight.gameObject.SetActive (false);
+		buttonGiveUp.gameObject.SetActive (false);
+		buttonCancel.gameObject.SetActive (false);
+		buttonGameOver.gameObject.SetActive (false);
+		buttonMap.gameObject.SetActive (false);
+		buttonToMz.gameObject.SetActive (false);
+		buttonRestart.gameObject.SetActive (false);
+		buttonNextMz.gameObject.SetActive (false);
+		buttonToTitle.gameObject.SetActive (false);
+
+		playerGoal.gameObject.SetActive (false);
 
 		mzAudioListener.enabled = false;
 		mzReadyClear.enabled = false;
@@ -226,20 +231,20 @@ public class GameController : MonoBehaviour {
 	{
 		state = GameState.READY;
 		cameraController.ShowReadyCamera();
-
 		AllFalse ();
+
 		mzReadyClear.enabled = true;
-		MzDescriptionLabel.enabled = true;
+		mzDescriptionLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			MzDescriptionLabel.text = "0面はチュートリアルです。\nここでは各基本アイテムの効果を説明していきます。\n" +
-				"制限時間内にすべてのアイテムを取得した後、ゴールを目指して下さい。\n\n画面クリックでゲーム開始です。";
+			mzDescriptionLabel.text = "0面はチュートリアルです。\nここでは各基本アイテムの効果を説明していきます。\n" +
+				"制限時間内にすべてのアイテムを取得した後、\nゴールを目指して下さい。\n\n画面クリックでゲーム開始です。";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
-			MzDescriptionLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
+			mzDescriptionLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			MzDescriptionLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、何処かに置き去りに\n" +
+			mzDescriptionLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、何処かに置き去りに\n" +
 				"されるので、上手く逃げ回りつつゴールを\n目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
@@ -249,19 +254,19 @@ public class GameController : MonoBehaviour {
 	void ReadyGo()
 	{
 		state = GameState.READYGO;
+		AllFalse ();
 		mzSoundEffect.ReadyGoSound();
 
-		AllFalse ();
 		mzReadyClear.enabled = true;
-		MzStartLabel.enabled = true;
+		mzStartLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			MzStartLabel.text = "0 面 スタート !";
+			mzStartLabel.text = "0 面 スタート !";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
-			MzStartLabel.text = "1 面 スタート !";
+			mzStartLabel.text = "1 面 スタート !";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			MzStartLabel.text = "2 面 スタート !";
+			mzStartLabel.text = "2 面 スタート !";
 		}
 	}
 
@@ -269,19 +274,19 @@ public class GameController : MonoBehaviour {
 	{
 		state = GameState.PLAYING;
 		cameraController.ShowPlayerCamera();
-
 		AllFalse ();
-		MzTimerLabel.enabled = true;
-		ForwardButton.gameObject.SetActive (true);
-		BackButton.gameObject.SetActive (true);
-		LeftButton.gameObject.SetActive (true);
-		RightButton.gameObject.SetActive (true);
-		FLButton.gameObject.SetActive (true);
-		FRButton.gameObject.SetActive (true);
-		BLButton.gameObject.SetActive (true);
-		BRButton.gameObject.SetActive (true);
-		GiveUpButton.gameObject.SetActive (true);
-		Player.gameObject.SetActive (true);
+
+		player.gameObject.SetActive (true);
+		mzTimerLabel.enabled = true;
+		buttonForward.gameObject.SetActive (true);
+		buttonBack.gameObject.SetActive (true);
+		buttonLeft.gameObject.SetActive (true);
+		buttonRight.gameObject.SetActive (true);
+		buttonFL.gameObject.SetActive (true);
+		buttonFR.gameObject.SetActive (true);
+		buttonBL.gameObject.SetActive (true);
+		buttonBR.gameObject.SetActive (true);
+		buttonGiveUp.gameObject.SetActive (true);
 		mzAudioListener.enabled = true;
 
 		mzTimer.StartTimer ();
@@ -291,67 +296,63 @@ public class GameController : MonoBehaviour {
 	void GiveUp()
 	{
 		state = GameState.GIVEUP;
-
-		AllFalse ();
-		MzTimerLabel.enabled = true;
-		GiveUpLabel.enabled = true;
-		CancelButton.gameObject.SetActive (true);
-		GameOverButton.gameObject.SetActive (true);
-		Player.gameObject.SetActive (true);
-		mzReadyClear.enabled = true;
-
 		Time.timeScale = 0.0f;
+		AllFalse ();
+
+		player.gameObject.SetActive (true);
+		mzTimerLabel.enabled = true;
+		giveUpLabel.enabled = true;
+		buttonCancel.gameObject.SetActive (true);
+		buttonGameOver.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 	}
 
 	void Map()
 	{
 		state = GameState.MAP;
 		cameraController.ShowMapCamera();
-
-		AllFalse ();
-		MzTimerLabel.enabled = true;
-		ToMzButton.gameObject.SetActive (true);
-		Player.gameObject.SetActive (true);
-		mzReadyClear.enabled = true;
-
 		Time.timeScale = 0.0f;
+		AllFalse ();
+
+		player.gameObject.SetActive (true);
+		mzTimerLabel.enabled = true;
+		buttonToMz.gameObject.SetActive (true);
+		mzReadyClear.enabled = true;
 	}
 
 	void TimeUp()
 	{
 		state = GameState.TIMEUP;
-
 		AllFalse ();
-		TimeUpLabel.enabled = true;
-		Player.gameObject.SetActive (true);
-		mzReadyClear.enabled = true;
-
 		mzSoundEffect.TimeUpSound();
+
+		player.gameObject.SetActive (true);
+		timeUpLabel.enabled = true;
+		mzReadyClear.enabled = true;
 	}
 
 	void Failure()
 	{
 		state = GameState.FAILURE;
 		cameraController.ShowPlayerCamera();
-
 		AllFalse ();
-		FailerLabel.enabled = true;
-		GameOverButton.gameObject.SetActive (true);
-		RestartButton.gameObject.SetActive (true);
-		Player.gameObject.SetActive (true);
+
+		player.gameObject.SetActive (true);
+		failerLabel.enabled = true;
+		buttonGameOver.gameObject.SetActive (true);
+		buttonRestart.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
 	}
 
 	void Goal()
 	{
 		state = GameState.GOAL;
-
-		mzSoundEffect.GoalSound();
 		cameraController.ShowGoalCamera();
-
 		AllFalse ();
-		GoalLabel.enabled = true;
-		PlayerGoal.gameObject.SetActive (true);
+		mzSoundEffect.GoalSound();
+
+		goalLabel.enabled = true;
+		playerGoal.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
 	}
 
@@ -359,21 +360,21 @@ public class GameController : MonoBehaviour {
 	{
 		state = GameState.CLEAR;
 
-		MzClearLabel.enabled = true;
+		mzClearLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			MzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n迷路探索の始まりです !";
-			MzClearLabel.fontSize = 60;
+			mzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n迷路探索の始まりです !";
+			mzClearLabel.fontSize = 60;
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
-			MzClearLabel.text = "1 面\nクリア !";
+			mzClearLabel.text = "1 面\nクリア !";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			MzClearLabel.text = "2 面\nクリア !";
+			mzClearLabel.text = "2 面\nクリア !";
 		}
 
-		GoalLabel.enabled = false;
-		NextMzButton.gameObject.SetActive (true);
-		ToTitleButton.gameObject.SetActive (true);
+		goalLabel.enabled = false;
+		buttonNextMz.gameObject.SetActive (true);
+		buttonToTitle.gameObject.SetActive (true);
 	}
 
 
@@ -392,31 +393,31 @@ public class GameController : MonoBehaviour {
 		SceneManager.LoadScene ("Title");
 	}
 
-	void ToNext()
+	void ToNextMz()
 	{
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 
 
 
-	public void OnGiveUpButtonClicked()
+	public void OnButtonGiveUpClicked()
 	{
 		mzSoundEffect.EnterSound();
 		GiveUp();
 	}
 
-	public void OnCancelButtonClicked()
+	public void OnButtonCancelClicked()
 	{
 		mzSoundEffect.ExitSound();
 		Playing();
 	}
 
-	public void OnGameOverButtonClicked()
+	public void OnButtonGameOverClicked()
 	{
 		GameOver();
 	}
 
-	public void OnMapButtonClicked()
+	public void OnButtonMapClicked()
 	{
 		mzSoundEffect.EnterSound();
 		MapModeON = true;
@@ -425,7 +426,7 @@ public class GameController : MonoBehaviour {
 		Map();
 	}
 
-	public void OnToMzButtonClicked()
+	public void OnButtonToMzClicked()
 	{
 		mzSoundEffect.ExitSound();
 		MapModeON = false;
@@ -434,7 +435,7 @@ public class GameController : MonoBehaviour {
 		Playing();
 	}
 
-	public void OnRestartButtonClicked()
+	public void OnButtonRestartClicked()
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
@@ -443,16 +444,16 @@ public class GameController : MonoBehaviour {
 		Invoke("Restart", 3.0f);
 	}
 
-	public void OnNextMzButtonClicked()
+	public void OnButtonNextMzClicked()
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
 		fadeBlack.enabled = true;
 		Fade = true;
-		Invoke ("ToNext", 3.0f);
+		Invoke ("ToNextMz", 3.0f);
 	}
 
-	public void OnToTitleButtonClicked()
+	public void OnButtonToTitleClicked()
 	{
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();

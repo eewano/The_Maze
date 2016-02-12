@@ -3,19 +3,18 @@ using System.Collections;
 
 public class FootSound : MonoBehaviour {
 
-	public float SoundInterval;
-	[SerializeField] private AudioClip MzWalkSE;
-	private AudioSource audio_source;
+	public float soundInterval;
+	[SerializeField] private AudioClip mzWalkSE;
+	private AudioSource audioSource;
 
 	private float count = 0;
 	private Vector3 last_pos;	//プレイヤーが前にいたPosition
 
-	void Start () {
-		audio_source = gameObject.GetComponent<AudioSource>();
-		audio_source.clip = MzWalkSE;
+	void Awake () {
+		audioSource = gameObject.GetComponent<AudioSource>();
+		audioSource.clip = mzWalkSE;
 	}
-
-
+		
 	void Update ()
 	{
 		if (GameController.Fall || GameController.GameIsOver || GameController.Dead) {
@@ -23,8 +22,8 @@ public class FootSound : MonoBehaviour {
 		}
 
 		if (last_pos != transform.position) {
-			if (SoundInterval < count) {
-				audio_source.Play();
+			if (soundInterval < count) {
+				audioSource.Play();
 				count = 0;
 			}
 		}

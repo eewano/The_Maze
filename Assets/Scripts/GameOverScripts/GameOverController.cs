@@ -5,23 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour {
 
-	[SerializeField] private Text GameOverLabel;
-	[SerializeField] private Text ReturnToTitleLabel;
-	[SerializeField] private Image FadeBlack;
+	[SerializeField] private Text gameOverLabel;
+	[SerializeField] private Text returnToTitleLabel;
+	[SerializeField] private Image fadeBlack;
 
 	void Start()
 	{
-		GameController.Fade = false;
 		Time.timeScale = 1.0f;
-		GameOverLabel.enabled = true;
-		ReturnToTitleLabel.enabled = true;
-		FadeBlack.enabled = false;
+		GameController.Fade = false;
+		gameOverLabel.enabled = true;
+		returnToTitleLabel.enabled = true;
+		fadeBlack.enabled = false;
 	}
 
 	void Update()
 	{
 		if (Input.GetMouseButtonDown (0)) {
-			FadeBlack.enabled = true;
+			fadeBlack.enabled = true;
 			GameController.Fade = true;
 			Invoke ("ReturnToTitle", 4.0f);
 		}

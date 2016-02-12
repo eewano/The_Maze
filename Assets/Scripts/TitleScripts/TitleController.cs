@@ -9,12 +9,7 @@ public class TitleController : MonoBehaviour {
 	public static bool Mz01 = false;
 	public static bool Mz02 = false;
 
-	enum TitleState
-	{
-		TITLE,
-		DESCRIPTION,
-		START
-	}
+	enum TitleState {TITLE, DESCRIPTION, START}
 	private TitleState state;
 
 	[SerializeField] private Text titleLabel;
@@ -28,9 +23,16 @@ public class TitleController : MonoBehaviour {
 	[SerializeField] private GameObject mazePanel03;
 	[SerializeField] private GameObject titleButton;
 
-	[SerializeField] private Image FadeBlack;
+	[SerializeField] private Image fadeBlack;
 
-	TitleSoundEffect titlesoundEffect;
+	private TitleSoundEffect titleSoundEffect;
+	private AudioSource titleBGM;
+
+	void Awake()
+	{
+		titleSoundEffect = GameObject.Find("TitleSoundEffect").GetComponent<TitleSoundEffect>();
+		titleBGM = GameObject.Find ("TitleBGM").GetComponent<AudioSource>();
+	}
 
 	void Start()
 	{
@@ -38,11 +40,9 @@ public class TitleController : MonoBehaviour {
 		Mz01 = false;
 		Mz02 = false;
 		GameController.Fade = false;
+		fadeBlack.enabled = false;
 
-		titlesoundEffect = GameObject.Find("TitleSoundController").GetComponent<TitleSoundEffect>();
 		Title ();
-
-		FadeBlack.enabled = false;
 	}
 
 	void Update()
@@ -56,11 +56,11 @@ public class TitleController : MonoBehaviour {
 			break;
 
 		case TitleState.START:
-					if (Mz00) {
+					if (Mz00 == true) {
 						SceneManager.LoadScene ("Maze00");
-					} else if (Mz01) {
+					} else if (Mz01 == true) {
 						SceneManager.LoadScene ("Maze01");
-					} else if (Mz02) {
+					} else if (Mz02 == true) {
 						SceneManager.LoadScene ("Maze02");
 					}
 			break;
@@ -80,13 +80,12 @@ public class TitleController : MonoBehaviour {
 		mazePanel03.gameObject.SetActive (false);
 		titleButton.gameObject.SetActive (false);
 	}
-
-
+		
 	void Title()
 	{
 		state = TitleState.TITLE;
-
 		AllFalse ();
+
 		titleLabel.enabled = true;
 		subtitleLabel.enabled = true;
 
@@ -99,8 +98,8 @@ public class TitleController : MonoBehaviour {
 	void Description()
 	{
 		state = TitleState.DESCRIPTION;
-
 		AllFalse ();
+
 		descriptiontitleLabel.enabled = true;
 		descriptionLabel.enabled = true;
 
@@ -110,18 +109,31 @@ public class TitleController : MonoBehaviour {
 	void GameStart()
 	{
 		state = TitleState.START;
-		if(FadeBlack.gameObject.activeSelf == false)
+		if(fadeBlack.gameObject.activeSelf == false)
 		{
-			FadeBlack.gameObject.SetActive(true);
+			fadeBlack.gameObject.SetActive(true);
 		}
 	}
 
 
+	public void OnTitleButtonClicked()
+	{
+		titleSoundEffect.Exit();
+		Title();
+	}
+
+	public void OnDescriptionClicked()
+	{
+		titleSoundEffect.Enter();
+		Description();
+	}
+
 	public void Mz00Start()
 	{
 		Mz00 = true;
-		titlesoundEffect.GameEnter();
-		FadeBlack.enabled = true;
+		titleBGM.Stop ();
+		titleSoundEffect.GameEnter();
+		fadeBlack.enabled = true;
 		GameController.Fade = true;
 		Invoke ("GameStart", 3.0f);
 	}
@@ -129,8 +141,9 @@ public class TitleController : MonoBehaviour {
 	public void Mz01Start()
 	{
 		Mz01 = true;
-		titlesoundEffect.GameEnter();
-		FadeBlack.enabled = true;
+		titleBGM.Stop ();
+		titleSoundEffect.GameEnter();
+		fadeBlack.enabled = true;
 		GameController.Fade = true;
 		Invoke ("GameStart", 3.0f);
 	}
@@ -138,21 +151,10 @@ public class TitleController : MonoBehaviour {
 	public void Mz02Start()
 	{
 		Mz02 = true;
-		titlesoundEffect.GameEnter();
-		FadeBlack.enabled = true;
+		titleBGM.Stop ();
+		titleSoundEffect.GameEnter();
+		fadeBlack.enabled = true;
 		GameController.Fade = true;
 		Invoke ("GameStart", 3.0f);
-	}
-
-	public void OnTitleButtonClicked()
-	{
-		titlesoundEffect.Exit();
-		Title();
-	}
-
-	public void OnDescriptionClicked()
-	{
-		titlesoundEffect.Enter();
-		Description();
 	}
 }

@@ -10,19 +10,22 @@ public class Mz00Controller : MonoBehaviour {
 	private bool FirstLightFlag;
 	private bool AllItemGet;
 
-	[SerializeField] Image MapCrystalLabel = null;
-	[SerializeField] Image CroquetteLabel = null;
-	[SerializeField] Image LightLabel = null;
-	[SerializeField] Image ToGoalLabel = null;
+	[SerializeField] private Image mapCrystalImage;
+	[SerializeField] private Image croquetteImage;
+	[SerializeField] private Image lightBallImage;
+	[SerializeField] private Image toGoalImage;
 
 	void Start()
 	{
-		MapCrystalLabel.gameObject.SetActive (false);
-		CroquetteLabel.gameObject.SetActive (false);
-		LightLabel.gameObject.SetActive (false);
-		ToGoalLabel.gameObject.SetActive (false);
+		mapCrystalImage.gameObject.SetActive (false);
+		croquetteImage.gameObject.SetActive (false);
+		lightBallImage.gameObject.SetActive (false);
+		toGoalImage.gameObject.SetActive (false);
 
 		FirstMapFlag = false;
+		FirstCroqFlag = false;
+		FirstLightFlag = false;
+		AllItemGet = false;
 	}
 
 	void Update()
@@ -33,45 +36,45 @@ public class Mz00Controller : MonoBehaviour {
 			AllItemGet == true)
 		{
 			Debug.Log ("ClearOK");
-			ToGoalLabel.gameObject.SetActive (true);
+			toGoalImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			Debug.Log ("Stop");
 			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
-				ToGoalLabel.gameObject.SetActive (false);
+				toGoalImage.gameObject.SetActive (false);
 				Mz00Goal = true;
 				AllItemGet = false;
 			}
 		}
 
 		if (GameController.MapCrystal == true && FirstMapFlag == false) {
-			MapCrystalLabel.gameObject.SetActive (true);
+			mapCrystalImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
-				MapCrystalLabel.gameObject.SetActive (false);
+				mapCrystalImage.gameObject.SetActive (false);
 				FirstMapFlag = true;
 				AllItemGet = true;
 			}
 		}
 
 		if (GameController.Croquette == true && FirstCroqFlag == false) {
-			CroquetteLabel.gameObject.SetActive (true);
+			croquetteImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
-				CroquetteLabel.gameObject.SetActive (false);
+				croquetteImage.gameObject.SetActive (false);
 				FirstCroqFlag = true;
 				AllItemGet = true;
 			}
 		}
 
 		if (GameController.Light == true && FirstLightFlag == false) {
-			LightLabel.gameObject.SetActive (true);
+			lightBallImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			if (Input.GetMouseButtonDown (0)) {
 				Time.timeScale = 1.0f;
-				LightLabel.gameObject.SetActive (false);
+				lightBallImage.gameObject.SetActive (false);
 				FirstLightFlag = true;
 				AllItemGet = true;
 			}

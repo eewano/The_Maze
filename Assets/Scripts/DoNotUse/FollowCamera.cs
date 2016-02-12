@@ -4,19 +4,19 @@ using System.Collections;
 public class FollowCamera : MonoBehaviour {
 
 	//追従するオブジェクト
-	[SerializeField] Transform target = null;
+	[SerializeField] private Transform target;
 
 	//Z方向の距離
-	[SerializeField] float distance = 0;
+	[SerializeField] private float distance;
 
 	//Y方向の高さ
-	[SerializeField] float height = 0;
+	[SerializeField] private float height;
 
 	//上下高さのスムーズ移動速度
-	[SerializeField] float heightDamping = 0;
+	[SerializeField] private float heightDamping;
 
 	//左右回転のスムーズ移動速度
-	[SerializeField] float rotationDamping = 0;
+	[SerializeField] private float rotationDamping;
 
 	void LateUpdate() {
 		if (target == null) {

@@ -4593,7 +4593,7 @@ GameObject:
   - 4: {fileID: 439018}
   - 108: {fileID: 10895950}
   m_Layer: 0
-  m_Name: MazeLight
+  m_Name: GetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48313,7 +48313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07f821a312b69048856b5514cd783ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 190052, guid: 5e4fa705526be46729df5bd07c8bd0ec, type: 2}
+  item: {fileID: 0}
 --- !u!114 &11481744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48336,7 +48336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07f821a312b69048856b5514cd783ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 175978, guid: b553d9ceb83a48d4a8a3827467caa472, type: 2}
+  item: {fileID: 0}
 --- !u!114 &11483746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48359,7 +48359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07f821a312b69048856b5514cd783ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 115474, guid: f49cad5b7cfd39a43bc2da7f985f5296, type: 2}
+  item: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

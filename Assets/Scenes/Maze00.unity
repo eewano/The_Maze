@@ -163,7 +163,7 @@ GameObject:
   - 114: {fileID: 212949432}
   - 114: {fileID: 212949431}
   m_Layer: 5
-  m_Name: RightButton
+  m_Name: ButtonRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +584,7 @@ GameObject:
   - 114: {fileID: 539991494}
   - 114: {fileID: 539991493}
   m_Layer: 5
-  m_Name: BRButton
+  m_Name: ButtonBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,6 +882,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 147682, guid: 7d8f7613d2b64441985c995e6ceba8e7, type: 2}
+      propertyPath: m_Name
+      value: MzSoundEffect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d8f7613d2b64441985c995e6ceba8e7, type: 2}
   m_IsPrefabParent: 0
@@ -1000,10 +1004,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe29784371f24773a4dc7d62299f08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapCrystalLabel: {fileID: 1693825128}
-  CroquetteLabel: {fileID: 1500228657}
-  LightLabel: {fileID: 1711485174}
-  ToGoalLabel: {fileID: 294474927}
+  mapCrystalImage: {fileID: 1693825128}
+  croquetteImage: {fileID: 1500228657}
+  lightBallImage: {fileID: 1711485174}
+  toGoalImage: {fileID: 294474927}
 --- !u!4 &643133140
 Transform:
   m_ObjectHideFlags: 0
@@ -1029,7 +1033,7 @@ GameObject:
   - 114: {fileID: 659678593}
   - 114: {fileID: 659678592}
   m_Layer: 5
-  m_Name: ForwardButton
+  m_Name: ButtonForward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1556,6 +1560,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11482814, guid: f27002bf838b94e21a2804736e3b335b, type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 175978, guid: b553d9ceb83a48d4a8a3827467caa472, type: 2}
+    - target: {fileID: 11454808, guid: f27002bf838b94e21a2804736e3b335b, type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 190052, guid: 5e4fa705526be46729df5bd07c8bd0ec, type: 2}
+    - target: {fileID: 11491612, guid: f27002bf838b94e21a2804736e3b335b, type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 115474, guid: f49cad5b7cfd39a43bc2da7f985f5296, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f27002bf838b94e21a2804736e3b335b, type: 2}
   m_IsPrefabParent: 0
@@ -1572,7 +1588,7 @@ GameObject:
   - 114: {fileID: 857059810}
   - 114: {fileID: 857059809}
   m_Layer: 5
-  m_Name: LeftButton
+  m_Name: ButtonLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,14 +1777,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bcbc25e6ae704980957b263af610951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReadyCamera: {fileID: 779515376}
-  PlayerCamera: {fileID: 2010794434}
-  MapCamera: {fileID: 995458460}
-  GoalCamera: {fileID: 1057439389}
-  Ceiling: {fileID: 1350939051}
-  MzLight: {fileID: 740475167}
-  MapLight: {fileID: 503916526}
-  GoalLight: {fileID: 166920882}
+  readyCamera: {fileID: 779515376}
+  playerCamera: {fileID: 2010794434}
+  mapCamera: {fileID: 995458460}
+  goalCamera: {fileID: 1057439389}
+  ceiling: {fileID: 1350939051}
+  mzLight: {fileID: 740475167}
+  mapLight: {fileID: 503916526}
+  goalLight: {fileID: 166920882}
 --- !u!4 &968167323
 Transform:
   m_ObjectHideFlags: 0
@@ -1959,17 +1975,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1891792075}
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
---- !u!114 &1000520744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1000520742}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1005397968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,7 +1988,7 @@ GameObject:
   - 114: {fileID: 1005397971}
   - 114: {fileID: 1005397970}
   m_Layer: 5
-  m_Name: FLButton
+  m_Name: ButtonFL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2320,7 +2325,7 @@ GameObject:
   - 114: {fileID: 1236035395}
   - 114: {fileID: 1236035394}
   m_Layer: 5
-  m_Name: FRButton
+  m_Name: ButtonFR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2676,7 +2681,7 @@ GameObject:
   - 114: {fileID: 1327620173}
   - 114: {fileID: 1327620175}
   m_Layer: 5
-  m_Name: LightLabel
+  m_Name: LightBallLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2879,36 +2884,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846bced902a5443c1a5ab8b3677064c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MzDescriptionLabel: {fileID: 969249410}
-  MzStartLabel: {fileID: 1505228047}
-  MzClearLabel: {fileID: 750580350}
-  MzTimerLabel: {fileID: 1177924142}
-  LightLabel: {fileID: 1504126655}
-  CroquetteLabel: {fileID: 563780768}
-  GiveUpLabel: {fileID: 947540802}
-  TimeUpLabel: {fileID: 2048696871}
-  FailerLabel: {fileID: 685380610}
-  GoalLabel: {fileID: 867518864}
-  ForwardButton: {fileID: 659678590}
-  BackButton: {fileID: 2127261336}
-  LeftButton: {fileID: 857059807}
-  RightButton: {fileID: 212949429}
-  FLButton: {fileID: 1005397968}
-  FRButton: {fileID: 1236035392}
-  BLButton: {fileID: 1924351526}
-  BRButton: {fileID: 539991492}
-  MazeLight: {fileID: 1408820631}
-  GiveUpButton: {fileID: 234070537}
-  CancelButton: {fileID: 1142447627}
-  GameOverButton: {fileID: 19131714}
-  MapButton: {fileID: 1845907042}
-  ToMzButton: {fileID: 1783922375}
-  RestartButton: {fileID: 2140622112}
-  NextMzButton: {fileID: 426693780}
-  ToTitleButton: {fileID: 1384831892}
-  Player: {fileID: 1000520742}
-  PlayerGoal: {fileID: 1155653655}
-  FadeBlack: {fileID: 419720855}
+  player: {fileID: 1000520742}
+  mzDescriptionLabel: {fileID: 969249410}
+  mzStartLabel: {fileID: 1505228047}
+  mzClearLabel: {fileID: 750580350}
+  mzTimerLabel: {fileID: 1177924142}
+  lightLabel: {fileID: 1504126655}
+  croquetteLabel: {fileID: 563780768}
+  giveUpLabel: {fileID: 947540802}
+  timeUpLabel: {fileID: 2048696871}
+  failerLabel: {fileID: 685380610}
+  goalLabel: {fileID: 867518864}
+  buttonForward: {fileID: 659678590}
+  buttonBack: {fileID: 2127261336}
+  buttonLeft: {fileID: 857059807}
+  buttonRight: {fileID: 212949429}
+  buttonFL: {fileID: 1005397968}
+  buttonFR: {fileID: 1236035392}
+  buttonBL: {fileID: 1924351526}
+  buttonBR: {fileID: 539991492}
+  getLight: {fileID: 1408820631}
+  buttonGiveUp: {fileID: 234070537}
+  buttonCancel: {fileID: 1142447627}
+  buttonGameOver: {fileID: 19131714}
+  buttonMap: {fileID: 1845907042}
+  buttonToMz: {fileID: 1783922375}
+  buttonRestart: {fileID: 2140622112}
+  buttonNextMz: {fileID: 426693780}
+  buttonToTitle: {fileID: 1384831892}
+  playerGoal: {fileID: 1155653655}
+  fadeBlack: {fileID: 419720855}
 --- !u!1 &1494270252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,7 +3320,7 @@ GameObject:
   - 222: {fileID: 1711485175}
   - 114: {fileID: 1711485174}
   m_Layer: 5
-  m_Name: LightImage
+  m_Name: LightBallImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3459,8 +3464,29 @@ Prefab:
       propertyPath: m_Radius
       value: 0.28
       objectReference: {fileID: 0}
+    - target: {fileID: 11449536, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+      propertyPath: soundInterval
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449536, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+      propertyPath: mzWalkSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 709328fe751ea4c4082a3bbd986d8a75, type: 3}
+    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+      propertyPath: rotSpeed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+      propertyPath: keyboardSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+      propertyPath: keyboardRotSpeed
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11936286, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+    - {fileID: 11422380, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1917087841
@@ -3599,7 +3625,7 @@ GameObject:
   - 114: {fileID: 1924351529}
   - 114: {fileID: 1924351528}
   m_Layer: 5
-  m_Name: BLButton
+  m_Name: ButtonBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3951,6 +3977,70 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 720
       objectReference: {fileID: 0}
+    - target: {fileID: 150008, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonCancel
+      objectReference: {fileID: 0}
+    - target: {fileID: 102164, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonGameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 194768, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonRestart
+      objectReference: {fileID: 0}
+    - target: {fileID: 164568, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonNextMz
+      objectReference: {fileID: 0}
+    - target: {fileID: 133520, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonToTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 122022, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonGiveUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 109910, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 101504, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_Name
+      value: ButtonToMz
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422708, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonGiveUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459806, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonMapClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486310, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonToMzClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489102, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonCancelClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413232, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonGameOverClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438304, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonRestartClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406188, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonNextMzClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432626, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonToTitleClicked
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
   m_IsPrefabParent: 0
@@ -3967,7 +4057,7 @@ GameObject:
   - 114: {fileID: 2127261339}
   - 114: {fileID: 2127261338}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: ButtonBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

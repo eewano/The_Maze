@@ -4,62 +4,62 @@ using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour {
 
-	[SerializeField] private Camera ReadyCamera;
-	[SerializeField] private Camera PlayerCamera;
-	[SerializeField] private Camera MapCamera;
-	[SerializeField] private Camera GoalCamera;
-	[SerializeField] private GameObject Ceiling;
-	[SerializeField] private GameObject MzLight;
-	[SerializeField] private GameObject MapLight;
-	[SerializeField] private GameObject GoalLight;
+	[SerializeField] private Camera readyCamera;
+	[SerializeField] private Camera playerCamera;
+	[SerializeField] private Camera mapCamera;
+	[SerializeField] private Camera goalCamera;
+	[SerializeField] private GameObject ceiling;
+	[SerializeField] private GameObject mzLight;
+	[SerializeField] private GameObject mapLight;
+	[SerializeField] private GameObject goalLight;
 
 
 	void CameraAllSet()
 	{
-		ReadyCamera.enabled = false;
-		PlayerCamera.enabled = false;
-		MapCamera.enabled = false;
-		GoalCamera.enabled = false;
-		Ceiling.gameObject.SetActive (true);
-		MzLight.gameObject.SetActive (false);
-		MapLight.gameObject.SetActive (false);
-		GoalLight.gameObject.SetActive (false);
+		readyCamera.enabled = false;
+		playerCamera.enabled = false;
+		mapCamera.enabled = false;
+		goalCamera.enabled = false;
+		ceiling.gameObject.SetActive (true);
+		mzLight.gameObject.SetActive (false);
+		mapLight.gameObject.SetActive (false);
+		goalLight.gameObject.SetActive (false);
 
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			Ceiling.gameObject.SetActive (false);
-			MzLight.gameObject.SetActive (true);
-			MapLight.gameObject.SetActive (false);
+			ceiling.gameObject.SetActive (false);
+			mzLight.gameObject.SetActive (true);
+			mapLight.gameObject.SetActive (false);
 		}
 	}
 
 	public void ShowReadyCamera()
 	{
 		CameraAllSet ();
-		ReadyCamera.enabled = true;
+		readyCamera.enabled = true;
 	}
 
 	public void ShowPlayerCamera()
 	{
 		CameraAllSet ();
-		PlayerCamera.enabled = true;
+		playerCamera.enabled = true;
 	}
 
 	public void ShowMapCamera()
 	{
 		CameraAllSet ();
 
-		MapCamera.enabled = true;
-		Ceiling.gameObject.SetActive (false);
-		MzLight.gameObject.SetActive (false);
-		MapLight.gameObject.SetActive (true);
+		mapCamera.enabled = true;
+		ceiling.gameObject.SetActive (false);
+		mzLight.gameObject.SetActive (false);
+		mapLight.gameObject.SetActive (true);
 	}
 
 	public void ShowGoalCamera()
 	{
 		CameraAllSet ();
 
-		GoalCamera.enabled = true;
-		MzLight.gameObject.SetActive (false);
-		GoalLight.gameObject.SetActive (true);
+		goalCamera.enabled = true;
+		mzLight.gameObject.SetActive (false);
+		goalLight.gameObject.SetActive (true);
 	}
 }

@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	private bool KeyboardCont;
-	private bool TouchPadCont;
-	private bool Forward = false;
-	private bool Back = false;
-	private bool Left = false;
-	private bool Right = false;
-	private bool FL = false;
-	private bool FR = false;
-	private bool BL = false;
-	private bool BR = false;
+	private bool KeyboardControl;
+	private bool TouchPadControl;
+	private bool Forward;
+	private bool Back;
+	private bool Left;
+	private bool Right;
+	private bool FL;
+	private bool FR;
+	private bool BL;
+	private bool BR;
 
 	private Light playerSpotlight;
 	private FootSound playerFootSound;
@@ -23,15 +23,14 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float maxForwardSpeed;
 	[SerializeField] private float maxBackwardSpeed;
 	[SerializeField] private float maxRotSpeed;
-	[SerializeField] private float RotSpeed;
+	[SerializeField] private float rotSpeed;
 	private float curSpeed;
 	private float curRotSpeed;
 	private float playerSpeed;
 	private float playerRotSpeed;
 
-	[SerializeField] private float KBSpeed;
-	[SerializeField] private float KBRotSpeed;
-	[SerializeField] private GameObject mapCrystal;
+	[SerializeField] private float keyboardSpeed;
+	[SerializeField] private float keyboardRotSpeed;
 
 
 	public void PushForwardDown()
@@ -42,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		Forward = false;
 	}
-	public void PushBackDown()
+public void PushBackDown()
 	{
 		Back = true;
 	}
@@ -100,23 +99,38 @@ public class PlayerController : MonoBehaviour {
 		BR = false;
 	}
 
-	void Start()
+
+	void Awake()
 	{
-		mzSoundEffect = GameObject.Find("MzSoundController").GetComponent<MzSoundEffect>();
+		mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
+		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
 		playerFootSound = GameObject.Find ("Player").GetComponent<FootSound> ();
 		playerSpotlight = GameObject.Find ("PlayerSpotlight").GetComponent<Light> ();
-		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
-		gameObject.SetActive (true);
-
-		KeyboardCont = false;
-		TouchPadCont = true;
-
-		GameController.Fall = false;
-		GameController.GameIsOver = false;
 	}
 
+	void Start()
+	{
+		gameObject.SetActive (true);
 
-	void Update ()
+		KeyboardControl = false;
+		TouchPadControl = true;
+		Forward = false;
+		Back = false;
+		Left = false;
+		Right = false;
+		FL = false;
+		FR = false;
+		BL = false;
+		BR = false;
+	}
+
+	void Update()
+	{
+		UpdateSystem ();
+		UpdateControl ();
+	}
+		
+	void UpdateSystem ()
 	{
 		if (GameController.GoalAndClear) {
 			gameObject.SetActive (false);
@@ -132,49 +146,50 @@ public class PlayerController : MonoBehaviour {
 			playerSpotlight.intensity = 4;
 		}
 
-		if (Input.GetKeyDown ("k")) {
-			KeyboardCont = true;
-			TouchPadCont = false;
-		} else if (Input.GetKeyDown ("t")) {
-			KeyboardCont = false;
-			TouchPadCont = true;
-		} else if (Input.GetKeyDown ("l")) {
+		//-----デバッグ用のショートカットキー-----
+		if (Input.GetKeyDown ("l")) {
 			GameController.Light = true;
 		} else if (Input.GetKeyDown ("c")) {
 			GameController.Croquette = true;
 		} else if (Input.GetKeyDown ("m")) {
 			GameController.MapCrystal = true;
 		}
+		//----------
 
 		if (GameController.Croquette) {
 			maxForwardSpeed = 4.0f;
 			maxBackwardSpeed = 2.5f;
 			maxRotSpeed = 1.2f;
-			//RotSpeed = 100.0f;
-			KBSpeed = 4.0f;
-			//KBRotSpeed = 100.0f;
-			playerFootSound.SoundInterval = 0.37f;
+			keyboardSpeed = 4.0f;
+			playerFootSound.soundInterval = 0.37f;
 		}
-			
+	}
 
-		//キーボードによる操作
-		if (KeyboardCont) {
-			float translation = Input.GetAxis ("Vertical") * KBSpeed;
-			float rotation = Input.GetAxis ("Horizontal") * KBRotSpeed;
+	void UpdateControl ()
+	{
+		//-----キーボードとタッチパッドの切り替え-----
+		if (Input.GetKeyDown ("k")) {
+			KeyboardControl = true;
+			TouchPadControl = false;
+		} else if (Input.GetKeyDown ("t")) {
+			KeyboardControl = false;
+			TouchPadControl = true;
+		}
+		//----------
+
+		//-----キーボードによる操作-----
+		if (KeyboardControl) {
+			float translation = Input.GetAxis ("Vertical") * keyboardSpeed;
+			float rotation = Input.GetAxis ("Horizontal") * keyboardRotSpeed;
 			translation *= Time.deltaTime;
 			rotation *= Time.deltaTime;
 			transform.Translate (0, 0, translation);
 			transform.Rotate (0, rotation, 0);
 		}
+		//----------
 
-		curSpeed = Mathf.Lerp(curSpeed, playerSpeed, 10.0f * Time.deltaTime);
-		transform.Translate(Vector3.forward * Time.deltaTime * curSpeed);
-
-		curRotSpeed = Mathf.Lerp (curRotSpeed, playerRotSpeed, 10.0f * Time.deltaTime);
-		transform.Rotate(0, -RotSpeed * Time.deltaTime * curRotSpeed, 0.0f);
-
-		//タッチパッドによる操作
-		if(TouchPadCont) {
+		//-----タッチパッドによる操作-----
+		if(TouchPadControl) {
 			if (Forward) {
 				MoveForward ();
 			} else if (Back) {
@@ -196,24 +211,28 @@ public class PlayerController : MonoBehaviour {
 				playerRotSpeed = 0;
 			}
 		}
+
+		curSpeed = Mathf.Lerp(curSpeed, playerSpeed, 10.0f * Time.deltaTime);
+		transform.Translate(Vector3.forward * Time.deltaTime * curSpeed);
+
+		curRotSpeed = Mathf.Lerp (curRotSpeed, playerRotSpeed, 10.0f * Time.deltaTime);
+		transform.Rotate(0, -rotSpeed * Time.deltaTime * curRotSpeed, 0.0f);
+		//----------
 	}
 		
-
+	//-----各操作ボタンを押した時の処理-----
 	public void MoveForward()
 	{
 		playerSpeed = maxForwardSpeed;
 	}
-
 	public void MoveBack()
 	{
 		playerSpeed = -maxBackwardSpeed;
 	}
-
 	public void RotateLeft()
 	{
 		playerRotSpeed = maxRotSpeed;
 	}
-
 	public void RotateRight()
 	{
 		playerRotSpeed = -maxRotSpeed;
@@ -223,24 +242,22 @@ public class PlayerController : MonoBehaviour {
 		playerSpeed = maxForwardSpeed;
 		playerRotSpeed = maxRotSpeed;
 	}
-
 	public void MoveFR()
 	{
 		playerSpeed = maxForwardSpeed;
 		playerRotSpeed = -maxRotSpeed;
 	}
-
 	public void RotateBL()
 	{
 		playerSpeed = -maxBackwardSpeed;
 		playerRotSpeed = maxRotSpeed;
 	}
-
 	public void RotateBR()
 	{
 		playerSpeed = -maxBackwardSpeed;
 		playerRotSpeed = -maxRotSpeed;
 	}
+	//----------
 
 
 	void OnTriggerEnter(Collider hit) {
@@ -260,10 +277,6 @@ public class PlayerController : MonoBehaviour {
 			mzSoundEffect.EnemyTouchSound ();
 			transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
 			mzTimer.EnemyTouchTimer ();
-			GameController.MapCrystal = false;
-			if (mapCrystal == null) {
-				Instantiate (mapCrystal);
-			}
 		}
 	}
 }

@@ -1756,9 +1756,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7235b477486d248855983c053844ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverLabel: {fileID: 1600918161}
-  ReturnToTitleLabel: {fileID: 1163995936}
-  FadeBlack: {fileID: 2117412562}
+  gameOverLabel: {fileID: 1600918161}
+  returnToTitleLabel: {fileID: 1163995936}
+  fadeBlack: {fileID: 2117412562}
 --- !u!1 &1600918159
 GameObject:
   m_ObjectHideFlags: 0

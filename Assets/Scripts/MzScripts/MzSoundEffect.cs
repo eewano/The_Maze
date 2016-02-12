@@ -3,69 +3,69 @@ using System.Collections;
 
 public class MzSoundEffect : MonoBehaviour {
 
-	private AudioSource ReadyGoSE;
-	private AudioSource EnterSE;
-	private AudioSource ExitSE;
-	private AudioSource LightBallSE;
-	private AudioSource CroquetteSE;
-	private AudioSource MapCrystalSE;
-	private AudioSource ShutterSE;
-	private AudioSource TimeUpSE;
-	private AudioSource GoalSE;
-	private AudioSource EnemyTouchSE;
+	private AudioSource readyGoSE;
+	private AudioSource enterSE;
+	private AudioSource exitSE;
+	private AudioSource lightBallSE;
+	private AudioSource croquetteSE;
+	private AudioSource mapCrystalSE;
+	private AudioSource shutterSE;
+	private AudioSource timeUpSE;
+	private AudioSource goalSE;
+	private AudioSource enemyTouchSE;
 
-	void Start()
+	void Awake()
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource> ();
-		ReadyGoSE = audioSources [0];
-		EnterSE = audioSources [1];
-		ExitSE = audioSources [2];
-		LightBallSE = audioSources [3];
-		CroquetteSE = audioSources [4];
-		MapCrystalSE = audioSources [5];
-		ShutterSE = audioSources [6];
-		TimeUpSE = audioSources [7];
-		GoalSE = audioSources [8];
-		EnemyTouchSE = audioSources [9];
+		readyGoSE = audioSources [0];
+		enterSE = audioSources [1];
+		exitSE = audioSources [2];
+		lightBallSE = audioSources [3];
+		croquetteSE = audioSources [4];
+		mapCrystalSE = audioSources [5];
+		shutterSE = audioSources [6];
+		timeUpSE = audioSources [7];
+		goalSE = audioSources [8];
+		enemyTouchSE = audioSources [9];
 	}
 
 	public void ReadyGoSound() {
-		ReadyGoSE.PlayOneShot (ReadyGoSE.clip);
+		readyGoSE.PlayOneShot (readyGoSE.clip);
 	}
 
 	public void EnterSound() {
-		EnterSE.PlayOneShot (EnterSE.clip);
+		enterSE.PlayOneShot (enterSE.clip);
 	}
 
 	public void ExitSound() {
-		ExitSE.PlayOneShot (ExitSE.clip);
+		exitSE.PlayOneShot (exitSE.clip);
 	}
 
 	public void LightBallSound() {
-		LightBallSE.PlayOneShot (LightBallSE.clip);
+		lightBallSE.PlayOneShot (lightBallSE.clip);
 	}
 
 	public void CroquetteSound() {
-		CroquetteSE.PlayOneShot (CroquetteSE.clip);
+		croquetteSE.PlayOneShot (croquetteSE.clip);
 	}
 
 	public void MapCrystalSound() {
-		MapCrystalSE.PlayOneShot (MapCrystalSE.clip);
+		mapCrystalSE.PlayOneShot (mapCrystalSE.clip);
 	}
 
 	public void ShutterSound() {
-		ShutterSE.PlayOneShot (ShutterSE.clip);
+		shutterSE.PlayOneShot (shutterSE.clip);
 	}
 
 	public void TimeUpSound() {
-		TimeUpSE.PlayOneShot (TimeUpSE.clip);
+		timeUpSE.PlayOneShot (timeUpSE.clip);
 	}
 
 	public void GoalSound() {
-		GoalSE.PlayOneShot (GoalSE.clip);
+		goalSE.PlayOneShot (goalSE.clip);
 	}
 
 	public void EnemyTouchSound() {
-		EnemyTouchSE.PlayOneShot (EnemyTouchSE.clip);
+		enemyTouchSE.PlayOneShot (enemyTouchSE.clip);
 	}
 }
