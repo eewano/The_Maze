@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour {
 	public static bool MapModeOFF = false;
 
 	[SerializeField] private GameObject player;
+	private Renderer playerRenderer;
 
 	[SerializeField] private Text mzDescriptionLabel;
 	[SerializeField] private Text mzStartLabel;
@@ -85,6 +86,7 @@ public class GameController : MonoBehaviour {
 		mzReadyClear = GameObject.Find("MzSoundEffect").GetComponent<AudioListener>();
 		cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
 		mzBGM = GameObject.Find ("MzBGM").GetComponent<AudioSource>();
+		playerRenderer = GameObject.Find ("Player").GetComponent<MeshRenderer> ();
 	}
 
 	void Start()
@@ -187,6 +189,7 @@ public class GameController : MonoBehaviour {
 	void AllFalse()
 	{
 		player.gameObject.SetActive (false);
+		playerRenderer.enabled = false;
 
 		mzDescriptionLabel.enabled = false;
 		mzStartLabel.enabled = false;
@@ -244,8 +247,8 @@ public class GameController : MonoBehaviour {
 				"画面クリックでゲーム開始です。";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			mzDescriptionLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、何処かに置き去りに\n" +
-				"されるので、上手く逃げ回りつつゴールを\n目指して下さい。\n\n" +
+			mzDescriptionLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、スタート地点に\n" +
+				"戻されるので、上手く逃げ回りつつゴールを\n目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
 		mzTimer.ResetTimer();
@@ -315,6 +318,7 @@ public class GameController : MonoBehaviour {
 		AllFalse ();
 
 		player.gameObject.SetActive (true);
+		playerRenderer.enabled = true;
 		mzTimerLabel.enabled = true;
 		buttonToMz.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;

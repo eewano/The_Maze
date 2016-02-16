@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		Forward = false;
 	}
-public void PushBackDown()
+	public void PushBackDown()
 	{
 		Back = true;
 	}
@@ -221,38 +221,38 @@ public void PushBackDown()
 	}
 		
 	//-----各操作ボタンを押した時の処理-----
-	public void MoveForward()
+	void MoveForward()
 	{
 		playerSpeed = maxForwardSpeed;
 	}
-	public void MoveBack()
+	void MoveBack()
 	{
 		playerSpeed = -maxBackwardSpeed;
 	}
-	public void RotateLeft()
+	void RotateLeft()
 	{
 		playerRotSpeed = maxRotSpeed;
 	}
-	public void RotateRight()
+	void RotateRight()
 	{
 		playerRotSpeed = -maxRotSpeed;
 	}
-	public void MoveFL()
+	void MoveFL()
 	{
 		playerSpeed = maxForwardSpeed;
 		playerRotSpeed = maxRotSpeed;
 	}
-	public void MoveFR()
+	void MoveFR()
 	{
 		playerSpeed = maxForwardSpeed;
 		playerRotSpeed = -maxRotSpeed;
 	}
-	public void RotateBL()
+	void RotateBL()
 	{
 		playerSpeed = -maxBackwardSpeed;
 		playerRotSpeed = maxRotSpeed;
 	}
-	public void RotateBR()
+	void RotateBR()
 	{
 		playerSpeed = -maxBackwardSpeed;
 		playerRotSpeed = -maxRotSpeed;
