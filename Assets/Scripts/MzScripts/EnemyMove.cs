@@ -52,7 +52,7 @@ public class EnemyMove : MonoBehaviour {
 		}
 
 		if (GameController.Fall || GameController.GameIsOver) {
-			return;
+			gameObject.SetActive (false);
 		}
 
 		//Agentと目的地の距離

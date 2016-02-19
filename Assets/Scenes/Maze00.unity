@@ -4041,6 +4041,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonToTitleClicked
       objectReference: {fileID: 0}
+    - target: {fileID: 11498618, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: timeLimit
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
   m_IsPrefabParent: 0

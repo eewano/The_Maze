@@ -136,7 +136,8 @@ public class PlayerController : MonoBehaviour {
 			gameObject.SetActive (false);
 		}
 
-		if (GameController.Fall || GameController.GameIsOver) {
+		if (GameController.Fall == true || GameController.GameIsOver == true) {
+			enabled = false;
 			return;
 		}
 
