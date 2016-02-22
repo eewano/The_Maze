@@ -4,33 +4,30 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	private bool KeyboardControl;
-	private bool TouchPadControl;
-	private bool Forward;
-	private bool Back;
-	private bool Left;
-	private bool Right;
-	private bool FL;
-	private bool FR;
-	private bool BL;
-	private bool BR;
+	private bool
+		KeyboardControl,
+		TouchPadControl,
+		Forward,
+		Back,
+		Left,
+		Right,
+		FL,
+		FR,
+		BL,
+		BR;
 
-	private Light playerSpotlight;
-	private FootSound playerFootSound;
-	private MzSoundEffect mzSoundEffect;
-	private MzTimer mzTimer;
+	public float maxForwardSpeed;
+	public float maxBackwardSpeed;
+	public float maxRotSpeed;
+	public float rotSpeed;
 
-	[SerializeField] private float maxForwardSpeed;
-	[SerializeField] private float maxBackwardSpeed;
-	[SerializeField] private float maxRotSpeed;
-	[SerializeField] private float rotSpeed;
+	public float keyboardSpeed;
+	public float keyboardRotSpeed;
+
 	private float curSpeed;
 	private float curRotSpeed;
 	private float playerSpeed;
 	private float playerRotSpeed;
-
-	[SerializeField] private float keyboardSpeed;
-	[SerializeField] private float keyboardRotSpeed;
 
 
 	public void PushForwardDown()
@@ -100,18 +97,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-	void Awake()
-	{
-		mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
-		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer> ();
-		playerFootSound = GameObject.Find ("Player").GetComponent<FootSound> ();
-		playerSpotlight = GameObject.Find ("PlayerSpotlight").GetComponent<Light> ();
-	}
-
 	void Start()
 	{
-		gameObject.SetActive (true);
-
 		KeyboardControl = false;
 		TouchPadControl = true;
 		Forward = false;
@@ -126,47 +113,15 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		UpdateSystem ();
-		UpdateControl ();
-	}
-		
-	void UpdateSystem ()
-	{
-		if (GameController.GoalAndClear) {
-			gameObject.SetActive (false);
-		}
-
-		if (GameController.Fall == true || GameController.GameIsOver == true) {
+		if (GameManager.Fall == true || GameManager.GameIsOver == true) {
 			enabled = false;
 			return;
 		}
-
-		if (GameController.MapModeON == true && GameController.MapModeOFF == false) {
-			playerSpotlight.intensity = 8;
-		} else if (GameController.MapModeON == false && GameController.MapModeOFF == true) {
-			playerSpotlight.intensity = 4;
-		}
-
-		//-----デバッグ用のショートカットキー-----
-		if (Input.GetKeyDown ("l")) {
-			GameController.Light = true;
-		} else if (Input.GetKeyDown ("c")) {
-			GameController.Croquette = true;
-		} else if (Input.GetKeyDown ("m")) {
-			GameController.MapCrystal = true;
-		}
-		//----------
-
-		if (GameController.Croquette) {
-			maxForwardSpeed = 4.0f;
-			maxBackwardSpeed = 2.5f;
-			maxRotSpeed = 1.2f;
-			keyboardSpeed = 4.0f;
-			playerFootSound.soundInterval = 0.37f;
-		}
+		UpdateShortCutKey();
+		UpdateControl();
 	}
 
-	void UpdateControl ()
+	void UpdateShortCutKey()
 	{
 		//-----キーボードとタッチパッドの切り替え-----
 		if (Input.GetKeyDown ("k")) {
@@ -188,7 +143,10 @@ public class PlayerController : MonoBehaviour {
 			transform.Rotate (0, rotation, 0);
 		}
 		//----------
+	}
 
+	void UpdateControl()
+	{
 		//-----タッチパッドによる操作-----
 		if(TouchPadControl) {
 			if (Forward) {
@@ -259,25 +217,4 @@ public class PlayerController : MonoBehaviour {
 		playerRotSpeed = -maxRotSpeed;
 	}
 	//----------
-
-
-	void OnTriggerEnter(Collider hit) {
-		if (hit.gameObject.tag == "Light") {
-			GameController.Light = true;
-			mzSoundEffect.LightBallSound ();
-			Destroy (hit.gameObject);
-		} else if (hit.gameObject.tag == "Croquette") {
-			GameController.Croquette = true;
-			mzSoundEffect.CroquetteSound ();
-			Destroy (hit.gameObject);
-		} else if (hit.gameObject.tag == "Map") {
-			GameController.MapCrystal = true;
-			mzSoundEffect.MapCrystalSound ();
-			Destroy (hit.gameObject);
-		} else if (hit.gameObject.tag == "Enemy") {
-			mzSoundEffect.EnemyTouchSound ();
-			transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
-			mzTimer.EnemyTouchTimer ();
-		}
-	}
 }

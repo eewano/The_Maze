@@ -822,21 +822,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1 &551993340 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 127172, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
-  m_PrefabInternal: {fileID: 2083207197}
---- !u!114 &551993345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 551993340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &563780768 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11410690, guid: 26044421973144dc4a0293c050bb1cdd,
@@ -881,10 +866,6 @@ Prefab:
     - target: {fileID: 411566, guid: 7d8f7613d2b64441985c995e6ceba8e7, type: 2}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 147682, guid: 7d8f7613d2b64441985c995e6ceba8e7, type: 2}
-      propertyPath: m_Name
-      value: MzSoundEffect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d8f7613d2b64441985c995e6ceba8e7, type: 2}
@@ -987,7 +968,7 @@ GameObject:
   - 4: {fileID: 643133140}
   - 114: {fileID: 643133139}
   m_Layer: 0
-  m_Name: Mz00Controller
+  m_Name: Mz00Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2855,7 +2836,7 @@ GameObject:
   - 4: {fileID: 1464749643}
   - 114: {fileID: 1464749644}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameManager
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3422,71 +3403,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: maxForwardSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: maxBackwardSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: RotSpeed
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 11936286, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: maxRotSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: KBRotSpeed
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 11449536, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: MzWalkSE
-      value: 
-      objectReference: {fileID: 8300000, guid: 709328fe751ea4c4082a3bbd986d8a75, type: 3}
-    - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 425624, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 13688138, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: m_Radius
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 11449536, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: soundInterval
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11449536, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: mzWalkSE
-      value: 
-      objectReference: {fileID: 8300000, guid: 709328fe751ea4c4082a3bbd986d8a75, type: 3}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: rotSpeed
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: keyboardSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432230, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-      propertyPath: keyboardRotSpeed
-      value: 75
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11936286, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
-    - {fileID: 11422380, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d3aa344fbf144084890583ef3d9dae8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1917087841
@@ -4043,9 +3962,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11498618, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
       propertyPath: timeLimit
-      value: 80
+      value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11445734, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2127261336

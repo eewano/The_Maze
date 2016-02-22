@@ -12,7 +12,7 @@ public class MapFigure : MonoBehaviour {
 
 	void Update()
 	{
-		if (GameController.MapModeON == true && GameController.MapModeOFF == false) {
+		if (GameManager.MapModeON == true && GameManager.MapModeOFF == false) {
 			itemLight.range = 5;
 			itemLight.intensity = 5;
 			if (gameObject.tag == "Light") {
@@ -21,7 +21,7 @@ public class MapFigure : MonoBehaviour {
 				itemLight.color = new Color(0.0f, 1.0f, 0.0f, 0.5f);
 			}
 		}
-		else if (GameController.MapModeON == false && GameController.MapModeOFF == true) {
+		else if (GameManager.MapModeON == false && GameManager.MapModeOFF == true) {
 			itemLight.range = 0;
 			itemLight.intensity = 0;
 		}

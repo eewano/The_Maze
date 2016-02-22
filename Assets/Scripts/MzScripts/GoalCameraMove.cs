@@ -21,14 +21,14 @@ public class GoalCameraMove : MonoBehaviour {
 	}
 
 	void Update () {
-		if (GameController.StartTween) {
+		if (GameManager.StartTween) {
 			//A-B差分と分子にA地点の座標を足して現在位置を算出
 			transform.position = From.position + Vector3.Scale (
 				To.position - From.position, new Vector3 (Bunshi, Bunshi, Bunshi));
 		}
 
 		//StartTweenがONのとき･･･
-		if(GameController.StartTween){
+		if(GameManager.StartTween){
 			//分子に秒単位÷指定秒数を加算
 			Bunshi += Time.deltaTime / Sec;
 			//分子が１以上のとき･･･

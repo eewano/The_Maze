@@ -67,8 +67,8 @@ GameObject:
   - 82: {fileID: 8258140}
   - 114: {fileID: 11432230}
   - 114: {fileID: 11449536}
-  - 114: {fileID: 11422380}
   - 81: {fileID: 8142330}
+  - 114: {fileID: 11475348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: 0.5, z: 11}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1.8, y: 0.5, z: 1.8}
   m_Children:
   - {fileID: 462556}
@@ -355,17 +355,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11422380
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03e374d0a9187a4fa474a5162d2ad03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11432230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -395,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundInterval: 0.4
-  mzWalkSE: {fileID: 8300000, guid: 487cda9111f9aa040a6927a280e12825, type: 3}
+  mzWalkSE: {fileID: 8300000, guid: 709328fe751ea4c4082a3bbd986d8a75, type: 3}
 --- !u!114 &11474482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,6 +394,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dda7662f0c13488d8c777a764b47293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11475348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7be65cde1174f50a0f72babcaf1cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!124 &12487046

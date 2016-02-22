@@ -47,11 +47,11 @@ public class EnemyMove : MonoBehaviour {
 
 	void UpdateControl()
 	{
-		if (GameController.GoalAndClear) {
+		if (GameManager.GoalAndClear) {
 			gameObject.SetActive (false);
 		}
 
-		if (GameController.Fall || GameController.GameIsOver) {
+		if (GameManager.Fall || GameManager.GameIsOver) {
 			gameObject.SetActive (false);
 		}
 
@@ -127,11 +127,11 @@ void Awake()
 
 	void Update()
 	{
-		if (GameController.GoalAndClear) {
+		if (GameManager.GoalAndClear) {
 			gameObject.SetActive (false);
 		}
 
-		if (GameController.Fall || GameController.GameIsOver) {
+		if (GameManager.Fall || GameManager.GameIsOver) {
 			return;
 		}
 

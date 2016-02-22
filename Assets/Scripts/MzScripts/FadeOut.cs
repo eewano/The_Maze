@@ -15,7 +15,7 @@ public class FadeOut : MonoBehaviour {
 
 	void Update()
 	{
-		if (GameController.Fade) {
+		if (GameManager.Fade) {
 			time += Time.deltaTime;	//時間更新.今度は増えていく
 			float a = time / fadeTime;
 			var color = image.color;

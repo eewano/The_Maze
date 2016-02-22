@@ -12,7 +12,7 @@ public class GameOverController : MonoBehaviour {
 	void Start()
 	{
 		Time.timeScale = 1.0f;
-		GameController.Fade = false;
+		GameManager.Fade = false;
 		gameOverLabel.enabled = true;
 		returnToTitleLabel.enabled = true;
 		fadeBlack.enabled = false;
@@ -22,7 +22,7 @@ public class GameOverController : MonoBehaviour {
 	{
 		if (Input.GetMouseButtonDown (0)) {
 			fadeBlack.enabled = true;
-			GameController.Fade = true;
+			GameManager.Fade = true;
 			Invoke ("ReturnToTitle", 4.0f);
 		}
 	}

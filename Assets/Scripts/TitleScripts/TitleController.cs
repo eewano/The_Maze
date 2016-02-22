@@ -39,7 +39,7 @@ public class TitleController : MonoBehaviour {
 		Mz00 = false;
 		Mz01 = false;
 		Mz02 = false;
-		GameController.Fade = false;
+		GameManager.Fade = false;
 		fadeBlack.enabled = false;
 
 		Title ();
@@ -134,7 +134,7 @@ public class TitleController : MonoBehaviour {
 		titleBGM.Stop ();
 		titleSoundEffect.GameEnter();
 		fadeBlack.enabled = true;
-		GameController.Fade = true;
+		GameManager.Fade = true;
 		Invoke ("GameStart", 3.0f);
 	}
 
@@ -144,7 +144,7 @@ public class TitleController : MonoBehaviour {
 		titleBGM.Stop ();
 		titleSoundEffect.GameEnter();
 		fadeBlack.enabled = true;
-		GameController.Fade = true;
+		GameManager.Fade = true;
 		Invoke ("GameStart", 3.0f);
 	}
 
@@ -154,7 +154,7 @@ public class TitleController : MonoBehaviour {
 		titleBGM.Stop ();
 		titleSoundEffect.GameEnter();
 		fadeBlack.enabled = true;
-		GameController.Fade = true;
+		GameManager.Fade = true;
 		Invoke ("GameStart", 3.0f);
 	}
 }

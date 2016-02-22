@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Mz00Controller : MonoBehaviour {
+public class Mz00Manager : MonoBehaviour {
 
 	public static bool Mz00Goal = false;
 	private bool FirstMapFlag;
@@ -47,7 +47,7 @@ public class Mz00Controller : MonoBehaviour {
 			}
 		}
 
-		if (GameController.MapCrystal == true && FirstMapFlag == false) {
+		if (GameManager.MapCrystal == true && FirstMapFlag == false) {
 			mapCrystalImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			if (Input.GetMouseButtonDown (0)) {
@@ -58,7 +58,7 @@ public class Mz00Controller : MonoBehaviour {
 			}
 		}
 
-		if (GameController.Croquette == true && FirstCroqFlag == false) {
+		if (GameManager.Croquette == true && FirstCroqFlag == false) {
 			croquetteImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			if (Input.GetMouseButtonDown (0)) {
@@ -69,7 +69,7 @@ public class Mz00Controller : MonoBehaviour {
 			}
 		}
 
-		if (GameController.Light == true && FirstLightFlag == false) {
+		if (GameManager.Light == true && FirstLightFlag == false) {
 			lightBallImage.gameObject.SetActive (true);
 			Time.timeScale = 0.0f;
 			if (Input.GetMouseButtonDown (0)) {

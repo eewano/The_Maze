@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 
 	enum GameState
 	{
