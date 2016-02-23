@@ -16,83 +16,68 @@ public class PlayerController : MonoBehaviour {
 		BL,
 		BR;
 
-	public float maxForwardSpeed;
-	public float maxBackwardSpeed;
-	public float maxRotSpeed;
-	public float rotSpeed;
+	public float
+		maxForwardSpeed,
+		maxBackwardSpeed,
+		maxRotSpeed,
+		rotSpeed;
 
-	public float keyboardSpeed;
-	public float keyboardRotSpeed;
+	public float keyboardSpeed, keyboardRotSpeed;
 
-	private float curSpeed;
-	private float curRotSpeed;
-	private float playerSpeed;
-	private float playerRotSpeed;
+	private float
+		curSpeed,
+		curRotSpeed,
+		playerSpeed,
+		playerRotSpeed;
 
 
-	public void PushForwardDown()
-	{
+	public void PushForwardDown() {
 		Forward = true;
 	}
-	public void PushForwardUp()
-	{
+	public void PushForwardUp() {
 		Forward = false;
 	}
-	public void PushBackDown()
-	{
+	public void PushBackDown() {
 		Back = true;
 	}
-	public void PushBackUp()
-	{
+	public void PushBackUp() {
 		Back = false;
 	}
-	public void PushLeftDown()
-	{
+	public void PushLeftDown() {
 		Left = true;
 	}
-	public void PushLeftUp()
-	{
+	public void PushLeftUp() {
 		Left = false;
 	}
-	public void PushRightDown()
-	{
+	public void PushRightDown() {
 		Right = true;
 	}
-	public void PushRightUp()
-	{
+	public void PushRightUp() {
 		Right = false;
 	}
 
-	public void PushFLDown()
-	{
+	public void PushFLDown() {
 		FL = true;
 	}
-	public void PushFLUp()
-	{
+	public void PushFLUp() {
 		FL = false;
 	}
-	public void PushFRDown()
-	{
+	public void PushFRDown() {
 		FR = true;
 	}
-	public void PushFRUp()
-	{
+	public void PushFRUp() {
 		FR = false;
 	}
-	public void PushBLDown()
-	{
+	public void PushBLDown() {
 		BL = true;
 	}
-	public void PushBLUp()
-	{
+	public void PushBLUp() {
 		BL = false;
 	}
-	public void PushBRDown()
-	{
+	public void PushBRDown() {
 		BR = true;
 	}
-	public void PushBRUp()
-	{
+	public void PushBRUp() {
 		BR = false;
 	}
 
@@ -117,13 +102,15 @@ public class PlayerController : MonoBehaviour {
 			enabled = false;
 			return;
 		}
+
 		UpdateShortCutKey();
-		UpdateControl();
+		UpdateKeyControl();
+		UpdateTouchControl();
 	}
 
+	//-----キーボードとタッチパッドの切り替え-----
 	void UpdateShortCutKey()
 	{
-		//-----キーボードとタッチパッドの切り替え-----
 		if (Input.GetKeyDown ("k")) {
 			KeyboardControl = true;
 			TouchPadControl = false;
@@ -131,9 +118,12 @@ public class PlayerController : MonoBehaviour {
 			KeyboardControl = false;
 			TouchPadControl = true;
 		}
-		//----------
+	}
+	//----------
 
-		//-----キーボードによる操作-----
+	//-----キーボードによる操作-----
+	void UpdateKeyControl()
+	{
 		if (KeyboardControl) {
 			float translation = Input.GetAxis ("Vertical") * keyboardSpeed;
 			float rotation = Input.GetAxis ("Horizontal") * keyboardRotSpeed;
@@ -142,12 +132,12 @@ public class PlayerController : MonoBehaviour {
 			transform.Translate (0, 0, translation);
 			transform.Rotate (0, rotation, 0);
 		}
-		//----------
 	}
+	//----------
 
-	void UpdateControl()
+	//-----タッチパッドによる操作-----
+	void UpdateTouchControl()
 	{
-		//-----タッチパッドによる操作-----
 		if(TouchPadControl) {
 			if (Forward) {
 				MoveForward ();
@@ -176,8 +166,8 @@ public class PlayerController : MonoBehaviour {
 
 		curRotSpeed = Mathf.Lerp (curRotSpeed, playerRotSpeed, 10.0f * Time.deltaTime);
 		transform.Rotate(0, -rotSpeed * Time.deltaTime * curRotSpeed, 0.0f);
-		//----------
 	}
+	//----------
 		
 	//-----各操作ボタンを押した時の処理-----
 	void MoveForward()

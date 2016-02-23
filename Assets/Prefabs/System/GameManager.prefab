@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &117714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412758}
+  - 114: {fileID: 11465670}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412758
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11465670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846bced902a5443c1a5ab8b3677064c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mzDescriptionLabel: {fileID: 0}
+  mzStartLabel: {fileID: 0}
+  mzClearLabel: {fileID: 0}
+  mzTimerLabel: {fileID: 0}
+  lightLabel: {fileID: 0}
+  croquetteLabel: {fileID: 0}
+  giveUpLabel: {fileID: 0}
+  timeUpLabel: {fileID: 0}
+  failerLabel: {fileID: 0}
+  goalLabel: {fileID: 0}
+  buttonForward: {fileID: 0}
+  buttonBack: {fileID: 0}
+  buttonLeft: {fileID: 0}
+  buttonRight: {fileID: 0}
+  buttonFL: {fileID: 0}
+  buttonFR: {fileID: 0}
+  buttonBL: {fileID: 0}
+  buttonBR: {fileID: 0}
+  getLight: {fileID: 0}
+  buttonGiveUp: {fileID: 0}
+  buttonCancel: {fileID: 0}
+  buttonGameOver: {fileID: 0}
+  buttonMap: {fileID: 0}
+  buttonToMz: {fileID: 0}
+  buttonRestart: {fileID: 0}
+  buttonNextMz: {fileID: 0}
+  buttonToTitle: {fileID: 0}
+  playerGoal: {fileID: 0}
+  fadeBlack: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 117714}
+  m_IsPrefabParent: 1

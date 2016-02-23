@@ -2,9 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class CameraController : MonoBehaviour {
-
-	[SerializeField] private Camera readyCamera;
+public class CameraManager : MonoBehaviour {
+	
 	[SerializeField] private Camera playerCamera;
 	[SerializeField] private Camera mapCamera;
 	[SerializeField] private Camera goalCamera;
@@ -13,10 +12,8 @@ public class CameraController : MonoBehaviour {
 	[SerializeField] private GameObject mapLight;
 	[SerializeField] private GameObject goalLight;
 
-
 	void CameraAllSet()
 	{
-		readyCamera.enabled = false;
 		playerCamera.enabled = false;
 		mapCamera.enabled = false;
 		goalCamera.enabled = false;
@@ -32,15 +29,10 @@ public class CameraController : MonoBehaviour {
 		}
 	}
 
-	public void ShowReadyCamera()
-	{
-		CameraAllSet ();
-		readyCamera.enabled = true;
-	}
-
 	public void ShowPlayerCamera()
 	{
 		CameraAllSet ();
+
 		playerCamera.enabled = true;
 	}
 

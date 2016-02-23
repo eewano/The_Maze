@@ -3,14 +3,14 @@ using System.Collections;
 
 public class ClearPoint : MonoBehaviour {
 
-	private GameObject gameController;
+	private GameObject gameManager;
 
 	void Start () {
-		gameController = GameObject.Find ("GameController");
+		gameManager = GameObject.Find ("GameManager");
 	}
 
 	void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Player")
-		gameController.SendMessage("Goal");
+			gameManager.SendMessage("Goal");
 	}
 }

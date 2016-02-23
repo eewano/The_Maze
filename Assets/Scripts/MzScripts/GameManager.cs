@@ -20,17 +20,18 @@ public class GameManager : MonoBehaviour {
 	}
 	private GameState state;
 
-	public static bool MapCrystal = false;
-	public static bool Light = false;
-	public static bool Croquette = false;
-	public static bool GameIsOver = false;
-	public static bool Fall = false;
-	public static bool Dead = false;
-	public static bool GoalAndClear = false;
-	public static bool StartTween = false;
-	public static bool Fade = false;
-	public static bool MapModeON = false;
-	public static bool MapModeOFF = false;
+	public static bool
+		MapCrystal,
+		Light,
+		Croquette,
+		GameIsOver,
+		Fall,
+		Dead,
+		GoalAndClear,
+		StartTween,
+		Fade,
+		MapModeON,
+		MapModeOFF;
 
 	[SerializeField] private GameObject player;
 	private Renderer playerRenderer;
@@ -74,19 +75,26 @@ public class GameManager : MonoBehaviour {
 	private MzSoundEffect mzSoundEffect;
 	private AudioListener mzAudioListener;
 	private AudioListener mzReadyClear;
-	private CameraController cameraController;
+	private CameraManager cameraController;
 	private AudioSource mzBGM;
 	private float alpha;
 
 	void Awake()
 	{
-		mzTimer = GameObject.Find ("MzTimerLabel").GetComponent<MzTimer>();
-		mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
-		mzAudioListener = GameObject.Find("Player").GetComponent<AudioListener>();
-		mzReadyClear = GameObject.Find("MzSoundEffect").GetComponent<AudioListener>();
-		cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
-		mzBGM = GameObject.Find ("MzBGM").GetComponent<AudioSource>();
-		playerRenderer = GameObject.Find ("Player").GetComponent<MeshRenderer> ();
+		mzTimer = GameObject.Find ("MzTimerLabel").
+			GetComponent<MzTimer>();
+		mzSoundEffect = GameObject.Find("MzSoundEffect").
+			GetComponent<MzSoundEffect>();
+		mzAudioListener = GameObject.Find("Player").
+			GetComponent<AudioListener>();
+		mzReadyClear = GameObject.Find("MzSoundEffect").
+			GetComponent<AudioListener>();
+		cameraController = GameObject.Find("CameraManager").
+			GetComponent<CameraManager>();
+		mzBGM = GameObject.Find ("MzBGM").
+			GetComponent<AudioSource>();
+		playerRenderer = GameObject.Find ("Player").
+			GetComponent<MeshRenderer> ();
 	}
 
 	void Start()
@@ -105,9 +113,7 @@ public class GameManager : MonoBehaviour {
 
 		Ready ();
 	}
-
-
-
+		
 	void Update()
 	{
 		switch (state) {
@@ -188,7 +194,6 @@ public class GameManager : MonoBehaviour {
 
 	void AllFalse()
 	{
-		player.gameObject.SetActive (false);
 		playerRenderer.enabled = false;
 
 		mzDescriptionLabel.enabled = false;
@@ -233,9 +238,10 @@ public class GameManager : MonoBehaviour {
 	void Ready()
 	{
 		state = GameState.READY;
-		cameraController.ShowReadyCamera();
-		AllFalse ();
+		cameraController.ShowPlayerCamera();
+		AllFalse();
 
+		player.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
 		mzDescriptionLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
@@ -257,7 +263,7 @@ public class GameManager : MonoBehaviour {
 	void ReadyGo()
 	{
 		state = GameState.READYGO;
-		AllFalse ();
+		AllFalse();
 		mzSoundEffect.ReadyGoSound();
 
 		mzReadyClear.enabled = true;
@@ -276,10 +282,8 @@ public class GameManager : MonoBehaviour {
 	void Playing()
 	{
 		state = GameState.PLAYING;
-		cameraController.ShowPlayerCamera();
-		AllFalse ();
+		AllFalse();
 
-		player.gameObject.SetActive (true);
 		mzTimerLabel.enabled = true;
 		buttonForward.gameObject.SetActive (true);
 		buttonBack.gameObject.SetActive (true);
@@ -300,9 +304,8 @@ public class GameManager : MonoBehaviour {
 	{
 		state = GameState.GIVEUP;
 		Time.timeScale = 0.0f;
-		AllFalse ();
+		AllFalse();
 
-		player.gameObject.SetActive (true);
 		mzTimerLabel.enabled = true;
 		giveUpLabel.enabled = true;
 		buttonCancel.gameObject.SetActive (true);
@@ -315,7 +318,7 @@ public class GameManager : MonoBehaviour {
 		state = GameState.MAP;
 		cameraController.ShowMapCamera();
 		Time.timeScale = 0.0f;
-		AllFalse ();
+		AllFalse();
 
 		player.gameObject.SetActive (true);
 		playerRenderer.enabled = true;
@@ -327,10 +330,9 @@ public class GameManager : MonoBehaviour {
 	void TimeUp()
 	{
 		state = GameState.TIMEUP;
-		AllFalse ();
+		AllFalse();
 		mzSoundEffect.TimeUpSound();
 
-		player.gameObject.SetActive (true);
 		timeUpLabel.enabled = true;
 		mzReadyClear.enabled = true;
 	}
@@ -339,9 +341,8 @@ public class GameManager : MonoBehaviour {
 	{
 		state = GameState.FAILURE;
 		cameraController.ShowPlayerCamera();
-		AllFalse ();
+		AllFalse();
 
-		player.gameObject.SetActive (true);
 		failerLabel.enabled = true;
 		buttonGameOver.gameObject.SetActive (true);
 		buttonRestart.gameObject.SetActive (true);
@@ -352,7 +353,7 @@ public class GameManager : MonoBehaviour {
 	{
 		state = GameState.GOAL;
 		cameraController.ShowGoalCamera();
-		AllFalse ();
+		AllFalse();
 		mzSoundEffect.GoalSound();
 
 		goalLabel.enabled = true;
@@ -366,7 +367,8 @@ public class GameManager : MonoBehaviour {
 
 		mzClearLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			mzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n迷路探索の始まりです !";
+			mzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n" +
+				"迷路探索の始まりです !";
 			mzClearLabel.fontSize = 60;
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
@@ -382,47 +384,38 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	void GameOver()
-	{
+	void GameOver() {
 		SceneManager.LoadScene("GameOver");
 	}
 
-	void Restart()
-	{
+	void Restart() {
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 
-	void ToTitle()
-	{
+	void ToTitle() {
 		SceneManager.LoadScene ("Title");
 	}
 
-	void ToNextMz()
-	{
+	void ToNextMz() {
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 
 
-
-	public void OnButtonGiveUpClicked()
-	{
+	public void OnButtonGiveUpClicked() {
 		mzSoundEffect.EnterSound();
 		GiveUp();
 	}
 
-	public void OnButtonCancelClicked()
-	{
+	public void OnButtonCancelClicked() {
 		mzSoundEffect.ExitSound();
 		Playing();
 	}
 
-	public void OnButtonGameOverClicked()
-	{
+	public void OnButtonGameOverClicked() {
 		GameOver();
 	}
 
-	public void OnButtonMapClicked()
-	{
+	public void OnButtonMapClicked() {
 		mzSoundEffect.EnterSound();
 		MapModeON = true;
 		MapModeOFF = false;
@@ -430,8 +423,7 @@ public class GameManager : MonoBehaviour {
 		Map();
 	}
 
-	public void OnButtonToMzClicked()
-	{
+	public void OnButtonToMzClicked() {
 		mzSoundEffect.ExitSound();
 		MapModeON = false;
 		MapModeOFF = true;
@@ -439,8 +431,7 @@ public class GameManager : MonoBehaviour {
 		Playing();
 	}
 
-	public void OnButtonRestartClicked()
-	{
+	public void OnButtonRestartClicked() {
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
 		fadeBlack.enabled = true;
@@ -448,8 +439,7 @@ public class GameManager : MonoBehaviour {
 		Invoke("Restart", 3.0f);
 	}
 
-	public void OnButtonNextMzClicked()
-	{
+	public void OnButtonNextMzClicked() {
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
 		fadeBlack.enabled = true;
@@ -457,8 +447,7 @@ public class GameManager : MonoBehaviour {
 		Invoke ("ToNextMz", 3.0f);
 	}
 
-	public void OnButtonToTitleClicked()
-	{
+	public void OnButtonToTitleClicked() {
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
 		fadeBlack.enabled = true;

@@ -3,16 +3,18 @@ using System.Collections;
 
 public class MzSoundEffect : MonoBehaviour {
 
-	private AudioSource readyGoSE;
-	private AudioSource enterSE;
-	private AudioSource exitSE;
-	private AudioSource lightBallSE;
-	private AudioSource croquetteSE;
-	private AudioSource mapCrystalSE;
-	private AudioSource shutterSE;
-	private AudioSource timeUpSE;
-	private AudioSource goalSE;
-	private AudioSource enemyTouchSE;
+	private AudioSource
+		readyGoSE,
+		enterSE,
+		exitSE,
+		lightBallSE,
+		croquetteSE,
+		mapCrystalSE,
+		shutterSE,
+		timeUpSE,
+		goalSE,
+		enemyTouchSE,
+		countDownSE;
 
 	void Awake()
 	{
@@ -27,6 +29,7 @@ public class MzSoundEffect : MonoBehaviour {
 		timeUpSE = audioSources [7];
 		goalSE = audioSources [8];
 		enemyTouchSE = audioSources [9];
+		countDownSE = audioSources [10];
 	}
 
 	public void ReadyGoSound() {
@@ -67,5 +70,9 @@ public class MzSoundEffect : MonoBehaviour {
 
 	public void EnemyTouchSound() {
 		enemyTouchSE.PlayOneShot (enemyTouchSE.clip);
+	}
+
+	public void CountDownSound() {
+		countDownSE.PlayOneShot (countDownSE.clip);
 	}
 }
