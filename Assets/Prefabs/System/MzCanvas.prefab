@@ -152,6 +152,7 @@ GameObject:
   - 114: {fileID: 11432474}
   - 114: {fileID: 11498618}
   - 114: {fileID: 11436626}
+  - 114: {fileID: 11437230}
   m_Layer: 5
   m_Name: MzTimerLabel
   m_TagString: Untagged
@@ -998,6 +999,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &11437230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ddc5d412d5d4cb989cff1032847cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11438304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1522,7 +1534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1\u9762\u306F\u3001\u5358\u7D14\u306A\u8FF7\u8DEF\u3067\u3059\u3002\n\u5236\u9650\u6642\u9593\u5185\u306B\u51FA\u53E3\u3092\u76EE\u6307\u3057\u3066\u4E0B\u3055\u3044\u3002\n\n\u753B\u9762\u30AF\u30EA\u30C3\u30AF\u3067\u30B2\u30FC\u30E0\u958B\u59CB\u3067\u3059\u3002"
+  m_Text: "\u8AAC\u660E\u7528\u306E\u30E9\u30D9\u30EB"
 --- !u!114 &11498618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1534,7 +1546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21266b47162e48b49177e12859c356b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 15
+  timeLimit: 240
 --- !u!114 &11499078
 MonoBehaviour:
   m_ObjectHideFlags: 1
