@@ -33,20 +33,11 @@ public class GameManager : MonoBehaviour {
 		MapModeON,
 		MapModeOFF;
 
-	[SerializeField] private GameObject player;
 	private Renderer playerRenderer;
-
-	[SerializeField] private Text mzDescriptionLabel;
-	[SerializeField] private Text mzStartLabel;
-	[SerializeField] private Text mzClearLabel;
-
-	[SerializeField] private Text mzTimerLabel;
-	[SerializeField] private Text lightLabel;
-	[SerializeField] private Text croquetteLabel;
-	[SerializeField] private Text giveUpLabel;
-	[SerializeField] private Text timeUpLabel;
-	[SerializeField] private Text failerLabel;
-	[SerializeField] private Text goalLabel;
+	private Text mzLabel;
+	private Text mzTimerLabel;
+	private Text lightLabel;
+	private Text croquetteLabel;
 
 	[SerializeField] private GameObject buttonForward;
 	[SerializeField] private GameObject buttonBack;
@@ -81,6 +72,11 @@ public class GameManager : MonoBehaviour {
 
 	void Awake()
 	{
+        mzLabel =  GameObject.Find ("MzLabel").GetComponent<Text>();
+        mzTimerLabel =  GameObject.Find ("MzTimerLabel").GetComponent<Text>();
+        lightLabel =  GameObject.Find ("LightLabel").GetComponent<Text>();
+        croquetteLabel =  GameObject.Find ("CroquetteLabel").GetComponent<Text>();
+
 		mzTimer = GameObject.Find ("MzTimerLabel").
 			GetComponent<MzTimer>();
 		mzSoundEffect = GameObject.Find("MzSoundEffect").
@@ -196,17 +192,9 @@ public class GameManager : MonoBehaviour {
 	{
 		playerRenderer.enabled = false;
 
-		mzDescriptionLabel.enabled = false;
-		mzStartLabel.enabled = false;
-		mzClearLabel.enabled = false;
-
 		mzTimerLabel.enabled = false;
 		lightLabel.enabled = false;
 		croquetteLabel.enabled = false;
-		giveUpLabel.enabled = false;
-		timeUpLabel.enabled = false;
-		failerLabel.enabled = false;
-		goalLabel.enabled = false;
 
 		buttonForward.gameObject.SetActive (false);
 		buttonBack.gameObject.SetActive (false);
@@ -241,19 +229,18 @@ public class GameManager : MonoBehaviour {
 		cameraController.ShowPlayerCamera();
 		AllFalse();
 
-		player.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
-		mzDescriptionLabel.enabled = true;
+		mzLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			mzDescriptionLabel.text = "0面はチュートリアルです。\nここでは各基本アイテムの効果を説明していきます。\n" +
+			mzLabel.text = "0面はチュートリアルです。\nここでは各基本アイテムの効果を説明していきます。\n" +
 				"制限時間内にすべてのアイテムを取得した後、\nゴールを目指して下さい。\n\n画面クリックでゲーム開始です。";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
-			mzDescriptionLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
+			mzLabel.text = "1面は、単純な迷路です。\n制限時間内に出口を目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			mzDescriptionLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、スタート地点に\n" +
+			mzLabel.text = "2面はロボットが襲ってきます。\n捕まると30秒間気絶させられ、スタート地点に\n" +
 				"戻されるので、上手く逃げ回りつつゴールを\n目指して下さい。\n\n" +
 				"画面クリックでゲーム開始です。";
 		}
@@ -267,24 +254,32 @@ public class GameManager : MonoBehaviour {
 		mzSoundEffect.ReadyGoSound();
 
 		mzReadyClear.enabled = true;
-		mzStartLabel.enabled = true;
+		mzLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			mzStartLabel.text = "0 面 スタート !";
+			mzLabel.text = "0 面 スタート !";
+            mzLabel.fontSize = 100;
+            mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
-			mzStartLabel.text = "1 面 スタート !";
+			mzLabel.text = "1 面 スタート !";
+            mzLabel.fontSize = 100;
+            mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			mzStartLabel.text = "2 面 スタート !";
+			mzLabel.text = "2 面 スタート !";
+            mzLabel.fontSize = 100;
+            mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		}
 	}
 
 	void Playing()
 	{
 		state = GameState.PLAYING;
+        cameraController.ShowPlayerCamera();
 		AllFalse();
 
-		mzTimerLabel.enabled = true;
+        mzLabel.text = "";
+        mzTimerLabel.enabled = true;
 		buttonForward.gameObject.SetActive (true);
 		buttonBack.gameObject.SetActive (true);
 		buttonLeft.gameObject.SetActive (true);
@@ -306,8 +301,10 @@ public class GameManager : MonoBehaviour {
 		Time.timeScale = 0.0f;
 		AllFalse();
 
+        mzLabel.text = "本当にギブアップ\nしますか？";
+        mzLabel.fontSize = 48;
+        mzLabel.color = new Color(255f/255f, 128f/255f, 0f/255f);
 		mzTimerLabel.enabled = true;
-		giveUpLabel.enabled = true;
 		buttonCancel.gameObject.SetActive (true);
 		buttonGameOver.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
@@ -318,9 +315,9 @@ public class GameManager : MonoBehaviour {
 		state = GameState.MAP;
 		cameraController.ShowMapCamera();
 		Time.timeScale = 0.0f;
+        mzLabel.text = "";
 		AllFalse();
 
-		player.gameObject.SetActive (true);
 		playerRenderer.enabled = true;
 		mzTimerLabel.enabled = true;
 		buttonToMz.gameObject.SetActive (true);
@@ -333,7 +330,9 @@ public class GameManager : MonoBehaviour {
 		AllFalse();
 		mzSoundEffect.TimeUpSound();
 
-		timeUpLabel.enabled = true;
+        mzLabel.text = "時間切れ！";
+        mzLabel.fontSize = 100;
+        mzLabel.color = new Color(255f/255f, 64f/255f, 0f/255f);
 		mzReadyClear.enabled = true;
 	}
 
@@ -343,7 +342,9 @@ public class GameManager : MonoBehaviour {
 		cameraController.ShowPlayerCamera();
 		AllFalse();
 
-		failerLabel.enabled = true;
+        mzLabel.text = "脱出失敗！";
+        mzLabel.fontSize = 100;
+        mzLabel.color = new Color(255f/255f, 0f/255f, 0f/255f);
 		buttonGameOver.gameObject.SetActive (true);
 		buttonRestart.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
@@ -356,7 +357,9 @@ public class GameManager : MonoBehaviour {
 		AllFalse();
 		mzSoundEffect.GoalSound();
 
-		goalLabel.enabled = true;
+        mzLabel.text = "GOAL！";
+        mzLabel.fontSize = 100;
+        mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		playerGoal.gameObject.SetActive (true);
 		mzReadyClear.enabled = true;
 	}
@@ -365,38 +368,51 @@ public class GameManager : MonoBehaviour {
 	{
 		state = GameState.CLEAR;
 
-		mzClearLabel.enabled = true;
 		if (SceneManager.GetActiveScene().name == "Maze00") {
-			mzClearLabel.text = "0 面 クリア !\nさあ次からが本格的な\n" +
+			mzLabel.text = "0 面 クリア !\nさあ次からが本格的な\n" +
 				"迷路探索の始まりです !";
-			mzClearLabel.fontSize = 60;
+			mzLabel.fontSize = 60;
+            mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze01") {
-			mzClearLabel.text = "1 面\nクリア !";
+			mzLabel.text = "1 面\nクリア !";
+            mzLabel.fontSize = 100;
+            mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		}
 		else if (SceneManager.GetActiveScene().name == "Maze02") {
-			mzClearLabel.text = "2 面\nクリア !";
+			mzLabel.text = "2 面\nクリア !";
+            mzLabel.fontSize = 100;
+            mzLabel.color = new Color(255f/255f, 255f/255f, 0f/255f);
 		}
 
-		goalLabel.enabled = false;
 		buttonNextMz.gameObject.SetActive (true);
 		buttonToTitle.gameObject.SetActive (true);
 	}
 
 
 	void GameOver() {
+
 		SceneManager.LoadScene("GameOver");
 	}
 
-	void Restart() {
+	IEnumerator Restart() {
+        yield return new WaitForSeconds(1.0f);
+        Fade = true;
+        yield return new WaitForSeconds(2.5f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 
-	void ToTitle() {
+    IEnumerator ToTitle() {
+        yield return new WaitForSeconds(1.0f);
+        Fade = true;
+        yield return new WaitForSeconds(2.5f);
 		SceneManager.LoadScene ("Title");
 	}
 
-	void ToNextMz() {
+    IEnumerator ToNextMz() {
+        yield return new WaitForSeconds(1.0f);
+        Fade = true;
+        yield return new WaitForSeconds(2.5f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 
@@ -435,23 +451,20 @@ public class GameManager : MonoBehaviour {
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound();
 		fadeBlack.enabled = true;
-		Fade = true;
-		Invoke("Restart", 3.0f);
+		StartCoroutine (Restart());
 	}
 
 	public void OnButtonNextMzClicked() {
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
 		fadeBlack.enabled = true;
-		Fade = true;
-		Invoke ("ToNextMz", 3.0f);
+        StartCoroutine (ToNextMz());
 	}
 
 	public void OnButtonToTitleClicked() {
 		mzBGM.Stop ();
 		mzSoundEffect.EnterSound ();
 		fadeBlack.enabled = true;
-		Fade = true;
-		Invoke ("ToTitle", 4.0f);
+        StartCoroutine (ToTitle());
 	}
 }

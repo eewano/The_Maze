@@ -39,17 +39,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846bced902a5443c1a5ab8b3677064c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  mzDescriptionLabel: {fileID: 0}
-  mzStartLabel: {fileID: 0}
-  mzClearLabel: {fileID: 0}
-  mzTimerLabel: {fileID: 0}
-  lightLabel: {fileID: 0}
-  croquetteLabel: {fileID: 0}
-  giveUpLabel: {fileID: 0}
-  timeUpLabel: {fileID: 0}
-  failerLabel: {fileID: 0}
-  goalLabel: {fileID: 0}
   buttonForward: {fileID: 0}
   buttonBack: {fileID: 0}
   buttonLeft: {fileID: 0}
