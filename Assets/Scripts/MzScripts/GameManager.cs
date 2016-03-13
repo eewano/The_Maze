@@ -146,19 +146,19 @@ public class GameManager : MonoBehaviour {
 			break;
 
 		case GameState.GIVEUP:
-			if(Light) {
+			if(Light == true) {
 				lightLabel.enabled = true;
 			}
-			if(Croquette) {
+			if(Croquette == true) {
 				croquetteLabel.enabled = true;
 			}
 			break;
 
 		case GameState.MAP:
-			if(Light) {
+			if(Light == true) {
 				lightLabel.enabled = true;
 			}
-			if(Croquette) {
+			if(Croquette == true) {
 				croquetteLabel.enabled = true;
 			}
 			break;
@@ -390,8 +390,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	void GameOver() {
-
+    void GameOver() {
 		SceneManager.LoadScene("GameOver");
 	}
 
@@ -428,7 +427,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void OnButtonGameOverClicked() {
-		GameOver();
+        GameOver();
 	}
 
 	public void OnButtonMapClicked() {

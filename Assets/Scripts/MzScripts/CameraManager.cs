@@ -8,7 +8,6 @@ public class CameraManager : MonoBehaviour {
 	[SerializeField] private Camera mapCamera;
 	[SerializeField] private Camera goalCamera;
 	[SerializeField] private GameObject ceiling;
-	[SerializeField] private GameObject mzLight;
 	[SerializeField] private GameObject mapLight;
 	[SerializeField] private GameObject goalLight;
 
@@ -18,15 +17,8 @@ public class CameraManager : MonoBehaviour {
 		mapCamera.enabled = false;
 		goalCamera.enabled = false;
 		ceiling.gameObject.SetActive (true);
-		mzLight.gameObject.SetActive (false);
 		mapLight.gameObject.SetActive (false);
 		goalLight.gameObject.SetActive (false);
-
-		if (SceneManager.GetActiveScene().name == "Maze00") {
-			ceiling.gameObject.SetActive (false);
-			mzLight.gameObject.SetActive (true);
-			mapLight.gameObject.SetActive (false);
-		}
 	}
 
 	public void ShowPlayerCamera()
@@ -42,7 +34,6 @@ public class CameraManager : MonoBehaviour {
 
 		mapCamera.enabled = true;
 		ceiling.gameObject.SetActive (false);
-		mzLight.gameObject.SetActive (false);
 		mapLight.gameObject.SetActive (true);
 	}
 
@@ -51,7 +42,6 @@ public class CameraManager : MonoBehaviour {
 		CameraAllSet ();
 
 		goalCamera.enabled = true;
-		mzLight.gameObject.SetActive (false);
 		goalLight.gameObject.SetActive (true);
 	}
 }
