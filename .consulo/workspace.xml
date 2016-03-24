@@ -8,7 +8,7 @@
     <file path="/Mz00Manager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1456401018086" ignored="false" />
     <file path="/MazeCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458463705724" ignored="false" />
     <file path="/Mz01FloorCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458470354455" ignored="false" />
-    <file path="/Mz01WallCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458551413054" ignored="false" />
+    <file path="/Mz01WallCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458811970734" ignored="false" />
     <file path="/Mz01CeilingCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458477006652" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="Mz01WallCreator.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Mz01WallCreator.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -212,15 +212,15 @@
       <workItem from="1458536284956" duration="10000" />
       <workItem from="1458537262378" duration="2276000" />
       <workItem from="1458725590429" duration="23000" />
-      <workItem from="1458798921153" duration="963000" />
+      <workItem from="1458798921153" duration="5068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21493000" />
+    <option name="totallyTimeSpent" value="25598000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1280" y="23" width="1280" height="1001" extended-state="1" />
+    <frame x="-1280" y="23" width="1280" height="1001" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -521,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Mz01WallCreator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding />
         </state>
       </provider>
