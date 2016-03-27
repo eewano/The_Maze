@@ -149,7 +149,6 @@ public class Mz01WallCreator : MonoBehaviour {
         Instantiate(this.prefab, new Vector3(9, 1, 1), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(11, 1, 1), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(13, 1, 1), Quaternion.identity);
-        Instantiate(this.prefab, new Vector3(15, 1, 1), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(17, 1, 1), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(21, 1, 1), Quaternion.identity);
 
@@ -195,6 +194,7 @@ public class Mz01WallCreator : MonoBehaviour {
         Instantiate(this.prefab, new Vector3(-15, 1, -7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-11, 1, -7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-7, 1, -7), Quaternion.identity);
+        Instantiate(this.prefab, new Vector3(13, 1, -7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(17, 1, -7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(21, 1, -7), Quaternion.identity);
 

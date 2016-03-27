@@ -36,7 +36,6 @@ public class Mz02WallCreator : MonoBehaviour {
 
         Instantiate(this.prefab, new Vector3(-21, 1, 17), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-15, 1, 17), Quaternion.identity);
-        Instantiate(this.prefab, new Vector3(-17, 1, 17), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-13, 1, 17), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-11, 1, 17), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-9, 1, 17), Quaternion.identity);
@@ -95,7 +94,6 @@ public class Mz02WallCreator : MonoBehaviour {
         Instantiate(this.prefab, new Vector3(-21, 1, 7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-17, 1, 7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-9, 1, 7), Quaternion.identity);
-        Instantiate(this.prefab, new Vector3(-5, 1, 7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(7, 1, 7), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(21, 1, 7), Quaternion.identity);
 
@@ -148,7 +146,6 @@ public class Mz02WallCreator : MonoBehaviour {
         Instantiate(this.prefab, new Vector3(21, 1, -3), Quaternion.identity);
 
         Instantiate(this.prefab, new Vector3(-21, 1, -5), Quaternion.identity);
-        Instantiate(this.prefab, new Vector3(-19, 1, -5), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-17, 1, -5), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-15, 1, -5), Quaternion.identity);
         Instantiate(this.prefab, new Vector3(-13, 1, -5), Quaternion.identity);
