@@ -608,23 +608,28 @@
         <module-layer name="Editor">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -683,8 +688,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -702,23 +705,28 @@
         <module-layer name="Linux (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -777,8 +785,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -796,23 +802,28 @@
         <module-layer name="Linux (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -871,8 +882,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -890,23 +899,28 @@
         <module-layer name="Linux (any)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -965,8 +979,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -984,23 +996,28 @@
         <module-layer name="MacOS (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -1059,8 +1076,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -1078,23 +1093,28 @@
         <module-layer name="MacOS (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -1153,8 +1173,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -1172,23 +1190,28 @@
         <module-layer name="MacOS (any)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -1247,8 +1270,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -1266,23 +1287,28 @@
         <module-layer name="Windows (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -1341,8 +1367,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
@@ -1360,23 +1384,28 @@
         <module-layer name="Windows (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz00WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz01WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02CeilingCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz02WallCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03FloorCreator.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Enemy01Controller.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/FollowCamera.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz00WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz01WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02CeilingCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz02WallCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03FloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverController.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz03.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/CameraManager.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzScripts/ClashCamera.cs" />
@@ -1435,8 +1464,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleController.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/TitleScripts/TitleSoundEffect.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButton.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/SlidableButtonGroup.cs" />
           <orderEntry type="sourceFolder" />
           <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
           <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />

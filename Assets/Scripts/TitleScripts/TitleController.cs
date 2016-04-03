@@ -8,6 +8,7 @@ public class TitleController : MonoBehaviour {
 	public static bool Mz00 = false;
 	public static bool Mz01 = false;
 	public static bool Mz02 = false;
+    public static bool Mz03 = false;
 
 	enum TitleState {TITLE, DESCRIPTION, START}
 	private TitleState state;
@@ -39,6 +40,7 @@ public class TitleController : MonoBehaviour {
 		Mz00 = false;
 		Mz01 = false;
 		Mz02 = false;
+        Mz03 = false;
 		GameManager.Fade = false;
 		fadeBlack.enabled = false;
 
@@ -62,7 +64,9 @@ public class TitleController : MonoBehaviour {
 						SceneManager.LoadScene ("Maze01");
 					} else if (Mz02 == true) {
 						SceneManager.LoadScene ("Maze02");
-					}
+					} else if (Mz03 == true) {
+                        SceneManager.LoadScene ("Maze03");
+                    }
 			break;
 		}
 	}
@@ -157,4 +161,14 @@ public class TitleController : MonoBehaviour {
 		GameManager.Fade = true;
 		Invoke ("GameStart", 3.0f);
 	}
+
+    public void Mz03Start()
+    {
+        Mz03 = true;
+        titleBGM.Stop ();
+        titleSoundEffect.GameEnter();
+        fadeBlack.enabled = true;
+        GameManager.Fade = true;
+        Invoke ("GameStart", 3.0f);
+    }
 }
