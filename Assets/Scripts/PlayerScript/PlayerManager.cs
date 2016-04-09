@@ -74,8 +74,28 @@ public class PlayerManager : MonoBehaviour {
 			Destroy (hit.gameObject);
 		} else if (hit.gameObject.tag == "Enemy") {
 			mzSoundEffect.EnemyTouchSound ();
-			transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
-			mzTimer.EnemyTouchTimer ();
+            StartCoroutine("WarpToStart");
 		}
 	}
+
+    private IEnumerator WarpToStart(){
+        Debug.Log("1");
+        yield return new WaitForSeconds(3.0f);
+        transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
+        mzTimer.EnemyTouchTimer ();
+        Debug.Log("2");
+        yield return null;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
