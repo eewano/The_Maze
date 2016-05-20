@@ -6,13 +6,11 @@ public class SlidableButtonGroup : MonoBehaviour, IPointerDownHandler, IPointerU
 
     List<int> pointerList;
 
-    void Start()
-    {
+    void Start() {
         pointerList = new List<int>();
     }
 
-    public void OnPointerDown(PointerEventData ev)
-    {
+    public void OnPointerDown(PointerEventData ev) {
         pointerList.Add(ev.pointerId);
         IterateAllChildren(transform, obj => {
             var arrowButton = obj.GetComponent<SlidableButton>();
@@ -23,8 +21,7 @@ public class SlidableButtonGroup : MonoBehaviour, IPointerDownHandler, IPointerU
         });
     }
 
-    public void OnPointerUp(PointerEventData ev)
-    {
+    public void OnPointerUp(PointerEventData ev) {
         pointerList.Remove(ev.pointerId);
 
         if (pointerList.Count > 0) return;
@@ -38,12 +35,10 @@ public class SlidableButtonGroup : MonoBehaviour, IPointerDownHandler, IPointerU
         });
     }
 
-    void IterateAllChildren(Transform transform, System.Action<GameObject> action)
-    {
+    void IterateAllChildren(Transform transform, System.Action<GameObject> action) {
         action(transform.gameObject);
 
-        for (int i = 0; i < transform.childCount; i++)
-        {
+        for (int i = 0; i < transform.childCount; i++) {
             var child = transform.GetChild(i);
             IterateAllChildren(child, action);
         }

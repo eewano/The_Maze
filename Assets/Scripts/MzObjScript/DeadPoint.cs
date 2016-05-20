@@ -3,16 +3,16 @@ using System.Collections;
 
 public class DeadPoint : MonoBehaviour {
 
-	GameObject gameController;
+    GameObject gameManager;
 
-	void Start () {
-		gameController = GameObject.Find ("GameController");
-	}
+    void Start() {
+        gameManager = GameObject.Find("GameManager");
+    }
 
-	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "Player") {
-			GameManager.Dead = true;
-			gameController.SendMessage ("Failure");
-		}
-	}
+    void OnTriggerEnter(Collider col) {
+        if (col.gameObject.tag == "Player") {
+            GameManager.Dead = true;
+            gameManager.SendMessage("Failure");
+        }
+    }
 }

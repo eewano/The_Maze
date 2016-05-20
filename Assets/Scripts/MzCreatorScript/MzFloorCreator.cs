@@ -3,30 +3,32 @@ using System.Collections;
 
 public class MzFloorCreator : MonoBehaviour {
 
-    [SerializeField] private GameObject prefab;
-    [SerializeField] private int xNumber;
-    [SerializeField] private int zNumber;
-    [SerializeField] private GameObject mzFloorContainer;
+    [SerializeField]
+    private GameObject prefab;
+    [SerializeField]
+    private int xNumber;
+    [SerializeField]
+    private int zNumber;
+    [SerializeField]
+    private GameObject mzFloorContainer;
 
-    [SerializeField] private bool isFloor = true;
+    [SerializeField]
+    private bool isFloor = true;
 
-    void Awake()
-    {
+    void Awake() {
         float floorWidth = this.prefab.transform.localScale.x;
         float floorDepth = this.prefab.transform.localScale.z;
 
         float floorLeftEdge = -1 * this.xNumber / 2 * floorWidth + (floorWidth / 2);
         float floorDepthEdge = -1 * this.zNumber / 2 * floorDepth + (floorDepth / 2);
 
-        for(int x = 0; x < this.xNumber; x++)
-        {
-            for(int z = 0; z < this.zNumber; z++)
-            {
+        for (int x = 0; x < this.xNumber; x++) {
+            for (int z = 0; z < this.zNumber; z++) {
                 GameObject mzFloor = (GameObject)Instantiate(prefab);
 
                 float y;
 
-                if(this.isFloor)
+                if (this.isFloor)
                 {
                     y = -0.25f;
                 }

@@ -3,45 +3,47 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class CameraManager : MonoBehaviour {
-	
-	[SerializeField] private Camera playerCamera;
-	[SerializeField] private Camera mapCamera;
-	[SerializeField] private Camera goalCamera;
-	[SerializeField] private GameObject ceiling;
-	[SerializeField] private GameObject mapLight;
-	[SerializeField] private GameObject goalLight;
 
-	void CameraAllSet()
-	{
-		playerCamera.enabled = false;
-		mapCamera.enabled = false;
-		goalCamera.enabled = false;
-		ceiling.gameObject.SetActive (true);
-		mapLight.gameObject.SetActive (false);
-		goalLight.gameObject.SetActive (false);
-	}
+    [SerializeField]
+    private Camera playerCamera;
+    [SerializeField]
+    private Camera mapCamera;
+    [SerializeField]
+    private Camera goalCamera;
+    [SerializeField]
+    private GameObject ceiling;
+    [SerializeField]
+    private GameObject mapLight;
+    [SerializeField]
+    private GameObject goalLight;
 
-	public void ShowPlayerCamera()
-	{
-		CameraAllSet ();
+    void CameraAllSet() {
+        playerCamera.enabled = false;
+        mapCamera.enabled = false;
+        goalCamera.enabled = false;
+        ceiling.gameObject.SetActive(true);
+        mapLight.gameObject.SetActive(false);
+        goalLight.gameObject.SetActive(false);
+    }
 
-		playerCamera.enabled = true;
-	}
+    public void ShowPlayerCamera() {
+        CameraAllSet();
 
-	public void ShowMapCamera()
-	{
-		CameraAllSet ();
+        playerCamera.enabled = true;
+    }
 
-		mapCamera.enabled = true;
-		ceiling.gameObject.SetActive (false);
-		mapLight.gameObject.SetActive (true);
-	}
+    public void ShowMapCamera() {
+        CameraAllSet();
 
-	public void ShowGoalCamera()
-	{
-		CameraAllSet ();
+        mapCamera.enabled = true;
+        ceiling.gameObject.SetActive(false);
+        mapLight.gameObject.SetActive(true);
+    }
 
-		goalCamera.enabled = true;
-		goalLight.gameObject.SetActive (true);
-	}
+    public void ShowGoalCamera() {
+        CameraAllSet();
+
+        goalCamera.enabled = true;
+        goalLight.gameObject.SetActive(true);
+    }
 }

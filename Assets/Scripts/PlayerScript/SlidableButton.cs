@@ -4,8 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Image))]
-public class SlidableButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
-{
+public class SlidableButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     Sprite notPressedSprite;
     public Sprite pressedSprite;
 
@@ -19,14 +18,12 @@ public class SlidableButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public UnityEvent onButtonDown;
     public UnityEvent onButtonUp;
 
-    public void Start()
-    {
+    public void Start() {
         image = GetComponent<Image>();
         notPressedSprite = image.sprite;
     }
 
-    void UpdateState()
-    {
+    void UpdateState() {
         if (!isPointerDown || !isPointerIn)
         {
             image.sprite = notPressedSprite;
@@ -45,26 +42,22 @@ public class SlidableButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
     }
 
-    public void OnPointerEnter(PointerEventData ev)
-    {
+    public void OnPointerEnter(PointerEventData ev) {
         isPointerIn = true;
         UpdateState();
     }
 
-    public void OnPointerExit(PointerEventData ev)
-    {
+    public void OnPointerExit(PointerEventData ev) {
         isPointerIn = false;
         UpdateState();
     }
 
-    public void OnGroupPointerDown()
-    {
+    public void OnGroupPointerDown() {
         isPointerDown = true;
         UpdateState();
     }
 
-    public void OnGroupPointerUp()
-    {
+    public void OnGroupPointerUp() {
         isPointerDown = false;
         UpdateState();
     }

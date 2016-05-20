@@ -16,7 +16,7 @@ public class MzSoundEffect : MonoBehaviour {
 		enemyTouchSE,
 		countDownSE;
 
-	void Awake()
+	void Start()
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource> ();
 		readyGoSE = audioSources [0];

@@ -3,21 +3,20 @@ using System.Collections;
 
 public class WallOn : MonoBehaviour {
 
-	MzSoundEffect mzSoundEffect;
+    MzSoundEffect mzSoundEffect;
 
-	void Start()
-	{
-		mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
-	}
+    void Start() {
+        mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
+    }
 
-	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "Player") {
-			if (WallOnOff.WallOn == false && WallOnOff.WallOff == true) {
-				mzSoundEffect.ShutterSound ();
-				Camera.main.SendMessage ("Clash");
-			}
-			WallOnOff.WallOn = true;
-			WallOnOff.WallOff = false;
-		}
-	}
+    void OnTriggerEnter(Collider col) {
+        if (col.gameObject.tag == "Player") {
+            if (WallOnOffManager.WallOn == false && WallOnOffManager.WallOff == true) {
+                mzSoundEffect.ShutterSound();
+                Camera.main.SendMessage("Clash");
+            }
+            WallOnOffManager.WallOn = true;
+            WallOnOffManager.WallOff = false;
+        }
+    }
 }

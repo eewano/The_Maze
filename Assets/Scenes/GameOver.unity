@@ -1727,7 +1727,7 @@ GameObject:
   - 4: {fileID: 1464749643}
   - 114: {fileID: 1464749644}
   m_Layer: 0
-  m_Name: GameOverController
+  m_Name: GameOverManager
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2247,6 +2247,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
