@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class PlayerManager : MonoBehaviour {
     private PlayerController playerController;
     private MzSoundEffect mzSoundEffect;
     private MzTimer mzTimer;
+    private CatchedFadeIn fadeWhite;
+
+    public static bool EnemyCatchPlayer;
 
     void Start() {
         mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
@@ -15,7 +19,10 @@ public class PlayerManager : MonoBehaviour {
         playerFootSound = GameObject.Find("Player").GetComponent<FootSound>();
         playerSpotlight = GameObject.Find("PlayerSpotlight").GetComponent<Light>();
         playerController = GetComponent<PlayerController>();
+        fadeWhite = GameObject.Find("FadeWhite").GetComponent<CatchedFadeIn>();
         gameObject.SetActive(true);
+
+        EnemyCatchPlayer = false;
     }
 
     void Update() {
@@ -35,12 +42,22 @@ public class PlayerManager : MonoBehaviour {
         }
 
         //-----デバッグ用のショートカットキー-----
-        if (Input.GetKeyDown("l")) {
+        if (Input.GetKeyDown("l") && GameManager.Light == false) {
             GameManager.Light = true;
-        } else if (Input.GetKeyDown("c")) {
+        }
+        else if (Input.GetKeyDown("l") && GameManager.Light == true) {
+            GameManager.Light = false;
+        }
+
+        if (Input.GetKeyDown("c") && GameManager.Croquette == false) {
             GameManager.Croquette = true;
-        } else if (Input.GetKeyDown("m")) {
+        }
+
+        if (Input.GetKeyDown("m") && GameManager.MapCrystal == false) {
             GameManager.MapCrystal = true;
+        }
+        else if (Input.GetKeyDown("m") && GameManager.MapCrystal == true) {
+            GameManager.MapCrystal = false;
         }
         //----------
 
@@ -68,16 +85,22 @@ public class PlayerManager : MonoBehaviour {
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Enemy") {
             mzSoundEffect.EnemyTouchSound();
+            Debug.Log("hit");
             StartCoroutine("WarpToStart");
         }
     }
 
     private IEnumerator WarpToStart() {
-        Debug.Log("1");
+        EnemyCatchPlayer = true;
+        fadeWhite.OnFade(true);
         yield return new WaitForSeconds(3.0f);
+        fadeWhite.OnFade(false);
+        fadeWhite.OffFade(true);
         transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
+        yield return new WaitForSeconds(3.0f);
         mzTimer.EnemyTouchTimer();
-        Debug.Log("2");
+        EnemyCatchPlayer = false;
+        Debug.Log(EnemyCatchPlayer);
         yield return null;
     }
 }

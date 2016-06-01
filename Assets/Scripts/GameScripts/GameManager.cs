@@ -128,18 +128,10 @@ public class GameManager : MonoBehaviour {
                 break;
 
             case GameState.PLAYING:
-                if (MapCrystal == true) {
-                    buttonMap.gameObject.SetActive(true);
-                } else {
-                    buttonMap.gameObject.SetActive(false);
-                }
-                if (Light == true) {
-                    getLight.gameObject.SetActive(true);
-                    lightLabel.enabled = true;
-                }
-                if (Croquette == true) {
-                    croquetteLabel.enabled = true;
-                }
+                buttonMap.gameObject.SetActive(MapCrystal);
+                getLight.gameObject.SetActive(Light);
+                lightLabel.enabled = Light;
+                croquetteLabel.enabled = Croquette;
 
                 if (mzTimer.GetTimeRemaining() == 0)
                 {
@@ -247,7 +239,7 @@ public class GameManager : MonoBehaviour {
             "画面クリックでゲーム開始です。";
         }
         else if (SceneManager.GetActiveScene().name == "Maze03") {
-            mzLabel.text = "3面はクリアするのに鍵のアイテムが。\n必要になります。\n" +
+            mzLabel.text = "3面はクリアするのに鍵のアイテムが\n必要になります。\n" +
             "様々な仕掛けをくぐり抜け、\n鍵を探し出してゴールを目指して下さい。\n\n" +
             "画面クリックでゲーム開始です。";
         }

@@ -42,8 +42,16 @@ public class EnemyMove : MonoBehaviour {
     }
 
     void Update() {
-        UpdateControl();
-        UpdateState();
+        if(PlayerManager.EnemyCatchPlayer == false)
+        {
+            UpdateControl();
+            UpdateState();
+        }
+
+        if(PlayerManager.EnemyCatchPlayer == true)
+        {
+            audio_source.Stop();
+        }
     }
 
     void UpdateControl() {

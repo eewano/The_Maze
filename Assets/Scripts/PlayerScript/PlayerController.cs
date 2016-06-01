@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
     private float
     curSpeed, curRotSpeed, playerSpeed, playerRotSpeed;
 
-
     public void PushForwardDown() {
         Forward = true;
     }
@@ -82,8 +81,8 @@ public class PlayerController : MonoBehaviour {
 
 
     void Start() {
-        KeyboardControl = false;
-        TouchPadControl = true;
+        KeyboardControl = true;
+        TouchPadControl = false;
         Forward = false;
         Back = false;
         Left = false;
@@ -100,9 +99,12 @@ public class PlayerController : MonoBehaviour {
             return;
         }
 
-        UpdateShortCutKey();
-        UpdateKeyControl();
-        UpdateTouchControl();
+        if(PlayerManager.EnemyCatchPlayer == false)
+        {
+            UpdateShortCutKey();
+            UpdateKeyControl();
+            UpdateTouchControl();
+        }
     }
 
     //-----キーボードとタッチパッドの切り替え-----

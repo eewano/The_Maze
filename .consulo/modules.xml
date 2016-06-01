@@ -1445,6 +1445,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -1531,6 +1532,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -1617,6 +1619,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -1703,6 +1706,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -1789,6 +1793,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -1875,6 +1880,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -1961,6 +1967,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -2047,6 +2054,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
@@ -2133,6 +2141,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CameraManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/FadeOut.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/GameManager.cs" />
