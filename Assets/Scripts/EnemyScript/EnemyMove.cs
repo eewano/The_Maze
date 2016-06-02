@@ -39,6 +39,7 @@ public class EnemyMove : MonoBehaviour {
         audio_source = gameObject.GetComponent<AudioSource>();
         audio_source.clip = EnemyMoveSE;
         EnemyPatrol();
+        audio_source.Play();
     }
 
     void Update() {
@@ -46,11 +47,6 @@ public class EnemyMove : MonoBehaviour {
         {
             UpdateControl();
             UpdateState();
-        }
-
-        if(PlayerManager.EnemyCatchPlayer == true)
-        {
-            audio_source.Stop();
         }
     }
 
@@ -112,5 +108,15 @@ public class EnemyMove : MonoBehaviour {
         navMeshAgent.speed = chasingSpeed;
         targetPos = target.transform.position;
         navMeshAgent.SetDestination(targetPos);
+    }
+
+    public void EnemySEStop()
+    {
+        audio_source.Stop();
+    }
+
+    public void EnemySEPlay()
+    {
+        audio_source.Play();
     }
 }

@@ -1113,7 +1113,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 568821211}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1162,10 +1162,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 612640135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d85d2e8264e9b4fe1bcaf7187dbf19ec, type: 3}
+  m_Script: {fileID: 11500000, guid: d8b21810681ca412bb65cd74546ec3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 1
 --- !u!1 &635362479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1845,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &868135978
 RectTransform:
@@ -3955,7 +3954,7 @@ Prefab:
       objectReference: {fileID: 1616309527}
     - target: {fileID: 11498618, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
       propertyPath: timeLimit
-      value: 240
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11403308, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
       propertyPath: m_RaycastTarget
@@ -3968,6 +3967,30 @@ Prefab:
     - target: {fileID: 11422708, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
       propertyPath: m_Interactable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22403686, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429950, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426166, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425476, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454054, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 22466596, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26044421973144dc4a0293c050bb1cdd, type: 2}
@@ -4204,7 +4227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 180080, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 147012, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
       propertyPath: m_TagString
@@ -4221,6 +4244,10 @@ Prefab:
     - target: {fileID: 11427728, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
       propertyPath: chasingSpeed
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269638, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
@@ -4647,7 +4674,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 180080, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 147012, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
       propertyPath: m_TagString
@@ -4656,6 +4683,10 @@ Prefab:
     - target: {fileID: 13664768, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269638, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1de2c995cdfd44166b3be12ebb54890c, type: 2}

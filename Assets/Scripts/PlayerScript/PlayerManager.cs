@@ -7,9 +7,11 @@ public class PlayerManager : MonoBehaviour {
     private Light playerSpotlight;
     private FootSound playerFootSound;
     private PlayerController playerController;
+    private EnemyMove enemyMove01;
+    private EnemyMove enemyMove02;
     private MzSoundEffect mzSoundEffect;
     private MzTimer mzTimer;
-    private CatchedFadeIn fadeWhite;
+    private FadeImage fadeWhite;
 
     public static bool EnemyCatchPlayer;
 
@@ -19,7 +21,9 @@ public class PlayerManager : MonoBehaviour {
         playerFootSound = GameObject.Find("Player").GetComponent<FootSound>();
         playerSpotlight = GameObject.Find("PlayerSpotlight").GetComponent<Light>();
         playerController = GetComponent<PlayerController>();
-        fadeWhite = GameObject.Find("FadeWhite").GetComponent<CatchedFadeIn>();
+        enemyMove01 = GameObject.Find("Enemy (1)").GetComponent<EnemyMove>();
+        enemyMove02 = GameObject.Find("Enemy (2)").GetComponent<EnemyMove>();
+        fadeWhite = GameObject.Find("FadeWhite").GetComponent<FadeImage>();
         gameObject.SetActive(true);
 
         EnemyCatchPlayer = false;
@@ -84,23 +88,26 @@ public class PlayerManager : MonoBehaviour {
             mzSoundEffect.MapCrystalSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Enemy") {
+            enemyMove01.EnemySEStop();
+            enemyMove02.EnemySEStop();
             mzSoundEffect.EnemyTouchSound();
-            Debug.Log("hit");
+            mzTimer.StopTimer();
             StartCoroutine("WarpToStart");
         }
     }
 
     private IEnumerator WarpToStart() {
         EnemyCatchPlayer = true;
-        fadeWhite.OnFade(true);
+        fadeWhite.show();
         yield return new WaitForSeconds(3.0f);
-        fadeWhite.OnFade(false);
-        fadeWhite.OffFade(true);
         transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
-        yield return new WaitForSeconds(3.0f);
         mzTimer.EnemyTouchTimer();
+        fadeWhite.hide();
+        yield return new WaitForSeconds(2.0f);
+        mzTimer.StartTimer();
         EnemyCatchPlayer = false;
-        Debug.Log(EnemyCatchPlayer);
+        enemyMove01.EnemySEPlay();
+        enemyMove02.EnemySEPlay();
         yield return null;
     }
 }
