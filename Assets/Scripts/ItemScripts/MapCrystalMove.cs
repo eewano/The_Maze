@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LightBallMove : MonoBehaviour {
+public class MapCrystalMove : MonoBehaviour {
 
     Vector3 startPosition;
 
-    [SerializeField]
-    private float amplitude;
-    [SerializeField]
-    private float speed;
+    private float amplitude = 0.05f;
+    private float speed = 5.0f;
 
     void Start() {
         startPosition = transform.localPosition;
@@ -20,5 +18,7 @@ public class LightBallMove : MonoBehaviour {
 
         //xを変位させたポジションに再設定する。
         transform.localPosition = startPosition + new Vector3(0, y, 0);
+
+        transform.Rotate(0, 1, 0);
     }
 }

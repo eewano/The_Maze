@@ -4,8 +4,8 @@
     <list default="true" id="299375d8-7347-458d-917b-8a3f8b3e16d1" name="Default" comment="" />
     <ignored path=".consulo/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="/GameManager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463830545121" ignored="false" />
-    <file path="/Mz00Manager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1456401018086" ignored="false" />
+    <file path="/GameManager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466856233984" ignored="false" />
+    <file path="/Mz00Manager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466851710059" ignored="false" />
     <file path="/MazeCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458463705724" ignored="false" />
     <file path="/Mz01FloorCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458470354455" ignored="false" />
     <file path="/Mz01WallCreator.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1458811970734" ignored="false" />
@@ -33,6 +33,22 @@
     <file path="/EnemyMove.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1464780642712" ignored="false" />
     <file path="/PlayerController.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1464760119469" ignored="false" />
     <file path="/FadeText.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1464778027532" ignored="false" />
+    <file path="/LightBallMove.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466842547790" ignored="false" />
+    <file path="/CroquetteMove.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466842904689" ignored="false" />
+    <file path="/LightBallMapLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466844168151" ignored="false" />
+    <file path="/CroquetteMapLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466844236070" ignored="false" />
+    <file path="/MapCrystalMapLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466844399623" ignored="false" />
+    <file path="/Mz00ItemGet.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466852548802" ignored="false" />
+    <file path="/ButtonDelete.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466850268762" ignored="false" />
+    <file path="/ButtonDeleteEvent.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466854314021" ignored="false" />
+    <file path="/ManagerMz00.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466851661932" ignored="false" />
+    <file path="/ManagerButtonDelete.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466853685658" ignored="false" />
+    <file path="/EventDeleteText.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466854305605" ignored="false" />
+    <file path="/ManagerGame.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466858171303" ignored="false" />
+    <file path="/ManagerMzText.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466859298271" ignored="false" />
+    <file path="/ManagerClearText.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466858800893" ignored="false" />
+    <file path="/ManagerMzLabel.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466859947274" ignored="false" />
+    <file path="/ManagerMzButton.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1466861385089" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,27 +74,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Assets/MzCeilingCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzScripts/MzSoundEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mz02WallCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/MzWallCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mz01WallCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/MzFloorCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzFloorCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzWallCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DoNotUse/Mz03WallCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TitleScripts/TitleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/WarpMz01_02.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/WarpMz01_01.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Maze03Build.txt" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/MzSoundEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOnOff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/DeadPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/FootSound.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/FallModePoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/MapFigure.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/Mz00Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/WarpMz01.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/WarpMz02.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/WarpMz03.cs" />
@@ -87,8 +87,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/ClashCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/ClearPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/LightBallMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/MapCrystalMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/Mz00WallDelete.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -101,7 +99,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameOverScripts/GameOverManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScript/EnemySpawnPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoNotUse/FollowCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/FadeOut.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/CatchedFadeIn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/PlayerController.cs" />
@@ -109,6 +106,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScript/EnemyMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/MzTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/MapCrystalMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/LightBallMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/CroquetteMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/LightBallMapLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/CroquetteMapLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/MapCrystalMapLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/ButtonDelete.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/Mz00Manager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMz00.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerButtonDelete.cs" />
+        <option value="$PROJECT_DIR$/Assets/ButtonDeleteEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/EventDeleteText.cs" />
+        <option value="$PROJECT_DIR$/Assets/ManagerGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/ManagerClearText.cs" />
+        <option value="$PROJECT_DIR$/Assets/ManagerMzText.cs" />
+        <option value="$PROJECT_DIR$/Assets/ManagerMzLabel.cs" />
+        <option value="$PROJECT_DIR$/Assets/ManagerMzButton.cs" />
       </list>
     </option>
   </component>
@@ -216,29 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PlayerScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MzObjScript" />
+              <option name="myItemId" value="ItemScripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,50 +255,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GameScripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameOverScripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnemyScript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -429,7 +379,7 @@
     <frame x="-1280" y="23" width="1280" height="1001" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2359015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2359015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -521,34 +471,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/PlayerManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/GameManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6735">
-          <caret line="452" column="33" selection-start-line="452" selection-start-column="8" selection-end-line="452" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/FadeOut.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/CatchedFadeIn.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScript/EnemyMove.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -626,27 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/MapFigure.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzWallCreator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/WarpMz03.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -665,13 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/Mz00Manager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -696,20 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOn.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOff.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/SpawnPoint.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -721,20 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/MapCrystalMove.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/LightBallMove.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -850,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/GameManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5085">
-          <caret line="435" column="25" selection-start-line="435" selection-start-column="25" selection-end-line="435" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/FadeImage.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -875,6 +734,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
           <caret line="62" column="27" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzWallCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOff.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOn.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ManagerMzButton.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ManagerMzLabel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ManagerMzText.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ItemScripts/LightBallMapLight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ManagerGame.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" column="32" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/GameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="378" column="40" selection-start-line="378" selection-start-column="40" selection-end-line="378" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ItemScripts/Mz00ItemGet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ManagerClearText.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/EventDeleteText.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

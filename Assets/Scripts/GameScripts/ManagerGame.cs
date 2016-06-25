@@ -3,20 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
-
-    enum GameState {
-        READY,
-        READYGO,
-        PLAYING,
-        GIVEUP,
-        MAP,
-        TIMEUP,
-        FAILURE,
-        GOAL,
-        CLEAR,
-        GAMEOVER
-    }
+public class ManagerGame : ManagerState {
 
     private GameState state;
 
@@ -28,23 +15,6 @@ public class GameManager : MonoBehaviour {
     private Text mzTimerLabel;
     private Text lightLabel;
     private Text croquetteLabel;
-
-    [SerializeField]
-    private GameObject buttonForward;
-    [SerializeField]
-    private GameObject buttonBack;
-    [SerializeField]
-    private GameObject buttonLeft;
-    [SerializeField]
-    private GameObject buttonRight;
-    [SerializeField]
-    private GameObject buttonFL;
-    [SerializeField]
-    private GameObject buttonFR;
-    [SerializeField]
-    private GameObject buttonBL;
-    [SerializeField]
-    private GameObject buttonBR;
 
     [SerializeField]
     private GameObject getLight;
@@ -75,13 +45,14 @@ public class GameManager : MonoBehaviour {
     private MzSoundEffect mzSoundEffect;
     private AudioListener mzAudioListener;
     private AudioListener mzReadyClear;
-    private CameraManager cameraController;
+    private ManagerCamera managerCamera;
+    private ManagerPlayer managerPlayer;
     private AudioSource mzBGM;
     private float alpha;
 
     void Start() {
-        mzTimer = GameObject.Find("MzTimerText").GetComponent<MzTimer>();
-        mzTimerLabel = GameObject.Find("MzTimerTextl").GetComponent<Text>();
+        mzLabel = GameObject.Find("MzLabel").GetComponent<Text>();
+        mzTimerLabel = GameObject.Find("MzTimerLabel").GetComponent<Text>();
         lightLabel = GameObject.Find("LightLabel").GetComponent<Text>();
         croquetteLabel = GameObject.Find("CroquetteLabel").GetComponent<Text>();
 
@@ -93,8 +64,10 @@ public class GameManager : MonoBehaviour {
         GetComponent<AudioListener>();
         mzReadyClear = GameObject.Find("MzSoundEffect").
         GetComponent<AudioListener>();
-        cameraController = GameObject.Find("CameraManager").
-        GetComponent<CameraManager>();
+        managerCamera = GameObject.Find("ManagerCamera").
+        GetComponent<ManagerCamera>();
+        managerPlayer = GameObject.Find("ManagerPlayer").
+        GetComponent<ManagerPlayer>();
         mzBGM = GameObject.Find("MzBGM").
         GetComponent<AudioSource>();
         playerRenderer = GameObject.Find("Player").
@@ -117,7 +90,6 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         switch (state) {
-
             case GameState.READY:
                 if (Input.GetMouseButtonUp(0))
                     ReadyGo();
@@ -180,6 +152,9 @@ public class GameManager : MonoBehaviour {
 
             case GameState.GAMEOVER:
                 break;
+
+            case GameState.EMPTY:
+                break;
         }
     }
 
@@ -190,15 +165,6 @@ public class GameManager : MonoBehaviour {
         mzTimerLabel.enabled = false;
         lightLabel.enabled = false;
         croquetteLabel.enabled = false;
-
-        buttonForward.gameObject.SetActive(false);
-        buttonBack.gameObject.SetActive(false);
-        buttonLeft.gameObject.SetActive(false);
-        buttonRight.gameObject.SetActive(false);
-        buttonFL.gameObject.SetActive(false);
-        buttonFR.gameObject.SetActive(false);
-        buttonBL.gameObject.SetActive(false);
-        buttonBR.gameObject.SetActive(false);
 
         getLight.gameObject.SetActive(false);
         buttonGiveUp.gameObject.SetActive(false);
@@ -220,7 +186,7 @@ public class GameManager : MonoBehaviour {
 
     void Ready() {
         state = GameState.READY;
-        cameraController.ShowPlayerCamera();
+        managerCamera.ShowPlayerCamera();
         AllFalse();
 
         mzReadyClear.enabled = true;
@@ -244,6 +210,8 @@ public class GameManager : MonoBehaviour {
             "画面クリックでゲーム開始です。";
         }
         mzTimer.ResetTimer();
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void ReadyGo() {
@@ -273,28 +241,24 @@ public class GameManager : MonoBehaviour {
             mzLabel.fontSize = 100;
             mzLabel.color = new Color(255f / 255f, 255f / 255f, 0f / 255f);
         }
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void Playing() {
         state = GameState.PLAYING;
-        cameraController.ShowPlayerCamera();
+        managerCamera.ShowPlayerCamera();
         AllFalse();
 
         mzLabel.text = "";
         mzTimerLabel.enabled = true;
-        buttonForward.gameObject.SetActive(true);
-        buttonBack.gameObject.SetActive(true);
-        buttonLeft.gameObject.SetActive(true);
-        buttonRight.gameObject.SetActive(true);
-        buttonFL.gameObject.SetActive(true);
-        buttonFR.gameObject.SetActive(true);
-        buttonBL.gameObject.SetActive(true);
-        buttonBR.gameObject.SetActive(true);
         buttonGiveUp.gameObject.SetActive(true);
         mzAudioListener.enabled = true;
 
         mzTimer.StartTimer();
         Time.timeScale = 1.0f;
+
+        managerPlayer.ControllerAllTrue();
     }
 
     void GiveUp() {
@@ -309,11 +273,13 @@ public class GameManager : MonoBehaviour {
         buttonCancel.gameObject.SetActive(true);
         buttonGameOver.gameObject.SetActive(true);
         mzReadyClear.enabled = true;
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void Map() {
         state = GameState.MAP;
-        cameraController.ShowMapCamera();
+        managerCamera.ShowMapCamera();
         Time.timeScale = 0.0f;
         mzLabel.text = "";
         AllFalse();
@@ -322,6 +288,8 @@ public class GameManager : MonoBehaviour {
         mzTimerLabel.enabled = true;
         buttonToMz.gameObject.SetActive(true);
         mzReadyClear.enabled = true;
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void TimeUp() {
@@ -333,11 +301,13 @@ public class GameManager : MonoBehaviour {
         mzLabel.fontSize = 100;
         mzLabel.color = new Color(255f / 255f, 64f / 255f, 0f / 255f);
         mzReadyClear.enabled = true;
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void Failure() {
         state = GameState.FAILURE;
-        cameraController.ShowPlayerCamera();
+        managerCamera.ShowPlayerCamera();
         AllFalse();
 
         mzLabel.text = "脱出失敗！";
@@ -346,11 +316,13 @@ public class GameManager : MonoBehaviour {
         buttonGameOver.gameObject.SetActive(true);
         buttonRestart.gameObject.SetActive(true);
         mzReadyClear.enabled = true;
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void Goal() {
         state = GameState.GOAL;
-        cameraController.ShowGoalCamera();
+        managerCamera.ShowGoalCamera();
         AllFalse();
         mzSoundEffect.GoalSound();
 
@@ -359,6 +331,8 @@ public class GameManager : MonoBehaviour {
         mzLabel.color = new Color(255f / 255f, 255f / 255f, 0f / 255f);
         playerGoal.gameObject.SetActive(true);
         mzReadyClear.enabled = true;
+
+        managerPlayer.ControllerAllFalse();
     }
 
     void Clear() {
@@ -388,6 +362,8 @@ public class GameManager : MonoBehaviour {
 
         buttonNextMz.gameObject.SetActive(true);
         buttonToTitle.gameObject.SetActive(true);
+
+        managerPlayer.ControllerAllFalse();
     }
 
 
