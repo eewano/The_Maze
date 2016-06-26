@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ManagerClearText : MonoBehaviour {
+public class Mgr_MzTextClear : MonoBehaviour {
 
     [SerializeField]
     private Text mzClearText;
@@ -12,7 +12,7 @@ public class ManagerClearText : MonoBehaviour {
         mzClearText.text = "";
     }
 
-    public void TextAppearEvent(object o, EventArgs e) {
+    public void AppearTextEvent(object o, EventArgs e) {
         if (SceneManager.GetActiveScene().name == "Maze00") {
             mzClearText.fontSize = 60;
             mzClearText.color = new Color32(255, 255, 0, 255);
@@ -36,7 +36,7 @@ public class ManagerClearText : MonoBehaviour {
         }
     }
 
-    public void TextHideEvent(object o, EventArgs e) {
+    public void HideTextEvent(object o, EventArgs e) {
         mzClearText.text = "";
     }
 }

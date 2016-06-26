@@ -9,12 +9,14 @@ public class EventDeleteText : MonoBehaviour {
 
     [SerializeField]
     private GameObject buttonDeleteText;
+    [SerializeField]
+    private Mz00ItemGet mz00ItemGet;
 
     public event EventHandler textDelete;
 
     void Start() {
         buttonDeleteText.gameObject.SetActive(false);
-//                textDelete += new EventHandler();
+        textDelete += new EventHandler(mz00ItemGet.ImageDeleteHandler);
     }
 
     public void AppearObject(object o, EventArgs e) {

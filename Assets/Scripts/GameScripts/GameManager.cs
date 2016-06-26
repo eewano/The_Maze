@@ -72,7 +72,6 @@ public class GameManager : MonoBehaviour {
     private Image fadeBlack;
 
     private MzTimer mzTimer;
-    private MzSoundEffect mzSoundEffect;
     private AudioListener mzAudioListener;
     private AudioListener mzReadyClear;
     private CameraManager cameraController;
@@ -87,8 +86,6 @@ public class GameManager : MonoBehaviour {
 
         mzTimer = GameObject.Find("MzTimerLabel").
         GetComponent<MzTimer>();
-        mzSoundEffect = GameObject.Find("MzSoundEffect").
-        GetComponent<MzSoundEffect>();
         mzAudioListener = GameObject.Find("Player").
         GetComponent<AudioListener>();
         mzReadyClear = GameObject.Find("MzSoundEffect").
@@ -249,7 +246,6 @@ public class GameManager : MonoBehaviour {
     void ReadyGo() {
         state = GameState.READYGO;
         AllFalse();
-        mzSoundEffect.ReadyGoSound();
 
         mzReadyClear.enabled = true;
         mzLabel.enabled = true;
@@ -327,7 +323,6 @@ public class GameManager : MonoBehaviour {
     void TimeUp() {
         state = GameState.TIMEUP;
         AllFalse();
-        mzSoundEffect.TimeUpSound();
 
         mzLabel.text = "時間切れ！";
         mzLabel.fontSize = 100;
@@ -352,7 +347,6 @@ public class GameManager : MonoBehaviour {
         state = GameState.GOAL;
         cameraController.ShowGoalCamera();
         AllFalse();
-        mzSoundEffect.GoalSound();
 
         mzLabel.text = "GOAL！";
         mzLabel.fontSize = 100;
@@ -418,12 +412,10 @@ public class GameManager : MonoBehaviour {
 
 
     public void OnButtonGiveUpClicked() {
-        mzSoundEffect.EnterSound();
         GiveUp();
     }
 
     public void OnButtonCancelClicked() {
-        mzSoundEffect.ExitSound();
         Playing();
     }
 
@@ -432,7 +424,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void OnButtonMapClicked() {
-        mzSoundEffect.EnterSound();
         MapModeON = true;
         MapModeOFF = false;
         //Pauser.Pause ();
@@ -440,7 +431,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void OnButtonToMzClicked() {
-        mzSoundEffect.ExitSound();
         MapModeON = false;
         MapModeOFF = true;
         //Pauser.Resume ();
@@ -449,21 +439,18 @@ public class GameManager : MonoBehaviour {
 
     public void OnButtonRestartClicked() {
         mzBGM.Stop();
-        mzSoundEffect.EnterSound();
         fadeBlack.enabled = true;
         StartCoroutine(Restart());
     }
 
     public void OnButtonNextMzClicked() {
         mzBGM.Stop();
-        mzSoundEffect.EnterSound();
         fadeBlack.enabled = true;
         StartCoroutine(ToNextMz());
     }
 
     public void OnButtonToTitleClicked() {
         mzBGM.Stop();
-        mzSoundEffect.EnterSound();
         fadeBlack.enabled = true;
         StartCoroutine(ToTitle());
     }

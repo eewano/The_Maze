@@ -12,12 +12,12 @@ public class MzTimer : MonoBehaviour {
     private float timeRemaining;    //制限時間
     private float countDown = 0;
     private Text timerText;
-    private MzSoundEffect mzSoundEffect;
+//    private MzSoundEffect mzSoundEffect;
 
     void Start() {
         timerText = GetComponent<Text>();
-        mzSoundEffect = GameObject.Find("MzSoundEffect").
-        GetComponent<MzSoundEffect>();
+//        mzSoundEffect = GameObject.Find("MzSoundEffect").
+//        GetComponent<MzSoundEffect>();
         ResetTimer();
     }
 
@@ -71,7 +71,7 @@ public class MzTimer : MonoBehaviour {
     void CountDown() {
         countDown -= Time.deltaTime;
         if (countDown <= 0.0) {
-            mzSoundEffect.CountDownSound();
+//            mzSoundEffect.CountDownSound();
             countDown = 1.0f;
         }
     }

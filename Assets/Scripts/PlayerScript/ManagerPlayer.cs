@@ -2,15 +2,13 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ManagerPlayer : ManagerState {
-
-    private GameState state;
+public class ManagerPlayer : MonoBehaviour {
 
     private Light playerSpotlight;
     private FootSound playerFootSound;
     private EnemyMove enemyMove01;
     private EnemyMove enemyMove02;
-    private MzSoundEffect mzSoundEffect;
+//    private MzSoundEffect mzSoundEffect;
     private MzTimer mzTimer;
     private FadeImage fadeWhite;
 
@@ -34,7 +32,7 @@ public class ManagerPlayer : ManagerState {
     private GameObject buttonBR;
 
     void Start() {
-        mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
+//        mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
         mzTimer = GameObject.Find("MzTimerLabel").GetComponent<MzTimer>();
         playerFootSound = GameObject.Find("Player").GetComponent<FootSound>();
         playerSpotlight = GameObject.Find("PlayerSpotlight").GetComponent<Light>();
@@ -70,21 +68,21 @@ public class ManagerPlayer : ManagerState {
 
     void OnTriggerEnter(Collider hit) {
         if (hit.gameObject.tag == "Light") {
-            ManagerGame.Light = true;
-            mzSoundEffect.LightBallSound();
+            GameManager.Light = true;
+//            mzSoundEffect.LightBallSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Croquette") {
-            ManagerGame.Croquette = true;
-            mzSoundEffect.CroquetteSound();
+            GameManager.Croquette = true;
+//            mzSoundEffect.CroquetteSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Map") {
-            ManagerGame.MapCrystal = true;
-            mzSoundEffect.MapCrystalSound();
+            GameManager.MapCrystal = true;
+//            mzSoundEffect.MapCrystalSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Enemy") {
             enemyMove01.EnemySEStop();
             enemyMove02.EnemySEStop();
-            mzSoundEffect.EnemyTouchSound();
+//            mzSoundEffect.EnemyTouchSound();
             mzTimer.StopTimer();
             StartCoroutine("WarpToStart");
         }

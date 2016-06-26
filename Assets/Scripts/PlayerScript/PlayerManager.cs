@@ -9,14 +9,14 @@ public class PlayerManager : MonoBehaviour {
     private PlayerController playerController;
     private EnemyMove enemyMove01;
     private EnemyMove enemyMove02;
-    private MzSoundEffect mzSoundEffect;
+//    private MzSoundEffect mzSoundEffect;
     private MzTimer mzTimer;
     private FadeImage fadeWhite;
 
     public static bool EnemyCatchPlayer;
 
     void Start() {
-        mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
+//        mzSoundEffect = GameObject.Find("MzSoundEffect").GetComponent<MzSoundEffect>();
         mzTimer = GameObject.Find("MzTimerLabel").GetComponent<MzTimer>();
         playerFootSound = GameObject.Find("Player").GetComponent<FootSound>();
         playerSpotlight = GameObject.Find("PlayerSpotlight").GetComponent<Light>();
@@ -77,20 +77,20 @@ public class PlayerManager : MonoBehaviour {
     void OnTriggerEnter(Collider hit) {
         if (hit.gameObject.tag == "Light") {
             GameManager.Light = true;
-            mzSoundEffect.LightBallSound();
+//            mzSoundEffect.LightBallSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Croquette") {
             GameManager.Croquette = true;
-            mzSoundEffect.CroquetteSound();
+//            mzSoundEffect.CroquetteSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Map") {
             GameManager.MapCrystal = true;
-            mzSoundEffect.MapCrystalSound();
+//            mzSoundEffect.MapCrystalSound();
             Destroy(hit.gameObject);
         } else if (hit.gameObject.tag == "Enemy") {
             enemyMove01.EnemySEStop();
             enemyMove02.EnemySEStop();
-            mzSoundEffect.EnemyTouchSound();
+//            mzSoundEffect.EnemyTouchSound();
             mzTimer.StopTimer();
             StartCoroutine("WarpToStart");
         }
