@@ -7,7 +7,7 @@ public class Mgr_MzCamMap : MonoBehaviour {
     private Camera mzCamMap;
 
     void Start() {
-        mzCamMap.enabled = true;
+        mzCamMap.enabled = false;
     }
 
     public void AppearCamEvent(object o, EventArgs e) {

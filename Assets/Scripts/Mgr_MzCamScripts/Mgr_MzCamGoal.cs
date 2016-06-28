@@ -7,7 +7,7 @@ public class Mgr_MzCamGoal : MonoBehaviour {
     private Camera mzCamGoal;
 
     void Start() {
-        mzCamGoal.enabled = true;
+        mzCamGoal.enabled = false;
     }
 
     public void AppearCamEvent(object o, EventArgs e) {

@@ -5,8 +5,22 @@ public class Mgr_MzBtnMap : MonoBehaviour {
 
     [SerializeField]
     private GameObject buttonMap;
+    private ManagerMzMaster managerMzMaster;
+    private Mgr_MzSE01 mgrMzSE01;
+
+    private event EveHandMoveState toMAPState;
+
+    private event EveHandPLAYSE playSE;
+
+    void Awake() {
+        managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
+        mgrMzSE01 = GameObject.Find("Mgr_MzSE01").GetComponent<Mgr_MzSE01>();
+    }
 
     void Start() {
+        toMAPState += new EveHandMoveState(managerMzMaster.ToMapMethod);
+        playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
+
         buttonMap.gameObject.SetActive(false);
     }
 
@@ -16,5 +30,10 @@ public class Mgr_MzBtnMap : MonoBehaviour {
 
     public void HideBtnEvent(object o, EventArgs e) {
         buttonMap.gameObject.SetActive(false);
+    }
+
+    public void OnButtonMapClicked() {
+        this.playSE(this, EventArgs.Empty);
+        this.toMAPState(this, EventArgs.Empty);
     }
 }

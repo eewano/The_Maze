@@ -1,14 +1,14 @@
 ﻿using System;
 using UnityEngine;
 
-public class Mgr_MzBtnRestart : MonoBehaviour {
+public class Mgr_MzBtnMapToMz : MonoBehaviour {
 
     [SerializeField]
-    private GameObject buttonRestart;
+    private GameObject buttonToMz;
     private ManagerMzMaster managerMzMaster;
     private Mgr_MzSE01 mgrMzSE01;
 
-    private event EveHandMoveState toRestartOrder;
+    private event EveHandMoveState toPLAYINGState;
 
     private event EveHandPLAYSE playSE;
 
@@ -18,22 +18,22 @@ public class Mgr_MzBtnRestart : MonoBehaviour {
     }
 
     void Start() {
-        toRestartOrder += new EveHandMoveState(managerMzMaster.RestartIMethod);
-        playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
+        toPLAYINGState += new EveHandMoveState(managerMzMaster.ToPlayingMethod);
+        playSE += new EveHandPLAYSE(mgrMzSE01.SECancelEvent);
 
-        buttonRestart.gameObject.SetActive(false);
+        buttonToMz.gameObject.SetActive(false);
     }
 
     public void AppearBtnEvent(object o, EventArgs e) {
-        buttonRestart.gameObject.SetActive(true);
+        buttonToMz.gameObject.SetActive(true);
     }
 
     public void HideBtnEvent(object o, EventArgs e) {
-        buttonRestart.gameObject.SetActive(false);
+        buttonToMz.gameObject.SetActive(false);
     }
 
-    public void OnButtonRestartClicked() {
+    public void OnButtonMapToMzClicked() {
         this.playSE(this, EventArgs.Empty);
-        this.toRestartOrder(this, EventArgs.Empty);
+        this.toPLAYINGState(this, EventArgs.Empty);
     }
 }
