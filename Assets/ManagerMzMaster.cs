@@ -62,7 +62,7 @@ public class ManagerMzMaster : MonoBehaviour {
 
     private event EveHandMgrState mzEventEMPTY;
 
-    enum GameState {
+    private enum GameState {
         MAZESTART,
         READY,
         READYGO,
@@ -78,9 +78,6 @@ public class ManagerMzMaster : MonoBehaviour {
     }
 
     private GameState state;
-
-    //    private bool
-    //    MapCrystal, Light, Croquette, GameIsOver, Fall, Dead, GoalAndClear, StartTween, Fade, MapModeON, MapModeOFF;
 
     void Awake() {
         mzTimerText = GameObject.Find("MzTimerText").GetComponent<Text>();
@@ -116,156 +113,75 @@ public class ManagerMzMaster : MonoBehaviour {
     }
 
     void Start() {
-        //        MapCrystal = false;
-        //        Light = false;
-        //        Croquette = false;
-        //        GameIsOver = false;
-        //        Fall = false;
-        //        Dead = false;
-        //        GoalAndClear = false;
-        //        StartTween = false;
-        //        Fade = false;
-        //        MapModeON = false;
-        //        MapModeOFF = false;
-
         //MAZESTARTステート
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventMAZESTART += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
         mzEventMAZESTART += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
         //READYステート
-        mzEventREADY += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventREADY += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
+        mzEventREADY += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
         mzEventREADY += new EveHandMgrState(mgrMzTextIntro.AppearTextEvent);
         //READYGOステート
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
-        mzEventREADYGO += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
-        mzEventREADYGO += new EveHandMgrState(mgrMzTextIntro.AppearTextEvent);
         mzEventREADYGO += new EveHandMgrState(mgrMzTextIntro.HideTextEvent);
+
         mzEventREADYGO += new EveHandMgrState(mgrMzTextReady.AppearTextEvent);
         mzEventREADYGO += new EveHandMgrState(mgrMzSE01.SEReadyGoEvent);
-
         //PLAYINGステート
+        mzEventPLAYING += new EveHandMgrState(mgrMzCamMap.HideCamEvent);
         mzEventPLAYING += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
         mzEventPLAYING += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventPLAYING += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
         mzEventPLAYING += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventPLAYING += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventPLAYING += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventPLAYING += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
-        mzEventPLAYING += new EveHandMgrState(mgrMzCamMap.HideCamEvent);
-        mzEventPLAYING += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
         mzEventPLAYING += new EveHandMgrState(mgrMzTextReady.HideTextEvent);
         mzEventPLAYING += new EveHandMgrState(mgrMzTextGiveUp.HideTextEvent);
+
+        mzEventPLAYING += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
         mzEventPLAYING += new EveHandMgrState(mgrMzBtnGiveUp.AppearBtnEvent);
         //GIVEUPステート
         mzEventGIVEUP += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzEventGIVEUP += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventGIVEUP += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventGIVEUP += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventGIVEUP += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventGIVEUP += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
 
         mzEventGIVEUP += new EveHandMgrState(mgrMzTextGiveUp.AppearTextEvent);
         mzEventGIVEUP += new EveHandMgrState(mgrMzBtnCancel.AppearBtnEvent);
         mzEventGIVEUP += new EveHandMgrState(mgrMzBtnGameOver.AppearBtnEvent);
         //MAPステート
-        mzEventMAP += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventMAP += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventMAP += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventMAP += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventMAP += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventMAP += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventMAP += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
         mzEventMAP += new EveHandMgrState(mgrMzCamPlayer.HideCamEvent);
+        mzEventMAP += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
+        mzEventMAP += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
+
         mzEventMAP += new EveHandMgrState(mgrMzCamMap.AppearCamEvent);
         mzEventMAP += new EveHandMgrState(mgrMzBtnMapToMz.AppearBtnEvent);
         //TIMEUPステート
         mzEventTIMEUP += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventTIMEUP += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventTIMEUP += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
         mzEventTIMEUP += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventTIMEUP += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventTIMEUP += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventTIMEUP += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventTIMEUP += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
 
         mzEventTIMEUP += new EveHandMgrState(mgrMzTextTimeUp.AppearTextEvent);
         mzEventTIMEUP += new EveHandMgrState(mgrMzSE01.SETimeUpEvent);
         //FAILUREステート
-        mzEventFAILURE += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventFAILURE += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventFAILURE += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventFAILURE += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventFAILURE += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventFAILURE += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
         mzEventFAILURE += new EveHandMgrState(mgrMzTextTimeUp.HideTextEvent);
+
         mzEventFAILURE += new EveHandMgrState(mgrMzBtnRestart.AppearBtnEvent);
         mzEventFAILURE += new EveHandMgrState(mgrMzBtnGameOver.AppearBtnEvent);
         mzEventFAILURE += new EveHandMgrState(mgrMzTextFailure.AppearTextEvent);
         //GOALステート
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventGOAL += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
         mzEventGOAL += new EveHandMgrState(mgrMzCamPlayer.HideCamEvent);
+        mzEventGOAL += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
+
         mzEventGOAL += new EveHandMgrState(mgrMzCamGoal.AppearCamEvent);
         mzEventGOAL += new EveHandMgrState(mgrMzTextGoal.AppearTextEvent);
         mzEventGOAL += new EveHandMgrState(mgrMzSE02.SEGoal01Event);
         //CLEARステート
-        mzEventCLEAR += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
-        mzEventCLEAR += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
-        mzEventCLEAR += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventCLEAR += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventCLEAR += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventCLEAR += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-
         mzEventCLEAR += new EveHandMgrState(mgrMzTextGoal.HideTextEvent);
+
         mzEventCLEAR += new EveHandMgrState(mgrMzBtnNextMz.AppearBtnEvent);
         mzEventCLEAR += new EveHandMgrState(mgrMzBtnToTitle.AppearBtnEvent);
         mzEventCLEAR += new EveHandMgrState(mgrMzTextClear.AppearTextEvent);
         //GAMEOVERステート
-        mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
         mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
-        mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
-        mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
-        mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
-        mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
-        mzEventGAMEOVER += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
-
         mzEventGAMEOVER += new EveHandMgrState(mgrMzTextGiveUp.HideTextEvent);
         mzEventGAMEOVER += new EveHandMgrState(mgrMzTextFailure.HideTextEvent);
         //EMPTYステート
+        mzEventEMPTY += new EveHandMgrState(mgrMzCamMap.HideCamEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzCamGoal.HideCamEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
+
         mzEventEMPTY += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzEventEMPTY += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
         mzEventEMPTY += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
@@ -277,6 +193,11 @@ public class ManagerMzMaster : MonoBehaviour {
 
         mzEventEMPTY += new EveHandMgrState(mgrMzTextClear.HideTextEvent);
         mzEventEMPTY += new EveHandMgrState(mgrMzTextFailure.HideTextEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzTextGiveUp.HideTextEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzTextGoal.HideTextEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzTextIntro.HideTextEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzTextReady.HideTextEvent);
+        mzEventEMPTY += new EveHandMgrState(mgrMzTextTimeUp.HideTextEvent);
 
         MazeStart();
     }
@@ -285,6 +206,7 @@ public class ManagerMzMaster : MonoBehaviour {
         switch (state) {
             case GameState.MAZESTART:
                 break;
+
             case GameState.READY:
                 if (Input.GetMouseButtonUp(0))
                     ReadyGo();
@@ -389,6 +311,7 @@ public class ManagerMzMaster : MonoBehaviour {
 
     void Empty() {
         state = GameState.EMPTY;
+        this.mzEventEMPTY(this, EventArgs.Empty);
     }
 
     public void ToGiveUpMethod(object o, EventArgs e) {
