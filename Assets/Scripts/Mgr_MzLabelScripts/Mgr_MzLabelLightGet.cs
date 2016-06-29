@@ -11,11 +11,11 @@ public class Mgr_MzLabelLightGet : MonoBehaviour {
         lightGetLabel.text = "";
     }
 
-    public void AppearTextEvent(object o, EventArgs e) {
+    public void AppearLabelEvent(object o, EventArgs e) {
         lightGetLabel.text = "ライト取得";
     }
 
-    public void HideTextEvent(object o, EventArgs e) {
+    public void HideLabelEvent(object o, EventArgs e) {
         lightGetLabel.text = "";
     }
 }

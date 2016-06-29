@@ -46,23 +46,23 @@ public class PlayerManager : MonoBehaviour {
         }
 
         //-----デバッグ用のショートカットキー-----
-        if (Input.GetKeyDown("l") && GameManager.Light == false) {
-            GameManager.Light = true;
-        }
-        else if (Input.GetKeyDown("l") && GameManager.Light == true) {
-            GameManager.Light = false;
-        }
-
-        if (Input.GetKeyDown("c") && GameManager.Croquette == false) {
-            GameManager.Croquette = true;
-        }
-
-        if (Input.GetKeyDown("m") && GameManager.MapCrystal == false) {
-            GameManager.MapCrystal = true;
-        }
-        else if (Input.GetKeyDown("m") && GameManager.MapCrystal == true) {
-            GameManager.MapCrystal = false;
-        }
+//        if (Input.GetKeyDown("l") && GameManager.Light == false) {
+//            GameManager.Light = true;
+//        }
+//        else if (Input.GetKeyDown("l") && GameManager.Light == true) {
+//            GameManager.Light = false;
+//        }
+//
+//        if (Input.GetKeyDown("c") && GameManager.Croquette == false) {
+//            GameManager.Croquette = true;
+//        }
+//
+//        if (Input.GetKeyDown("m") && GameManager.MapCrystal == false) {
+//            GameManager.MapCrystal = true;
+//        }
+//        else if (Input.GetKeyDown("m") && GameManager.MapCrystal == true) {
+//            GameManager.MapCrystal = false;
+//        }
         //----------
 
         if (GameManager.Croquette) {

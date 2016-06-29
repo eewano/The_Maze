@@ -11,11 +11,11 @@ public class Mgr_MzLabelCroquetteGet : MonoBehaviour {
         croquetteLabel.text = "";
     }
 
-    public void AppearTextEvent(object o, EventArgs e) {
+    public void AppearLabelEvent(object o, EventArgs e) {
         croquetteLabel.text = "コロッケ取得";
     }
 
-    public void HideTextEvent(object o, EventArgs e) {
+    public void HideLabelEvent(object o, EventArgs e) {
         croquetteLabel.text = "";
     }
 }

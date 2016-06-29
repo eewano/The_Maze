@@ -18,8 +18,8 @@ public class Mgr_MzBtnToTitle : MonoBehaviour {
     }
 
     void Start() {
-        toTitleOrder += new EveHandMoveState(managerMzMaster.ToTitleIMethod);
         playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
+        toTitleOrder += new EveHandMoveState(managerMzMaster.ToTitleIMethod);
 
         buttonToTitle.gameObject.SetActive(false);
     }

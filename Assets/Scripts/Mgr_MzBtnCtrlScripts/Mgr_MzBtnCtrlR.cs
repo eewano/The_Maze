@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Mgr_MzCtrlBtnR : MonoBehaviour {
+public class Mgr_MzBtnCtrlR : MonoBehaviour {
 
     [SerializeField]
     private GameObject buttonCtrlR;
@@ -10,11 +10,11 @@ public class Mgr_MzCtrlBtnR : MonoBehaviour {
         buttonCtrlR.gameObject.SetActive(false);
     }
 
-    public void AppearBtnEvent(object o, EventArgs e) {
+    public void AppearBtnCtrlEvent(object o, EventArgs e) {
         buttonCtrlR.gameObject.SetActive(true);
     }
 
-    public void HideBtnEvent(object o, EventArgs e) {
+    public void HideBtnCtrlEvent(object o, EventArgs e) {
         buttonCtrlR.gameObject.SetActive(false);
     }
 

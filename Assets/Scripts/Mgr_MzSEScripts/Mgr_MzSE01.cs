@@ -30,15 +30,15 @@ public class Mgr_MzSE01 : MonoBehaviour {
         sECancel.PlayOneShot(sECancel.clip);
     }
 
-    public void SELightGetEvent(object o, EventArgs e) {
+    public void SEGetLightEvent(object o, EventArgs e) {
         sElightGet.PlayOneShot(sElightGet.clip);
     }
 
-    public void SECroquetteGetEvent(object o, EventArgs e) {
+    public void SEGetCroquetteEvent(object o, EventArgs e) {
         sECroquetteGet.PlayOneShot(sECroquetteGet.clip);
     }
 
-    public void SEMapGetEvent(object o, EventArgs e) {
+    public void SEGetMapEvent(object o, EventArgs e) {
         sEMapGet.PlayOneShot(sEMapGet.clip);
     }
 

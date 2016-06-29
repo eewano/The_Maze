@@ -18,8 +18,8 @@ public class Mgr_MzBtnNextMz : MonoBehaviour {
     }
 
     void Start() {
-        toNextMzOrder += new EveHandMoveState(managerMzMaster.ToNextMzIMethod);
         playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
+        toNextMzOrder += new EveHandMoveState(managerMzMaster.ToNextMzIMethod);
 
         buttonToNextMz.gameObject.SetActive(false);
     }

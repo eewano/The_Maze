@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2372320}
   - 114: {fileID: 11473710}
   - 65: {fileID: 6555810}
+  - 114: {fileID: 11476862}
   m_Layer: 0
   m_Name: MapCrystal
   m_TagString: Map
@@ -86,6 +87,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94df57849675e4971b9cc3361cad07a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11476862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff28ec8748b1c426f90812c0a670ff9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000

@@ -15,6 +15,7 @@ GameObject:
   - 54: {fileID: 5437516}
   - 114: {fileID: 11403150}
   - 108: {fileID: 10850242}
+  - 114: {fileID: 11418820}
   m_Layer: 0
   m_Name: LightBall
   m_TagString: Light
@@ -136,6 +137,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9cdc60373fb2434b906e51a7c4bc9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11418820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c53a8cc171bc421bac3a7bde72ce567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &13587558

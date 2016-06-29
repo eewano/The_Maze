@@ -18,8 +18,8 @@ public class Mgr_MzBtnRestart : MonoBehaviour {
     }
 
     void Start() {
-        toRestartOrder += new EveHandMoveState(managerMzMaster.RestartIMethod);
         playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
+        toRestartOrder += new EveHandMoveState(managerMzMaster.RestartIMethod);
 
         buttonRestart.gameObject.SetActive(false);
     }
