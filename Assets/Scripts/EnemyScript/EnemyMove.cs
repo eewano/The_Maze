@@ -43,22 +43,11 @@ public class EnemyMove : MonoBehaviour {
     }
 
     void Update() {
-        if(PlayerManager.EnemyCatchPlayer == false)
-        {
             UpdateControl();
             UpdateState();
-        }
     }
 
     void UpdateControl() {
-        if (GameManager.GoalAndClear) {
-            gameObject.SetActive(false);
-        }
-
-        if (GameManager.Fall || GameManager.GameIsOver) {
-            gameObject.SetActive(false);
-        }
-
         //Agentと目的地の距離
         agentToPatrolDistance = Vector3.Distance
         (this.navMeshAgent.transform.position, pos);

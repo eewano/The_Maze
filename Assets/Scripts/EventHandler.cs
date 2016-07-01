@@ -10,3 +10,7 @@ public delegate void EveHandPLAYSE(object sender, EventArgs e);
 public delegate void EveHandDeleteText(object sender, EventArgs e);
 //アイテムフラグ用のイベント
 public delegate void EveHandFlagItem(object sender, EventArgs e);
+//デバッグ用のイベント
+public delegate void EveHandDebug(object sender, EventArgs e);
+//各面選択用のイベント
+public delegate void EveHandGoToMaze(object sender, int i);

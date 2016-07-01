@@ -37,6 +37,8 @@ public class Manager_MzText : MonoBehaviour {
 
     private event EveHandMgrState mzTextEMPTY;
 
+    private event EveHandMgrState mzTextOTHER;
+
     void Awake() {
         mgrMzTextClear = GameObject.Find("Mgr_MzText").GetComponent<Mgr_MzTextClear>();
         mgrMzTextFailure = GameObject.Find("Mgr_MzText").GetComponent<Mgr_MzTextFailure>();
@@ -81,6 +83,8 @@ public class Manager_MzText : MonoBehaviour {
         mzTextEMPTY += new EveHandMgrState(mgrMzTextIntro.HideTextEvent);
         mzTextEMPTY += new EveHandMgrState(mgrMzTextReady.HideTextEvent);
         mzTextEMPTY += new EveHandMgrState(mgrMzTextTimeUp.HideTextEvent);
+        //OTHER
+        mzTextEMPTY += new EveHandMgrState(mgrMzTextClear.HideTextEvent);
     }
 
     public void EventMAZESTART(object o, EventArgs e) {
@@ -129,5 +133,9 @@ public class Manager_MzText : MonoBehaviour {
 
     public void EventEMPTY(object o, EventArgs e) {
         this.mzTextEMPTY(this, EventArgs.Empty);
+    }
+
+    public void EventOTHER(object o, EventArgs e) {
+        this.mzTextOTHER(this, EventArgs.Empty);
     }
 }

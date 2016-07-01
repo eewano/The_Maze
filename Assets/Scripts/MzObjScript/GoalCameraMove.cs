@@ -23,22 +23,22 @@ public class GoalCameraMove : MonoBehaviour {
     }
 
     void Update() {
-        if (GameManager.StartTween) {
-            //A-B差分と分子にA地点の座標を足して現在位置を算出
-            transform.position = From.position + Vector3.Scale(
-                    To.position - From.position, new Vector3(Bunshi, Bunshi, Bunshi));
-        }
-
-        //StartTweenがONのとき･･･
-        if (GameManager.StartTween) {
-            //分子に秒単位÷指定秒数を加算
-            Bunshi += Time.deltaTime / Sec;
-            //分子が１以上のとき･･･
-            if (Bunshi >= 1f) {
-                //再生終了。
-                Bunshi = 1f;
-                return;
-            }
-        }
+//        if (GameManager.StartTween) {
+//            //A-B差分と分子にA地点の座標を足して現在位置を算出
+//            transform.position = From.position + Vector3.Scale(
+//                    To.position - From.position, new Vector3(Bunshi, Bunshi, Bunshi));
+//        }
+//
+//        //StartTweenがONのとき･･･
+//        if (GameManager.StartTween) {
+//            //分子に秒単位÷指定秒数を加算
+//            Bunshi += Time.deltaTime / Sec;
+//            //分子が１以上のとき･･･
+//            if (Bunshi >= 1f) {
+//                //再生終了。
+//                Bunshi = 1f;
+//                return;
+//            }
+//        }
     }
 }

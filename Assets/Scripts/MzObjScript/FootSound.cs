@@ -17,10 +17,6 @@ public class FootSound : MonoBehaviour {
     }
 
     void Update() {
-        if (GameManager.Fall || GameManager.GameIsOver || GameManager.Dead) {
-            return;
-        }
-
         if (last_pos != transform.position) {
             if (soundInterval < count) {
                 audioSource.Play();

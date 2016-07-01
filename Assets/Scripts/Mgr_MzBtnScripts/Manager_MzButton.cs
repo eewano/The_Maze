@@ -38,6 +38,8 @@ public class Manager_MzButton : MonoBehaviour {
 
     private event EveHandMgrState mzBtnEMPTY;
 
+    private event EveHandMgrState mzBtnOTHER;
+
     void Awake() {
         mgrMzBtnGiveUp = GameObject.Find("Mgr_MzButton").GetComponent<Mgr_MzBtnGiveUp>();
         mgrMzBtnCancel = GameObject.Find("Mgr_MzButton").GetComponent<Mgr_MzBtnCancel>();
@@ -84,6 +86,7 @@ public class Manager_MzButton : MonoBehaviour {
         //GAMEOVERステート
         mzBtnGAMEOVER += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
         mzBtnGAMEOVER += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
+        mzBtnGAMEOVER += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
         //EMPTYステート
         mzBtnEMPTY += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzBtnEMPTY += new EveHandMgrState(mgrMzBtnCancel.HideBtnEvent);
@@ -93,6 +96,11 @@ public class Manager_MzButton : MonoBehaviour {
         mzBtnEMPTY += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
         mzBtnEMPTY += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
         mzBtnEMPTY += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
+        //OTHER
+        mzBtnOTHER += new EveHandMgrState(mgrMzBtnGameOver.HideBtnEvent);
+        mzBtnOTHER += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
+        mzBtnOTHER += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
+        mzBtnOTHER += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
     }
 
     public void EventMAZESTART(object o, EventArgs e) {
@@ -141,5 +149,9 @@ public class Manager_MzButton : MonoBehaviour {
 
     public void EventEMPTY(object o, EventArgs e) {
         this.mzBtnEMPTY(this, EventArgs.Empty);
+    }
+
+    public void EventOTHER(object o, EventArgs e) {
+        this.mzBtnOTHER(this, EventArgs.Empty);
     }
 }

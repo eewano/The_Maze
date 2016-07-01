@@ -11,7 +11,6 @@ public class DeadPoint : MonoBehaviour {
 
     void OnTriggerEnter(Collider col) {
         if (col.gameObject.tag == "Player") {
-            GameManager.Dead = true;
             gameManager.SendMessage("Failure");
         }
     }

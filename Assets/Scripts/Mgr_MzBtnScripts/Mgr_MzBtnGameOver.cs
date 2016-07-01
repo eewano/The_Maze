@@ -14,7 +14,7 @@ public class Mgr_MzBtnGameOver : MonoBehaviour {
     }
 
     void Start() {
-        toGAMEOVERState += new EveHandMoveState(managerMzMaster.ToGameOverMethod);
+        toGAMEOVERState += new EveHandMoveState(managerMzMaster.ToGAMEOVERState);
         buttonGameOver.gameObject.SetActive(false);
     }
 

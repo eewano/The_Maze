@@ -6,7 +6,9 @@ public class Mgr_MzBtnToTitle : MonoBehaviour {
     [SerializeField]
     private GameObject buttonToTitle;
     private ManagerMzMaster managerMzMaster;
-    private Mgr_MzSE01 mgrMzSE01;
+    private Manager_MzButton managerMzButton;
+    private Manager_MzText managerMzText;
+    private Mgr_GameSE01 mgrMzSE01;
 
     private event EveHandMoveState toTitleOrder;
 
@@ -14,12 +16,16 @@ public class Mgr_MzBtnToTitle : MonoBehaviour {
 
     void Awake() {
         managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
-        mgrMzSE01 = GameObject.Find("Mgr_MzSE01").GetComponent<Mgr_MzSE01>();
+        managerMzButton = GameObject.Find("Mgr_MzButton").GetComponent<Manager_MzButton>();
+        managerMzText = GameObject.Find("Mgr_MzText").GetComponent<Manager_MzText>();
+        mgrMzSE01 = GameObject.Find("Mgr_GameSE01").GetComponent<Mgr_GameSE01>();
     }
 
     void Start() {
         playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
         toTitleOrder += new EveHandMoveState(managerMzMaster.ToTitleIMethod);
+        toTitleOrder += new EveHandMoveState(managerMzButton.EventOTHER);
+        toTitleOrder += new EveHandMoveState(managerMzText.EventOTHER);
 
         buttonToTitle.gameObject.SetActive(false);
     }

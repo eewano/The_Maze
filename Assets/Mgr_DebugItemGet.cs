@@ -6,22 +6,16 @@ public class Mgr_DebugItemGet : MonoBehaviour {
 
     [SerializeField]
     private Text debugItemGetText;
-    [SerializeField]
     private Mgr_ItemLight mgrItemLight;
-    [SerializeField]
     private Mgr_ItemCroquette mgrItemCroquette;
-    [SerializeField]
     private Mgr_ItemMap mgrItemMap;
 
     private bool debugItemGet;
 
-    void Awake() {
-//        mgrItemLight = GameObject.Find("LightBall").GetComponent<Mgr_ItemLight>();
-//        mgrItemCroquette = GameObject.Find("Dish").GetComponent<Mgr_ItemCroquette>();
-//        mgrItemMap = GameObject.Find("MapCrystal").GetComponent<Mgr_ItemMap>();
-    }
-
     void Start() {
+        mgrItemLight = GameObject.FindWithTag("Light").GetComponent<Mgr_ItemLight>();
+        mgrItemCroquette = GameObject.FindWithTag("Croquette").GetComponent<Mgr_ItemCroquette>();
+        mgrItemMap = GameObject.FindWithTag("Map").GetComponent<Mgr_ItemMap>();
         debugItemGet = false;
         debugItemGetText.text = "";
     }
@@ -33,23 +27,28 @@ public class Mgr_DebugItemGet : MonoBehaviour {
 
     void DebugSwitch() {
         if (Input.GetKeyUp("i") && debugItemGet == false) {
+            Debug.Log("DebugItemGetON");
             debugItemGet = true;
             debugItemGetText.text = "デバッグアイテム取得";
         }
         else if (Input.GetKeyUp("i") && debugItemGet == true) {
+            Debug.Log("DebugItemGetOFF");
             debugItemGet = false;
             debugItemGetText.text = "";
         }
     }
 
     void DebugGetItem() {
-        if (Input.GetKeyUp("l") && debugItemGet == true) {
+        if (Input.GetKeyUp("l") && debugItemGet == true && mgrItemLight != null) {
+            Debug.Log("LightGet");
             mgrItemLight.DebugGetLight();
         }
-        else if (Input.GetKeyUp("c") && debugItemGet == true) {
+        else if (Input.GetKeyUp("c") && debugItemGet == true && mgrItemCroquette != null) {
+            Debug.Log("CroquetteGet");
             mgrItemCroquette.DebugGetCroquette();
         }
-        else if (Input.GetKeyUp("m") && debugItemGet == true) {
+        else if (Input.GetKeyUp("m") && debugItemGet == true && mgrItemMap != null) {
+            Debug.Log("MapGet");
             mgrItemMap.DebugGetMap();
         }
     }

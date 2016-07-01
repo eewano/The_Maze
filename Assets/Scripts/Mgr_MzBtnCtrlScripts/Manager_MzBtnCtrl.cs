@@ -5,14 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Manager_MzBtnCtrl : MonoBehaviour {
 
-    private Mgr_MzBtnCtrlF mgrMzBtnCtrlF;
-    private Mgr_MzBtnCtrlB mgrMzBtnCtrlB;
-    private Mgr_MzBtnCtrlL mgrMzBtnCtrlL;
-    private Mgr_MzBtnCtrlR mgrMzBtnCtrlR;
-    private Mgr_MzBtnCtrlFL mgrMzBtnCtrlFL;
-    private Mgr_MzBtnCtrlFR mgrMzBtnCtrlFR;
-    private Mgr_MzBtnCtrlBL mgrMzBtnCtrlBL;
-    private Mgr_MzBtnCtrlBR mgrMzBtnCtrlBR;
+    private Mgr_MzBtnCtrl mgrMzBtnCtrl;
 
     private event EveHandMgrState mzBtnCtrlMAZESTART;
 
@@ -39,14 +32,7 @@ public class Manager_MzBtnCtrl : MonoBehaviour {
     private event EveHandMgrState mzBtnCtrlEMPTY;
 
     void Awake() {
-        mgrMzBtnCtrlF = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlF>();
-        mgrMzBtnCtrlB = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlB>();
-        mgrMzBtnCtrlL = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlL>();
-        mgrMzBtnCtrlR = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlR>();
-        mgrMzBtnCtrlFL = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlFL>();
-        mgrMzBtnCtrlFR = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlFR>();
-        mgrMzBtnCtrlBL = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlBL>();
-        mgrMzBtnCtrlBR = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrlBR>();
+        mgrMzBtnCtrl = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Mgr_MzBtnCtrl>();
     }
 
     void Start() {
@@ -55,62 +41,20 @@ public class Manager_MzBtnCtrl : MonoBehaviour {
         //READYステート
         //READYGOステート
         //PLAYINGステート
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlF.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlB.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlL.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlR.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlFL.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlFR.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlBL.AppearBtnCtrlEvent);
-        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrlBR.AppearBtnCtrlEvent);
+        mzBtnCtrlPLAYING += new EveHandMgrState(mgrMzBtnCtrl.AppearBtnCtrlEvent);
         //GIVEUPステート
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlF.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlB.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlL.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlR.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlFL.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlFR.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlBL.HideBtnCtrlEvent);
-        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrlBR.HideBtnCtrlEvent);
+        mzBtnCtrlGIVEUP += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //MAPステート
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlF.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlB.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlL.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlR.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlFL.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlFR.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlBL.HideBtnCtrlEvent);
-        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrlBR.HideBtnCtrlEvent);
+        mzBtnCtrlMAP += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //TIMEUPステート
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlF.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlB.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlL.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlR.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlFL.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlFR.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlBL.HideBtnCtrlEvent);
-        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrlBR.HideBtnCtrlEvent);
+        mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //FAILUREステート
         //GOALステート
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlF.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlB.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlL.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlR.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlFL.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlFR.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlBL.HideBtnCtrlEvent);
-        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrlBR.HideBtnCtrlEvent);
+        mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //CLEARステート
         //GAMEOVERステート
         //EMPTYステート
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlF.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlB.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlL.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlR.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlFL.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlFR.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlBL.HideBtnCtrlEvent);
-        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrlBR.HideBtnCtrlEvent);
+        mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
     }
 
     public void EventMAZESTART(object o, EventArgs e) {
