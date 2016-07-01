@@ -25,7 +25,7 @@ public class ManagerMzMaster : MonoBehaviour {
     //カメラ用
     private Manager_MzCam managerMzCam;
 
-    private event EveHandMgrState mzEventMAZESTART;
+    private event EveHandMgrState mzEventDUMMY;
 
     private event EveHandMgrState mzEventREADY;
 
@@ -50,7 +50,7 @@ public class ManagerMzMaster : MonoBehaviour {
     private event EveHandMgrState mzEventEMPTY;
 
     private enum GameState {
-        MAZESTART,
+        DUMMY,
         READY,
         READYGO,
         PLAYING,
@@ -63,6 +63,7 @@ public class ManagerMzMaster : MonoBehaviour {
         GAMEOVER,
         EMPTY
     }
+
     private GameState state;
 
     void Awake() {
@@ -86,8 +87,8 @@ public class ManagerMzMaster : MonoBehaviour {
     }
 
     void Start() {
-        //MAZESTARTステート
-        mzEventMAZESTART += new EveHandMgrState(managerMzCam.EventMAZESTART);
+        //DUMMYステート
+        mzEventDUMMY += new EveHandMgrState(managerMzCam.EventDUMMY);
         //READYステート
         mzEventREADY += new EveHandMgrState(managerMzCam.EventREADY);
         mzEventREADY += new EveHandMgrState(managerMzText.EventREADY);
@@ -139,12 +140,12 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventEMPTY += new EveHandMgrState(managerMzText.EventEMPTY);
         mzEventEMPTY += new EveHandMgrState(managerMzItem01.EventEMPTY);
 
-        MazeStart();
+        Dummy();
     }
 
     void Update() {
         switch (state) {
-            case GameState.MAZESTART:
+            case GameState.DUMMY:
                 break;
 
             case GameState.READY:
@@ -189,10 +190,10 @@ public class ManagerMzMaster : MonoBehaviour {
         }
     }
 
-    void MazeStart() {
-        state = GameState.MAZESTART;
-        this.mzEventMAZESTART(this, EventArgs.Empty);
-        Invoke("Ready", 1.5f);
+    void Dummy() {
+        state = GameState.DUMMY;
+        this.mzEventDUMMY(this, EventArgs.Empty);
+        Invoke("Ready", 0.5f);
     }
 
     void Ready() {
@@ -305,8 +306,8 @@ public class ManagerMzMaster : MonoBehaviour {
 
 
     //----------デバッグ用----------
-    public void DebugMAZESTART() {
-        MazeStart();
+    public void DebugDUMMY() {
+        Dummy();
     }
 
     public void DebugREADY() {

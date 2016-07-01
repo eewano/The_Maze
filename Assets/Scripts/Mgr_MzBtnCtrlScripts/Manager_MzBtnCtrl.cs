@@ -7,7 +7,7 @@ public class Manager_MzBtnCtrl : MonoBehaviour {
 
     private Mgr_MzBtnCtrl mgrMzBtnCtrl;
 
-    private event EveHandMgrState mzBtnCtrlMAZESTART;
+    private event EveHandMgrState mzBtnCtrlDUMMY;
 
     private event EveHandMgrState mzBtnCtrlREADY;
 
@@ -37,7 +37,7 @@ public class Manager_MzBtnCtrl : MonoBehaviour {
 
     void Start() {
 
-        //MAZESTARTステート
+        //DUMMYステート
         //READYステート
         //READYGOステート
         //PLAYINGステート
@@ -57,8 +57,8 @@ public class Manager_MzBtnCtrl : MonoBehaviour {
         mzBtnCtrlEMPTY += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
     }
 
-    public void EventMAZESTART(object o, EventArgs e) {
-        this.mzBtnCtrlMAZESTART(this, EventArgs.Empty);
+    public void EventDUMMY(object o, EventArgs e) {
+        this.mzBtnCtrlDUMMY(this, EventArgs.Empty);
     }
 
     public void EventREADY(object o, EventArgs e) {

@@ -13,7 +13,7 @@ public class Manager_MzText : MonoBehaviour {
     private Mgr_MzTextReady mgrMzTextReady;
     private Mgr_MzTextTimeUp mgrMzTextTimeUp;
 
-    private event EveHandMgrState mzTextMAZESTART;
+    private event EveHandMgrState mzTextDUMMY;
 
     private event EveHandMgrState mzTextREADY;
 
@@ -50,7 +50,7 @@ public class Manager_MzText : MonoBehaviour {
     }
 
     void Start() {
-        //MAZESTARTステート
+        //DUMMYステート
         //READYステート
         mzTextREADY += new EveHandMgrState(mgrMzTextIntro.AppearTextEvent);
         //READYGOステート
@@ -84,11 +84,11 @@ public class Manager_MzText : MonoBehaviour {
         mzTextEMPTY += new EveHandMgrState(mgrMzTextReady.HideTextEvent);
         mzTextEMPTY += new EveHandMgrState(mgrMzTextTimeUp.HideTextEvent);
         //OTHER
-        mzTextEMPTY += new EveHandMgrState(mgrMzTextClear.HideTextEvent);
+        mzTextOTHER += new EveHandMgrState(mgrMzTextClear.HideTextEvent);
     }
 
-    public void EventMAZESTART(object o, EventArgs e) {
-        this.mzTextMAZESTART(this, EventArgs.Empty);
+    public void EventDUMMY(object o, EventArgs e) {
+        this.mzTextDUMMY(this, EventArgs.Empty);
     }
 
     public void EventREADY(object o, EventArgs e) {

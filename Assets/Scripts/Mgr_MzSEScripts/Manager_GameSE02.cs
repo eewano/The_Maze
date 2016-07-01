@@ -7,7 +7,7 @@ public class Manager_GameSE02 : MonoBehaviour {
 
     private Mgr_GameSE02 mgrMzSE02;
 
-    private event EveHandMgrState mzSE02MAZESTART;
+    private event EveHandMgrState mzSE02DUMMY;
 
     private event EveHandMgrState mzSE02READY;
 
@@ -36,7 +36,7 @@ public class Manager_GameSE02 : MonoBehaviour {
     }
 
     void Start() {
-        //MAZESTARTステート
+        //DUMMYステート
         //READYステート
         //READYGOステート
         //PLAYINGステート
@@ -51,8 +51,8 @@ public class Manager_GameSE02 : MonoBehaviour {
         //EMPTYステート
     }
 
-    public void EventMAZESTART(object o, EventArgs e) {
-        this.mzSE02MAZESTART(this, EventArgs.Empty);
+    public void EventDUMMY(object o, EventArgs e) {
+        this.mzSE02DUMMY(this, EventArgs.Empty);
     }
 
     public void EventREADY(object o, EventArgs e) {

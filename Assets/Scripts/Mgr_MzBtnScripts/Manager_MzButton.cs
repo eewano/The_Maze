@@ -14,7 +14,9 @@ public class Manager_MzButton : MonoBehaviour {
     private Mgr_MzBtnNextMz mgrMzBtnNextMz;
     private Mgr_MzBtnToTitle mgrMzBtnToTitle;
 
-    private event EveHandMgrState mzBtnMAZESTART;
+    private bool getMap;
+
+    private event EveHandMgrState mzBtnDUMMY;
 
     private event EveHandMgrState mzBtnREADY;
 
@@ -40,6 +42,8 @@ public class Manager_MzButton : MonoBehaviour {
 
     private event EveHandMgrState mzBtnOTHER;
 
+    private event EveHandFlagItem mzBtnMapPLAYING;
+
     void Awake() {
         mgrMzBtnGiveUp = GameObject.Find("Mgr_MzButton").GetComponent<Mgr_MzBtnGiveUp>();
         mgrMzBtnCancel = GameObject.Find("Mgr_MzButton").GetComponent<Mgr_MzBtnCancel>();
@@ -52,7 +56,7 @@ public class Manager_MzButton : MonoBehaviour {
     }
 
     void Start() {
-        //MAZESTARTステート
+        //DUMMYステート
         //READYステート
         //READYGOステート
         //PLAYINGステート
@@ -61,6 +65,7 @@ public class Manager_MzButton : MonoBehaviour {
         mzBtnPLAYING += new EveHandMgrState(mgrMzBtnMapToMz.HideBtnEvent);
 
         mzBtnPLAYING += new EveHandMgrState(mgrMzBtnGiveUp.AppearBtnEvent);
+        mzBtnMapPLAYING += new EveHandFlagItem(mgrMzBtnMap.AppearBtnEvent);
         //GIVEUPステート
         mzBtnGIVEUP += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzBtnGIVEUP += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
@@ -80,6 +85,7 @@ public class Manager_MzButton : MonoBehaviour {
         mzBtnFAILURE += new EveHandMgrState(mgrMzBtnGameOver.AppearBtnEvent);
         //GOALステート
         mzBtnGOAL += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
+        mzBtnGOAL += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
         //CLEARステート
         mzBtnCLEAR += new EveHandMgrState(mgrMzBtnNextMz.AppearBtnEvent);
         mzBtnCLEAR += new EveHandMgrState(mgrMzBtnToTitle.AppearBtnEvent);
@@ -101,10 +107,12 @@ public class Manager_MzButton : MonoBehaviour {
         mzBtnOTHER += new EveHandMgrState(mgrMzBtnRestart.HideBtnEvent);
         mzBtnOTHER += new EveHandMgrState(mgrMzBtnNextMz.HideBtnEvent);
         mzBtnOTHER += new EveHandMgrState(mgrMzBtnToTitle.HideBtnEvent);
+
+        getMap = false;
     }
 
-    public void EventMAZESTART(object o, EventArgs e) {
-        this.mzBtnMAZESTART(this, EventArgs.Empty);
+    public void EventDUMMY(object o, EventArgs e) {
+        this.mzBtnDUMMY(this, EventArgs.Empty);
     }
 
     public void EventREADY(object o, EventArgs e) {
@@ -117,6 +125,9 @@ public class Manager_MzButton : MonoBehaviour {
 
     public void EventPLAYING(object o, EventArgs e) {
         this.mzBtnPLAYING(this, EventArgs.Empty);
+        if (getMap == true) {
+            this.mzBtnMapPLAYING(this, EventArgs.Empty);
+        }
     }
 
     public void EventGIVEUP(object o, EventArgs e) {
@@ -153,5 +164,9 @@ public class Manager_MzButton : MonoBehaviour {
 
     public void EventOTHER(object o, EventArgs e) {
         this.mzBtnOTHER(this, EventArgs.Empty);
+    }
+
+    public void GetItemMap(object o, EventArgs e) {
+        getMap = true;
     }
 }

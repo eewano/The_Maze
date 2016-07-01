@@ -1,15 +1,19 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Mgr_TitleBtnToMz03 : MonoBehaviour {
+public class Mgr_TitleBtnToMz00 : MonoBehaviour {
 
     [SerializeField]
-    private GameObject buttonToMz03;
+    private GameObject buttonToMz00;
     private ManagerTitleMaster managerTitleMaster;
     private Mgr_GameSE01 mgrMzSE01;
 
-    private event EveHandGoToMaze toMaze03;
+    private event EveHandGoToMaze toMaze00;
+
+    private event EveHandMoveState toStopBGM;
 
     private event EveHandPLAYSE playSE;
 
@@ -19,27 +23,29 @@ public class Mgr_TitleBtnToMz03 : MonoBehaviour {
     }
 
     void Start() {
-        toMaze03 += new EveHandGoToMaze(managerTitleMaster.StartMaze);
+        toMaze00 += new EveHandGoToMaze(managerTitleMaster.StartMaze);
         playSE += new EveHandPLAYSE(mgrMzSE01.SEEnterEvent);
+        toStopBGM += new EveHandMoveState(managerTitleMaster.ToGAMESTARTState);
 
-        buttonToMz03.gameObject.SetActive(false);
+        buttonToMz00.gameObject.SetActive(false);
     }
 
     public void AppearBtnEvent(object o, EventArgs e) {
-        buttonToMz03.gameObject.SetActive(true);
+        buttonToMz00.gameObject.SetActive(true);
     }
 
     public void HideBtnEvent(object o, EventArgs e) {
-        buttonToMz03.gameObject.SetActive(false);
+        buttonToMz00.gameObject.SetActive(false);
     }
 
-    public void OnButtonToMz03Clicked() {
+    public void OnButtonToMz00Clicked() {
         this.playSE(this, EventArgs.Empty);
-        StartCoroutine(ToMz03());
+        this.toStopBGM(this, EventArgs.Empty);
+        StartCoroutine(ToMz00());
     }
 
-    IEnumerator ToMz03() {
+    IEnumerator ToMz00() {
         yield return new WaitForSeconds(4.0f);
-        this.toMaze03(this, 3);
+        this.toMaze00(this, 0);
     }
 }

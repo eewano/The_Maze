@@ -9,7 +9,7 @@ public class Manager_MzLabel : MonoBehaviour {
     private Mgr_MzLabelCroquetteGet mgrMzLabelCroquetteGet;
     private Mgr_MzLabelMapGet mgrMzLabelMapGet;
 
-    private event EveHandMgrState mzLabelMAZESTART;
+    private event EveHandMgrState mzLabelDUMMY;
 
     private event EveHandMgrState mzLabelREADY;
 
@@ -40,7 +40,7 @@ public class Manager_MzLabel : MonoBehaviour {
     }
 
     void Start() {
-        //MAZESTARTステート
+        //DUMMYステート
         //READYステート
         //READYGOステート
         //PLAYINGステート
@@ -63,8 +63,8 @@ public class Manager_MzLabel : MonoBehaviour {
         //EMPTYステート
     }
 
-    public void EventMAZESTART(object o, EventArgs e) {
-        this.mzLabelMAZESTART(this, EventArgs.Empty);
+    public void EventDUMMY(object o, EventArgs e) {
+        this.mzLabelDUMMY(this, EventArgs.Empty);
     }
 
     public void EventREADY(object o, EventArgs e) {

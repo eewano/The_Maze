@@ -8,6 +8,7 @@ public class ManagerTitleMaster : MonoBehaviour {
 
     private Manager_TitleText managerTitleText;
     private Manager_TitleButton managerTitleBtn;
+    private AudioSource titleBGM;
 
     private event EveHandMgrState titleEventDUMMY;
 
@@ -32,6 +33,7 @@ public class ManagerTitleMaster : MonoBehaviour {
     void Awake() {
         managerTitleText = GameObject.Find("Mgr_TitleText").GetComponent<Manager_TitleText>();
         managerTitleBtn = GameObject.Find("Mgr_TitleButton").GetComponent<Manager_TitleButton>();
+        titleBGM = GameObject.Find("TitleBGM").GetComponent<AudioSource>();
     }
 
     void Start() {
@@ -84,6 +86,7 @@ public class ManagerTitleMaster : MonoBehaviour {
 
     void GameStart() {
         state = TitleState.GAMESTART;
+        titleBGM.Stop();
     }
 
     void Empty() {

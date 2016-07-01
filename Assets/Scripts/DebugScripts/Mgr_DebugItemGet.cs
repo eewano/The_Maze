@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class Mgr_DebugItemGet : MonoBehaviour {
 
@@ -29,7 +28,7 @@ public class Mgr_DebugItemGet : MonoBehaviour {
         if (Input.GetKeyUp("i") && debugItemGet == false) {
             Debug.Log("DebugItemGetON");
             debugItemGet = true;
-            debugItemGetText.text = "デバッグアイテム取得";
+            debugItemGetText.text = "デバッグアイテム";
         }
         else if (Input.GetKeyUp("i") && debugItemGet == true) {
             Debug.Log("DebugItemGetOFF");

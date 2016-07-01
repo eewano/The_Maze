@@ -37,7 +37,7 @@ public class Mgr_DebugMoveState : MonoBehaviour {
 
     void DebugMoveState() {
         if (Input.GetKeyUp("1") && debugState == true) {
-            managerMzMaster.DebugMAZESTART();
+            managerMzMaster.DebugDUMMY();
         }
         else if (Input.GetKeyUp("2") && debugState == true) {
             managerMzMaster.DebugREADY();
