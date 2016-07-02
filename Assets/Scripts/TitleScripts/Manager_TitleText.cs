@@ -10,7 +10,7 @@ public class Manager_TitleText : MonoBehaviour {
     private Mgr_TitleTextExplain01 mgrTitleTextExplain01;
     private Mgr_TitleTextExplain02 mgrTitleTextExplain02;
 
-    private event EveHandMgrState titleTextMAIN;
+    private event EveHandMgrState titleTextMAINMENU;
 
     private event EveHandMgrState titleTextEXPLAIN;
 
@@ -27,10 +27,10 @@ public class Manager_TitleText : MonoBehaviour {
 
 	void Start () {
         //TITLEステート
-        titleTextMAIN += new EveHandMgrState(mgrTitleTextExplain01.HideTextEvent);
-        titleTextMAIN += new EveHandMgrState(mgrTitleTextExplain02.HideTextEvent);
-        titleTextMAIN += new EveHandMgrState(mgrTitleTextMain01.AppearTextEvent);
-        titleTextMAIN += new EveHandMgrState(mgrTitleTextMain02.AppearTextEvent);
+        titleTextMAINMENU += new EveHandMgrState(mgrTitleTextExplain01.HideTextEvent);
+        titleTextMAINMENU += new EveHandMgrState(mgrTitleTextExplain02.HideTextEvent);
+        titleTextMAINMENU += new EveHandMgrState(mgrTitleTextMain01.AppearTextEvent);
+        titleTextMAINMENU += new EveHandMgrState(mgrTitleTextMain02.AppearTextEvent);
         //DESCRIPTIONステート
         titleTextEXPLAIN += new EveHandMgrState(mgrTitleTextMain01.HideTextEvent);
         titleTextEXPLAIN += new EveHandMgrState(mgrTitleTextMain02.HideTextEvent);
@@ -40,8 +40,8 @@ public class Manager_TitleText : MonoBehaviour {
         //EMPTYステート
 	}
 
-    public void TitleEventMAIN(object o, EventArgs e) {
-        this.titleTextMAIN(this, EventArgs.Empty);
+    public void TitleEventMAINMENU(object o, EventArgs e) {
+        this.titleTextMAINMENU(this, EventArgs.Empty);
     }
 
     public void TitleEventEXPLAIN(object o, EventArgs e) {

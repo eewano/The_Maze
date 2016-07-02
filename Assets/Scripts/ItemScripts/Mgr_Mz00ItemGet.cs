@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mz00ItemGet : MonoBehaviour {
+public class Mgr_Mz00ItemGet : MonoBehaviour {
 
     [SerializeField]
     private Text tutorialText;
@@ -14,7 +14,7 @@ public class Mz00ItemGet : MonoBehaviour {
         tutorialImage.gameObject.SetActive(false);
     }
 
-    public void Mz00LightGetHandler(object o, EventArgs e) {
+    public void Mz00LightGet(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
         tutorialText.color = new Color32(255, 255, 255, 192);
         tutorialText.text = "< 照明 >\n\n" +
@@ -22,7 +22,7 @@ public class Mz00ItemGet : MonoBehaviour {
         "迷路内がより明るく見える様になります。\n";
     }
 
-    public void Mz00CroquetteGetHandler(object o, EventArgs e) {
+    public void Mz00CroquetteGet(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
         tutorialImage.color = new Color32(255, 255, 255, 192);
         tutorialText.text = "< カレーコロッケ >\n\n" +
@@ -30,7 +30,7 @@ public class Mz00ItemGet : MonoBehaviour {
         "旋回スピードがアップします。\n";
     }
 
-    public void Mz00MapGetHandler(object o, EventArgs e) {
+    public void Mz00MapGet(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
         tutorialText.color = new Color32(255, 255, 255, 192);
         tutorialText.text = "< マップ表示クリスタル >\n\n" +
@@ -40,7 +40,7 @@ public class Mz00ItemGet : MonoBehaviour {
         "「全体マップ」を押して切り替えて下さい。";
     }
 
-    public void Mz00ClearFlagHandler(object o, EventArgs e) {
+    public void Mz00ClearFlag(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
         tutorialText.color = new Color32(255, 220, 255, 192);
         tutorialText.text = "これですべてのアイテムが\n" +
@@ -48,7 +48,7 @@ public class Mz00ItemGet : MonoBehaviour {
         "ゴールまで目指して下さい。";
     }
 
-    public void ImageDeleteHandler(object o, EventArgs e) {
+    public void ImageTextDelete(object o, EventArgs e) {
         tutorialText.text = "";
         tutorialImage.gameObject.SetActive(false);
     }

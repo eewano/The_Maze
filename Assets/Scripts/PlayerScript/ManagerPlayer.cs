@@ -8,13 +8,11 @@ public class ManagerPlayer : MonoBehaviour {
     private FootSound playerFootSound;
     private EnemyMove enemyMove01;
     private EnemyMove enemyMove02;
-    private MzTimer mzTimer;
     private FadeImage fadeWhite;
 
     public static bool EnemyCatchPlayer;
 
     void Start() {
-        mzTimer = GameObject.Find("MzTimerLabel").GetComponent<MzTimer>();
         playerFootSound = GameObject.Find("Player").GetComponent<FootSound>();
         playerSpotlight = GameObject.Find("PlayerSpotlight").GetComponent<Light>();
         enemyMove01 = GameObject.Find("Enemy (1)").GetComponent<EnemyMove>();
@@ -36,10 +34,8 @@ public class ManagerPlayer : MonoBehaviour {
         fadeWhite.show();
         yield return new WaitForSeconds(3.0f);
         transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
-        mzTimer.EnemyTouchTimer();
         fadeWhite.hide();
         yield return new WaitForSeconds(2.0f);
-        mzTimer.StartTimer();
         EnemyCatchPlayer = false;
         enemyMove01.EnemySEPlay();
         enemyMove02.EnemySEPlay();

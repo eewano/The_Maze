@@ -18,7 +18,7 @@ public class Mgr_TitleBtnToMain : MonoBehaviour {
     }
 
     void Start() {
-        toMAINState += new EveHandMoveState(managerTitleMaster.ToMAINState);
+        toMAINState += new EveHandMoveState(managerTitleMaster.ToMAINMENUState);
         playSE += new EveHandPLAYSE(mgrMzSE01.SECancelEvent);
 
         buttonToMain.gameObject.SetActive(false);

@@ -16,11 +16,11 @@ public class Mgr_DebugPlayerCtrl : MonoBehaviour {
     }
 
     void Start() {
-        changeToCtrlBtn += new EveHandDebug(mgrPlayerBtnCtrl.DebugCtrlChangeToBtn);
-        changeToCtrlBtn += new EveHandDebug(mgrPlayerKeyCtrl.DebugCtrlChangeToBtn);
+        changeToCtrlBtn += new EveHandDebug(mgrPlayerBtnCtrl.CtrlChangeToBtn);
+        changeToCtrlBtn += new EveHandDebug(mgrPlayerKeyCtrl.CtrlChangeToBtn);
 
-        changeToCtrlKey += new EveHandDebug(mgrPlayerBtnCtrl.DebugCtrlChangeToKey);
-        changeToCtrlKey += new EveHandDebug(mgrPlayerKeyCtrl.DebugCtrlChangeToKey);
+        changeToCtrlKey += new EveHandDebug(mgrPlayerBtnCtrl.CtrlChangeToKey);
+        changeToCtrlKey += new EveHandDebug(mgrPlayerKeyCtrl.CtrlChangeToKey);
     }
 
     void Update() {

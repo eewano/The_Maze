@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ManagerMzMaster : MonoBehaviour {
 
-    [SerializeField]
-    private Text mzTimerText;
-    private MzTimer mzTimer;
+    //プレイヤー制御用
+    private ManagerPlayerMaster managerPlayerMaster;
     //SEサウンド出力用
     private Manager_GameSE01 managerMzSE01;
     private Manager_GameSE02 managerMzSE02;
@@ -18,12 +17,14 @@ public class ManagerMzMaster : MonoBehaviour {
     private Manager_MzButton managerMzButton;
     //コントロールボタン表示用
     private Manager_MzBtnCtrl managerMzBtnCtrl;
-    //マップ画面でのアイテム表示用
-    private Manager_MzItem01 managerMzItem01;
     //取得アイテム表示用
     private Manager_MzLabel managerMzLabel;
     //カメラ用
     private Manager_MzCam managerMzCam;
+    //タイマー管理用
+    private Mgr_MzTextTimer mgrMzTextTimer;
+    //迷路BGM
+    private AudioSource mzBGM;
 
     private event EveHandMgrState mzEventDUMMY;
 
@@ -49,6 +50,14 @@ public class ManagerMzMaster : MonoBehaviour {
 
     private event EveHandMgrState mzEventEMPTY;
 
+    private event EveHandMzTimer mzTimerStart;
+
+    private event EveHandMzTimer mzTimerStop;
+
+    private event EveHandToPlayer playerMoveOn;
+
+    private event EveHandToPlayer playerMoveOff;
+
     private enum GameState {
         DUMMY,
         READY,
@@ -63,12 +72,11 @@ public class ManagerMzMaster : MonoBehaviour {
         GAMEOVER,
         EMPTY
     }
-
     private GameState state;
 
     void Awake() {
-        mzTimerText = GameObject.Find("MzTimerText").GetComponent<Text>();
-        mzTimer = GameObject.Find("MzTimerText").GetComponent<MzTimer>();
+        //プレイヤー制御用
+        managerPlayerMaster = GameObject.Find("ManagerPlayerMaster").GetComponent<ManagerPlayerMaster>();
         //SEサウンド出力用
         managerMzSE01 = GameObject.Find("Mgr_GameSE01").GetComponent<Manager_GameSE01>();
         managerMzSE02 = GameObject.Find("Mgr_GameSE02").GetComponent<Manager_GameSE02>();
@@ -78,20 +86,22 @@ public class ManagerMzMaster : MonoBehaviour {
         managerMzButton = GameObject.Find("Mgr_MzButton").GetComponent<Manager_MzButton>();
         //コントロールボタン表示用
         managerMzBtnCtrl = GameObject.Find("Mgr_MzBtnCtrl").GetComponent<Manager_MzBtnCtrl>();
-        //マップ画面でのアイテム表示用
-        managerMzItem01 = GameObject.Find("Mgr_MzItem01").GetComponent<Manager_MzItem01>();
         //アイテム取得ラベル用
         managerMzLabel = GameObject.Find("Mgr_MzLabel").GetComponent<Manager_MzLabel>();
         //カメラ用
         managerMzCam = GameObject.Find("Mgr_MzCamera").GetComponent<Manager_MzCam>();
+        //タイマー管理用
+        mgrMzTextTimer = GameObject.Find("Mgr_MzTimer").GetComponent<Mgr_MzTextTimer>();
+        mzBGM = GameObject.Find("MzBGM").GetComponent<AudioSource>();
     }
 
     void Start() {
         //DUMMYステート
-        mzEventDUMMY += new EveHandMgrState(managerMzCam.EventDUMMY);
         //READYステート
         mzEventREADY += new EveHandMgrState(managerMzCam.EventREADY);
         mzEventREADY += new EveHandMgrState(managerMzText.EventREADY);
+
+        mzEventREADY += new EveHandMgrState(mgrMzTextTimer.AppearTextEvent);
         //READYGOステート
         mzEventREADYGO += new EveHandMgrState(managerMzText.EventREADYGO);
         mzEventREADYGO += new EveHandMgrState(managerMzSE01.EventREADYGO);
@@ -100,7 +110,6 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventPLAYING += new EveHandMgrState(managerMzButton.EventPLAYING);
         mzEventPLAYING += new EveHandMgrState(managerMzBtnCtrl.EventPLAYING);
         mzEventPLAYING += new EveHandMgrState(managerMzText.EventPLAYING);
-        mzEventPLAYING += new EveHandMgrState(managerMzItem01.EventPLAYING);
         //GIVEUPステート
         mzEventGIVEUP += new EveHandMgrState(managerMzButton.EventGIVEUP);
         mzEventGIVEUP += new EveHandMgrState(managerMzBtnCtrl.EventGIVEUP);
@@ -109,7 +118,6 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventMAP += new EveHandMgrState(managerMzCam.EventMAP);
         mzEventMAP += new EveHandMgrState(managerMzButton.EventMAP);
         mzEventMAP += new EveHandMgrState(managerMzBtnCtrl.EventMAP);
-        mzEventMAP += new EveHandMgrState(managerMzItem01.EventMAP);
         //TIMEUPステート
         mzEventTIMEUP += new EveHandMgrState(managerMzButton.EventTIMEUP);
         mzEventTIMEUP += new EveHandMgrState(managerMzBtnCtrl.EventTIMEUP);
@@ -133,12 +141,22 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventGAMEOVER += new EveHandMgrState(managerMzButton.EventGAMEOVER);
         mzEventGAMEOVER += new EveHandMgrState(managerMzText.EventGAMEOVER);
         mzEventGAMEOVER += new EveHandMgrState(managerMzLabel.EventGAMEOVER);
+
+        mzEventGAMEOVER += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //EMPTYステート
         mzEventEMPTY += new EveHandMgrState(managerMzCam.EventEMPTY);
         mzEventEMPTY += new EveHandMgrState(managerMzButton.EventEMPTY);
         mzEventEMPTY += new EveHandMgrState(managerMzBtnCtrl.EventEMPTY);
         mzEventEMPTY += new EveHandMgrState(managerMzText.EventEMPTY);
-        mzEventEMPTY += new EveHandMgrState(managerMzItem01.EventEMPTY);
+
+        mzEventEMPTY += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
+        //タイマーの処理
+        mzTimerStart += new EveHandMzTimer(mgrMzTextTimer.MzTimerStart);
+        mzTimerStop += new EveHandMzTimer(mgrMzTextTimer.MzTimerStop);
+        //プレイヤー操作のOnOff
+        playerMoveOn += new EveHandToPlayer(managerPlayerMaster.PlayerCtrlOn);
+        playerMoveOff += new EveHandToPlayer(managerPlayerMaster.PlayerCtrlOff);
+
 
         Dummy();
     }
@@ -157,11 +175,6 @@ public class ManagerMzMaster : MonoBehaviour {
                 break;
 
             case GameState.PLAYING:
-                if (mzTimer.GetTimeRemaining() == 0)
-                {
-                    mzTimer.StopTimer();
-                    TimeUp();
-                }
                 break;
 
             case GameState.GIVEUP:
@@ -192,13 +205,13 @@ public class ManagerMzMaster : MonoBehaviour {
 
     void Dummy() {
         state = GameState.DUMMY;
-        this.mzEventDUMMY(this, EventArgs.Empty);
         Invoke("Ready", 0.5f);
     }
 
     void Ready() {
         state = GameState.READY;
         this.mzEventREADY(this, EventArgs.Empty);
+        this.playerMoveOff(this, EventArgs.Empty);
     }
 
     void ReadyGo() {
@@ -210,21 +223,28 @@ public class ManagerMzMaster : MonoBehaviour {
     void Playing() {
         state = GameState.PLAYING;
         this.mzEventPLAYING(this, EventArgs.Empty);
+        this.mzTimerStart(this, EventArgs.Empty);
+        this.playerMoveOn(this, EventArgs.Empty);
     }
 
     void GiveUp() {
         state = GameState.GIVEUP;
         this.mzEventGIVEUP(this, EventArgs.Empty);
+        this.mzTimerStop(this, EventArgs.Empty);
+        this.playerMoveOff(this, EventArgs.Empty);
     }
 
     void Map() {
         state = GameState.MAP;
         this.mzEventMAP(this, EventArgs.Empty);
+        this.mzTimerStop(this, EventArgs.Empty);
+        this.playerMoveOff(this, EventArgs.Empty);
     }
 
     void TimeUp() {
         state = GameState.TIMEUP;
         this.mzEventTIMEUP(this, EventArgs.Empty);
+        this.mzTimerStop(this, EventArgs.Empty);
         Invoke("Failure", 2.0f);
     }
 
@@ -236,6 +256,8 @@ public class ManagerMzMaster : MonoBehaviour {
     void Goal() {
         state = GameState.GOAL;
         this.mzEventGOAL(this, EventArgs.Empty);
+        this.mzTimerStop(this, EventArgs.Empty);
+        this.playerMoveOff(this, EventArgs.Empty);
         Invoke("Clear", 4.0f);
     }
 
@@ -246,6 +268,7 @@ public class ManagerMzMaster : MonoBehaviour {
 
     void GameOver() {
         state = GameState.GAMEOVER;
+        mzBGM.Stop();
         this.mzEventGAMEOVER(this, EventArgs.Empty);
         StartCoroutine(ToGameOver());
     }
@@ -253,18 +276,24 @@ public class ManagerMzMaster : MonoBehaviour {
     void Empty() {
         state = GameState.EMPTY;
         this.mzEventEMPTY(this, EventArgs.Empty);
-    }
-
-    public void ToGIVEUPState(object o, EventArgs e) {
-        GiveUp();
+        this.mzTimerStop(this, EventArgs.Empty);
+        this.playerMoveOff(this, EventArgs.Empty);
     }
 
     public void ToPLAYINGState(object o, EventArgs e) {
         Playing();
     }
 
+    public void ToGIVEUPState(object o, EventArgs e) {
+        GiveUp();
+    }
+
     public void ToMAPState(object o, EventArgs e) {
         Map();
+    }
+
+    public void ToTIMEUPState(object o, EventArgs e) {
+        TimeUp();
     }
 
     public void ToGAMEOVERState(object o, EventArgs e) {
@@ -272,14 +301,17 @@ public class ManagerMzMaster : MonoBehaviour {
     }
 
     public void RestartIMethod(object o, EventArgs e) {
+        mzBGM.Stop();
         StartCoroutine(Restart());
     }
 
     public void ToNextMzIMethod(object o, EventArgs e) {
+        mzBGM.Stop();
         StartCoroutine(ToNextMz());
     }
 
     public void ToTitleIMethod(object o, EventArgs e) {
+        mzBGM.Stop();
         StartCoroutine(ToTitle());
     }
 

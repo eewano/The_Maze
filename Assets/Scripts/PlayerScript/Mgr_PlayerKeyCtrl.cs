@@ -16,6 +16,10 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
         if (keyCtrl == true)
         {
             float translation = Input.GetAxis("Vertical") * keySpeed;
+            if (translation < 0)
+            {
+                translation *= 0.5f;
+            }
             float rotation = Input.GetAxis("Horizontal") * keyRotSpeed;
             translation *= Time.deltaTime;
             rotation *= Time.deltaTime;
@@ -24,11 +28,11 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
         }
     }
 
-    public void DebugCtrlChangeToKey(object o, EventArgs e) {
+    public void CtrlChangeToKey(object o, EventArgs e) {
         keyCtrl = true;
     }
 
-    public void DebugCtrlChangeToBtn(object o, EventArgs e) {
+    public void CtrlChangeToBtn(object o, EventArgs e) {
         keyCtrl = false;
     }
 }

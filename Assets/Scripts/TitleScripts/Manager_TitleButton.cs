@@ -19,7 +19,7 @@ public class Manager_TitleButton : MonoBehaviour {
     private Mgr_TitleBtnToMz09 mgrTitleBtnToMz09;
     private Mgr_TitleBtnToMz10 mgrTitleBtnToMz10;
 
-    private event EveHandMgrState titleBtnMAIN;
+    private event EveHandMgrState titleBtnMAINMENU;
 
     private event EveHandMgrState titleBtnEXPLAIN;
 
@@ -45,19 +45,19 @@ public class Manager_TitleButton : MonoBehaviour {
 
     void Start() {
         //MAINステート
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMain.HideBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnExplain.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz00.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz01.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz02.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz03.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz04.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz05.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz06.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz07.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz08.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz09.AppearBtnEvent);
-        titleBtnMAIN += new EveHandMgrState(mgrTitleBtnToMz10.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMain.HideBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnExplain.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz00.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz01.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz02.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz03.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz04.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz05.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz06.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz07.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz08.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz09.AppearBtnEvent);
+        titleBtnMAINMENU += new EveHandMgrState(mgrTitleBtnToMz10.AppearBtnEvent);
         //EXPLAINステート
         titleBtnEXPLAIN += new EveHandMgrState(mgrTitleBtnExplain.HideBtnEvent);
         titleBtnEXPLAIN += new EveHandMgrState(mgrTitleBtnToMz00.HideBtnEvent);
@@ -76,8 +76,8 @@ public class Manager_TitleButton : MonoBehaviour {
         //EMPTYステート
     }
 
-    public void TitleEventMAIN(object o, EventArgs e) {
-        this.titleBtnMAIN(this, EventArgs.Empty);
+    public void TitleEventMAINMENU(object o, EventArgs e) {
+        this.titleBtnMAINMENU(this, EventArgs.Empty);
     }
 
     public void TitleEventEXPLAIN(object o, EventArgs e) {

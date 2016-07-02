@@ -154,11 +154,11 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
         playerRotSpeed = -maxRotSpeed;
     }
 
-    public void DebugCtrlChangeToKey(object o, EventArgs e) {
+    public void CtrlChangeToKey(object o, EventArgs e) {
         btnCtrl = false;
     }
 
-    public void DebugCtrlChangeToBtn(object o, EventArgs e) {
+    public void CtrlChangeToBtn(object o, EventArgs e) {
         btnCtrl = true;
     }
 }

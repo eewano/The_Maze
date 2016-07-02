@@ -11,6 +11,8 @@ public class Mgr_ItemLight : MonoBehaviour {
 
     private event EveHandFlagItem flagGetLight;
 
+    private event EveHandFlagItem flagGetLightMz00;
+
     void Awake() {
         mgrMzLabelLightGet = GameObject.Find("Mgr_MzLabel").GetComponent<Mgr_MzLabelLightGet>();
         mgrMzSE01 = GameObject.Find("Mgr_GameSE01").GetComponent<Mgr_GameSE01>();

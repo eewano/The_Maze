@@ -14,3 +14,9 @@ public delegate void EveHandFlagItem(object sender, EventArgs e);
 public delegate void EveHandDebug(object sender, EventArgs e);
 //各面選択用のイベント
 public delegate void EveHandGoToMaze(object sender, int i);
+//タイマー制御用のイベント
+public delegate void EveHandMzTimer(object sender, EventArgs e);
+//タイマー増減用のイベント
+public delegate void EveHandMzTimeUpDown(object sender, int i);
+//プレイヤー反映用のイベント
+public delegate void EveHandToPlayer(object sender, EventArgs e);

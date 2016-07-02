@@ -608,8 +608,8 @@
         <module-layer name="Editor">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -642,6 +642,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -678,8 +679,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -698,8 +697,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -734,10 +733,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -961,8 +963,8 @@
         <module-layer name="Linux (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -995,6 +997,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -1031,8 +1034,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -1051,8 +1052,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -1087,10 +1088,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -1314,8 +1318,8 @@
         <module-layer name="Linux (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -1348,6 +1352,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -1384,8 +1389,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -1404,8 +1407,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -1440,10 +1443,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -1667,8 +1673,8 @@
         <module-layer name="Linux (any)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -1701,6 +1707,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -1737,8 +1744,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -1757,8 +1762,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -1793,10 +1798,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -2020,8 +2028,8 @@
         <module-layer name="MacOS (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2054,6 +2062,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -2090,8 +2099,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -2110,8 +2117,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -2146,10 +2153,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -2373,8 +2383,8 @@
         <module-layer name="MacOS (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2407,6 +2417,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -2443,8 +2454,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -2463,8 +2472,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -2499,10 +2508,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -2726,8 +2738,8 @@
         <module-layer name="MacOS (any)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2760,6 +2772,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -2796,8 +2809,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -2816,8 +2827,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -2852,10 +2863,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -3079,8 +3093,8 @@
         <module-layer name="Windows (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -3113,6 +3127,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -3149,8 +3164,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -3169,8 +3182,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -3205,10 +3218,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
@@ -3432,8 +3448,8 @@
         <module-layer name="Windows (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/EventDeleteText.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_BtnDeleteMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -3466,6 +3482,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingPunch.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/ILeanTween.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Plugins/LTDescr.cs" />
@@ -3502,8 +3519,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerCamera.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/MzTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/WarpMz02.cs" />
@@ -3522,8 +3537,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMapLight.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/MapCrystalMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mz00ItemGet.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs" />
@@ -3558,10 +3573,13 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Manager_MzItem01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />

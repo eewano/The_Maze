@@ -10,24 +10,17 @@ public class ManagerTitleMaster : MonoBehaviour {
     private Manager_TitleButton managerTitleBtn;
     private AudioSource titleBGM;
 
-    private event EveHandMgrState titleEventDUMMY;
-
-    private event EveHandMgrState titleEventMAIN;
+    private event EveHandMgrState titleEventMAINMEMU;
 
     private event EveHandMgrState titleEventEXPLAIN;
 
-    private event EveHandMgrState titleEventGAMESTART;
-
-    private event EveHandMgrState titleEventEMPTY;
-
     private enum TitleState {
         DUMMY,
-        MAIN,
+        MAINMENU,
         EXPLAIN,
         GAMESTART,
         EMPTY
     }
-
     private TitleState state;
 
     void Awake() {
@@ -39,8 +32,8 @@ public class ManagerTitleMaster : MonoBehaviour {
     void Start() {
         //DUMMYステート
         //MAINステート
-        titleEventMAIN += new EveHandMgrState(managerTitleText.TitleEventMAIN);
-        titleEventMAIN += new EveHandMgrState(managerTitleBtn.TitleEventMAIN);
+        titleEventMAINMEMU += new EveHandMgrState(managerTitleText.TitleEventMAINMENU);
+        titleEventMAINMEMU += new EveHandMgrState(managerTitleBtn.TitleEventMAINMENU);
         //EXPLAINステート
         titleEventEXPLAIN += new EveHandMgrState(managerTitleText.TitleEventEXPLAIN);
         titleEventEXPLAIN += new EveHandMgrState(managerTitleBtn.TitleEventEXPLAIN);
@@ -55,7 +48,7 @@ public class ManagerTitleMaster : MonoBehaviour {
             case TitleState.DUMMY:
                 break;
 
-            case TitleState.MAIN:
+            case TitleState.MAINMENU:
                 break;
 
             case TitleState.EXPLAIN:
@@ -71,12 +64,12 @@ public class ManagerTitleMaster : MonoBehaviour {
 
     void Dummy() {
         state = TitleState.DUMMY;
-        Invoke("Main", 0.5f);
+        Invoke("MainMenu", 0.5f);
     }
 
-    void Main() {
-        state = TitleState.MAIN;
-        this.titleEventMAIN(this, EventArgs.Empty);
+    void MainMenu() {
+        state = TitleState.MAINMENU;
+        this.titleEventMAINMEMU(this, EventArgs.Empty);
     }
 
     void Explain() {
@@ -97,8 +90,8 @@ public class ManagerTitleMaster : MonoBehaviour {
         Dummy();
     }
 
-    public void ToMAINState(object o, EventArgs e) {
-        Main();
+    public void ToMAINMENUState(object o, EventArgs e) {
+        MainMenu();
     }
 
     public void ToEXPLAINState(object o, EventArgs e) {

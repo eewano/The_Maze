@@ -9,8 +9,6 @@ public class Manager_MzCam : MonoBehaviour {
     private Mgr_MzCamMap mgrMzCamMap;
     private Mgr_MzCamGoal mgrMzCamGoal;
 
-    private event EveHandMgrState mzCamDUMMY;
-
     private event EveHandMgrState mzCamREADY;
 
     private event EveHandMgrState mzCamREADYGO;
@@ -41,7 +39,6 @@ public class Manager_MzCam : MonoBehaviour {
 
     void Start() {
         //DUMMYステート
-        mzCamDUMMY += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
         //READYステート
         mzCamREADY += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
         //READYGOステート
@@ -63,10 +60,6 @@ public class Manager_MzCam : MonoBehaviour {
         mzCamEMPTY += new EveHandMgrState(mgrMzCamMap.HideCamEvent);
         mzCamEMPTY += new EveHandMgrState(mgrMzCamGoal.HideCamEvent);
         mzCamEMPTY += new EveHandMgrState(mgrMzCamPlayer.AppearCamEvent);
-    }
-
-    public void EventDUMMY(object o, EventArgs e) {
-        this.mzCamDUMMY(this, EventArgs.Empty);
     }
 
     public void EventREADY(object o, EventArgs e) {

@@ -8,10 +8,6 @@ public class Mgr_MzTextIntro : MonoBehaviour {
     [SerializeField]
     private Text mzIntroText;
 
-    void Start() {
-        mzIntroText.text = "";
-    }
-
     public void AppearTextEvent(object o, EventArgs e) {
         if (SceneManager.GetActiveScene().name == "Maze00") {
             mzIntroText.fontSize = 32;
