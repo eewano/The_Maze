@@ -14,6 +14,16 @@ public class ManagerPlayerMaster : MonoBehaviour {
 
     private event EveHandToPlayer playerCtrlOff;
 
+    private event EveHandPlayerValue playerMaxFSpeedUp;
+
+    private event EveHandPlayerValue playerMaxBSpeedUp;
+
+    private event EveHandPlayerValue playerMaxRotSpeedUp;
+
+    private event EveHandPlayerValue playerKeySpeedUp;
+
+    private event EveHandPlayerValue playerKeyRotSpeedUp;
+
     void Awake() {
         mgrPlayerBtnCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerBtnCtrl>();
         mgrPlayerKeyCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerKeyCtrl>();
@@ -26,6 +36,12 @@ public class ManagerPlayerMaster : MonoBehaviour {
 
         playerCtrlOff += new EveHandToPlayer(mgrPlayerBtnCtrl.CtrlChangeToKey);
         playerCtrlOff += new EveHandToPlayer(mgrPlayerKeyCtrl.CtrlChangeToBtn);
+
+        playerMaxFSpeedUp += new EveHandPlayerValue(mgrPlayerBtnCtrl.PlayerMaxFSpeedChange);
+        playerMaxBSpeedUp += new EveHandPlayerValue(mgrPlayerBtnCtrl.PlayerMaxBSpeedChange);
+        playerMaxRotSpeedUp += new EveHandPlayerValue(mgrPlayerBtnCtrl.PlayerMaxRotSpeedChange);
+        playerKeySpeedUp += new EveHandPlayerValue(mgrPlayerKeyCtrl.PlayerKeySpeedChange);
+        playerKeyRotSpeedUp += new EveHandPlayerValue(mgrPlayerKeyCtrl.PlayerKeyRotSpeedChange);
     }
 
     private IEnumerator WarpToStart() {
@@ -41,5 +57,13 @@ public class ManagerPlayerMaster : MonoBehaviour {
 
     public void PlayerCtrlOff(object o, EventArgs e) {
         this.playerCtrlOff(this, EventArgs.Empty);
+    }
+
+    public void PlayerGetCroquette(object o, EventArgs e) {
+        this.playerMaxFSpeedUp(this, 1.0f);
+        this.playerMaxBSpeedUp(this, 0.5f);
+        this.playerMaxRotSpeedUp(this, 0.2f);
+        this.playerKeySpeedUp(this, 1.0f);
+        this.playerKeyRotSpeedUp(this, 1);
     }
 }

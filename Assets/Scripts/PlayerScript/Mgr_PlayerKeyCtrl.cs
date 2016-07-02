@@ -35,4 +35,12 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
     public void CtrlChangeToBtn(object o, EventArgs e) {
         keyCtrl = false;
     }
+
+    public void PlayerKeySpeedChange(object o, float i) {
+        keySpeed += i;
+    }
+
+    public void PlayerKeyRotSpeedChange(object o, float i) {
+        keyRotSpeed += i;
+    }
 }

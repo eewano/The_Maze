@@ -20,3 +20,5 @@ public delegate void EveHandMzTimer(object sender, EventArgs e);
 public delegate void EveHandMzTimeUpDown(object sender, int i);
 //プレイヤー反映用のイベント
 public delegate void EveHandToPlayer(object sender, EventArgs e);
+//プレイヤーパラメータ増減用のイベント
+public delegate void EveHandPlayerValue(object sender, float i);

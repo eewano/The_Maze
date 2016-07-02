@@ -16,7 +16,7 @@ public class Mgr_Mz00ItemGet : MonoBehaviour {
 
     public void Mz00LightGet(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
-        tutorialText.color = new Color32(255, 255, 255, 192);
+        tutorialText.color = new Color32(179, 72, 29, 255);
         tutorialText.text = "< 照明 >\n\n" +
         "迷路全体の照明が点灯し、\n" +
         "迷路内がより明るく見える様になります。\n";
@@ -24,7 +24,7 @@ public class Mgr_Mz00ItemGet : MonoBehaviour {
 
     public void Mz00CroquetteGet(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
-        tutorialImage.color = new Color32(255, 255, 255, 192);
+        tutorialText.color = new Color32(179, 72, 29, 255);
         tutorialText.text = "< カレーコロッケ >\n\n" +
         "スケルトンが覚醒し、移動及び\n" +
         "旋回スピードがアップします。\n";
@@ -32,7 +32,7 @@ public class Mgr_Mz00ItemGet : MonoBehaviour {
 
     public void Mz00MapGet(object o, EventArgs e) {
         tutorialImage.gameObject.SetActive(true);
-        tutorialText.color = new Color32(255, 255, 255, 192);
+        tutorialText.color = new Color32(179, 72, 29, 255);
         tutorialText.text = "< マップ表示クリスタル >\n\n" +
         "迷路の全体を表示し確認する事が\n" +
         "出来る様になります。\n" +

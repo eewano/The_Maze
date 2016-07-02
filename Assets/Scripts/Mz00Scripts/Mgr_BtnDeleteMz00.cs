@@ -20,10 +20,12 @@ public class Mgr_BtnDeleteMz00 : MonoBehaviour {
 
     public void AppearObject(object o, EventArgs e) {
         buttonDeleteMz00.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void OnButtonDeleteClicked() {
         Debug.Log("Delete");
+        Time.timeScale = 1;
         this.textDeleteMz00(this, EventArgs.Empty);
         buttonDeleteMz00.gameObject.SetActive(false);
     }

@@ -155,10 +155,24 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
     }
 
     public void CtrlChangeToKey(object o, EventArgs e) {
+        playerSpeed = 0;
+        playerRotSpeed = 0;
         btnCtrl = false;
     }
 
     public void CtrlChangeToBtn(object o, EventArgs e) {
         btnCtrl = true;
+    }
+
+    public void PlayerMaxFSpeedChange(object o, float i) {
+        maxFSpeed += i;
+    }
+
+    public void PlayerMaxBSpeedChange(object o, float i) {
+        maxBSpeed += i;
+    }
+
+    public void PlayerMaxRotSpeedChange(object o, float i) {
+        maxRotSpeed += i;
     }
 }
