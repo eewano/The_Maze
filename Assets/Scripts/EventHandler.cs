@@ -22,3 +22,7 @@ public delegate void EveHandMzTimeUpDown(object sender, int i);
 public delegate void EveHandToPlayer(object sender, EventArgs e);
 //プレイヤーパラメータ増減用のイベント
 public delegate void EveHandPlayerValue(object sender, float i);
+//DirectionalLight用のイベント
+public delegate void EveHandDirLight(object sender, float i);
+//SpotLight用のイベント
+public delegate void EveHandSpotLight(object sender, float i);

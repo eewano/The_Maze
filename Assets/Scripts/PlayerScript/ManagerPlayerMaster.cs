@@ -8,7 +8,6 @@ public class ManagerPlayerMaster : MonoBehaviour {
 
     private Mgr_PlayerBtnCtrl mgrPlayerBtnCtrl;
     private Mgr_PlayerKeyCtrl mgrPlayerKeyCtrl;
-    private Mgr_GameSE01 mgrMzSE01;
 
     private event EveHandToPlayer playerCtrlOn;
 
@@ -27,7 +26,6 @@ public class ManagerPlayerMaster : MonoBehaviour {
     void Awake() {
         mgrPlayerBtnCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerBtnCtrl>();
         mgrPlayerKeyCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerKeyCtrl>();
-        mgrMzSE01 = GameObject.Find("Mgr_GameSE01").GetComponent<Mgr_GameSE01>();
     }
 
     void Start() {

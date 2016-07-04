@@ -2,10 +2,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeImage : MonoBehaviour {
+public class ImageFade : MonoBehaviour {
 
-    private float delayTime = 0f;
-    private float durationTime = 1f;
+    [SerializeField]
+    private float delayTime = 0.5f;
+    [SerializeField]
+    private float durationTime = 1.0f;
 
     private RectTransform rectTransform;
     private Image image;
@@ -29,17 +31,17 @@ public class FadeImage : MonoBehaviour {
         this.activate();
     }
 
-    public void setDelay(float __delay) {
-        this.delayTime = __delay;
+    public void setDelay(float _Delay) {
+        this.delayTime = _Delay;
     }
 
-    public void setDuration(float __duration) {
-        this.durationTime = __duration;
+    public void setDuration(float _Duration) {
+        this.durationTime = _Duration;
     }
 
     public void hide() {
         LeanTween.cancel(this.rectTransform.gameObject);
-        LeanTween.alpha(this.rectTransform, 0f, this.durationTime).setEase(LeanTweenType.easeOutSine);
+        LeanTween.alpha(this.rectTransform, 1.0f, this.durationTime).setEase(LeanTweenType.easeOutSine);
     }
 
     public void activate() {
@@ -54,7 +56,7 @@ public class FadeImage : MonoBehaviour {
         LeanTween.alpha(this.rectTransform, 0.4f, 0.2f).setEase(LeanTweenType.easeOutSine);
     }
 
-    public void blink(Color __color, float __duration = 1f) {
+    public void blink(Color _Color, float _Duration = 1f) {
         if (this.isBlinking) {
             return;
         }
@@ -62,15 +64,15 @@ public class FadeImage : MonoBehaviour {
         this.gameObject.transform.localScale = Vector3.one;
         this.gameObject.SetActive(true);
 
-        this.image.color = new Color(__color.r, __color.g, __color.b, this.image.color.a);
+        this.image.color = new Color(_Color.r, _Color.g, _Color.b, this.image.color.a);
 
         this.isBlinking = true;
-        LeanTween.alpha(this.rectTransform, 0.65f, __duration)
+        LeanTween.alpha(this.rectTransform, 0.65f, _Duration)
         .setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
-            LeanTween.alpha(this.rectTransform, 0.0f, __duration)
+            LeanTween.alpha(this.rectTransform, 0.0f, _Duration)
             .setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
                 this.isBlinking = false;
-                this.blink(__color, __duration);
+                this.blink(_Color, _Duration);
             });
         });
     }

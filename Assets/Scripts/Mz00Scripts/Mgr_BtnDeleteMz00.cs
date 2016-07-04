@@ -24,7 +24,6 @@ public class Mgr_BtnDeleteMz00 : MonoBehaviour {
     }
 
     public void OnButtonDeleteClicked() {
-        Debug.Log("Delete");
         Time.timeScale = 1;
         this.textDeleteMz00(this, EventArgs.Empty);
         buttonDeleteMz00.gameObject.SetActive(false);

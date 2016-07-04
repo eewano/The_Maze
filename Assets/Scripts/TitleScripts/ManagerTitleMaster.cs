@@ -9,10 +9,13 @@ public class ManagerTitleMaster : MonoBehaviour {
     private Manager_TitleText managerTitleText;
     private Manager_TitleButton managerTitleBtn;
     private AudioSource titleBGM;
+    private ImageFade imageFadeBlack;
 
     private event EveHandMgrState titleEventMAINMEMU;
 
     private event EveHandMgrState titleEventEXPLAIN;
+
+    private event EveHandMgrState titleEventGAMESTART;
 
     private enum TitleState {
         DUMMY,
@@ -27,6 +30,7 @@ public class ManagerTitleMaster : MonoBehaviour {
         managerTitleText = GameObject.Find("Mgr_TitleText").GetComponent<Manager_TitleText>();
         managerTitleBtn = GameObject.Find("Mgr_TitleButton").GetComponent<Manager_TitleButton>();
         titleBGM = GameObject.Find("TitleBGM").GetComponent<AudioSource>();
+        imageFadeBlack = GameObject.Find("FadeBlack").GetComponent<ImageFade>();
     }
 
     void Start() {
@@ -38,6 +42,7 @@ public class ManagerTitleMaster : MonoBehaviour {
         titleEventEXPLAIN += new EveHandMgrState(managerTitleText.TitleEventEXPLAIN);
         titleEventEXPLAIN += new EveHandMgrState(managerTitleBtn.TitleEventEXPLAIN);
         //GAMESTARTステート
+        titleEventGAMESTART += new EveHandMgrState(managerTitleBtn.TitleEventGAMESTART);
         //EMPTYステート
 
         Dummy();
@@ -79,7 +84,9 @@ public class ManagerTitleMaster : MonoBehaviour {
 
     void GameStart() {
         state = TitleState.GAMESTART;
+        this.titleEventGAMESTART(this, EventArgs.Empty);
         titleBGM.Stop();
+        imageFadeBlack.show();
     }
 
     void Empty() {

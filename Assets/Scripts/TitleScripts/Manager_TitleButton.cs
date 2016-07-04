@@ -73,6 +73,18 @@ public class Manager_TitleButton : MonoBehaviour {
         titleBtnEXPLAIN += new EveHandMgrState(mgrTitleBtnToMz10.HideBtnEvent);
         titleBtnEXPLAIN += new EveHandMgrState(mgrTitleBtnToMain.AppearBtnEvent);
         //GAMESTARTステート
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnExplain.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz00.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz01.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz02.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz03.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz04.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz05.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz06.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz07.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz08.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz09.HideBtnEvent);
+        titleBtnGAMESTART += new EveHandMgrState(mgrTitleBtnToMz10.HideBtnEvent);
         //EMPTYステート
     }
 

@@ -14,10 +14,6 @@ public class Manager_TitleText : MonoBehaviour {
 
     private event EveHandMgrState titleTextEXPLAIN;
 
-    private event EveHandMgrState titleTextGAMESTART;
-
-    private event EveHandMgrState titleTextEMPTY;
-
     void Awake() {
         mgrTitleTextMain01 = GameObject.Find("Mgr_TitleText").GetComponent<Mgr_TitleTextMain01>();
         mgrTitleTextMain02 = GameObject.Find("Mgr_TitleText").GetComponent<Mgr_TitleTextMain02>();

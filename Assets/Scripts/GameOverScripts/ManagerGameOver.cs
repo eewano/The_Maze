@@ -9,12 +9,18 @@ public class ManagerGameOver : MonoBehaviour {
     private Text gameOverText;
     [SerializeField]
     private Text toTitleText;
+    private ImageFade imageFadeBlack;
+
     private enum State {
         EMPTY,
         STANDBYOK
     }
 
     private State state;
+
+    void Awake() {
+        imageFadeBlack = GameObject.Find("FadeBlack").GetComponent<ImageFade>();
+    }
 
     void Start() {
         Time.timeScale = 1.0f;
@@ -48,6 +54,7 @@ public class ManagerGameOver : MonoBehaviour {
     }
 
     IEnumerator ToTitle() {
+        imageFadeBlack.show();
         yield return new WaitForSeconds(4.0f);
         SceneManager.LoadScene("Title");
     }
