@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class ManagerPlayerMaster : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject player;
+    private GameObject playerGoal;
+    private Renderer playerRenderer;
     private Mgr_PlayerBtnCtrl mgrPlayerBtnCtrl;
     private Mgr_PlayerKeyCtrl mgrPlayerKeyCtrl;
 
@@ -26,9 +30,14 @@ public class ManagerPlayerMaster : MonoBehaviour {
     void Awake() {
         mgrPlayerBtnCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerBtnCtrl>();
         mgrPlayerKeyCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerKeyCtrl>();
+        playerRenderer = GameObject.FindWithTag("Player").GetComponent<MeshRenderer>();
+        playerGoal = GameObject.Find("PlayerGoal");
     }
 
     void Start() {
+        playerGoal.gameObject.SetActive(false);
+        playerRenderer.enabled = false;
+
         playerCtrlOn += new EveHandToPlayer(mgrPlayerBtnCtrl.CtrlChangeToKey);
         playerCtrlOn += new EveHandToPlayer(mgrPlayerKeyCtrl.CtrlChangeToKey);
 
@@ -63,5 +72,18 @@ public class ManagerPlayerMaster : MonoBehaviour {
         this.playerMaxRotSpeedUp(this, 0.2f);
         this.playerKeySpeedUp(this, 1.0f);
         this.playerKeyRotSpeedUp(this, 1);
+    }
+
+    public void EventPLAYING(object o, EventArgs e) {
+        playerRenderer.enabled = false;
+    }
+
+    public void EventMAP(object o, EventArgs e) {
+        playerRenderer.enabled = true;
+    }
+
+    public void EventGOAL(object o, EventArgs e) {
+        player.gameObject.SetActive(false);
+        playerGoal.gameObject.SetActive(true);
     }
 }

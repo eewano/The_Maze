@@ -1685,8 +1685,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -1699,8 +1700,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -1709,8 +1708,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -1719,6 +1716,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -1927,8 +1926,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -1941,8 +1941,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -1951,8 +1949,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -1961,6 +1957,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -2169,8 +2167,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -2183,8 +2182,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -2193,8 +2190,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -2203,6 +2198,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -2411,8 +2408,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -2425,8 +2423,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -2435,8 +2431,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -2445,6 +2439,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -2653,8 +2649,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -2667,8 +2664,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -2677,8 +2672,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -2687,6 +2680,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -2895,8 +2890,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -2909,8 +2905,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -2919,8 +2913,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -2929,6 +2921,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -3137,8 +3131,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -3151,8 +3146,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -3161,8 +3154,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -3171,6 +3162,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -3379,8 +3372,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -3393,8 +3387,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -3403,8 +3395,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -3413,6 +3403,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
@@ -3621,8 +3613,9 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallDelete.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
@@ -3635,8 +3628,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClashCamera.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
@@ -3645,8 +3636,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Pauser.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOff.cs" />
@@ -3655,6 +3644,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOn.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/WallOnOffManager.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/mzClearPoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />

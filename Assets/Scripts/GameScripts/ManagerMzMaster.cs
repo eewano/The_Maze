@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ManagerMzMaster : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject playerGoal;
     private ManagerPlayerMaster managerPlayerMaster;
     private Manager_GameSE01 managerMzSE01;
     private Manager_GameSE02 managerMzSE02;
@@ -112,6 +114,7 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventPLAYING += new EveHandMgrState(managerMzBtnCtrl.EventPLAYING);
         mzEventPLAYING += new EveHandMgrState(managerMzText.EventPLAYING);
         mzEventPLAYING += new EveHandMgrState(managerDirLight.EventPLAYING);
+        mzEventPLAYING += new EveHandMgrState(managerPlayerMaster.EventPLAYING);
         //GIVEUPステート
         mzEventGIVEUP += new EveHandMgrState(managerMzButton.EventGIVEUP);
         mzEventGIVEUP += new EveHandMgrState(managerMzBtnCtrl.EventGIVEUP);
@@ -121,6 +124,7 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventMAP += new EveHandMgrState(managerMzButton.EventMAP);
         mzEventMAP += new EveHandMgrState(managerMzBtnCtrl.EventMAP);
         mzEventMAP += new EveHandMgrState(managerDirLight.EventMAP);
+        mzEventMAP += new EveHandMgrState(managerPlayerMaster.EventMAP);
         //TIMEUPステート
         mzEventTIMEUP += new EveHandMgrState(managerMzButton.EventTIMEUP);
         mzEventTIMEUP += new EveHandMgrState(managerMzBtnCtrl.EventTIMEUP);
@@ -138,6 +142,7 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventGOAL += new EveHandMgrState(managerMzLabel.EventGOAL);
         mzEventGOAL += new EveHandMgrState(managerMzSE02.EventGOAL);
         mzEventGOAL += new EveHandMgrState(managerDirLight.EventGOAL);
+        mzEventGOAL += new EveHandMgrState(managerPlayerMaster.EventGOAL);
         //CLEARステート
         mzEventCLEAR += new EveHandMgrState(managerMzButton.EventCLEAR);
         mzEventCLEAR += new EveHandMgrState(managerMzText.EventCLEAR);
@@ -166,7 +171,6 @@ public class ManagerMzMaster : MonoBehaviour {
 
         spotLightMAP += new EveHandMgrState(managerSpotLight.EventMAPSpotLight);
         spotCroqMAP = new EveHandMgrState(managerSpotLight.EventMAPSpotCroq);
-
 
         Dummy();
     }
@@ -324,6 +328,10 @@ public class ManagerMzMaster : MonoBehaviour {
 
     public void ToGAMEOVERState(object o, EventArgs e) {
         GameOver();
+    }
+
+    public void ToGOALState(object o, EventArgs e) {
+        Goal();
     }
 
     public void SpotLightTrue(object o, EventArgs e) {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Manager_SpotLight : MonoBehaviour {
 
-    private Mgr_SpotLightLight mgrSpotLightLight;
+    private Mgr_SpotLightLight mgrSpotOfLight;
     private Mgr_SpotCroquette mgrSpotCroquette;
 
     private event EveHandSpotLight changeSpotLight;
@@ -11,12 +11,12 @@ public class Manager_SpotLight : MonoBehaviour {
     private event EveHandSpotLight changeSpotCroquette;
 
     void Awake() {
-        mgrSpotLightLight = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotLightLight>();
+        mgrSpotOfLight = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotLightLight>();
         mgrSpotCroquette = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotCroquette>();
     }
 
     void Start() {
-        changeSpotLight += new EveHandSpotLight(mgrSpotLightLight.ChangeSpotLight);
+        changeSpotLight += new EveHandSpotLight(mgrSpotOfLight.ChangeSpotLight);
         changeSpotCroquette += new EveHandSpotLight(mgrSpotCroquette.ChangeSpotLight);
     }
 
