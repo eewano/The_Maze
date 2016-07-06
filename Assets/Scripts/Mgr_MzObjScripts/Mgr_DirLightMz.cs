@@ -6,7 +6,7 @@ public class Mgr_DirLightMz : MonoBehaviour {
     private Light dirLightMz;
 
     void Start() {
-        dirLightMz.intensity = 0.3f;
+        dirLightMz.intensity = 0;
     }
 
     public void ChangeIntensityOfMz(object o, float i) {

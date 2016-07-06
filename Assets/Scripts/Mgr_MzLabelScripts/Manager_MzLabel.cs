@@ -51,6 +51,9 @@ public class Manager_MzLabel : MonoBehaviour {
         mzLabelTIMEUP += new EveHandMgrState(mgrMzLabelCroquetteGet.HideLabelEvent);
         mzLabelTIMEUP += new EveHandMgrState(mgrMzLabelMapGet.HideLabelEvent);
         //FAILUREステート
+        mzLabelFAILURE += new EveHandMgrState(mgrMzLabelLightGet.HideLabelEvent);
+        mzLabelFAILURE += new EveHandMgrState(mgrMzLabelCroquetteGet.HideLabelEvent);
+        mzLabelFAILURE += new EveHandMgrState(mgrMzLabelMapGet.HideLabelEvent);
         //GOALステート
         mzLabelGOAL += new EveHandMgrState(mgrMzLabelLightGet.HideLabelEvent);
         mzLabelGOAL += new EveHandMgrState(mgrMzLabelCroquetteGet.HideLabelEvent);

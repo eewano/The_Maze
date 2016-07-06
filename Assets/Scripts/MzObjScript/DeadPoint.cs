@@ -1,17 +1,23 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
 public class DeadPoint : MonoBehaviour {
 
-    GameObject gameManager;
+    private ManagerMzMaster managerMzMaster;
+
+    private event EveHandMoveState playerDead;
+
+    void Awake() {
+        managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
+    }
 
     void Start() {
-        gameManager = GameObject.Find("GameManager");
+        playerDead += new EveHandMoveState(managerMzMaster.ToFAILUREState);
     }
 
     void OnTriggerEnter(Collider col) {
         if (col.gameObject.tag == "Player") {
-            gameManager.SendMessage("Failure");
+            this.playerDead(this, EventArgs.Empty);
         }
     }
 }

@@ -26,3 +26,5 @@ public delegate void EveHandPlayerValue(object sender, float i);
 public delegate void EveHandDirLight(object sender, float i);
 //SpotLight用のイベント
 public delegate void EveHandSpotLight(object sender, float i);
+//出現壁ギミックのイベント
+public delegate void EveHandWallGimmick01(object sender, EventArgs e);

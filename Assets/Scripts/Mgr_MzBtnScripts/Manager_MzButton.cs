@@ -81,8 +81,10 @@ public class Manager_MzButton : MonoBehaviour {
         mzBtnTIMEUP += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzBtnTIMEUP += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
         //FAILUREステート
+        mzBtnFAILURE += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzBtnFAILURE += new EveHandMgrState(mgrMzBtnRestart.AppearBtnEvent);
         mzBtnFAILURE += new EveHandMgrState(mgrMzBtnGameOver.AppearBtnEvent);
+        mzBtnFAILURE += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);
         //GOALステート
         mzBtnGOAL += new EveHandMgrState(mgrMzBtnGiveUp.HideBtnEvent);
         mzBtnGOAL += new EveHandMgrState(mgrMzBtnMap.HideBtnEvent);

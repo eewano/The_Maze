@@ -49,6 +49,7 @@ public class Manager_MzBtnCtrl : MonoBehaviour {
         //TIMEUPステート
         mzBtnCtrlTIMEUP += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //FAILUREステート
+        mzBtnCtrlFAILURE += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //GOALステート
         mzBtnCtrlGOAL += new EveHandMgrState(mgrMzBtnCtrl.HideBtnCtrlEvent);
         //CLEARステート

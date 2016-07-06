@@ -31,7 +31,6 @@ GameObject:
   - 23: {fileID: 2347844}
   - 108: {fileID: 10820228}
   - 114: {fileID: 11421626}
-  - 114: {fileID: 11470754}
   - 114: {fileID: 11486492}
   m_Layer: 0
   m_Name: Croquette
@@ -142,7 +141,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_Intensity: 0
   m_Range: 0
   m_SpotAngle: 30
@@ -175,17 +174,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 207f77ea17a5d4c618a7baa1e541bbb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11470754
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1466f733704be4025b67bbfad364fa85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11486492

@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2389348}
   - 114: {fileID: 11411702}
   - 54: {fileID: 5437516}
-  - 114: {fileID: 11403150}
   - 108: {fileID: 10850242}
   - 114: {fileID: 11418820}
   m_Layer: 0
@@ -93,7 +92,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_Intensity: 0
   m_Range: 0
   m_SpotAngle: 30
@@ -117,17 +116,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11403150
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de234209ea93a496dbb3b25442881954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11411702
 MonoBehaviour:
   m_ObjectHideFlags: 1

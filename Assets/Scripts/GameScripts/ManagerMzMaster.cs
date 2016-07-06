@@ -8,6 +8,8 @@ public class ManagerMzMaster : MonoBehaviour {
 
     [SerializeField]
     private GameObject playerGoal;
+    [SerializeField]
+    private GameObject mzCeiling;
     private ManagerPlayerMaster managerPlayerMaster;
     private Manager_GameSE01 managerMzSE01;
     private Manager_GameSE02 managerMzSE02;
@@ -99,6 +101,7 @@ public class ManagerMzMaster : MonoBehaviour {
     void Start() {
         getLight = false;
         getCroquette = false;
+
         //DUMMYステート
         //READYステート
         mzEventREADY += new EveHandMgrState(managerMzCam.EventREADY);
@@ -133,7 +136,9 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventTIMEUP += new EveHandMgrState(managerMzSE01.EventTIMEUP);
         //FAILUREステート
         mzEventFAILURE += new EveHandMgrState(managerMzButton.EventFAILURE);
+        mzEventFAILURE += new EveHandMgrState(managerMzBtnCtrl.EventFAILURE);
         mzEventFAILURE += new EveHandMgrState(managerMzText.EventFAILURE);
+        mzEventFAILURE += new EveHandMgrState(managerMzLabel.EventFAILURE);
         //GOALステート
         mzEventGOAL += new EveHandMgrState(managerMzCam.EventGOAL);
         mzEventGOAL += new EveHandMgrState(managerMzButton.EventGOAL);
@@ -247,6 +252,7 @@ public class ManagerMzMaster : MonoBehaviour {
         {
             this.spotCroqPLAYING(this, EventArgs.Empty);
         }
+        mzCeiling.gameObject.SetActive(true);
     }
 
     void GiveUp() {
@@ -269,6 +275,7 @@ public class ManagerMzMaster : MonoBehaviour {
         {
             this.spotCroqMAP(this, EventArgs.Empty);
         }
+        mzCeiling.gameObject.SetActive(false);
     }
 
     void TimeUp() {
@@ -281,6 +288,7 @@ public class ManagerMzMaster : MonoBehaviour {
     void Failure() {
         state = GameState.FAILURE;
         this.mzEventFAILURE(this, EventArgs.Empty);
+        this.mzTimerStop(this, EventArgs.Empty);
     }
 
     void Goal() {
@@ -324,6 +332,10 @@ public class ManagerMzMaster : MonoBehaviour {
 
     public void ToTIMEUPState(object o, EventArgs e) {
         TimeUp();
+    }
+
+    public void ToFAILUREState(object o, EventArgs e) {
+        Failure();
     }
 
     public void ToGAMEOVERState(object o, EventArgs e) {

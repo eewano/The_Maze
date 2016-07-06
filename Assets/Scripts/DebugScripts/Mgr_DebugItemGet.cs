@@ -26,12 +26,10 @@ public class Mgr_DebugItemGet : MonoBehaviour {
 
     void DebugSwitch() {
         if (Input.GetKeyUp("i") && debugItemGet == false) {
-            Debug.Log("DebugItemGetON");
             debugItemGet = true;
             debugItemGetText.text = "デバッグアイテム";
         }
         else if (Input.GetKeyUp("i") && debugItemGet == true) {
-            Debug.Log("DebugItemGetOFF");
             debugItemGet = false;
             debugItemGetText.text = "";
         }
@@ -39,15 +37,12 @@ public class Mgr_DebugItemGet : MonoBehaviour {
 
     void DebugGetItem() {
         if (Input.GetKeyUp("l") && debugItemGet == true && mgrItemLight != null) {
-            Debug.Log("LightGet");
             mgrItemLight.DebugGetLight();
         }
         else if (Input.GetKeyUp("c") && debugItemGet == true && mgrItemCroquette != null) {
-            Debug.Log("CroquetteGet");
             mgrItemCroquette.DebugGetCroquette();
         }
         else if (Input.GetKeyUp("m") && debugItemGet == true && mgrItemMap != null) {
-            Debug.Log("MapGet");
             mgrItemMap.DebugGetMap();
         }
     }

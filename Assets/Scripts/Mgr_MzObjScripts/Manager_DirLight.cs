@@ -6,6 +6,7 @@ public class Manager_DirLight : MonoBehaviour {
     private Mgr_DirLightMz mgrDirLightMz;
     private Mgr_DirLightMap mgrDirLightMap;
     private Mgr_DirLightGoal mgrDirLightGoal;
+    [SerializeField]
     private float defaultMzValue = 0.3f;
 
     private bool getLight;
@@ -24,6 +25,8 @@ public class Manager_DirLight : MonoBehaviour {
 
     void Start() {
         getLight = false;
+        //DUMMYステート
+
         //ライトゲット
         changeDirLightItem += new EveHandDirLight(mgrDirLightMz.ChangeIntensityOfMz);
         //MAPステート

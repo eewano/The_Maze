@@ -24,9 +24,9 @@
     <file path="/TitleManager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463738247805" ignored="false" />
     <file path="/GameOverManager.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463738835592" ignored="false" />
     <file path="/WallOnOff.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463740282271" ignored="false" />
-    <file path="/SpawnPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463740386894" ignored="false" />
+    <file path="/SpawnPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467791889146" ignored="false" />
     <file path="/FootSound.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463740744285" ignored="false" />
-    <file path="/DeadPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463740816194" ignored="false" />
+    <file path="/DeadPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467806760077" ignored="false" />
     <file path="/GoalCameraMove.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467705469331" ignored="false" />
     <file path="/CatchedFadeIn.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463838639407" ignored="false" />
     <file path="/FadeOut.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1463836520922" ignored="false" />
@@ -65,9 +65,9 @@
     <file path="/Mgr_MzBtnRestart.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467096423822" ignored="false" />
     <file path="/Mgr_MzBtnNextMz.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467357059744" ignored="false" />
     <file path="/Mgr_MzBtnToTitle.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467096750809" ignored="false" />
-    <file path="/a.dummy" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467608677242" ignored="false" />
+    <file path="/a.dummy" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467786627067" ignored="false" />
     <file path="$PROJECT_DIR$/.consulo/workspace.xml" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467361104861" ignored="false" />
-    <file path="/ManagerMzMaster.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467703684128" ignored="false" />
+    <file path="/ManagerMzMaster.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467808265503" ignored="false" />
     <file path="/Mgr_MzBtnGiveUp.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467101839469" ignored="false" />
     <file path="/Mgr_MzCamPlayer.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467444414209" ignored="false" />
     <file path="/Mgr_MzCamMap.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467103107418" ignored="false" />
@@ -81,7 +81,7 @@
     <file path="/Mgr_MzBtnMapToMz.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467102767441" ignored="false" />
     <file path="/Mgr_MzBtnMap.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467094592399" ignored="false" />
     <file path="/Mgr_DebugMoveState.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467099124364" ignored="false" />
-    <file path="/EventHandler.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467626593945" ignored="false" />
+    <file path="/EventHandler.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467801237550" ignored="false" />
     <file path="/Manager_MzText.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467435000427" ignored="false" />
     <file path="/Manager_MzButton.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467377865865" ignored="false" />
     <file path="/Manager_MzLabel.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467185547026" ignored="false" />
@@ -90,7 +90,7 @@
     <file path="/Manager_MzSE02.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467187489930" ignored="false" />
     <file path="/Manager_MzCtrlBtn.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467189525336" ignored="false" />
     <file path="/Mgr_MzCtrlBtnF.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467188673487" ignored="false" />
-    <file path="/Manager_MzBtnCtrl.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467273276904" ignored="false" />
+    <file path="/Manager_MzBtnCtrl.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467807360782" ignored="false" />
     <file path="/Mgr_MzBtnCtrlB.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467272187855" ignored="false" />
     <file path="/Manager_MzItem01.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467440353633" ignored="false" />
     <file path="/Mgr_MzItemFlag.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467196260596" ignored="false" />
@@ -101,7 +101,7 @@
     <file path="/Mgr_MzLabelMapGet.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467202827518" ignored="false" />
     <file path="/Mgr_ItemMap.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467377978442" ignored="false" />
     <file path="/Mgr_ItemCroquette.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467465795714" ignored="false" />
-    <file path="/Mgr_DebugItemGet.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467622292757" ignored="false" />
+    <file path="/Mgr_DebugItemGet.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467792042348" ignored="false" />
     <file path="/Mgr_MzBtnCtrlF.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467272333248" ignored="false" />
     <file path="/Mgr_MzBtnCtrlL.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467272663614" ignored="false" />
     <file path="/Mgr_MzBtnCtrl.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467273227369" ignored="false" />
@@ -134,11 +134,11 @@
     <file path="/Mgr_BtnDeleteText.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467456151036" ignored="false" />
     <file path="/Mgr_BtnDeleteMz00.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467699494278" ignored="false" />
     <file path="/ImageFade.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467609790122" ignored="false" />
-    <file path="/Manager_DirLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467627950669" ignored="false" />
+    <file path="/Manager_DirLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467789948999" ignored="false" />
     <file path="/Mgr_DirLightMap.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467620577789" ignored="false" />
-    <file path="/Mgr_DirLightMz.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467627835700" ignored="false" />
+    <file path="/Mgr_DirLightMz.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467790754239" ignored="false" />
     <file path="/Mgr_DirLightGoal.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467620565317" ignored="false" />
-    <file path="/Mgr_DebugItemGetMz00.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467623180681" ignored="false" />
+    <file path="/Mgr_DebugItemGetMz00.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467785722367" ignored="false" />
     <file path="/Manager_SpotLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467634467849" ignored="false" />
     <file path="/Mgr_SpotLightLight.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467626981344" ignored="false" />
     <file path="/Mgr_SpotCroquette.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467627044397" ignored="false" />
@@ -146,6 +146,13 @@
     <file path="/Mz00WallClearFlag.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467699780820" ignored="false" />
     <file path="/ClearPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467703621486" ignored="false" />
     <file path="/mzClearPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467704774435" ignored="false" />
+    <file path="/WallOn.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467793549106" ignored="false" />
+    <file path="/ClashCamera.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467802096573" ignored="false" />
+    <file path="/Mgr_WallGimmick01.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467805504580" ignored="false" />
+    <file path="/WallGimmick01.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467805847957" ignored="false" />
+    <file path="/WallGimmick01Off.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467801524661" ignored="false" />
+    <file path="/WallONOFFCtrl.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467805087380" ignored="false" />
+    <file path="/FallModePoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467806478199" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,93 +173,11 @@
     <fileColor scope="Test Resources" color="Green" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ManagerMzMaster.cs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMzMaster.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GoalCameraMove.cs" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/GoalCameraMove.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EventHandler.cs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Assets/Scripts/EventHandler.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="37" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Mz00ClearFlag.cs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mzClearPoint.cs" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/mzClearPoint.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnNextMz.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnToTitle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TitleScripts/Mgr_TitleScripts/Mgr_TitleBtnToMain.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/ManagerPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mgr_MzTextTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugPlayerCtrl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mgr_BtnDeleteText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemScripts/Mgr_Mz00ItemGet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquetteMz00.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMapMz00.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLightMz00.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mgr_BtnDeleteMz00.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerKeyCtrl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/ImageFade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TitleScripts/Mgr_TitleScripts/Mgr_TitleBtnExplain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TitleScripts/Manager_TitleButton.cs" />
@@ -263,20 +188,14 @@
         <option value="$PROJECT_DIR$/Assets/Mgr_DirLightGoal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Manager_DirLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Mgr_DirLightMz.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugItemGetMz00.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TitleScripts/Manager_TitleText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_SpotLightLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_SpotCroquette.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_DirLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzItemScripts/LightBallMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzItemScripts/CroquetteMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzItemScripts/MapCrystalMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_SpotLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_ItemCroquetteMz00.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_ItemLightMz00.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_ItemMapMz00.cs" />
@@ -284,19 +203,40 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mz00WallClearFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_Mz00ItemGet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/ClearPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/GoalCameraMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/mzClearPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugItemGetMz00.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzWallCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_DirLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallOn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/ManagerWallGimmick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EventHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallGimmick01Off.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/ClashCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/WallONOFFCtrl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallGimmick01.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/DeadPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Manager_MzButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/FallModePoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_SpotLight.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
+    <option name="x" value="-1280" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="width" value="1280" />
+    <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -324,10 +264,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="All" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -396,55 +332,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MzObjScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mz00Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="The_Maze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Mgr_MzObjScripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="The_Maze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="The_Maze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mgr_MzItemScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="The_Maze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="The_Maze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="All" />
       </pane>
     </panes>
   </component>
@@ -562,10 +502,10 @@
     <option name="totallyTimeSpent" value="71476000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1280" y="23" width="1280" height="1001" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16903633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21842733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -675,125 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzCamScripts/Mgr_MzCamPlayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnGiveUp.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnRestart.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnToTitle.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TitleScripts/Mgr_TitleScripts/Mgr_TitleBtnToMain.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnNextMz.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Manager_MzButton.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="114" column="18" selection-start-line="114" selection-start-column="18" selection-end-line="114" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugPlayerCtrl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/SpawnPoint.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Mgr_MzBtnCancel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerKeyCtrl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="174" column="39" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverScripts/ManagerGameOver.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TitleScripts/BtnToMzScripts/Mgr_TitleBtnToMz00.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/TitleScripts/Mgr_TitleScripts/Mgr_TitleBtnExplain.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -812,13 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
           <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -878,80 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_SpotLightLight.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="75" selection-start-line="19" selection-start-column="18" selection-end-line="20" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_SpotLight.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_SpotCroquette.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_DirLight.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_ItemCroquetteMz00.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,19 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMzMaster.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -995,6 +724,214 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="79" selection-start-line="23" selection-start-column="18" selection-end-line="24" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_BtnDeleteMz00.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/mzClearPoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/GoalCameraMove.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzWallCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemMap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_DirLight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/SpawnPoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzCreatorScript/MzFloorCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextFailure.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/WallGimmick01.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/DeadPoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerKeyCtrl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnCtrlScripts/Mgr_MzBtnCtrl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-431">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Manager_MzLabel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzBtnScripts/Manager_MzButton.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/FallModePoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/ClashCamera.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -1003,55 +940,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/EventHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/ManagerPlayerMaster.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="847">
+          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mgr_BtnDeleteMz00.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemCroquette.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        <state relative-caret-position="315">
+          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/mzClearPoint.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMzMaster.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2213">
+          <caret line="87" column="61" selection-start-line="87" selection-start-column="61" selection-end-line="87" selection-end-column="61" />
+          <folding>
+            <marker date="1467808274000" expanded="true" signature="3305:7802" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Manager_SpotLight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemLight.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/GoalCameraMove.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_SpotLightLight.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_SpotCroquette.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

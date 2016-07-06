@@ -10,12 +10,12 @@ public class Manager_SpotLight : MonoBehaviour {
 
     private event EveHandSpotLight changeSpotCroquette;
 
-    void Awake() {
-        mgrSpotOfLight = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotLightLight>();
-        mgrSpotCroquette = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotCroquette>();
-    }
+//    void Awake() {
+//    }
 
     void Start() {
+        mgrSpotOfLight = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotLightLight>();
+        mgrSpotCroquette = GameObject.Find("Mgr_SpotLight").GetComponent<Mgr_SpotCroquette>();
         changeSpotLight += new EveHandSpotLight(mgrSpotOfLight.ChangeSpotLight);
         changeSpotCroquette += new EveHandSpotLight(mgrSpotCroquette.ChangeSpotLight);
     }
