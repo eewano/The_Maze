@@ -444,6 +444,12 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 164354, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
   m_PrefabInternal: {fileID: 1619948310}
+--- !u!114 &176569944 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11490468, guid: 1871b7df2e174467ba05eac3ca7d095a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1619948310}
+  m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
 --- !u!114 &177662181 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11489792, guid: f7e9ac44cd4574a5aa21250ab25aaae8,
@@ -1016,7 +1022,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 460555469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 1, z: -3}
+  m_LocalPosition: {x: 13, y: 1, z: 7}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1652,6 +1658,20 @@ Prefab:
       propertyPath: buttonGiveUp
       value: 
       objectReference: {fileID: 656340009}
+    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: timeLimit
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405382, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: spotCroquette
+      value: 
+      objectReference: {fileID: 10820228, guid: 5e4fa705526be46729df5bd07c8bd0ec,
+        type: 2}
+    - target: {fileID: 11481042, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: spotLight
+      value: 
+      objectReference: {fileID: 10850242, guid: f49cad5b7cfd39a43bc2da7f985f5296,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
   m_IsPrefabParent: 0
@@ -2533,6 +2553,134 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11405430, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11405430, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnFwdDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405430, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11405430, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnFwdUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478868, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11478868, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnBwdDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478868, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11478868, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnBwdUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486256, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11486256, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnLeftDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486256, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11486256, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnLeftUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479552, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11479552, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnRightDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479552, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11479552, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnRightUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423360, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11423360, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnFLDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423360, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11423360, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnFLUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494954, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11494954, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnFRDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494954, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11494954, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnFRUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438660, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11438660, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnBLDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438660, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11438660, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnBLUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430506, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11430506, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnBRDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430506, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 176569944}
+    - target: {fileID: 11430506, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: onButtonUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushBtnBRUp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
   m_IsPrefabParent: 0
@@ -2798,7 +2946,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 490140, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 19
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 490140, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2806,7 +2954,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490140, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -19
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 490140, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
       propertyPath: m_LocalRotation.x

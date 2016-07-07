@@ -85,188 +85,6 @@ NavMeshSettings:
     cellSize: 0.1
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &13029257
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 11405382, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: spotCroquette
-      value: 
-      objectReference: {fileID: 1222776042}
-    - target: {fileID: 11481042, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: spotLight
-      value: 
-      objectReference: {fileID: 1015388377}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlF
-      value: 
-      objectReference: {fileID: 1466094888}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlB
-      value: 
-      objectReference: {fileID: 1007976874}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlL
-      value: 
-      objectReference: {fileID: 1873088496}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlR
-      value: 
-      objectReference: {fileID: 1463243810}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlFL
-      value: 
-      objectReference: {fileID: 854273758}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlFR
-      value: 
-      objectReference: {fileID: 934054367}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlBL
-      value: 
-      objectReference: {fileID: 406066143}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCtrlBR
-      value: 
-      objectReference: {fileID: 1980921204}
-    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzTimerText
-      value: 
-      objectReference: {fileID: 655408161}
-    - target: {fileID: 11409260, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonGiveUp
-      value: 
-      objectReference: {fileID: 234070537}
-    - target: {fileID: 11437476, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonToTitle
-      value: 
-      objectReference: {fileID: 1384831892}
-    - target: {fileID: 11428144, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonToNextMz
-      value: 
-      objectReference: {fileID: 426693780}
-    - target: {fileID: 11452158, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonRestart
-      value: 
-      objectReference: {fileID: 2140622112}
-    - target: {fileID: 11412056, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonToMz
-      value: 
-      objectReference: {fileID: 1783922375}
-    - target: {fileID: 11424126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonMap
-      value: 
-      objectReference: {fileID: 1845907042}
-    - target: {fileID: 11469910, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonGameOver
-      value: 
-      objectReference: {fileID: 19131714}
-    - target: {fileID: 11453402, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCancel
-      value: 
-      objectReference: {fileID: 1142447627}
-    - target: {fileID: 11495198, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mapGetLabel
-      value: 
-      objectReference: {fileID: 74617300}
-    - target: {fileID: 11431836, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: croquetteLabel
-      value: 
-      objectReference: {fileID: 191015918}
-    - target: {fileID: 11428874, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: lightGetLabel
-      value: 
-      objectReference: {fileID: 1226831042}
-    - target: {fileID: 11441474, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzCamGoal
-      value: 
-      objectReference: {fileID: 1248166415}
-    - target: {fileID: 11422412, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzCamMap
-      value: 
-      objectReference: {fileID: 2009974602}
-    - target: {fileID: 11415060, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzCamPlayer
-      value: 
-      objectReference: {fileID: 2010794434}
-    - target: {fileID: 11454126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: dirLightGoal
-      value: 
-      objectReference: {fileID: 486721535}
-    - target: {fileID: 11497138, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: dirLightMap
-      value: 
-      objectReference: {fileID: 453251699}
-    - target: {fileID: 11449228, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: dirLightMz
-      value: 
-      objectReference: {fileID: 160523127}
-    - target: {fileID: 11411752, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzGiveUpText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11421928, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzFailureText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11485036, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzTimeUpText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11403992, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzGoalText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11417712, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzClearText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11497396, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzReadyText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11457100, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzIntroText
-      value: 
-      objectReference: {fileID: 1627323118}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &19131714 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 159420, guid: f7e9ac44cd4574a5aa21250ab25aaae8, type: 2}
@@ -1104,49 +922,49 @@ Transform:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11409260, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: 1d4eb3e397ed34fe297509e3eb3faf23, type: 3}
 --- !u!114 &723956732 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11437476, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: 0ccc18df73c04494a822217f5eff6e44, type: 3}
 --- !u!114 &723956733 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11428144, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: ac3203d97d84b41d493d1582dbbf5554, type: 3}
 --- !u!114 &723956734 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11452158, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: efd2d2c9d3f7d44b89a308ca32f93cdc, type: 3}
 --- !u!114 &723956735 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11412056, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: eec1bec6779d94a12b5cd6c8b2ef3a70, type: 3}
 --- !u!114 &723956736 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11424126, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: 80c3512d8c9974ff1b584d63c9187206, type: 3}
 --- !u!114 &723956737 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11469910, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: 2925297125a2b40a59c6813b3ff81380, type: 3}
 --- !u!114 &723956738 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11453402, guid: 158bcc6e81c994141ba32ed9cc3e2904,
     type: 2}
-  m_PrefabInternal: {fileID: 13029257}
+  m_PrefabInternal: {fileID: 1450413486}
   m_Script: {fileID: 11500000, guid: bf3d665ef4de645f4bf2b3da617fa053, type: 3}
 --- !u!1 &742880317
 GameObject:
@@ -1897,6 +1715,196 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 164354, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
   m_PrefabInternal: {fileID: 1771974092}
+--- !u!1001 &1450413486
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423488, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405382, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: spotCroquette
+      value: 
+      objectReference: {fileID: 1222776042}
+    - target: {fileID: 11481042, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: spotLight
+      value: 
+      objectReference: {fileID: 1015388377}
+    - target: {fileID: 11457100, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzIntroText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11497396, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzReadyText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11417712, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzClearText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11403992, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzGoalText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11485036, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzTimeUpText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11421928, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzFailureText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11411752, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzGiveUpText
+      value: 
+      objectReference: {fileID: 1627323118}
+    - target: {fileID: 11449228, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: dirLightMz
+      value: 
+      objectReference: {fileID: 160523127}
+    - target: {fileID: 11497138, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: dirLightMap
+      value: 
+      objectReference: {fileID: 453251699}
+    - target: {fileID: 11454126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: dirLightGoal
+      value: 
+      objectReference: {fileID: 486721535}
+    - target: {fileID: 11415060, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzCamPlayer
+      value: 
+      objectReference: {fileID: 2010794434}
+    - target: {fileID: 11422412, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzCamMap
+      value: 
+      objectReference: {fileID: 2009974602}
+    - target: {fileID: 11441474, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzCamGoal
+      value: 
+      objectReference: {fileID: 1248166415}
+    - target: {fileID: 11428874, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: lightGetLabel
+      value: 
+      objectReference: {fileID: 1226831042}
+    - target: {fileID: 11431836, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: croquetteLabel
+      value: 
+      objectReference: {fileID: 191015918}
+    - target: {fileID: 11495198, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mapGetLabel
+      value: 
+      objectReference: {fileID: 74617300}
+    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzTimerText
+      value: 
+      objectReference: {fileID: 655408161}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlF
+      value: 
+      objectReference: {fileID: 1466094888}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlB
+      value: 
+      objectReference: {fileID: 1007976874}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlL
+      value: 
+      objectReference: {fileID: 1873088496}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlR
+      value: 
+      objectReference: {fileID: 1463243810}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlFL
+      value: 
+      objectReference: {fileID: 854273758}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlFR
+      value: 
+      objectReference: {fileID: 934054367}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlBL
+      value: 
+      objectReference: {fileID: 406066143}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCtrlBR
+      value: 
+      objectReference: {fileID: 1980921204}
+    - target: {fileID: 11409260, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonGiveUp
+      value: 
+      objectReference: {fileID: 234070537}
+    - target: {fileID: 11437476, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonToTitle
+      value: 
+      objectReference: {fileID: 1384831892}
+    - target: {fileID: 11428144, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonToNextMz
+      value: 
+      objectReference: {fileID: 426693780}
+    - target: {fileID: 11452158, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonRestart
+      value: 
+      objectReference: {fileID: 2140622112}
+    - target: {fileID: 11412056, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonToMz
+      value: 
+      objectReference: {fileID: 1783922375}
+    - target: {fileID: 11424126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonMap
+      value: 
+      objectReference: {fileID: 1845907042}
+    - target: {fileID: 11469910, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonGameOver
+      value: 
+      objectReference: {fileID: 19131714}
+    - target: {fileID: 11453402, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCancel
+      value: 
+      objectReference: {fileID: 1142447627}
+    - target: {fileID: 11405510, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: defaultMzValue
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: timeLimit
+      value: 60
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1463243810 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 188498, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}

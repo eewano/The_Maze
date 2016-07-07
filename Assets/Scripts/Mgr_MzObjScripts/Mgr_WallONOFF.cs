@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class WallONOFFCtrl : MonoBehaviour {
+public class Mgr_WallONOFF : MonoBehaviour {
 
     private Mgr_WallGimmick01 mgrWallGimmick01;
     [SerializeField]
@@ -24,12 +24,10 @@ public class WallONOFFCtrl : MonoBehaviour {
         if (col.gameObject.tag == "Player") {
             if (wallONType == true)
             {
-                Debug.Log("WallOn");
                 this.wallAppearMode(this, EventArgs.Empty);
             }
             else if (wallONType == false)
             {
-                Debug.Log("WallOff");
                 this.wallHideMode(this, EventArgs.Empty);
             }
         }
