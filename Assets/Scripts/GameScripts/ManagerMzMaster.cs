@@ -10,6 +10,7 @@ public class ManagerMzMaster : MonoBehaviour {
     private GameObject playerGoal;
     [SerializeField]
     private GameObject mzCeiling;
+    private Mgr_EmyRobo mgrEmyRobo;
     private ManagerPlayerMaster managerPlayerMaster;
     private Manager_GameSE01 managerMzSE01;
     private Manager_GameSE02 managerMzSE02;
@@ -22,10 +23,6 @@ public class ManagerMzMaster : MonoBehaviour {
     private AudioSource mzBGM;
     private ImageFade imageFadeBlack;
     private Manager_DirLight managerDirLight;
-    private Manager_SpotLight managerSpotLight;
-
-    private bool getLight;
-    private bool getCroquette;
 
     private event EveHandMgrState mzEventREADY;
 
@@ -48,14 +45,6 @@ public class ManagerMzMaster : MonoBehaviour {
     private event EveHandMgrState mzEventGAMEOVER;
 
     private event EveHandMgrState mzEventEMPTY;
-
-    private event EveHandMgrState spotLightPLAYING;
-
-    private event EveHandMgrState spotCroqPLAYING;
-
-    private event EveHandMgrState spotLightMAP;
-
-    private event EveHandMgrState spotCroqMAP;
 
     private event EveHandMzTimer mzTimerStart;
 
@@ -95,12 +84,10 @@ public class ManagerMzMaster : MonoBehaviour {
         mzBGM = GameObject.Find("MzBGM").GetComponent<AudioSource>();
         imageFadeBlack = GameObject.Find("FadeBlack").GetComponent<ImageFade>();
         managerDirLight = GameObject.Find("Mgr_DirLight").GetComponent<Manager_DirLight>();
-        managerSpotLight = GameObject.Find("Mgr_SpotLight").GetComponent<Manager_SpotLight>();
+        mgrEmyRobo = GameObject.Find("Mgr_Enemy").GetComponent<Mgr_EmyRobo>();
     }
 
     void Start() {
-        getLight = false;
-        getCroquette = false;
 
         //DUMMYステート
         //READYステート
@@ -118,27 +105,32 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventPLAYING += new EveHandMgrState(managerMzText.EventPLAYING);
         mzEventPLAYING += new EveHandMgrState(managerDirLight.EventPLAYING);
         mzEventPLAYING += new EveHandMgrState(managerPlayerMaster.EventPLAYING);
+        mzEventPLAYING += new EveHandMgrState(mgrEmyRobo.EventPLAYING);
         //GIVEUPステート
         mzEventGIVEUP += new EveHandMgrState(managerMzButton.EventGIVEUP);
         mzEventGIVEUP += new EveHandMgrState(managerMzBtnCtrl.EventGIVEUP);
         mzEventGIVEUP += new EveHandMgrState(managerMzText.EventGIVEUP);
+        mzEventGIVEUP += new EveHandMgrState(mgrEmyRobo.EventGIVEUP);
         //MAPステート
         mzEventMAP += new EveHandMgrState(managerMzCam.EventMAP);
         mzEventMAP += new EveHandMgrState(managerMzButton.EventMAP);
         mzEventMAP += new EveHandMgrState(managerMzBtnCtrl.EventMAP);
         mzEventMAP += new EveHandMgrState(managerDirLight.EventMAP);
         mzEventMAP += new EveHandMgrState(managerPlayerMaster.EventMAP);
+        mzEventMAP += new EveHandMgrState(mgrEmyRobo.EventMAP);
         //TIMEUPステート
         mzEventTIMEUP += new EveHandMgrState(managerMzButton.EventTIMEUP);
         mzEventTIMEUP += new EveHandMgrState(managerMzBtnCtrl.EventTIMEUP);
         mzEventTIMEUP += new EveHandMgrState(managerMzText.EventTIMEUP);
         mzEventTIMEUP += new EveHandMgrState(managerMzLabel.EventTIMEUP);
         mzEventTIMEUP += new EveHandMgrState(managerMzSE01.EventTIMEUP);
+        mzEventTIMEUP += new EveHandMgrState(mgrEmyRobo.EventTIMEUP);
         //FAILUREステート
         mzEventFAILURE += new EveHandMgrState(managerMzButton.EventFAILURE);
         mzEventFAILURE += new EveHandMgrState(managerMzBtnCtrl.EventFAILURE);
         mzEventFAILURE += new EveHandMgrState(managerMzText.EventFAILURE);
         mzEventFAILURE += new EveHandMgrState(managerMzLabel.EventFAILURE);
+        mzEventFAILURE += new EveHandMgrState(mgrEmyRobo.EventFAILURE);
         //GOALステート
         mzEventGOAL += new EveHandMgrState(managerMzCam.EventGOAL);
         mzEventGOAL += new EveHandMgrState(managerMzButton.EventGOAL);
@@ -148,6 +140,7 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventGOAL += new EveHandMgrState(managerMzSE02.EventGOAL);
         mzEventGOAL += new EveHandMgrState(managerDirLight.EventGOAL);
         mzEventGOAL += new EveHandMgrState(managerPlayerMaster.EventGOAL);
+        mzEventGOAL += new EveHandMgrState(mgrEmyRobo.EventGOAL);
         //CLEARステート
         mzEventCLEAR += new EveHandMgrState(managerMzButton.EventCLEAR);
         mzEventCLEAR += new EveHandMgrState(managerMzText.EventCLEAR);
@@ -155,6 +148,7 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventGAMEOVER += new EveHandMgrState(managerMzButton.EventGAMEOVER);
         mzEventGAMEOVER += new EveHandMgrState(managerMzText.EventGAMEOVER);
         mzEventGAMEOVER += new EveHandMgrState(managerMzLabel.EventGAMEOVER);
+        mzEventGAMEOVER += new EveHandMgrState(mgrEmyRobo.EventGAMEOVER);
 
         mzEventGAMEOVER += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //EMPTYステート
@@ -162,6 +156,7 @@ public class ManagerMzMaster : MonoBehaviour {
         mzEventEMPTY += new EveHandMgrState(managerMzButton.EventEMPTY);
         mzEventEMPTY += new EveHandMgrState(managerMzBtnCtrl.EventEMPTY);
         mzEventEMPTY += new EveHandMgrState(managerMzText.EventEMPTY);
+        mzEventEMPTY += new EveHandMgrState(mgrEmyRobo.EventEMPTY);
 
         mzEventEMPTY += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //タイマーの処理
@@ -170,12 +165,6 @@ public class ManagerMzMaster : MonoBehaviour {
         //プレイヤー操作のOnOff
         playerMoveOn += new EveHandToPlayer(managerPlayerMaster.PlayerCtrlOn);
         playerMoveOff += new EveHandToPlayer(managerPlayerMaster.PlayerCtrlOff);
-        //マップ時のアイテム表示
-        spotLightPLAYING += new EveHandMgrState(managerSpotLight.EventPLAYINGSpotLight);
-        spotCroqPLAYING = new EveHandMgrState(managerSpotLight.EventPLAYINGSpotCroq);
-
-        spotLightMAP += new EveHandMgrState(managerSpotLight.EventMAPSpotLight);
-        spotCroqMAP = new EveHandMgrState(managerSpotLight.EventMAPSpotCroq);
 
         Dummy();
     }
@@ -244,14 +233,6 @@ public class ManagerMzMaster : MonoBehaviour {
         this.mzEventPLAYING(this, EventArgs.Empty);
         this.mzTimerStart(this, EventArgs.Empty);
         this.playerMoveOn(this, EventArgs.Empty);
-        if (getLight == false)
-        {
-            this.spotLightPLAYING(this, EventArgs.Empty);
-        }
-        if (getCroquette == false)
-        {
-            this.spotCroqPLAYING(this, EventArgs.Empty);
-        }
         mzCeiling.gameObject.SetActive(true);
     }
 
@@ -267,14 +248,6 @@ public class ManagerMzMaster : MonoBehaviour {
         this.mzEventMAP(this, EventArgs.Empty);
         this.mzTimerStop(this, EventArgs.Empty);
         this.playerMoveOff(this, EventArgs.Empty);
-        if (getLight == false)
-        {
-            this.spotLightMAP(this, EventArgs.Empty);
-        }
-        if (getCroquette == false)
-        {
-            this.spotCroqMAP(this, EventArgs.Empty);
-        }
         mzCeiling.gameObject.SetActive(false);
     }
 
@@ -344,14 +317,6 @@ public class ManagerMzMaster : MonoBehaviour {
 
     public void ToGOALState(object o, EventArgs e) {
         Goal();
-    }
-
-    public void SpotLightTrue(object o, EventArgs e) {
-        getLight = true;
-    }
-
-    public void SpotCroqTrue(object o, EventArgs e) {
-        getCroquette = true;
     }
 
     public void RestartIMethod(object o, EventArgs e) {

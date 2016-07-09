@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Mgr_ItemCroquetteMz00 : MonoBehaviour {
 
-    private ManagerMzMaster managerMzMaster;
     private ManagerPlayerMaster managerPlayerMaster;
     private Mgr_MzLabelCroquetteGet mgrMzLabelCroquetteGet;
     private Mgr_Mz00ItemGet mgrMz00ItemGet;
@@ -15,7 +14,6 @@ public class Mgr_ItemCroquetteMz00 : MonoBehaviour {
     private event EveHandToPlayer mz00PlayerGetCroquette;
 
     void Awake() {
-        managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
         managerPlayerMaster = GameObject.Find("ManagerPlayerMaster").GetComponent<ManagerPlayerMaster>();
         mgrMzLabelCroquetteGet = GameObject.Find("Mgr_MzLabel").GetComponent<Mgr_MzLabelCroquetteGet>();
         mgrMz00ItemGet = GameObject.Find("Mgr_Mz00").GetComponent<Mgr_Mz00ItemGet>();
@@ -24,7 +22,6 @@ public class Mgr_ItemCroquetteMz00 : MonoBehaviour {
     }
 
     void Start() {
-        flagGetCroquetteMz00 += new EveHandFlagItem(managerMzMaster.SpotCroqTrue);
         flagGetCroquetteMz00 += new EveHandFlagItem(mgrMzLabelCroquetteGet.AppearLabelEvent);
         flagGetCroquetteMz00 += new EveHandFlagItem(mgrGameSE01.SEGetCroquetteEvent);
         flagGetCroquetteMz00 += new EveHandFlagItem(mgrMz00ItemGet.Mz00CroquetteGet);

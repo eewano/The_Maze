@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
 [System.Serializable]
 public class MoveArea {
@@ -8,6 +8,23 @@ public class MoveArea {
 
 public class EnemyMove : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject target;
+    [SerializeField]
+    private MoveArea moveArea;
+    [SerializeField]
+    private float chasingSpeed;
+    [SerializeField]
+    private AudioSource sERoboMove;
+    private float agentToPatrolDistance;
+    private float agentToTargetDistance;
+    private NavMeshAgent navMeshAgent;
+
+    Vector3 pos;
+    Vector3 targetPos;
+
+    private bool moveON = false;
+
     enum EnemyState {
         PATROL,
         CHASE
@@ -15,36 +32,17 @@ public class EnemyMove : MonoBehaviour {
 
     private EnemyState state;
 
-    [SerializeField]
-    private GameObject target;
-    [SerializeField]
-    private MoveArea moveArea;
-    [SerializeField]
-    private float chasingSpeed;
-
-    private NavMeshAgent navMeshAgent;
-
-    Vector3 pos;
-    Vector3 targetPos;
-
-    private float agentToPatrolDistance;
-    private float agentToTargetDistance;
-
-    [SerializeField]
-    private AudioClip EnemyMoveSE;
-    private AudioSource audio_source;
-
     void Start() {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        audio_source = gameObject.GetComponent<AudioSource>();
-        audio_source.clip = EnemyMoveSE;
         EnemyPatrol();
-        audio_source.Play();
     }
 
     void Update() {
+        if (moveON == true)
+        {
             UpdateControl();
             UpdateState();
+        }
     }
 
     void UpdateControl() {
@@ -61,21 +59,21 @@ public class EnemyMove : MonoBehaviour {
         switch (state) {
             case EnemyState.PATROL:
                 //プレイヤーとAgentの距離が7.0f以下になると追跡開始
-                if (agentToTargetDistance <= 7.0f) {
-                    //Debug.Log ("Chasing");
+                if (agentToTargetDistance <= 7.0f)
+                {
                     EnemyChasing();
                 }
                     //Agentと目的地の距離が4.0f未満になると次の目的地をランダム指定
-                else if (agentToPatrolDistance < 4.0f) {
-                    //Debug.Log ("Patrol");
+                else if (agentToPatrolDistance < 4.0f)
+                {
                     EnemyPatrol();
                 }
                 break;
 
             case EnemyState.CHASE:
                 EnemyChasing();
-                if (agentToTargetDistance > 7.0f) {
-                    //Debug.Log ("ChangePatrol");
+                if (agentToTargetDistance > 7.0f)
+                {
                     EnemyPatrol();
                 }
                 break;
@@ -85,9 +83,9 @@ public class EnemyMove : MonoBehaviour {
     void EnemyPatrol() {
         state = EnemyState.PATROL;
 
-        var x = Random.Range(moveArea.xMin, moveArea.xMax);
-        var z = Random.Range(moveArea.zMin, moveArea.zMax);
-        pos = new Vector3(x, 0, z);
+        var x = UnityEngine.Random.Range(moveArea.xMin, moveArea.xMax);
+        var z = UnityEngine.Random.Range(moveArea.zMin, moveArea.zMax);
+        pos = new Vector3(x, 0.0f, z);
         navMeshAgent.SetDestination(pos);
     }
 
@@ -99,13 +97,13 @@ public class EnemyMove : MonoBehaviour {
         navMeshAgent.SetDestination(targetPos);
     }
 
-    public void EnemySEStop()
-    {
-        audio_source.Stop();
+    public void MovingStart(object o, EventArgs e) {
+        moveON = true;
+        sERoboMove.Play();
     }
 
-    public void EnemySEPlay()
-    {
-        audio_source.Play();
+    public void MovingStop(object o, EventArgs e) {
+        moveON = false;
+        sERoboMove.Stop();
     }
 }

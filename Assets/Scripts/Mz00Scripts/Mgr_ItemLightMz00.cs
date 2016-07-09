@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Mgr_ItemLightMz00 : MonoBehaviour {
 
-    private ManagerMzMaster managerMzMaster;
     private Manager_DirLight managerDirLight;
     private Mgr_MzLabelLightGet mgrMzLabelLightGet;
     private Mgr_Mz00ItemGet mgrMz00ItemGet;
@@ -13,7 +12,6 @@ public class Mgr_ItemLightMz00 : MonoBehaviour {
     private event EveHandFlagItem flagGetLightMz00;
 
     void Awake() {
-        managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
         mgrMzLabelLightGet = GameObject.Find("Mgr_MzLabel").GetComponent<Mgr_MzLabelLightGet>();
         mgrMz00ItemGet = GameObject.Find("Mgr_Mz00").GetComponent<Mgr_Mz00ItemGet>();
         mgrBtnDeleteMz00 = GameObject.Find("Mgr_Mz00").GetComponent<Mgr_BtnDeleteMz00>();
@@ -22,7 +20,6 @@ public class Mgr_ItemLightMz00 : MonoBehaviour {
     }
 
     void Start() {
-        flagGetLightMz00 += new EveHandFlagItem(managerMzMaster.SpotLightTrue);
         flagGetLightMz00 += new EveHandFlagItem(mgrMzLabelLightGet.AppearLabelEvent);
         flagGetLightMz00 += new EveHandFlagItem(mgrGameSE01.SEGetLightEvent);
         flagGetLightMz00 += new EveHandFlagItem(mgrMz00ItemGet.Mz00LightGet);
