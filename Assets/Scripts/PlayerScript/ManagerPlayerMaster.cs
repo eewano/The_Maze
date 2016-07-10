@@ -10,6 +10,9 @@ public class ManagerPlayerMaster : MonoBehaviour {
     private Renderer playerRenderer;
     private Mgr_PlayerBtnCtrl mgrPlayerBtnCtrl;
     private Mgr_PlayerKeyCtrl mgrPlayerKeyCtrl;
+    private Mgr_FadeImage mgrFadeImage;
+    private Mgr_GameSE02 mgrGameSE02;
+    private Mgr_MzTextTimer mgrMzTextTimer;
 
     private event EveHandToPlayer playerCtrlOn;
 
@@ -25,11 +28,26 @@ public class ManagerPlayerMaster : MonoBehaviour {
 
     private event EveHandPlayerValue playerKeyRotSpeedUp;
 
+    private event EveHandPLAYSE caughtByEnemySE;
+
+    private event EveHandFadeImage toStartFadeWhite;
+
+    private event EveHandFadeImage toReturnFadeWhite;
+
+    private event EveHandMzTimer stopMzTimer;
+
+    private event EveHandMzTimer startMzTimer;
+
+    private event EveHandMzTimeUpDown reduseMzTimer;
+
     void Awake() {
         mgrPlayerBtnCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerBtnCtrl>();
         mgrPlayerKeyCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerKeyCtrl>();
         playerRenderer = GameObject.FindWithTag("Player").GetComponent<MeshRenderer>();
         playerGoal = GameObject.Find("PlayerGoal");
+        mgrFadeImage = GameObject.Find("Mgr_FadeImage").GetComponent<Mgr_FadeImage>();
+        mgrGameSE02 = GameObject.Find("Mgr_GameSE02").GetComponent<Mgr_GameSE02>();
+        mgrMzTextTimer = GameObject.Find("Mgr_MzTimer").GetComponent<Mgr_MzTextTimer>();
     }
 
     void Start() {
@@ -47,6 +65,14 @@ public class ManagerPlayerMaster : MonoBehaviour {
         playerMaxRotSpeedUp += new EveHandPlayerValue(mgrPlayerBtnCtrl.PlayerMaxRotSpeedChange);
         playerKeySpeedUp += new EveHandPlayerValue(mgrPlayerKeyCtrl.PlayerKeySpeedChange);
         playerKeyRotSpeedUp += new EveHandPlayerValue(mgrPlayerKeyCtrl.PlayerKeyRotSpeedChange);
+
+        caughtByEnemySE += new EveHandPLAYSE(mgrGameSE02.SEEnemyTouch01Event);
+        toStartFadeWhite += new EveHandFadeImage(mgrFadeImage.StartFadeWhite);
+        toReturnFadeWhite += new EveHandFadeImage(mgrFadeImage.ReturnFadeWhite);
+
+        reduseMzTimer += new EveHandMzTimeUpDown(mgrMzTextTimer.MzTimerCountValue);
+        stopMzTimer += new EveHandMzTimer(mgrMzTextTimer.MzTimerStop);
+        startMzTimer += new EveHandMzTimer(mgrMzTextTimer.MzTimerStart);
     }
 
     private IEnumerator WarpToStart() {
@@ -83,5 +109,23 @@ public class ManagerPlayerMaster : MonoBehaviour {
     public void EventGOAL(object o, EventArgs e) {
         player.gameObject.SetActive(false);
         playerGoal.gameObject.SetActive(true);
+    }
+
+    public void CaughtByEmyRobo(object o, EventArgs e) {
+        this.playerCtrlOff(this, EventArgs.Empty);
+        this.caughtByEnemySE(this, EventArgs.Empty);
+        StartCoroutine(ReturnToStart());
+    }
+
+    IEnumerator ReturnToStart() {
+        this.stopMzTimer(this, EventArgs.Empty);
+        this.toStartFadeWhite(this, EventArgs.Empty);
+        yield return new WaitForSeconds(3.0f);
+        player.transform.position = new Vector3(-1.0f, 0.5f, -15.0f);
+        this.reduseMzTimer(this, -30);
+        this.toReturnFadeWhite(this, EventArgs.Empty);
+        yield return new WaitForSeconds(3.0f);
+        this.playerCtrlOn(this, EventArgs.Empty);
+        this.startMzTimer(this, EventArgs.Empty);
     }
 }

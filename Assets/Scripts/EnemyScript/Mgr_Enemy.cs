@@ -1,23 +1,23 @@
 ﻿using System;
 using UnityEngine;
 
-public class Mgr_EmyRobo : MonoBehaviour {
+public class Mgr_Enemy : MonoBehaviour {
 
     [SerializeField]
-    private EnemyMove enemyRobo01;
+    private EnemyRoboMove enemy01;
     [SerializeField]
-    private EnemyMove enemyRobo02;
+    private EnemyRoboMove enemy02;
 
     private event EveHandMgrState enemyMoveON;
 
     private event EveHandMgrState enemyMoveOFF;
 
     void Start() {
-        enemyMoveON += new EveHandMgrState(enemyRobo01.MovingStart);
-        enemyMoveON += new EveHandMgrState(enemyRobo02.MovingStart);
+        enemyMoveON += new EveHandMgrState(enemy01.MovingStart);
+        enemyMoveON += new EveHandMgrState(enemy02.MovingStart);
 
-        enemyMoveOFF += new EveHandMgrState(enemyRobo01.MovingStop);
-        enemyMoveOFF += new EveHandMgrState(enemyRobo02.MovingStop);
+        enemyMoveOFF += new EveHandMgrState(enemy01.MovingStop);
+        enemyMoveOFF += new EveHandMgrState(enemy02.MovingStop);
     }
 
     public void EventPLAYING(object o, EventArgs e) {

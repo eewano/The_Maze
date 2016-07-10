@@ -41,7 +41,7 @@ public class ImageFade : MonoBehaviour {
 
     public void hide() {
         LeanTween.cancel(this.rectTransform.gameObject);
-        LeanTween.alpha(this.rectTransform, 1.0f, this.durationTime).setEase(LeanTweenType.easeOutSine);
+        LeanTween.alpha(this.rectTransform, 2.5f, this.durationTime).setEase(LeanTweenType.easeOutSine);
     }
 
     public void activate() {

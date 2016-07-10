@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
@@ -6,7 +7,7 @@ public class MoveArea {
     public float xMin, xMax, zMin, zMax;
 }
 
-public class EnemyMove : MonoBehaviour {
+public class EnemyRoboMove : MonoBehaviour {
 
     [SerializeField]
     private GameObject target;
@@ -16,6 +17,7 @@ public class EnemyMove : MonoBehaviour {
     private float chasingSpeed;
     [SerializeField]
     private AudioSource sERoboMove;
+    private ManagerPlayerMaster managerPlayerMaster;
     private float agentToPatrolDistance;
     private float agentToTargetDistance;
     private NavMeshAgent navMeshAgent;
@@ -32,9 +34,16 @@ public class EnemyMove : MonoBehaviour {
 
     private EnemyState state;
 
+    private event EveHandToPlayer catchPlayer;
+
+    void Awake() {
+        managerPlayerMaster = GameObject.Find("ManagerPlayerMaster").GetComponent<ManagerPlayerMaster>();
+    }
+
     void Start() {
         navMeshAgent = GetComponent<NavMeshAgent>();
         EnemyPatrol();
+        catchPlayer = new EveHandToPlayer(managerPlayerMaster.CaughtByEmyRobo);
     }
 
     void Update() {
@@ -82,7 +91,6 @@ public class EnemyMove : MonoBehaviour {
 
     void EnemyPatrol() {
         state = EnemyState.PATROL;
-
         var x = UnityEngine.Random.Range(moveArea.xMin, moveArea.xMax);
         var z = UnityEngine.Random.Range(moveArea.zMin, moveArea.zMax);
         pos = new Vector3(x, 0.0f, z);
@@ -91,7 +99,6 @@ public class EnemyMove : MonoBehaviour {
 
     void EnemyChasing() {
         state = EnemyState.CHASE;
-
         navMeshAgent.speed = chasingSpeed;
         targetPos = target.transform.position;
         navMeshAgent.SetDestination(targetPos);
@@ -105,5 +112,19 @@ public class EnemyMove : MonoBehaviour {
     public void MovingStop(object o, EventArgs e) {
         moveON = false;
         sERoboMove.Stop();
+    }
+
+    void OnTriggerEnter(Collider hit) {
+        if (hit.gameObject.tag == "Player")
+        {
+            this.catchPlayer(this, EventArgs.Empty);
+            sERoboMove.Stop();
+            StartCoroutine(EmySEMoveStop());
+        }
+    }
+
+    IEnumerator EmySEMoveStop() {
+        yield return new WaitForSeconds(6.0f);
+        sERoboMove.Play();
     }
 }

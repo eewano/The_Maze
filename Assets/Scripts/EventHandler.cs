@@ -28,3 +28,5 @@ public delegate void EveHandDirLight(object sender, float i);
 public delegate void EveHandSpotLight(object sender, float i);
 //出現壁ギミックのイベント
 public delegate void EveHandWallGimmick01(object sender, EventArgs e);
+//フェード関連のイベント
+public delegate void EveHandFadeImage(object sender, EventArgs e);
