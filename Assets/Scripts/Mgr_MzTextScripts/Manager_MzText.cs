@@ -12,7 +12,6 @@ public class Manager_MzText : MonoBehaviour {
     private Mgr_MzTextIntro mgrMzTextIntro;
     private Mgr_MzTextReady mgrMzTextReady;
     private Mgr_MzTextTimeUp mgrMzTextTimeUp;
-//    private Mgr_MzTextTimer mgrMzTextTimer;
 
     private event EveHandMgrState mzTextDUMMY;
 
@@ -48,22 +47,18 @@ public class Manager_MzText : MonoBehaviour {
         mgrMzTextIntro = GameObject.Find("Mgr_MzText").GetComponent<Mgr_MzTextIntro>();
         mgrMzTextReady = GameObject.Find("Mgr_MzText").GetComponent<Mgr_MzTextReady>();
         mgrMzTextTimeUp = GameObject.Find("Mgr_MzText").GetComponent<Mgr_MzTextTimeUp>();
-//        mgrMzTextTimer = GameObject.Find("Mgr_MzTimer").GetComponent<Mgr_MzTextTimer>();
     }
 
     void Start() {
         //DUMMYステート
-//        mzTextDUMMY += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //READYステート
         mzTextREADY += new EveHandMgrState(mgrMzTextIntro.AppearTextEvent);
-//        mzTextREADY += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //READYGOステート
         mzTextREADYGO += new EveHandMgrState(mgrMzTextIntro.HideTextEvent);
         mzTextREADYGO += new EveHandMgrState(mgrMzTextReady.AppearTextEvent);
         //PLAYINGステート
         mzTextPLAYING += new EveHandMgrState(mgrMzTextReady.HideTextEvent);
         mzTextPLAYING += new EveHandMgrState(mgrMzTextGiveUp.HideTextEvent);
-//        mzTextPLAYING += new EveHandMgrState(mgrMzTextTimer.AppearTextEvent);
         //GIVEUPステート
         mzTextGIVEUP += new EveHandMgrState(mgrMzTextGiveUp.AppearTextEvent);
         //MAPステート
@@ -76,12 +71,10 @@ public class Manager_MzText : MonoBehaviour {
         mzTextGOAL += new EveHandMgrState(mgrMzTextGoal.AppearTextEvent);
         //CLEARステート
         mzTextCLEAR += new EveHandMgrState(mgrMzTextGoal.HideTextEvent);
-//        mzTextCLEAR += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         mzTextCLEAR += new EveHandMgrState(mgrMzTextClear.AppearTextEvent);
         //GAMEOVERステート
         mzTextGAMEOVER += new EveHandMgrState(mgrMzTextGiveUp.HideTextEvent);
         mzTextGAMEOVER += new EveHandMgrState(mgrMzTextFailure.HideTextEvent);
-//        mzTextGAMEOVER += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //EMPTYステート
         mzTextEMPTY += new EveHandMgrState(mgrMzTextClear.HideTextEvent);
         mzTextEMPTY += new EveHandMgrState(mgrMzTextFailure.HideTextEvent);
@@ -90,10 +83,8 @@ public class Manager_MzText : MonoBehaviour {
         mzTextEMPTY += new EveHandMgrState(mgrMzTextIntro.HideTextEvent);
         mzTextEMPTY += new EveHandMgrState(mgrMzTextReady.HideTextEvent);
         mzTextEMPTY += new EveHandMgrState(mgrMzTextTimeUp.HideTextEvent);
-//        mzTextEMPTY += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
         //OTHER
         mzTextOTHER += new EveHandMgrState(mgrMzTextClear.HideTextEvent);
-//        mzTextOTHER += new EveHandMgrState(mgrMzTextTimer.HideTextEvent);
     }
 
     public void EventDUMMY(object o, EventArgs e) {

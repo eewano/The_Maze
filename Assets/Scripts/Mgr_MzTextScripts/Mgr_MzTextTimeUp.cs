@@ -1,15 +1,13 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Mgr_MzTextTimeUp : MonoBehaviour {
 
-    [SerializeField]
     private Text mzTimeUpText;
 
-    void Start() {
-        mzTimeUpText.text = "";
+    void Awake() {
+        mzTimeUpText = GameObject.Find("MzTextMain").GetComponent<Text>();
     }
 
     public void AppearTextEvent(object o, EventArgs e) {

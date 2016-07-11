@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Mgr_MzTextReady : MonoBehaviour {
 
-    [SerializeField]
     private Text mzReadyText;
 
-    void Start() {
-        mzReadyText.text = "";
+    void Awake() {
+        mzReadyText = GameObject.Find("MzTextMain").GetComponent<Text>();
     }
 
     public void AppearTextEvent(object o, EventArgs e) {

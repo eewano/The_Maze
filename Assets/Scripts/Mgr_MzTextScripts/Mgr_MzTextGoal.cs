@@ -1,15 +1,13 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Mgr_MzTextGoal : MonoBehaviour {
 
-    [SerializeField]
     private Text mzGoalText;
 
-    void Start() {
-        mzGoalText.text = "";
+    void Awake() {
+        mzGoalText = GameObject.Find("MzTextMain").GetComponent<Text>();
     }
 
     public void AppearTextEvent(object o, EventArgs e) {

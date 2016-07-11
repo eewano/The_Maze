@@ -3,79 +3,108 @@ using UnityEngine;
 
 public class Mgr_PlayerBtnCtrl : MonoBehaviour {
 
+    [SerializeField]
+    private float walkSEInterval;
+    private float count = 0;
+    private CameraSEWalk cameraWalking;
+
     public float
     maxFSpeed, maxBSpeed, maxRotSpeed, rotSpeed;
     private float
     curSpeed, curRotSpeed, playerSpeed, playerRotSpeed;
 
     private bool
-    btnCtrl, ctrlF, ctrlB, ctrlL, ctrlR, ctrlFL, ctrlFR, ctrlBL, ctrlBR;
+    btnCtrl, ctrlF, ctrlB, ctrlL, ctrlR, ctrlFL, ctrlFR, ctrlBL, ctrlBR, anyBtnPush;
+
+    private event EveHandToPlayer cameraToWalk;
 
     public void PushBtnFwdDown() {
+        anyBtnPush = true;
         ctrlF = true;
     }
 
     public void PushBtnFwdUp() {
+        anyBtnPush = false;
         ctrlF = false;
     }
 
     public void PushBtnBwdDown() {
+        anyBtnPush = true;
         ctrlB = true;
     }
 
     public void PushBtnBwdUp() {
+        anyBtnPush = false;
         ctrlB = false;
     }
 
     public void PushBtnLeftDown() {
+        anyBtnPush = true;
         ctrlL = true;
     }
 
     public void PushBtnLeftUp() {
+        anyBtnPush = false;
         ctrlL = false;
     }
 
     public void PushBtnRightDown() {
+        anyBtnPush = true;
         ctrlR = true;
     }
 
     public void PushBtnRightUp() {
+        anyBtnPush = false;
         ctrlR = false;
     }
 
     public void PushBtnFLDown() {
+        anyBtnPush = true;
         ctrlFL = true;
     }
 
     public void PushBtnFLUp() {
+        anyBtnPush = false;
         ctrlFL = false;
     }
 
     public void PushBtnFRDown() {
+        anyBtnPush = true;
         ctrlFR = true;
     }
 
     public void PushBtnFRUp() {
+        anyBtnPush = false;
         ctrlFR = false;
     }
 
     public void PushBtnBLDown() {
+        anyBtnPush = true;
         ctrlBL = true;
     }
 
     public void PushBtnBLUp() {
+        anyBtnPush = false;
         ctrlBL = false;
     }
 
     public void PushBtnBRDown() {
+        anyBtnPush = true;
         ctrlBR = true;
     }
 
     public void PushBtnBRUp() {
+        anyBtnPush = false;
         ctrlBR = false;
     }
 
+    void Awake() {
+        cameraWalking = GameObject.Find("MzCamPlayer").GetComponent<CameraSEWalk>();
+    }
+
     void Start() {
+        cameraToWalk = new EveHandToPlayer(cameraWalking.StartWalking);
+
         btnCtrl = false;
         ctrlF = false;
         ctrlB = false;
@@ -85,27 +114,59 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
         ctrlFR = false;
         ctrlBL = false;
         ctrlBR = false;
+        anyBtnPush = false;
     }
 
     void Update() {
-        if (btnCtrl == true) {
-            if (ctrlF == true) {
-                MoveF();
-            } else if (ctrlB == true) {
-                MoveB();
-            } else if (ctrlL == true) {
-                RotateL();
-            } else if (ctrlR == true) {
-                RotateR();
-            } else if (ctrlFL == true) {
-                MoveRotFL();
-            } else if (ctrlFR == true) {
-                MoveRotFR();
-            } else if (ctrlBL == true) {
-                MoveRotBL();
-            } else if (ctrlBR == true) {
-                MoveRotBR();
-            } else {
+        if (btnCtrl == true)
+        {
+            if (anyBtnPush == true)
+            {
+                if (ctrlF == true)
+                {
+                    MoveF();
+                }
+                else if (ctrlB == true)
+                {
+                    MoveB();
+                }
+                else if (ctrlL == true)
+                {
+                    RotateL();
+                }
+                else if (ctrlR == true)
+                {
+                    RotateR();
+                }
+                else if (ctrlFL == true)
+                {
+                    MoveRotFL();
+                }
+                else if (ctrlFR == true)
+                {
+                    MoveRotFR();
+                }
+                else if (ctrlBL == true)
+                {
+                    MoveRotBL();
+                }
+                else if (ctrlBR == true)
+                {
+                    MoveRotBR();
+                }
+
+                if (playerSpeed == maxFSpeed)
+                {
+                    if (walkSEInterval < count)
+                    {
+                        this.cameraToWalk(this, EventArgs.Empty);
+                        count = 0;
+                    }
+                }
+                count += 1 * Time.deltaTime;
+            }
+            else
+            {
                 playerSpeed = 0;
                 playerRotSpeed = 0;
             }
@@ -174,5 +235,9 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
 
     public void PlayerMaxRotSpeedChange(object o, float i) {
         maxRotSpeed += i;
+    }
+
+    public void PlayerBtnIntervalChange(object o, float i) {
+        walkSEInterval += i;
     }
 }

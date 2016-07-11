@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-public class ClashCamera : MonoBehaviour {
+public class CameraShaking : MonoBehaviour {
 
-    public void ClashCameraOn(object o, EventArgs e) {
+    public void CameraShakeOn(object o, EventArgs e) {
         GetComponent<Animator>().SetTrigger("Shake");
     }
 

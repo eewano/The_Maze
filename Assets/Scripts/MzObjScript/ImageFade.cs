@@ -35,13 +35,13 @@ public class ImageFade : MonoBehaviour {
         this.delayTime = _Delay;
     }
 
-    public void setDuration(float _Duration) {
-        this.durationTime = _Duration;
+    public void setDuration(float __duration) {
+        this.durationTime = __duration;
     }
 
     public void hide() {
         LeanTween.cancel(this.rectTransform.gameObject);
-        LeanTween.alpha(this.rectTransform, 2.5f, this.durationTime).setEase(LeanTweenType.easeOutSine);
+        LeanTween.alpha(this.rectTransform, 0.0f, this.durationTime).setEase(LeanTweenType.easeOutSine);
     }
 
     public void activate() {
@@ -56,7 +56,7 @@ public class ImageFade : MonoBehaviour {
         LeanTween.alpha(this.rectTransform, 0.4f, 0.2f).setEase(LeanTweenType.easeOutSine);
     }
 
-    public void blink(Color _Color, float _Duration = 1f) {
+    public void blink(Color __color, float __duration = 1f) {
         if (this.isBlinking) {
             return;
         }
@@ -64,15 +64,15 @@ public class ImageFade : MonoBehaviour {
         this.gameObject.transform.localScale = Vector3.one;
         this.gameObject.SetActive(true);
 
-        this.image.color = new Color(_Color.r, _Color.g, _Color.b, this.image.color.a);
+        this.image.color = new Color(__color.r, __color.g, __color.b, this.image.color.a);
 
         this.isBlinking = true;
-        LeanTween.alpha(this.rectTransform, 0.65f, _Duration)
+        LeanTween.alpha(this.rectTransform, 0.65f, __duration)
         .setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
-            LeanTween.alpha(this.rectTransform, 0.0f, _Duration)
+            LeanTween.alpha(this.rectTransform, 0.0f, __duration)
             .setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
                 this.isBlinking = false;
-                this.blink(_Color, _Duration);
+                this.blink(__color, __duration);
             });
         });
     }

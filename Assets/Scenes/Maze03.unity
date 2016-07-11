@@ -2171,6 +2171,14 @@ Prefab:
       propertyPath: mzIntroOutLine
       value: 
       objectReference: {fileID: 378740866}
+    - target: {fileID: 11420494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: imageFadeBlack
+      value: 
+      objectReference: {fileID: 957307951}
+    - target: {fileID: 11420494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: imageFadeWhite
+      value: 
+      objectReference: {fileID: 957307950}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
   m_IsPrefabParent: 0
@@ -2256,6 +2264,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd2c63074e11140549d7b486e2dc3283, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &957307950 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11468180, guid: dd2c63074e11140549d7b486e2dc3283,
+    type: 2}
+  m_PrefabInternal: {fileID: 957307949}
+  m_Script: {fileID: 11500000, guid: d8b21810681ca412bb65cd74546ec3e3, type: 3}
+--- !u!114 &957307951 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11482000, guid: dd2c63074e11140549d7b486e2dc3283,
+    type: 2}
+  m_PrefabInternal: {fileID: 957307949}
+  m_Script: {fileID: 11500000, guid: d8b21810681ca412bb65cd74546ec3e3, type: 3}
 --- !u!1 &962235161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +2951,10 @@ Prefab:
     - target: {fileID: 11435630, guid: f7e9ac44cd4574a5aa21250ab25aaae8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonToTitleClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439956, guid: f7e9ac44cd4574a5aa21250ab25aaae8, type: 2}
+      propertyPath: m_EffectColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7e9ac44cd4574a5aa21250ab25aaae8, type: 2}

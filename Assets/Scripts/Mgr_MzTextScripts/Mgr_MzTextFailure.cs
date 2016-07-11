@@ -1,15 +1,13 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Mgr_MzTextFailure : MonoBehaviour {
 
-    [SerializeField]
     private Text mzFailureText;
 
-    void Start() {
-        mzFailureText.text = "";
+    void Awake() {
+        mzFailureText = GameObject.Find("MzTextMain").GetComponent<Text>();
     }
 
     public void AppearTextEvent(object o, EventArgs e) {

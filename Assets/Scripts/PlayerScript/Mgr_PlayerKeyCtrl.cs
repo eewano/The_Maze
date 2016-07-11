@@ -1,14 +1,28 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Mgr_PlayerKeyCtrl : MonoBehaviour {
 
-    public float
-    keySpeed, keyRotSpeed;
+    [SerializeField]
+    private float keySpeed;
+    [SerializeField]
+    private float keyRotSpeed;
+    [SerializeField]
+    private float walkSEInterval;
+    private float count = 0;
+    private CameraSEWalk cameraWalking;
 
     private bool keyCtrl;
 
+    private event EveHandToPlayer cameraToWalk;
+
+    void Awake() {
+        cameraWalking = GameObject.Find("MzCamPlayer").GetComponent<CameraSEWalk>();
+    }
+
     void Start() {
+        cameraToWalk = new EveHandToPlayer(cameraWalking.StartWalking);
         keyCtrl = true;
     }
 
@@ -20,6 +34,19 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
             {
                 translation *= 0.5f;
             }
+            else if(translation > 0)
+            {
+                if(translation == keySpeed)
+                {
+                    if(walkSEInterval < count)
+                    {
+                        this.cameraToWalk(this, EventArgs.Empty);
+                        count = 0;
+                    }
+                }
+                count += 1 * Time.deltaTime;
+            }
+
             float rotation = Input.GetAxis("Horizontal") * keyRotSpeed;
             translation *= Time.deltaTime;
             rotation *= Time.deltaTime;
@@ -42,5 +69,9 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
 
     public void PlayerKeyRotSpeedChange(object o, float i) {
         keyRotSpeed += i;
+    }
+
+    public void PlayerKeyIntervalChange(object o, float i) {
+        walkSEInterval += i;
     }
 }

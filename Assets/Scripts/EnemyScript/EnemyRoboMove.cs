@@ -124,7 +124,7 @@ public class EnemyRoboMove : MonoBehaviour {
     }
 
     IEnumerator EmySEMoveStop() {
-        yield return new WaitForSeconds(6.0f);
+        yield return new WaitForSeconds(5.0f);
         sERoboMove.Play();
     }
 }

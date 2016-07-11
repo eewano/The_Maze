@@ -625,6 +625,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd2c63074e11140549d7b486e2dc3283, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &448242733 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11468180, guid: dd2c63074e11140549d7b486e2dc3283,
+    type: 2}
+  m_PrefabInternal: {fileID: 448242732}
+  m_Script: {fileID: 11500000, guid: d8b21810681ca412bb65cd74546ec3e3, type: 3}
+--- !u!114 &448242734 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11482000, guid: dd2c63074e11140549d7b486e2dc3283,
+    type: 2}
+  m_PrefabInternal: {fileID: 448242732}
+  m_Script: {fileID: 11500000, guid: d8b21810681ca412bb65cd74546ec3e3, type: 3}
 --- !u!108 &453251699 stripped
 Light:
   m_PrefabParentObject: {fileID: 10832872, guid: d2086a32490574e8f8f7fc87469b95c1,
@@ -778,12 +790,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1771974092}
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
---- !u!114 &655408161 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11433394, guid: f7e9ac44cd4574a5aa21250ab25aaae8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2023722587}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &698295643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,42 +1760,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 11405382, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: spotCroquette
+    - target: {fileID: 11420494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: imageFadeBlack
       value: 
-      objectReference: {fileID: 1222776042}
-    - target: {fileID: 11481042, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: spotLight
+      objectReference: {fileID: 448242734}
+    - target: {fileID: 11420494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: imageFadeWhite
       value: 
-      objectReference: {fileID: 1015388377}
-    - target: {fileID: 11457100, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzIntroText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11497396, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzReadyText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11417712, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzClearText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11403992, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzGoalText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11485036, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzTimeUpText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11421928, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzFailureText
-      value: 
-      objectReference: {fileID: 1627323118}
-    - target: {fileID: 11411752, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzGiveUpText
-      value: 
-      objectReference: {fileID: 1627323118}
+      objectReference: {fileID: 448242733}
     - target: {fileID: 11449228, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
       propertyPath: dirLightMz
       value: 
@@ -1826,10 +1804,6 @@ Prefab:
       propertyPath: mapGetLabel
       value: 
       objectReference: {fileID: 74617300}
-    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzTimerText
-      value: 
-      objectReference: {fileID: 655408161}
     - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
       propertyPath: buttonCtrlF
       value: 
@@ -1894,18 +1868,6 @@ Prefab:
       propertyPath: buttonCancel
       value: 
       objectReference: {fileID: 1142447627}
-    - target: {fileID: 11405510, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: defaultMzValue
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: timeLimit
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 11457100, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzIntroOutLine
-      value: 
-      objectReference: {fileID: 2023722588}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
   m_IsPrefabParent: 0
@@ -1963,12 +1925,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae4f7997218a84975ad3f836fb67fd5c, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1627323118 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11498708, guid: f7e9ac44cd4574a5aa21250ab25aaae8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2023722587}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1647182764
 Prefab:
   m_ObjectHideFlags: 0
@@ -2872,12 +2828,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7e9ac44cd4574a5aa21250ab25aaae8, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &2023722588 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11430352, guid: f7e9ac44cd4574a5aa21250ab25aaae8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2023722587}
-  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &2140622112 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 129770, guid: f7e9ac44cd4574a5aa21250ab25aaae8, type: 2}

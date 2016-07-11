@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Mgr_MzTextTimer : MonoBehaviour {
 
@@ -9,9 +10,9 @@ public class Mgr_MzTextTimer : MonoBehaviour {
     private Mgr_GameSE01 mgrGameSE01;
 
     [SerializeField]
-    private Text mzTimerText;
-    [SerializeField]
     private int timeLimit;
+    private Text mzTimerText;
+    private Outline mzTimerOutline;
     private float timeRemaining; //制限時間
     private float countDown = 0;
 
@@ -24,6 +25,8 @@ public class Mgr_MzTextTimer : MonoBehaviour {
     private event EveHandToPlayer playerCtrlOff;
 
     void Awake() {
+        mzTimerText = GameObject.Find("MzTimerText").GetComponent<Text>();
+        mzTimerOutline = GameObject.Find("MzTimerText").GetComponent<Outline>();
         managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
         managerPlayerMaster = GameObject.Find("ManagerPlayerMaster").GetComponent<ManagerPlayerMaster>();
         mgrGameSE01 = GameObject.Find("Mgr_GameSE01").GetComponent<Mgr_GameSE01>();
@@ -33,24 +36,33 @@ public class Mgr_MzTextTimer : MonoBehaviour {
         countDownSE += new EveHandPLAYSE(mgrGameSE01.SECountDownEvent);
         toTIMEUPState += new EveHandMoveState(managerMzMaster.ToTIMEUPState);
         playerCtrlOff += new EveHandToPlayer(managerPlayerMaster.PlayerCtrlOff);
-        ResetTimer();
+
+        mzTimerOutline.enabled = false;
         mzTimerText.text = "";
         timerStarted = false;
+        if (SceneManager.GetActiveScene().name == "Maze03")
+        {
+            mzTimerOutline.enabled = true;
+        }
+        ResetTimer();
     }
 
     void Update() {
         if (timerStarted == true) {
             //残り時間を1秒ずつ引いていく
             timeRemaining -= Time.deltaTime;
-            if (timeRemaining <= 10) {
+            if (timeRemaining <= 10)
+            {
                 mzTimerText.fontStyle = FontStyle.Bold;
                 mzTimerText.color = new Color32(255, 0, 0, 255);
-                if (timeRemaining <= 5) {
+                if (timeRemaining <= 5)
+                {
                     CountDown();
                 }
             }
             //残り時間が0以下になったらタイマーを停止する
-            if (timeRemaining <= 0) {
+            if (timeRemaining <= 0)
+            {
                 timeRemaining = 0;
                 this.toTIMEUPState(this, EventArgs.Empty);
                 this.playerCtrlOff(this, EventArgs.Empty);
@@ -82,6 +94,16 @@ public class Mgr_MzTextTimer : MonoBehaviour {
 
     public void MzTimerCountValue(object o, int i) {
         timeRemaining += i;
+        if (timeRemaining <= 0)
+        {
+            timeRemaining = 0;
+            if (timeRemaining <= 10)
+            {
+                mzTimerText.fontStyle = FontStyle.Bold;
+                mzTimerText.color = new Color32(255, 0, 0, 255);
+            }
+        }
+        mzTimerText.text = "残り時間 : " + (int)timeRemaining + " 秒";
     }
 
     void ResetTimer() {
@@ -91,7 +113,8 @@ public class Mgr_MzTextTimer : MonoBehaviour {
 
     void CountDown() {
         countDown -= Time.deltaTime;
-        if (countDown <= 0.0) {
+        if (countDown <= 0.0)
+        {
             this.countDownSE(this, EventArgs.Empty);
             countDown = 1.0f;
         }

@@ -1,15 +1,13 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Mgr_MzTextGiveUp : MonoBehaviour {
 
-    [SerializeField]
     private Text mzGiveUpText;
 
-    void Start() {
-        mzGiveUpText.text = "";
+    void Awake() {
+        mzGiveUpText = GameObject.Find("MzTextMain").GetComponent<Text>();
     }
 
     public void AppearTextEvent(object o, EventArgs e) {
