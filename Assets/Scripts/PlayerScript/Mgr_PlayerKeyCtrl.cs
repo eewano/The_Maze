@@ -9,20 +9,29 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
     [SerializeField]
     private float keyRotSpeed;
     [SerializeField]
-    private float walkSEInterval;
+    private float walkSEFwdInterval;
+    [SerializeField]
+    private float walkSEBackInterval;
     private float count = 0;
-    private CameraSEWalk cameraWalking;
+    private CameraWalking cameraWalking;
+    private CameraSEWalk cameraSEWalk;
 
     private bool keyCtrl;
 
     private event EveHandToPlayer cameraToWalk;
 
+    private event EveHandToPlayer cameraToBack;
+
     void Awake() {
-        cameraWalking = GameObject.Find("MzCamPlayer").GetComponent<CameraSEWalk>();
+        cameraWalking = GameObject.Find("CameraPosition").GetComponent<CameraWalking>();
+        cameraSEWalk = GameObject.Find("MzCamPlayer").GetComponent<CameraSEWalk>();
     }
 
     void Start() {
-        cameraToWalk = new EveHandToPlayer(cameraWalking.StartWalking);
+        cameraToWalk = new EveHandToPlayer(cameraWalking.PlayerWalking);
+
+        cameraToBack = new EveHandToPlayer(cameraSEWalk.StartWalkingSE);
+
         keyCtrl = true;
     }
 
@@ -32,20 +41,28 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
             float translation = Input.GetAxis("Vertical") * keySpeed;
             if (translation < 0)
             {
-                translation *= 0.5f;
-            }
-            else if(translation > 0)
-            {
-                if(translation == keySpeed)
+                translation *= 0.6f;
+                if (translation == -keySpeed * 0.6f)
                 {
-                    if(walkSEInterval < count)
+                    if (walkSEBackInterval < count)
+                    {
+                        this.cameraToBack(this, EventArgs.Empty);
+                        count = 0;
+                    }
+                }
+            }
+            else if (translation > 0)
+            {
+                if (translation == keySpeed)
+                {
+                    if (walkSEFwdInterval < count)
                     {
                         this.cameraToWalk(this, EventArgs.Empty);
                         count = 0;
                     }
                 }
-                count += 1 * Time.deltaTime;
             }
+            count += 1 * Time.deltaTime;
 
             float rotation = Input.GetAxis("Horizontal") * keyRotSpeed;
             translation *= Time.deltaTime;
@@ -72,6 +89,6 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
     }
 
     public void PlayerKeyIntervalChange(object o, float i) {
-        walkSEInterval += i;
+        walkSEFwdInterval += i;
     }
 }

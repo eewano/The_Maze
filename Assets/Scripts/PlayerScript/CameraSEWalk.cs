@@ -25,7 +25,7 @@ public class CameraSEWalk : MonoBehaviour {
         playSEMz03Walk += new EveHandPLAYSE(mgrGameSEFoot.SEMz00WalkEvent);
     }
 
-    public void StartWalking(object o, EventArgs e) {
+    public void StartWalkingSE(object o, EventArgs e) {
         if (SceneManager.GetActiveScene().name == "Maze00")
         {
             this.playSEMz00Walk(this, EventArgs.Empty);

@@ -100,7 +100,7 @@ public class ManagerPlayerMaster : MonoBehaviour {
         this.playerMaxRotSpeedUp(this, 0.2f);
         this.playerKeySpeedUp(this, 1.0f);
         this.playerKeyRotSpeedUp(this, 1);
-        this.playerIntarvalDown(this, -0.05f);
+        this.playerIntarvalDown(this, -0.03f);
     }
 
     public void EventPLAYING(object o, EventArgs e) {

@@ -4,9 +4,12 @@ using UnityEngine;
 public class Mgr_PlayerBtnCtrl : MonoBehaviour {
 
     [SerializeField]
-    private float walkSEInterval;
+    private float walkFwdSEInterval;
     private float count = 0;
-    private CameraSEWalk cameraWalking;
+    [SerializeField]
+    private float walkBackSEInterval;
+    private CameraWalking cameraWalking;
+    private CameraSEWalk cameraSEWalk;
 
     public float
     maxFSpeed, maxBSpeed, maxRotSpeed, rotSpeed;
@@ -17,6 +20,8 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
     btnCtrl, ctrlF, ctrlB, ctrlL, ctrlR, ctrlFL, ctrlFR, ctrlBL, ctrlBR, anyBtnPush;
 
     private event EveHandToPlayer cameraToWalk;
+
+    private event EveHandToPlayer cameraToBack;
 
     public void PushBtnFwdDown() {
         anyBtnPush = true;
@@ -99,11 +104,14 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
     }
 
     void Awake() {
-        cameraWalking = GameObject.Find("MzCamPlayer").GetComponent<CameraSEWalk>();
+        cameraWalking = GameObject.Find("CameraPosition").GetComponent<CameraWalking>();
+        cameraSEWalk = GameObject.Find("MzCamPlayer").GetComponent<CameraSEWalk>();
     }
 
     void Start() {
-        cameraToWalk = new EveHandToPlayer(cameraWalking.StartWalking);
+        cameraToWalk = new EveHandToPlayer(cameraWalking.PlayerWalking);
+
+        cameraToBack = new EveHandToPlayer(cameraSEWalk.StartWalkingSE);
 
         btnCtrl = false;
         ctrlF = false;
@@ -157,12 +165,22 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
 
                 if (playerSpeed == maxFSpeed)
                 {
-                    if (walkSEInterval < count)
+                    if (walkFwdSEInterval < count)
                     {
                         this.cameraToWalk(this, EventArgs.Empty);
                         count = 0;
                     }
                 }
+
+                if (playerSpeed == -maxBSpeed)
+                {
+                    if (walkBackSEInterval < count)
+                    {
+                        this.cameraToBack(this, EventArgs.Empty);
+                        count = 0;
+                    }
+                }
+
                 count += 1 * Time.deltaTime;
             }
             else
@@ -238,6 +256,6 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
     }
 
     public void PlayerBtnIntervalChange(object o, float i) {
-        walkSEInterval += i;
+        walkFwdSEInterval += i;
     }
 }

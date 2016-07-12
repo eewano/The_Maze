@@ -47,6 +47,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444624}
+  - 114: {fileID: 11451810}
   m_Layer: 0
   m_Name: CameraPosition
   m_TagString: Untagged
@@ -298,7 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keySpeed: 3
   keyRotSpeed: 75
-  walkSEInterval: 0.4
+  walkSEFwdInterval: 0.4
+  walkSEBackInterval: 0.5
 --- !u!114 &11423160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,6 +323,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dda7662f0c13488d8c777a764b47293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11451810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb762ce761d04a9faa5298b0dd129ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepHeight: 0.02
 --- !u!114 &11466850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,7 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e744572dbc9b584996aa4115f127786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSEInterval: 0.4
+  walkFwdSEInterval: 0.4
+  walkBackSEInterval: 0.5
   maxFSpeed: 3
   maxBSpeed: 2
   maxRotSpeed: 1
