@@ -1544,7 +1544,6 @@
         <module-layer name="Editor">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -1653,10 +1652,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -1713,6 +1714,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -1721,8 +1724,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -1803,7 +1804,6 @@
         <module-layer name="Linux (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -1912,10 +1912,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -1972,6 +1974,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -1980,8 +1984,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -2062,7 +2064,6 @@
         <module-layer name="Linux (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2171,10 +2172,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -2231,6 +2234,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -2239,8 +2244,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -2321,7 +2324,6 @@
         <module-layer name="Linux (any)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2430,10 +2432,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -2490,6 +2494,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -2498,8 +2504,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -2580,7 +2584,6 @@
         <module-layer name="MacOS (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2689,10 +2692,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -2749,6 +2754,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -2757,8 +2764,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -2839,7 +2844,6 @@
         <module-layer name="MacOS (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -2948,10 +2952,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -3008,6 +3014,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -3016,8 +3024,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -3098,7 +3104,6 @@
         <module-layer name="MacOS (any)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -3207,10 +3212,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -3267,6 +3274,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -3275,8 +3284,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -3357,7 +3364,6 @@
         <module-layer name="Windows (32 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -3466,10 +3472,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -3526,6 +3534,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -3534,8 +3544,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />
@@ -3616,7 +3624,6 @@
         <module-layer name="Windows (64 bit)">
           <extension id="unity3d-child" />
           <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasicCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/GeneralBasics2dCS.cs" />
@@ -3725,10 +3732,12 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMap.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DirLightMz.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallONOFF.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Manager_GameSE01.cs" />
@@ -3785,6 +3794,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzItemScripts/MapCrystalMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeadPoint.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/DeleteLock.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Door01Open.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FallModePoint.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/FootSound.cs" />
@@ -3793,8 +3804,6 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/GoalCameraMove.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/ImageFade.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/Mgr_WallGimmick01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/MzObjScript/SpawnPoint.cs.meta" />

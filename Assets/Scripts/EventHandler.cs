@@ -20,6 +20,8 @@ public delegate void EveHandToPlayer(object sender, EventArgs e);
 public delegate void EveHandWallGimmick01(object sender, EventArgs e);
 //フェード関連のイベント
 public delegate void EveHandFadeImage(object sender, EventArgs e);
+//鍵取得時のイベント
+public delegate void EveHandItemKey(object sender, EventArgs e);
 
 
 //各面選択用のイベント
@@ -32,3 +34,5 @@ public delegate void EveHandPlayerValue(object sender, float i);
 public delegate void EveHandDirLight(object sender, float i);
 //SpotLight用のイベント
 public delegate void EveHandSpotLight(object sender, float i);
+//鍵取得時のイベント
+public delegate void EveHandItemKeyValue(object sender, int i);
