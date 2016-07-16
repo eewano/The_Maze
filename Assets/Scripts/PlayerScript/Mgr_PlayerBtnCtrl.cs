@@ -113,7 +113,7 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
 
         cameraToBack = new EveHandToPlayer(cameraSEWalk.StartWalkingSE);
 
-        btnCtrl = false;
+        btnCtrl = true;
         ctrlF = false;
         ctrlB = false;
         ctrlL = false;

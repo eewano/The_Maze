@@ -31,7 +31,6 @@ public class Door01Open : MonoBehaviour {
         if (col.gameObject.tag == "Player" && mgrDoorObject.keyItemCount > 0)
         {
             this.unLockObj(this, EventArgs.Empty);
-            this.playSE(this, EventArgs.Empty);
             DoorOpen("DoorOpen");
         }
     }
@@ -40,5 +39,9 @@ public class Door01Open : MonoBehaviour {
         animator.SetTrigger(direction);
         animator.SetBool("DoorOpened", true);
         this.lostItemKey(this, -1);
+    }
+
+    void DoorOpenSE() {
+        this.playSE(this, EventArgs.Empty);
     }
 }
