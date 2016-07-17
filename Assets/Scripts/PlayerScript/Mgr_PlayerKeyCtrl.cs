@@ -32,7 +32,7 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
 
         cameraToBack = new EveHandToPlayer(cameraSEWalk.StartWalkingSE);
 
-        keyCtrl = false;
+        keyCtrl = true;
     }
 
     void Update() {

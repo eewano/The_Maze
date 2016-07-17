@@ -10,7 +10,7 @@ public class Door01Open : MonoBehaviour {
 
     private event EveHandPLAYSE playSE;
 
-    private event EveHandItemKey unLockObj;
+    private event EveHandItemKey unlockObj;
 
     private event EveHandItemKeyValue lostItemKey;
 
@@ -22,15 +22,16 @@ public class Door01Open : MonoBehaviour {
     }
 
     void Start() {
-        unLockObj += new EveHandItemKey(deleteLock.ObjectUnLock);
+        unlockObj += new EveHandItemKey(deleteLock.ObjectUnLock);
+        unlockObj += new EveHandItemKey(mgrGameSE02.SEDoor01UnlockEvent);
         playSE += new EveHandPLAYSE(mgrGameSE02.SEDoor01OpenEvent);
         lostItemKey += new EveHandItemKeyValue(mgrDoorObject.ChangeItemKeyCount);
     }
 
     void OnTriggerEnter(Collider col) {
-        if (col.gameObject.tag == "Player" && mgrDoorObject.keyItemCount > 0)
+        if (col.gameObject.tag == "Player" && mgrDoorObject.keyDoor01Count > 0)
         {
-            this.unLockObj(this, EventArgs.Empty);
+            this.unlockObj(this, EventArgs.Empty);
             DoorOpen("DoorOpen");
         }
     }

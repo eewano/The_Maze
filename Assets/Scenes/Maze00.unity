@@ -1868,6 +1868,10 @@ Prefab:
       propertyPath: buttonCancel
       value: 
       objectReference: {fileID: 1142447627}
+    - target: {fileID: 11405510, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: defaultMzValue
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
   m_IsPrefabParent: 0
@@ -2335,10 +2339,6 @@ Prefab:
     - target: {fileID: 490140, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409556, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1871b7df2e174467ba05eac3ca7d095a, type: 2}

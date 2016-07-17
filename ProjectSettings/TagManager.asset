@@ -8,28 +8,9 @@ TagManager:
   - Croquette
   - Map
   - Goal
-  - Warp01-01
-  - Warp01-02
-  - Warp01-03
-  - Warp01-04
-  - Warp01-05
-  - Warp02-01
-  - Warp02-02
-  - Warp02-03
-  - Warp02-04
-  - Warp02-05
-  - Warp03-01
-  - Warp03-02
-  - Warp03-03
-  - Warp03-04
-  - Warp03-05
   - Enemy
   - EnemyArea
-  - Warp01-06
-  - Warp01-07
-  - Warp01-08
-  - Warp01-09
-  - Warp01-10
+  - WallGimmick01
   layers:
   - Default
   - TransparentFX

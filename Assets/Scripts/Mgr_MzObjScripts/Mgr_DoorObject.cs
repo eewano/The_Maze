@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Mgr_DoorObject : MonoBehaviour {
 
-    public int keyItemCount;
+    public int keyDoor01Count;
 
     void Start() {
-        keyItemCount = 0;
+        keyDoor01Count = 0;
     }
 
     void Update() {
@@ -17,10 +17,10 @@ public class Mgr_DoorObject : MonoBehaviour {
     }
 
     public void ChangeItemKeyCount(object o, int i) {
-        keyItemCount += i;
+        keyDoor01Count += i;
     }
 
     void DebugGetItemKey() {
-        keyItemCount += 1;
+        keyDoor01Count += 1;
     }
 }
