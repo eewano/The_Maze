@@ -1598,6 +1598,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -1669,8 +1670,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -1860,6 +1861,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -1931,8 +1933,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -2122,6 +2124,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -2193,8 +2196,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -2384,6 +2387,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -2455,8 +2459,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -2646,6 +2650,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -2717,8 +2722,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -2908,6 +2913,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -2979,8 +2985,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -3170,6 +3176,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -3241,8 +3248,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -3432,6 +3439,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -3503,8 +3511,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />
@@ -3694,6 +3702,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/EventHandler.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerGameOver.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameOverScripts/ManagerMaking.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/GameScripts/ManagerMzMaster.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzBtnCtrlScripts/Manager_MzBtnCtrl.cs" />
@@ -3765,8 +3774,8 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE01.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs.meta" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs" />
-          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEFoot.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSEWalk.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Manager_MzText.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzTextScripts/Mgr_MzTextClear.cs" />

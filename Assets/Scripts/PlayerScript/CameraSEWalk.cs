@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CameraSEWalk : MonoBehaviour {
 
-    private Mgr_GameSEFoot mgrGameSEFoot;
+    private Mgr_GameSEWalk mgrGameSEWalk;
 
     private event EveHandPLAYSE playSEMz00Walk;
 
@@ -15,14 +15,14 @@ public class CameraSEWalk : MonoBehaviour {
     private event EveHandPLAYSE playSEMz03Walk;
 
     void Awake() {
-        mgrGameSEFoot = GameObject.Find("Mgr_GameSEFoot").GetComponent<Mgr_GameSEFoot>();
+        mgrGameSEWalk = GameObject.Find("Mgr_GameSEWalk").GetComponent<Mgr_GameSEWalk>();
     }
 
     void Start() {
-        playSEMz00Walk += new EveHandPLAYSE(mgrGameSEFoot.SEMz00WalkEvent);
-        playSEMz01Walk += new EveHandPLAYSE(mgrGameSEFoot.SEMz01WalkEvent);
-        playSEMz02Walk += new EveHandPLAYSE(mgrGameSEFoot.SEMz02WalkEvent);
-        playSEMz03Walk += new EveHandPLAYSE(mgrGameSEFoot.SEMz00WalkEvent);
+        playSEMz00Walk += new EveHandPLAYSE(mgrGameSEWalk.SEMz00WalkEvent);
+        playSEMz01Walk += new EveHandPLAYSE(mgrGameSEWalk.SEMz01WalkEvent);
+        playSEMz02Walk += new EveHandPLAYSE(mgrGameSEWalk.SEMz02WalkEvent);
+        playSEMz03Walk += new EveHandPLAYSE(mgrGameSEWalk.SEMz03WalkEvent);
     }
 
     public void StartWalkingSE(object o, EventArgs e) {

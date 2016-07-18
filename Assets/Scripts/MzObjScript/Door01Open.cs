@@ -8,6 +8,8 @@ public class Door01Open : MonoBehaviour {
     private Mgr_GameSE02 mgrGameSE02;
     private DeleteLock deleteLock;
 
+    private bool doorOpen = false;
+
     private event EveHandPLAYSE playSE;
 
     private event EveHandItemKey unlockObj;
@@ -29,7 +31,7 @@ public class Door01Open : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider col) {
-        if (col.gameObject.tag == "Player" && mgrDoorObject.keyDoor01Count > 0)
+        if (col.gameObject.tag == "Player" && doorOpen == false && mgrDoorObject.keyDoor01Count > 0)
         {
             this.unlockObj(this, EventArgs.Empty);
             DoorOpen("DoorOpen");
@@ -40,6 +42,7 @@ public class Door01Open : MonoBehaviour {
         animator.SetTrigger(direction);
         animator.SetBool("DoorOpened", true);
         this.lostItemKey(this, -1);
+        doorOpen = true;
     }
 
     void DoorOpenSE() {

@@ -12,7 +12,7 @@ public class Mgr_MzLabelMapGet : MonoBehaviour {
     }
 
     public void AppearLabelEvent(object o, EventArgs e) {
-        mapGetLabel.text = "マップ取得";
+        mapGetLabel.text = "マップOK";
     }
 
     public void HideLabelEvent(object o, EventArgs e) {

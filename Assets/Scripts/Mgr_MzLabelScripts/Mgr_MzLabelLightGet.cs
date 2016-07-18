@@ -12,7 +12,7 @@ public class Mgr_MzLabelLightGet : MonoBehaviour {
     }
 
     public void AppearLabelEvent(object o, EventArgs e) {
-        lightGetLabel.text = "ライト取得";
+        lightGetLabel.text = "ライトOK";
     }
 
     public void HideLabelEvent(object o, EventArgs e) {

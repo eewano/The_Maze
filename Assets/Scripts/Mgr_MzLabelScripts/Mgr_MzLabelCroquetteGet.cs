@@ -12,7 +12,7 @@ public class Mgr_MzLabelCroquetteGet : MonoBehaviour {
     }
 
     public void AppearLabelEvent(object o, EventArgs e) {
-        croquetteLabel.text = "コロッケ取得";
+        croquetteLabel.text = "コロッケOK";
     }
 
     public void HideLabelEvent(object o, EventArgs e) {
