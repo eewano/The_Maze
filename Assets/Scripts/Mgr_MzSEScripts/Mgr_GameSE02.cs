@@ -4,7 +4,7 @@ using UnityEngine;
 public class Mgr_GameSE02 : MonoBehaviour {
 
     private AudioSource
-    sEEnemyTouch01, sEGoal01, sEShutter01, sEDoor01Open, sEGetKeyToWood, sEDoor01Unlock;
+    sEEnemyTouch01, sEGoal01, sEShutter01, sEDoor01Open, sEGetKeyToWood, sEDoor01Unlock, sEWarp;
 
     void Awake() {
         AudioSource[] audioSources = GetComponents<AudioSource>();
@@ -14,6 +14,7 @@ public class Mgr_GameSE02 : MonoBehaviour {
         sEDoor01Open = audioSources[3];
         sEGetKeyToWood = audioSources[4];
         sEDoor01Unlock = audioSources[5];
+        sEWarp = audioSources[6];
     }
 
     public void SEEnemyTouch01Event(object o, EventArgs e) {
@@ -38,5 +39,9 @@ public class Mgr_GameSE02 : MonoBehaviour {
 
     public void SEDoor01UnlockEvent(object o, EventArgs e) {
         sEDoor01Unlock.PlayOneShot(sEDoor01Unlock.clip);
+    }
+
+    public void SEWarpEvent(object o, EventArgs e) {
+        sEWarp.PlayOneShot(sEWarp.clip);
     }
 }

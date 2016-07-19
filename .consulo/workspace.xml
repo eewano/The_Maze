@@ -154,7 +154,7 @@
     <file path="/WallONOFFCtrl.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467805087380" ignored="false" />
     <file path="/FallModePoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467806478199" ignored="false" />
     <file path="/Mgr_EmyRobo.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1467974077098" ignored="false" />
-    <file path="/Mgr_GameSE02.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468740592194" ignored="false" />
+    <file path="/Mgr_GameSE02.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468903396245" ignored="false" />
     <file path="/ClearFlagPractice.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468048818425" ignored="false" />
     <file path="/ManagerMz02Master.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468054972340" ignored="false" />
     <file path="/Mgr_Enemy.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468056320841" ignored="false" />
@@ -168,7 +168,7 @@
     <file path="/Mgr_GameSE03.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468223635845" ignored="false" />
     <file path="/Mgr_GameSEFoot.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468224005393" ignored="false" />
     <file path="/CameraSEWalk.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468830772197" ignored="false" />
-    <file path="/MzWarpPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468397218245" ignored="false" />
+    <file path="/MzWarpPoint.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468904724656" ignored="false" />
     <file path="/Mgr_PlayerWarp.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468397869497" ignored="false" />
     <file path="/Door01Open.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468833878947" ignored="false" />
     <file path="/Mgr_DoorObject.cs" changelist="299375d8-7347-458d-917b-8a3f8b3e16d1" time="1468740796474" ignored="false" />
@@ -201,21 +201,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="EventHandler.cs" pinned="false" current-in-tab="false">
+          <file leaf-file-name="EventHandler.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/EventHandler.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
                   <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Mgr_MzLabelMapGet.cs" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelMapGet.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -228,7 +218,7 @@
           <file leaf-file-name="Mgr_PlayerKeyCtrl.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerKeyCtrl.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
+                <state relative-caret-position="15">
                   <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
@@ -242,7 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mz00Scripts/Mz00ClearFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScript/EnemyMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameScripts/ManagerMz02Master.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScript/Mgr_Enemy.cs" />
@@ -282,7 +271,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerBtnCtrl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MzItemScripts/KeyToWoodMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzItemScripts/Mgr_ItemKeyToWood.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Maze02Build.txt" />
@@ -293,6 +281,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelCroquetteGet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelLightGet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelMapGet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MzObjScript/MzWarpPoint.cs" />
       </list>
     </option>
   </component>
@@ -644,10 +634,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="All" />
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -765,7 +755,7 @@
     <option name="totallyTimeSpent" value="71476000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="23" width="1920" height="1057" extended-state="1" />
+    <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15218537" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -878,20 +868,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverScripts/ManagerGameOver.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TitleScripts/ManagerTitleMaster.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1120,7 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1128,15 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,7 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,7 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,9 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,7 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1186,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,15 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerKeyCtrl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1210,9 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1220,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,7 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,6 +1180,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerWarp.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzSEScripts/Mgr_GameSE02.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MzObjScript/MzWarpPoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelMapGet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1248,10 +1225,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mgr_MzLabelScripts/Mgr_MzLabelMapGet.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript/Mgr_PlayerKeyCtrl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="15">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
