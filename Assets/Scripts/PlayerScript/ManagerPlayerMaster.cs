@@ -56,11 +56,11 @@ public class ManagerPlayerMaster : MonoBehaviour {
         playerGoal.gameObject.SetActive(false);
         playerRenderer.enabled = false;
 
-        playerCtrlOn += new EveHandToPlayer(mgrPlayerBtnCtrl.CtrlChangeToKey);
-        playerCtrlOn += new EveHandToPlayer(mgrPlayerKeyCtrl.CtrlChangeToKey);
+        playerCtrlOn += new EveHandToPlayer(mgrPlayerBtnCtrl.BtnCtrlChangeToBtn);
+        playerCtrlOn += new EveHandToPlayer(mgrPlayerKeyCtrl.KeyCtrlChangeToKey);
 
-        playerCtrlOff += new EveHandToPlayer(mgrPlayerBtnCtrl.CtrlChangeToKey);
-        playerCtrlOff += new EveHandToPlayer(mgrPlayerKeyCtrl.CtrlChangeToBtn);
+        playerCtrlOff += new EveHandToPlayer(mgrPlayerBtnCtrl.BtnCtrlChangeToKey);
+        playerCtrlOff += new EveHandToPlayer(mgrPlayerKeyCtrl.KeyCtrlChangeToBtn);
 
         playerMaxFSpeedUp += new EveHandPlayerValue(mgrPlayerBtnCtrl.PlayerMaxFSpeedChange);
         playerMaxBSpeedUp += new EveHandPlayerValue(mgrPlayerBtnCtrl.PlayerMaxBSpeedChange);

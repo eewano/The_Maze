@@ -14,8 +14,8 @@ public class FallModePoint : MonoBehaviour {
     }
 
     void Start() {
-        playerCtrlOff += new EveHandToPlayer(mgrPlayerBtnCtrl.CtrlChangeToKey);
-        playerCtrlOff += new EveHandToPlayer(mgrPlayerKeyCtrl.CtrlChangeToBtn);
+        playerCtrlOff += new EveHandToPlayer(mgrPlayerBtnCtrl.BtnCtrlChangeToKey);
+        playerCtrlOff += new EveHandToPlayer(mgrPlayerKeyCtrl.KeyCtrlChangeToBtn);
     }
 
     void OnTriggerEnter(Collider col) {

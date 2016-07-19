@@ -11,16 +11,16 @@ public class Mgr_DebugPlayerCtrl : MonoBehaviour {
     private event EveHandDebug changeToCtrlKey;
 
     void Awake() {
-        mgrPlayerBtnCtrl = GameObject.Find("Player").GetComponent<Mgr_PlayerBtnCtrl>();
-        mgrPlayerKeyCtrl = GameObject.Find("Player").GetComponent<Mgr_PlayerKeyCtrl>();
+        mgrPlayerBtnCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerBtnCtrl>();
+        mgrPlayerKeyCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerKeyCtrl>();
     }
 
     void Start() {
-        changeToCtrlBtn += new EveHandDebug(mgrPlayerBtnCtrl.CtrlChangeToBtn);
-        changeToCtrlBtn += new EveHandDebug(mgrPlayerKeyCtrl.CtrlChangeToBtn);
+        changeToCtrlBtn += new EveHandDebug(mgrPlayerBtnCtrl.BtnCtrlChangeToBtn);
+        changeToCtrlBtn += new EveHandDebug(mgrPlayerKeyCtrl.KeyCtrlChangeToBtn);
 
-        changeToCtrlKey += new EveHandDebug(mgrPlayerBtnCtrl.CtrlChangeToKey);
-        changeToCtrlKey += new EveHandDebug(mgrPlayerKeyCtrl.CtrlChangeToKey);
+        changeToCtrlKey += new EveHandDebug(mgrPlayerBtnCtrl.BtnCtrlChangeToKey);
+        changeToCtrlKey += new EveHandDebug(mgrPlayerKeyCtrl.KeyCtrlChangeToKey);
     }
 
     void Update() {

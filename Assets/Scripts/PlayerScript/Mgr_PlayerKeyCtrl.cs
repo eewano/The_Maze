@@ -16,7 +16,8 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
     private CameraWalking cameraWalking;
     private CameraSEWalk cameraSEWalk;
 
-    private bool keyCtrl;
+    [SerializeField]
+    private bool keyCtrl = false;
 
     private event EveHandToPlayer cameraToWalk;
 
@@ -31,8 +32,6 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
         cameraToWalk = new EveHandToPlayer(cameraWalking.PlayerWalking);
 
         cameraToBack = new EveHandToPlayer(cameraSEWalk.StartWalkingSE);
-
-        keyCtrl = true;
     }
 
     void Update() {
@@ -72,11 +71,11 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
         }
     }
 
-    public void CtrlChangeToKey(object o, EventArgs e) {
+    public void KeyCtrlChangeToKey(object o, EventArgs e) {
         keyCtrl = true;
     }
 
-    public void CtrlChangeToBtn(object o, EventArgs e) {
+    public void KeyCtrlChangeToBtn(object o, EventArgs e) {
         keyCtrl = false;
     }
 

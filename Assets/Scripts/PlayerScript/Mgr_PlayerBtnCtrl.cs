@@ -16,8 +16,10 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
     private float
     curSpeed, curRotSpeed, playerSpeed, playerRotSpeed;
 
+    [SerializeField]
+    private bool btnCtrl = false;
     private bool
-    btnCtrl, ctrlF, ctrlB, ctrlL, ctrlR, ctrlFL, ctrlFR, ctrlBL, ctrlBR, anyBtnPush;
+    ctrlF, ctrlB, ctrlL, ctrlR, ctrlFL, ctrlFR, ctrlBL, ctrlBR, anyBtnPush;
 
     private event EveHandToPlayer cameraToWalk;
 
@@ -112,7 +114,6 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
         cameraToWalk = new EveHandToPlayer(cameraWalking.PlayerWalking);
         cameraToBack = new EveHandToPlayer(cameraSEWalk.StartWalkingSE);
 
-        btnCtrl = false;
         ctrlF = false;
         ctrlB = false;
         ctrlL = false;
@@ -232,13 +233,13 @@ public class Mgr_PlayerBtnCtrl : MonoBehaviour {
         playerRotSpeed = -maxRotSpeed;
     }
 
-    public void CtrlChangeToKey(object o, EventArgs e) {
+    public void BtnCtrlChangeToKey(object o, EventArgs e) {
         playerSpeed = 0;
         playerRotSpeed = 0;
         btnCtrl = false;
     }
 
-    public void CtrlChangeToBtn(object o, EventArgs e) {
+    public void BtnCtrlChangeToBtn(object o, EventArgs e) {
         btnCtrl = true;
     }
 
