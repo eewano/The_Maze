@@ -1206,6 +1206,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 721483895}
   - 82: {fileID: 721483894}
+  - 114: {fileID: 721483896}
   m_Layer: 0
   m_Name: MzBGM
   m_TagString: Untagged
@@ -1300,6 +1301,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &721483896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721483893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4413d132fb3fc487d96e08f94c8a19ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTime: 2.5
 --- !u!1 &739083862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2376,10 @@ Prefab:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 176569944}
+    - target: {fileID: 198484, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48ce001bb1aa24ab49a8d564b3dd97d2, type: 2}
   m_IsPrefabParent: 0
@@ -2732,6 +2749,14 @@ Prefab:
       propertyPath: buttonGiveUp
       value: 
       objectReference: {fileID: 656340009}
+    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mobileJoyStick
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: timeLimit
+      value: 220
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
   m_IsPrefabParent: 0

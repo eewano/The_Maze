@@ -1862,7 +1862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3042f1629cbc419ea03eeca3ac5408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMzValue: 0
+  defaultMzValue: 0.2
 --- !u!114 &11409260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1967,14 +1967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ace1c2b9c6e4fad99c8311f0ceab77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonCtrlF: {fileID: 0}
-  buttonCtrlB: {fileID: 0}
-  buttonCtrlL: {fileID: 0}
-  buttonCtrlR: {fileID: 0}
-  buttonCtrlFL: {fileID: 0}
-  buttonCtrlFR: {fileID: 0}
-  buttonCtrlBL: {fileID: 0}
-  buttonCtrlBR: {fileID: 0}
+  mobileJoyStick: {fileID: 0}
 --- !u!114 &11421802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2195,7 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f70e2fe09394dd2878888cd59c595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 220
+  timeLimit: 80
 --- !u!114 &11469910
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,7 +19,7 @@ public class ManagerMzMaster : MonoBehaviour {
     private Manager_MzLabel managerMzLabel;
     private Manager_MzCam managerMzCam;
     private Mgr_MzTextTimer mgrMzTextTimer;
-    private AudioSource mzBGM;
+    private Mgr_MzBGM mgrMzBGM;
     private Mgr_FadeImage mgrFadeImage;
     private Manager_DirLight managerDirLight;
 
@@ -58,6 +58,10 @@ public class ManagerMzMaster : MonoBehaviour {
 
     private event EveHandFadeImage toFadeBlack;
 
+    private event EveHandPLAYSE mzBGMStop;
+
+    private event EveHandPLAYSE mzBGMFadeOut;
+
     private enum GameState {
         DUMMY,
         READY,
@@ -85,7 +89,7 @@ public class ManagerMzMaster : MonoBehaviour {
         managerMzLabel = GameObject.Find("Mgr_MzLabel").GetComponent<Manager_MzLabel>();
         managerMzCam = GameObject.Find("Mgr_MzCamera").GetComponent<Manager_MzCam>();
         mgrMzTextTimer = GameObject.Find("Mgr_MzTimer").GetComponent<Mgr_MzTextTimer>();
-        mzBGM = GameObject.Find("MzBGM").GetComponent<AudioSource>();
+        mgrMzBGM = GameObject.Find("MzBGM").GetComponent<Mgr_MzBGM>();
         mgrFadeImage = GameObject.Find("Mgr_FadeImage").GetComponent<Mgr_FadeImage>();
         managerDirLight = GameObject.Find("Mgr_DirLight").GetComponent<Manager_DirLight>();
 
@@ -169,6 +173,9 @@ public class ManagerMzMaster : MonoBehaviour {
         playerMoveOff += new EveHandToPlayer(managerPlayerMaster.PlayerCtrlOff);
         //フェード操作
         toFadeBlack += new EveHandFadeImage(mgrFadeImage.StartFadeBlack);
+        mzBGMFadeOut += new EveHandPLAYSE(mgrMzBGM.BGMFadeOutEvent);
+        //BGM停止
+        mzBGMStop += new EveHandPLAYSE(mgrMzBGM.BGMStopEvent);
 
         if (mgrEnemy != null) {
             mzEventPLAYING += new EveHandMgrState(mgrEnemy.EventPLAYING);
@@ -293,7 +300,7 @@ public class ManagerMzMaster : MonoBehaviour {
 
     void GameOver() {
         state = GameState.GAMEOVER;
-        mzBGM.Stop();
+        this.mzBGMFadeOut(this, EventArgs.Empty);
         this.mzEventGAMEOVER(this, EventArgs.Empty);
         StartCoroutine(ToGameOver());
     }
@@ -334,17 +341,17 @@ public class ManagerMzMaster : MonoBehaviour {
     }
 
     public void RestartIMethod(object o, EventArgs e) {
-        mzBGM.Stop();
+        this.mzBGMStop(this, EventArgs.Empty);
         StartCoroutine(Restart());
     }
 
     public void ToNextMzIMethod(object o, EventArgs e) {
-        mzBGM.Stop();
+        this.mzBGMStop(this, EventArgs.Empty);
         StartCoroutine(ToNextMz());
     }
 
     public void ToTitleIMethod(object o, EventArgs e) {
-        mzBGM.Stop();
+        this.mzBGMStop(this, EventArgs.Empty);
         StartCoroutine(ToTitle());
     }
 
