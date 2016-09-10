@@ -4,8 +4,10 @@
     <modules>
       <module name="The_Maze" dirurl="file://$PROJECT_DIR$" current-layer="Editor">
         <module-layer name="Editor">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="Editor" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="Editor" file-name="$ModuleName$">
             <define>UNITY_EDITOR</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -16,8 +18,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="Linux (32 bit)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="Linux32" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="Linux32" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_LINUX</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -28,8 +32,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="Linux (64 bit)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="Linux64" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="Linux64" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_LINUX</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -40,8 +46,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="Linux (any)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="LinuxUniversal" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="LinuxUniversal" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_LINUX</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -52,8 +60,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="MacOS (32 bit)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="OSX" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="OSX" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_OSX</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -64,8 +74,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="MacOS (64 bit)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="OSX64" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="OSX64" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_OSX</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -76,8 +88,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="MacOS (any)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="OSXUniversal" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="OSXUniversal" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_OSX</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -88,8 +102,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="Windows (32 bit)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="Windows" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="Windows" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_WIN</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -100,8 +116,10 @@
           <orderEntry type="sourceFolder" />
         </module-layer>
         <module-layer name="Windows (64 bit)">
-          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.5" output-dir="$ModuleProductionOutputDirPath$" build-target="Windows64" file-name="$ModuleName$">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.3.6" output-dir="$ModuleProductionOutputDirPath$" build-target="Windows64" file-name="$ModuleName$">
             <define>UNITY_STANDALONE_WIN</define>
+            <define>UNITY_5_0</define>
+            <define>UNITY_5_3</define>
           </extension>
           <content url="file://$MODULE_DIR$">
             <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
@@ -1793,6 +1811,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -1877,6 +1896,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -2067,6 +2087,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -2151,6 +2172,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -2341,6 +2363,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -2425,6 +2448,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -2615,6 +2639,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -2699,6 +2724,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -2889,6 +2915,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -2973,6 +3000,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -3163,6 +3191,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -3247,6 +3276,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -3437,6 +3467,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -3521,6 +3552,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -3711,6 +3743,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -3795,6 +3828,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
@@ -3985,6 +4019,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/LeanTween/Examples/Scripts/TestingRigidbodyCS.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Mgr_MzBGM.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugItemGet.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/DebugScripts/Mgr_DebugMoveState.cs" />
@@ -4069,6 +4104,7 @@
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_DoorObject.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_FadeImage.cs.meta" />
+          <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_KeyIcon.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_MzTextTimer.cs.meta" />
           <content url="file://$USER_HOME$/The_Maze/Assets/Scripts/Mgr_MzObjScripts/Mgr_WallGimmick01.cs" />
