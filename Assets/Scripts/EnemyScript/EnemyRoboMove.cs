@@ -25,7 +25,7 @@ public class EnemyRoboMove : MonoBehaviour {
     Vector3 pos;
     Vector3 targetPos;
 
-    private bool moveON = false;
+    private bool moveON = true;
 
     enum EnemyState {
         PATROL,
@@ -47,8 +47,7 @@ public class EnemyRoboMove : MonoBehaviour {
     }
 
     void Update() {
-        if (moveON == true)
-        {
+        if (moveON == true) {
             UpdateControl();
             UpdateState();
         }
@@ -105,13 +104,13 @@ public class EnemyRoboMove : MonoBehaviour {
     }
 
     public void MovingStart(object o, EventArgs e) {
-        moveON = true;
         sERoboMove.Play();
+        moveON = true;
     }
 
     public void MovingStop(object o, EventArgs e) {
-        moveON = false;
         sERoboMove.Stop();
+        moveON = false;
     }
 
     void OnTriggerEnter(Collider hit) {

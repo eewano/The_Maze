@@ -250,6 +250,7 @@ public class ManagerMzMaster : MonoBehaviour {
     }
 
     void Playing() {
+        Time.timeScale = 1.0f;
         state = GameState.PLAYING;
         this.mzEventPLAYING(this, EventArgs.Empty);
         this.mzTimerStart(this, EventArgs.Empty);
@@ -270,6 +271,7 @@ public class ManagerMzMaster : MonoBehaviour {
         this.mzTimerStop(this, EventArgs.Empty);
         this.playerMoveOff(this, EventArgs.Empty);
         mzCeiling.gameObject.SetActive(false);
+        Time.timeScale = 0.0f;
     }
 
     void TimeUp() {
