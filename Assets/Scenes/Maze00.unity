@@ -1785,46 +1785,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mobileJoyStick
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11495198, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mapGetLabel
-      value: 
-      objectReference: {fileID: 74617300}
-    - target: {fileID: 11431836, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: croquetteLabel
-      value: 
-      objectReference: {fileID: 191015918}
-    - target: {fileID: 11428874, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: lightGetLabel
-      value: 
-      objectReference: {fileID: 1226831042}
-    - target: {fileID: 11441474, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzCamGoal
-      value: 
-      objectReference: {fileID: 1248166415}
-    - target: {fileID: 11422412, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzCamMap
-      value: 
-      objectReference: {fileID: 2009974602}
-    - target: {fileID: 11415060, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: mzCamPlayer
-      value: 
-      objectReference: {fileID: 2010794434}
-    - target: {fileID: 11454126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: dirLightGoal
-      value: 
-      objectReference: {fileID: 486721535}
-    - target: {fileID: 11497138, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: dirLightMap
-      value: 
-      objectReference: {fileID: 453251699}
-    - target: {fileID: 11449228, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: dirLightMz
-      value: 
-      objectReference: {fileID: 160523127}
     - target: {fileID: 11420494, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
       propertyPath: imageFadeBlack
       value: 
@@ -1833,38 +1793,42 @@ Prefab:
       propertyPath: imageFadeWhite
       value: 
       objectReference: {fileID: 448242733}
-    - target: {fileID: 11409260, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonGiveUp
+    - target: {fileID: 11449228, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: dirLightMz
       value: 
-      objectReference: {fileID: 234070537}
-    - target: {fileID: 11437476, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonToTitle
+      objectReference: {fileID: 160523127}
+    - target: {fileID: 11497138, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: dirLightMap
       value: 
-      objectReference: {fileID: 1384831892}
-    - target: {fileID: 11428144, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonToNextMz
+      objectReference: {fileID: 453251699}
+    - target: {fileID: 11454126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: dirLightGoal
       value: 
-      objectReference: {fileID: 426693780}
-    - target: {fileID: 11452158, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonRestart
+      objectReference: {fileID: 486721535}
+    - target: {fileID: 11415060, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzCamPlayer
       value: 
-      objectReference: {fileID: 2140622112}
-    - target: {fileID: 11412056, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonToMz
+      objectReference: {fileID: 2010794434}
+    - target: {fileID: 11422412, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzCamMap
       value: 
-      objectReference: {fileID: 1783922375}
-    - target: {fileID: 11424126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonMap
+      objectReference: {fileID: 2009974602}
+    - target: {fileID: 11441474, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mzCamGoal
       value: 
-      objectReference: {fileID: 1845907042}
-    - target: {fileID: 11469910, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonGameOver
+      objectReference: {fileID: 1248166415}
+    - target: {fileID: 11428874, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: lightGetLabel
       value: 
-      objectReference: {fileID: 19131714}
-    - target: {fileID: 11453402, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
-      propertyPath: buttonCancel
+      objectReference: {fileID: 1226831042}
+    - target: {fileID: 11431836, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: croquetteLabel
       value: 
-      objectReference: {fileID: 1142447627}
+      objectReference: {fileID: 191015918}
+    - target: {fileID: 11495198, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: mapGetLabel
+      value: 
+      objectReference: {fileID: 74617300}
     - target: {fileID: 11420788, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
       propertyPath: buttonCtrlF
       value: 
@@ -1897,6 +1861,38 @@ Prefab:
       propertyPath: buttonCtrlBR
       value: 
       objectReference: {fileID: 2059258106}
+    - target: {fileID: 11409260, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonGiveUp
+      value: 
+      objectReference: {fileID: 234070537}
+    - target: {fileID: 11437476, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonToTitle
+      value: 
+      objectReference: {fileID: 1384831892}
+    - target: {fileID: 11428144, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonToNextMz
+      value: 
+      objectReference: {fileID: 426693780}
+    - target: {fileID: 11452158, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonRestart
+      value: 
+      objectReference: {fileID: 2140622112}
+    - target: {fileID: 11412056, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonToMz
+      value: 
+      objectReference: {fileID: 1783922375}
+    - target: {fileID: 11424126, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonMap
+      value: 
+      objectReference: {fileID: 1845907042}
+    - target: {fileID: 11469910, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonGameOver
+      value: 
+      objectReference: {fileID: 19131714}
+    - target: {fileID: 11453402, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
+      propertyPath: buttonCancel
+      value: 
+      objectReference: {fileID: 1142447627}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158bcc6e81c994141ba32ed9cc3e2904, type: 2}
   m_IsPrefabParent: 0

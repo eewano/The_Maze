@@ -7,6 +7,7 @@ public class Mgr_MzBtnCancel : MonoBehaviour {
     private GameObject buttonCancel;
     private ManagerMzMaster managerMzMaster;
     private Mgr_GameSE01 mgrMzSE01;
+    private Mgr_PlayerBtnCtrl mgrPlayerBtnCtrl;
 
     private event EveHandMoveState toPLAYINGState;
 
@@ -14,11 +15,13 @@ public class Mgr_MzBtnCancel : MonoBehaviour {
 
     void Awake() {
         managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
+        mgrPlayerBtnCtrl = GameObject.FindWithTag("Player").GetComponent<Mgr_PlayerBtnCtrl>();
         mgrMzSE01 = GameObject.Find("Mgr_GameSE01").GetComponent<Mgr_GameSE01>();
     }
 
     void Start() {
         toPLAYINGState += new EveHandMoveState(managerMzMaster.ToPLAYINGState);
+        toPLAYINGState += new EveHandMoveState(mgrPlayerBtnCtrl.BtnCtrlChangeToBtn);
         playSE += new EveHandPLAYSE(mgrMzSE01.SECancelEvent);
 
         buttonCancel.gameObject.SetActive(false);

@@ -591,9 +591,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 15eeb0cd2042742a7909afbe0cebcb2a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abb3a85036b78497e84c651081290dfb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1967,7 +1967,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ace1c2b9c6e4fad99c8311f0ceab77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobileJoyStick: {fileID: 0}
+  buttonCtrlF: {fileID: 0}
+  buttonCtrlB: {fileID: 0}
+  buttonCtrlL: {fileID: 0}
+  buttonCtrlR: {fileID: 0}
+  buttonCtrlFL: {fileID: 0}
+  buttonCtrlFR: {fileID: 0}
+  buttonCtrlBL: {fileID: 0}
+  buttonCtrlBR: {fileID: 0}
 --- !u!114 &11421802
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -37,7 +37,6 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
     void Update() {
         if (keyCtrl == true)
         {
-//            float translation = CrossPlatformInputManager.GetAxis("Vertical") * keySpeed;
             float translation = Input.GetAxis("Vertical") * keySpeed;
             if (translation < 0)
             {
@@ -64,7 +63,6 @@ public class Mgr_PlayerKeyCtrl : MonoBehaviour {
             }
             count += 1 * Time.deltaTime;
 
-//            float rotation = CrossPlatformInputManager.GetAxis("Horizontal") * keyRotSpeed;
             float rotation = Input.GetAxis("Horizontal") * keyRotSpeed;
             translation *= Time.deltaTime;
             rotation *= Time.deltaTime;

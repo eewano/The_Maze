@@ -15,7 +15,7 @@ public class DeadPoint : MonoBehaviour {
         playerDead += new EveHandMoveState(managerMzMaster.ToFAILUREState);
     }
 
-    void OnTriggerEnter(Collider col) {
+    void OnCollisionEnter(Collision col) {
         if (col.gameObject.tag == "Player") {
             this.playerDead(this, EventArgs.Empty);
         }
