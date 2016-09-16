@@ -94,15 +94,21 @@ public class Mgr_MzTextTimer : MonoBehaviour {
 
     public void MzTimerCountValue(object o, int i) {
         timeRemaining += i;
-        if (timeRemaining <= 0)
+        if (timeRemaining <= 10)
         {
-            timeRemaining = 0;
-            if (timeRemaining <= 10)
+            mzTimerText.fontStyle = FontStyle.Bold;
+            mzTimerText.color = new Color32(255, 0, 0, 255);
+            if (timeRemaining <= 0)
             {
-                mzTimerText.fontStyle = FontStyle.Bold;
-                mzTimerText.color = new Color32(255, 0, 0, 255);
+                timeRemaining = 0;
             }
         }
+        else
+        {
+            mzTimerText.fontStyle = FontStyle.Normal;
+            mzTimerText.color = new Color32(255, 255, 255, 255);
+        }
+
         mzTimerText.text = "残り時間 : " + (int)timeRemaining + " 秒";
     }
 
@@ -119,4 +125,16 @@ public class Mgr_MzTextTimer : MonoBehaviour {
             countDown = 1.0f;
         }
     }
+
+    //-----デバッグモード-----
+    public void DebugTimerReset(object o, EventArgs e) {
+        timeRemaining = timeLimit;
+        mzTimerText.fontStyle = FontStyle.Normal;
+        mzTimerText.color = new Color32(255, 255, 255, 255);
+    }
+
+    public void DebugTimerTo10(object o, EventArgs e) {
+        timeRemaining = 10;
+    }
+    //-----デバッグモード-----
 }

@@ -1,76 +1,60 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
 public class Mgr_DebugMoveState : MonoBehaviour {
 
-    [SerializeField]
-    private Text debugOnOffText;
     private ManagerMzMaster managerMzMaster;
 
-    private bool debugState;
+    private bool debugStateON = false;
 
     void Awake() {
         managerMzMaster = GameObject.Find("ManagerMzMaster").GetComponent<ManagerMzMaster>();
     }
 
-    void Start() {
-        debugState = false;
-        debugOnOffText.text = "";
-    }
-
     void Update() {
-        DebugSwitch();
-        DebugMoveState();
-    }
-
-    void DebugSwitch() {
-        if (Input.GetKeyUp("d") && debugState == false) {
-            debugState = true;
-            debugOnOffText.text = "デバッグステート";
-        }
-        else if (Input.GetKeyUp("d") && debugState == true) {
-            debugState = false;
-            debugOnOffText.text = "";
-        }
-    }
-
-    void DebugMoveState() {
-        if (Input.GetKeyUp("1") && debugState == true) {
+        if (Input.GetKeyUp("1") && debugStateON == true) {
             managerMzMaster.DebugDUMMY();
         }
-        else if (Input.GetKeyUp("2") && debugState == true) {
+        else if (Input.GetKeyUp("2") && debugStateON == true) {
             managerMzMaster.DebugREADY();
         }
-        else if (Input.GetKeyUp("3") && debugState == true) {
+        else if (Input.GetKeyUp("3") && debugStateON == true) {
             managerMzMaster.DebugREADYGO();
         }
-        else if (Input.GetKeyUp("4") && debugState == true) {
+        else if (Input.GetKeyUp("4") && debugStateON == true) {
             managerMzMaster.DebugPLAYING();
         }
-        else if (Input.GetKeyUp("5") && debugState == true) {
+        else if (Input.GetKeyUp("5") && debugStateON == true) {
             managerMzMaster.DebugGIVEUP();
         }
-        else if (Input.GetKeyUp("6") && debugState == true) {
+        else if (Input.GetKeyUp("6") && debugStateON == true) {
             managerMzMaster.DebugMAP();
         }
-        else if (Input.GetKeyUp("7") && debugState == true) {
+        else if (Input.GetKeyUp("7") && debugStateON == true) {
             managerMzMaster.DebugTIMEUP();
         }
-        else if (Input.GetKeyUp("8") && debugState == true) {
+        else if (Input.GetKeyUp("8") && debugStateON == true) {
             managerMzMaster.DebugFAILURE();
         }
-        else if (Input.GetKeyUp("9") && debugState == true) {
+        else if (Input.GetKeyUp("9") && debugStateON == true) {
             managerMzMaster.DebugGOAL();
         }
-        else if (Input.GetKeyUp("0") && debugState == true) {
+        else if (Input.GetKeyUp("0") && debugStateON == true) {
             managerMzMaster.DebugCLEAR();
         }
-        else if (Input.GetKeyUp("q") && debugState == true) {
+        else if (Input.GetKeyUp("q") && debugStateON == true) {
             managerMzMaster.DebugGAMEOVER();
         }
-        else if (Input.GetKeyUp("w") && debugState == true) {
+        else if (Input.GetKeyUp("w") && debugStateON == true) {
             managerMzMaster.DebugEMPTY();
         }
+    }
+
+    public void DebugModeON(object o, EventArgs e) {
+        debugStateON = true;
+    }
+
+    public void DebugModeOFF(object o, EventArgs e) {
+        debugStateON = false;
     }
 }
